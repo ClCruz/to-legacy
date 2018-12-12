@@ -1,0 +1,24 @@
+kind: 
+name: legacy
+
+steps:
+- name: install
+  image: blcoccaro/linuxphpsql:v4
+  volumes:
+  - name: wl
+    path: /tmp/host
+  commands:
+  - rsync -vr /tmp/host/teste/legacy/ /tmp/host/bk/legacy
+  - rsync -vrR --exclude='.git' * /tmp/host/teste/legacy
+  - chmod -R 777 /tmp/host/legacy/api
+  
+volumes:
+- name: wl
+  host:
+    path: /var/www/unique
+
+trigger:
+  branch:
+  - master
+  event:
+  - push
