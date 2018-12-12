@@ -3,14 +3,15 @@ name: legacy
 
 steps:
 - name: install
-  image: blcoccaro/linuxphpsql:v4
+  image: blcoccaro/to-deploy:v2
   volumes:
   - name: wl
     path: /tmp/host
   commands:
-  - rsync -vr /tmp/host/teste/legacy/ /tmp/host/bk/legacy
-  - rsync -vrR --exclude='.git' * /tmp/host/teste/legacy
-  - chmod -R 777 /tmp/host/legacy/api
+  - rsync -vr /tmp/host/legacy/ /tmp/host/bk/legacy
+  - rsync -vrR --exclude='.git' * /tmp/host/legacy
+  - rsync -vrR .htaccess /tmp/host/legacy
+  - chmod -R 777 /tmp/host/legacy/
   
 volumes:
 - name: wl
