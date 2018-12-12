@@ -197,13 +197,15 @@ a.botao {
 									{
 										return false;
 									}else{
-										$btn.click();
+										window.location = "<?php echo multiSite_getSearch("+$busca.val()+") ?>";
+										//$btn.click();
 									}
 								}
 							</script>
 							<div class="bottom">
 								<div class="search">
-									<form method="get" action="<?php echo multiSite_getSearch(); ?>">
+									PUTA Q PARIO
+									<form method="get" onsubmit="buscaEspetaculos();return false;">
 										<span class="flaticon-magnifier" onclick="buscaEspetaculos();"></span>
 										<input type="submit" id="busca-espetaculos" class="hidden" />
 										<span><input name="busca" type="text" placeholder="Espetáculo, diretor, teatro, elenco"></span>
@@ -314,19 +316,23 @@ a.botao {
 				</div>
 		
 			<div class="search">
-									<form method="get" action="<?php echo multiSite_getSearch(); ?>" style="
-    text-align: center;
-    align-self: center;
-    margin: 0 auto;
-">
 										<span class="flaticon-magnifier" onclick="buscaEspetaculos();"></span>
-										<input type="submit" id="busca-espetaculos" class="hidden" />
-										<span><input name="busca" type="text" placeholder=""></span>
-									</form>
+										<span><input id="buscalegacy" name="buscalegacy" type="text" placeholder=""></span>
 								</div>
-				<span class="header__signin hidden-xs hidden-sm" style="float: right">
-				
+				<span class="header__signin hidden-xs hidden-sm" style="float: right">				
 				</span>
+<script language="javascript">
+$( document ).ready(function() {
+	$('#buscalegacy').keypress(function (e) {
+  if (e.which == 13) {
+	  window.location = "<?php echo multiSite_getSearch(); ?>" + $("#buscalegacy").val();
+    return false;    //<---- Add this line
+  }
+});
+
+
+});
+	</script>
 				<div class="opcoes"  style="float: right; color: white">
 									<?php if (isset($_SESSION['operador']) and $rows == 0) { ?>
 <a href="pesquisa_usuario.php">Pesquisar Cliente</a>

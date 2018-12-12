@@ -1,6 +1,6 @@
 {
   "env": "dev",
-  "host": "tixs.me",
+  "host": "localhost:8080",
   "uri": "http://localhost:8080",
   "api": "http://localhost:2002",
   "pinpad": "http://localhost:7001/api",

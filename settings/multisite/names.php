@@ -86,7 +86,7 @@ function multiSite_getTomTicket() {
 }
 function multiSite_getSearch($concat = "") {
     $ret = multiSite_getURI("URI_SSL");
-    $ret .= "/espetaculos";
+    $ret .= "/busca/";
     $ret = $ret . $concat;
     return $ret;
 }
@@ -95,6 +95,7 @@ function multiSite_getAPI() {
     return $ret;
 }
 function multiSite_getURI($type, $concat = "") {
+    //die("getwhitelabelobj: ".json_encode(getwhitelabelobj()));
     $ret = getwhitelabel("uri");
     $ret = $ret . $concat;
     return $ret;
