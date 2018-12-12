@@ -1,0 +1,124 @@
+@media print {
+    .esconder{
+        display: none;
+    }
+
+    #main{
+        margin-left: 10px;
+    }
+}
+
+body, * {
+    margin:0px;
+    padding: 0px;
+    font-family: arial;
+    font-size: 9px;
+    color: #000000;
+}
+
+#main{
+    float: left;
+    width: 800px;    
+}
+
+#main #box-geral{
+    float: left;
+    padding: 35px 40px;
+    border: 1px solid black;    
+    width: 710px;
+}
+
+#main #box-geral #box-left{
+    float: left;
+    width: 310px;    
+}
+
+#main #box-geral #box-left .box-endereco{    
+    padding-bottom: 10px;
+    font-weight: bold; 
+    text-transform: uppercase;
+    float: left;
+    width: 200px;
+}
+
+#main #box-geral #box-left .codbarras{    
+    width: 90px;
+    float: right;
+    font-size: 10px;
+    height: 75px;
+    text-align: right;
+    font-weight: normal;    
+}
+
+#main #box-geral #box-left .box-ingressos{
+    width: 310px;
+    margin-top: 10px;
+    float: left;
+    height: 114px;
+}
+
+#main #box-geral #box-left .box-ingressos table{
+    font-size: 10px;
+    width: 310px;
+    font-size: 9px;
+}
+
+#main #box-geral #box-left .box-ingressos table tr .detalhe{
+    font-weight: bold;
+    text-align: left;
+}
+
+#main #box-geral #box-left .box-ingressos table tr td{
+    text-align: right;
+    padding: 1px 0;
+}
+
+#main #box-geral #box-left .box-ingressos table tr:nth-child(odd){
+    background-color: #999999;
+}
+
+#main #box-geral #box-left .rodape{
+    border-top: 2px solid black;
+    font-size: 10px;
+    padding-top: 4px;
+    float: left;
+    width:  100%;
+    margin-top: 9px;
+}
+
+#main #box-geral #box-left span{
+    font-size: 8px;
+    font-weight: bold;
+}
+
+#main #box-geral #box-right{
+    float: left;
+    width: 400px;
+    text-align: right;    
+}
+
+#main #box-geral #box-right .box-cliente{padding-top: 30px;font-size: 10px !important;}
+#main #box-geral #box-right .box-local{padding-top: 25px;font-size: 10px !important;}
+#main #box-geral #box-right .box-pagamento{padding-top: 35px;font-size: 10px !important;}
+
+#main #box-geral #box-right span{
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.proxima{
+    float: left;
+    width: 100%;
+    margin-top: 1px;
+}
+
+.codbarra{
+    text-align: right;
+    padding: 0px 0px;
+    margin-top: 10px;
+}
+
+.link{
+    font-size: 10px;
+    color: black;
+}

@@ -1,0 +1,48 @@
+<script src="../javascripts/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="../javascripts/fnRelatorios.js" type="text/javascript"></script>
+<style type="text/css">
+  .coluna-header{width: 200px;}
+  .tb-form{margin-left: 40px;}
+  form select{min-width: 200px;}
+</style>
+<h2>{titulo}</h2>
+<form action="http://{host}/compreingressos2/admin/relExportacaoClientes.php"
+      name="fPeca"  id="fPeca" method="POST" onsubmit="return validar();"
+      enctype="multipart/form-data" target="_blank">
+  <input type="hidden" name="rs:Command" value="Render"/>
+  <input type="hidden" name="rc:Parameters" value="False"/>
+  <input type="hidden" name="rs:Format" value="HTML4.0"/>
+  <table cellpadding='0' class="tb-form" border='0' width='609' cellspacing='0'>
+    <tr>
+      <td class="coluna-header"><strong>Local:</strong></td>
+      <td>
+        <select name="cboTeatro" onChange="
+          ExibePeca2(this.value, 'Peca', 'SP_PEC_CON009;5');PreencheDescricao()"
+                class="inputStyle" id="cboTeatro">
+          <option value="-1">Selecione o Local...</option>
+          <!-- BEGIN BLOCK_LOCAL -->
+          <option value="{idLocal}">{dsLocal}</option>
+          <!-- END BLOCK_LOCAL -->
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="coluna-header"><strong>Evento:</strong></td>
+      <td>
+        <div name="divPeca" Id="divPeca">
+          <select id="cboPeca" name="PARAM_PECA" onchange="getSetor();">
+            <option value="">Selecione o Evento...</option>
+          </select>
+        </div>
+      </td>
+    </tr>    
+    <tr>
+      <td align="center" colspan="2">
+        <br />
+        <input type="submit" value="Visualizar" class="button" />&nbsp;
+        <input type="button" value="Limpar Campos" class="button" onClick="limpar()">&nbsp;
+      </td>
+    </tr>
+  </table>
+</form>
+<br/>

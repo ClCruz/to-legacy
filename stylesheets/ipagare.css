@@ -1,0 +1,134 @@
+A {
+text-decoration: none;
+color: #37659D;
+font-weight: bold;
+}
+A:active {
+text-decoration: underline;
+color: #37659D;
+font-weight: bold;
+}
+A:visited {
+text-decoration: none;
+color: #37659D;
+font-weight: bold;
+}
+A:hover{
+text-decoration: underline;
+color: #37659D;
+font-weight: bold;
+}
+Body {
+	background-color:#FFFFFF;
+	background-image: url('');
+	background-position: center ;
+	background-repeat: repeat;
+	margin:0;
+	text-align:left;
+	color: #616162;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+TABLE {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color: #616162;
+margin: 0px;
+background-color: #FFFFFF;
+}
+DIV#cabecalho
+{
+/*	border-right: #bfbfbf 1px solid;
+	padding-right: 5px;
+	border-top: #bfbfbf 1px solid;
+	padding-left: 5px;
+	font-weight: 900;
+	font-size: 25px;
+	background-image: url(img/top_ipagare.jpg);
+	padding-bottom: 5px;
+	vertical-align: sub;
+	border-left: #bfbfbf 1px solid;
+	width: 500px;
+	color: #999999;
+	line-height: 100px;
+	padding-top: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	background-color: #f0f0f0;
+	text-align: right; */
+	display:none;
+}
+DIV#passoapasso {
+position: relative;
+width: 98%;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 12px;
+text-align: left;
+line-height: 20px;
+vertical-align: middle;
+padding: 5px;
+border-left: 1px solid #F9F8F8;
+border-right: 1px solid #F9F8F8;
+background-color: #F9F8F8;
+color:#616162;
+}
+DIV#corpo {
+width: 98%;
+position: relative;
+text-align: left;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 12px;
+border-top: 1px solid #FFFFFF;
+border-left: 1px solid #FFFFFF;
+border-right: 1px solid #FFFFFF;
+background-color: #FFFFFF;
+padding: 5px;
+color:#616162;
+}
+TABLE#opcoes {
+font-size:12px;
+width: 100%;
+}
+.atributoNome {
+font-weight: bold;
+font-size: 12px;
+}
+.atributoValor {
+font-size: 12px;
+}
+DIV#navegacao {
+width: 100%;
+padding: 5px;
+text-align: center;
+position: relative;
+background-color: #ffffff;
+}
+FORM {
+display: inline;
+}
+INPUT, SELECT, TEXTAREA {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color: #000000;
+vertical-align: baseline;
+padding : 1px 0px 0px 2px;
+}
+INPUT.radio {
+border-width : 0px;
+vertical-align: middle;
+}
+INPUT.checkbox {
+border-width : 0px;
+vertical-align: middle;
+}
+INPUT.button {
+padding: 0px 5px 0px 5px;
+margin: 0px 0px 0px 0px;
+background-color: #CCCCCC;
+}
+INPUT.select {
+background-color: #FFFFFF;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color: #555555;
+}

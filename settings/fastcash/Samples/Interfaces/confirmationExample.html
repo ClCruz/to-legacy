@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div>
+            <form action="confirmationController.php" method="post">
+                <fieldset>
+					<legend>Confirmation</legend>
+					<!--Campos preenchidos automaticamente para identificar qual transação está sendo confirmada(pode estar hardcoded)-->
+					<input Value="110" id="Pid" name="Pid" type="hidden"/>
+					<input Value="3577" id="ProdId" name="ProdId" type="hidden" />
+					<input Value="5454544" id="Tid" name="Tid" type="hidden" />
+
+					<ul>
+						<li>
+							<!--Data de pagamento (pode conter a data atual por padrão gerada dinamicamente)-->
+							<label for="PaidDate">PaidDate</label>
+							<input Value="05/22/2013 14:16:53" id="PaidDate" name="PaidDate" type="text" />
+						</li>
+						<!--Os fields de 1 a 4 devem ser exibidos de acordo com o fieldcount retornado no momento de gerar a compra-->
+						<li>
+							<label for="Value">Value</label>
+							<input id="Value" name="Value" type="text" />
+						</li>
+						<li>
+							<label for="F1">Field 1 (nome gerado dinamicamente)</label>
+							<input id="F1" name="F1" type="text" />
+						</li>
+						<li>
+							<label for="F1">Field 2 (nome gerado dinamicamente)</label>
+							<input id="F2" name="F2" type="text" />
+						</li>
+						<li>
+							<label for="F1">Field 3 (nome gerado dinamicamente)</label>
+							<input id="F3" name="F3" type="text" />
+						</li>
+						<li>
+							<label for="F1">Field 4 (nome gerado dinamicamente)</label>
+							<input id="F4" name="F4" type="text" />
+						</li>
+						<li>
+							<!--Observações (preenchimento opcional)-->
+							<label for="Observations">Observations</label>
+						</li>
+						<li>
+							<textarea cols="20" id="Observations" name="Observations" rows="2"></textarea>
+						</li>
+					</ul>
+					<input type="submit" />
+				</fieldset>
+            </form>
+        </div>
+    </body>
+</html>

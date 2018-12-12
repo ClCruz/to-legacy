@@ -1,0 +1,22 @@
+/* Gerado pelas Ferramentas para Desenvolvedores. Pode não ser uma representação fiel do arquivo fonte original */
+.texto {
+	BORDER-BOTTOM: gray 1px solid; BORDER-LEFT: gray 1px solid; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: white; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Tahoma, Verdana, Arial; COLOR: #000; FONT-SIZE: 9px; BORDER-TOP: gray 1px solid; CURSOR: text; BORDER-RIGHT: gray 1px solid; PADDING-TOP: 0px
+}
+.label {
+	FONT-FAMILY: Tahoma, Verdana, Arial; COLOR: black; FONT-SIZE: 11px; FONT-WEIGHT: bolder
+}
+.titulogrid {
+	BORDER-BOTTOM: gray 1px solid; BORDER-LEFT: gray 1px solid; BACKGROUND-COLOR: darkgray; FONT-FAMILY: Tahoma, Verdana, Arial; COLOR: black; FONT-SIZE: 9px; BORDER-TOP: gray 1px solid; FONT-WEIGHT: bolder; BORDER-RIGHT: gray 1px solid
+}
+.tabela {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid
+}
+A:link {
+	COLOR: gray; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: gray; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: gray; FONT-SIZE: 11px; TEXT-DECORATION: none
+}

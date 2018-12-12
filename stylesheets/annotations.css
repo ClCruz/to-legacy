@@ -1,0 +1,52 @@
+.annotation {
+  width:10px;
+  height:10px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-color: #3CA55C;
+  box-sizing: border-box;
+}
+
+.diametro{
+  width:10px;
+  height:10px;
+}
+
+.annotationHover {
+  width: 9px;
+  height: 9px;
+  border:1px solid #333;
+}
+
+.annotationSelected {
+}
+
+.open {}
+
+.standby {
+  
+  width:9px;
+  height:9px;
+  border:1px solid #333;
+  background-color: #006837;    
+}
+
+.closed {
+  background-color: #cccccc;
+}
+
+.mapa_de_plateia .ui-selecting {
+  margin: -2px;
+  border:2px solid #FF0;
+}
+
+.mapa_de_plateia .ui-selected {
+  margin: -2px;
+  border: 2px solid #F00;
+}
+
+.mapa_de_plateia {
+  position:relative;
+}

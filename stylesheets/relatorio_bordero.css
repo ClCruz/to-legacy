@@ -1,0 +1,44 @@
+/* 
+    Document   : relatorio_bordero
+    Created on : Jun 21, 2013, 9:45:58 AM
+    Author     : Edicarlos Barbosa
+    Description:
+        Estilos utilizados para todos os relatórios borderôs.
+*/
+
+body {margin:0px 0px 0px 0px;}
+
+div.logoTeatro {
+  height: 80px;
+  overflow: hidden;
+  width: 100%;
+}
+
+div.logoTeatro img{
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
+  max-height: 145px;
+  margin-top: 10px;
+}
+
+@media print {
+  body {margin: 0px 0px 0px 0px;}
+  .boxmenu { display: none; }
+
+  *, TD, .normal, .botao, .result, .marrom, .texto, .label, .titulogrid, A:link, A:active, A:visited {
+    font-size: 8px;
+  }
+
+  .linha_assinatura {
+    font-size: 10px;
+  }
+
+  .tabelaAuxiliar{border: none; width: 390px;}
+}
+
+@media screen {
+  .top {border-left-width: 0em;}
+  .tblResumo tr td{font-family: tahoma,verdana,arial; font-size: 7pt;}
+  .tblResumo tr td b{margin-right: 3px;}
+  .tabelaAuxiliar{border: none; width: 390px;}
+}

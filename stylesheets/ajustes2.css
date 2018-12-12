@@ -1,0 +1,204 @@
+.hidden {
+	display: none;
+}
+
+.espetaculo_img img {
+	width: 146px;
+}
+
+table#pedido_resumo tbody td span.valorConveniencia {
+	font: inherit;
+}
+
+div#mapa_de_plateia_geral{
+	float: left;
+	width: 960px;
+	margin: 0 0 20px;
+}
+
+.cL {
+	background-color: #118242;
+}
+
+.c10 {
+	background-color: #4374B9;
+}
+
+.c12 {
+	background-color: #FDD015;
+}
+
+.c14 {
+	background-color: #F6821F;
+}
+
+.c16 {
+	background-color: #B50A37;
+}
+
+.c18 {
+	background-color: #060709;
+}
+
+.minha_conta table.select_endereco tr td.input input[type=radio].radio + label.radio{
+	display: none;
+}
+
+div.mapa_de_plateia {
+	float: none;
+	margin: auto;
+}
+
+body .ui-tooltip__legado {
+	border-width: 0;
+	padding: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+div.tooltip__legado {
+	background: #FFF;
+	margin: auto;
+	font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+div.tooltip__legado img.foto-plateia {
+	margin-bottom: 14px;
+	width: 220px;
+}
+
+div.img_cod_cartao {
+	z-index: 1;
+}
+
+/*div.espetaculo_img {
+	background-image: url(../images/evento/default.jpg);
+}*/
+
+table#servico_por_pedido{
+	width:708px;
+	float:left;
+	border-collapse:collapse;
+}
+
+table#servico_por_pedido tbody tr{
+	border:1px solid #CCC;
+	background:#FAF8F9 url('../images/bg_faixa.jpg') 0 0 repeat-x;
+}
+
+table#servico_por_pedido tbody td{
+	padding:10px 0;
+	font-size:15px;
+	vertical-align:middle;
+	background:#FAF8F9 url('../images/bg_faixa.jpg') 0 0 repeat-x;
+}
+
+#detalhes_pedido div.resumo_espetaculo, #pedido div.resumo_espetaculo {
+	margin-bottom: 50px;
+}
+
+div.container_escolha_ingresso div.ingresso div.descricao p.help {
+	font-size: 17px;
+}
+
+.bilhete_lote_indisponivel {
+	display: none;
+}
+
+div.tooltip__legado div.informacoes {
+	margin-top: 10px;
+}
+
+div.tooltip__legado span {
+	display: inline-block;
+	border-top: 1px solid #B2B2B2;
+	width: 100%;
+	background-color: #A6181B;
+	color: #FFF;
+	font-size: 11px;
+	line-height: 24px;
+}
+
+div.erro_help p.help {
+	float: left;
+	text-align: left;
+}
+
+div.resumo_espetaculo div.resumo p.teatro {
+	min-height: 20px;
+}
+
+div.identificacao a.esqueci_senha {
+	float: right;
+}
+
+.sbOptions .sbDisabled{
+	color:#999;
+	height:20px;
+	line-height:20px;
+	padding:6px 7px;
+        display: block;
+        border-bottom: solid 1px #CCC;
+}
+
+div.container_escolha_ingresso div.locais div.icone.assinaturas, div.container_escolha_ingresso div.ingresso div.icone.assinaturas {
+	background:transparent url('../images/icon_lugar.png') 0 0 no-repeat;
+}
+
+span.pedido_resumo table {
+	width: 708px;
+	float: left;
+	margin: 30px 0 0;
+	border-collapse: collapse;
+}
+
+span.pedido_resumo table tbody tr {
+	border: 1px solid #CCC;
+	background: #FAF8F9 url('../images/bg_faixa.jpg') 0 0 repeat-x;
+}
+
+span.pedido_resumo table tbody td {
+	padding: 10px 0;
+	font-size: 15px;
+	vertical-align: middle;
+	background: #FAF8F9 url('../images/bg_faixa.jpg') 0 0 repeat-x;
+}
+
+input[type="checkbox"]:disabled+label {
+	opacity: .9;
+}
+
+a.botao.voltar.passo0 {
+	background-image: url('../images/bot_voltar0.png');
+}
+
+table#assinaturas {
+	width: 950px;
+	margin-left: 30px;
+}
+
+body.mini #form_cadastro .coluna p.frase,
+body.mini #form_cadastro .input_area.sexo,
+body.mini #form_cadastro .input_area.nascimento,
+body.mini #form_cadastro .input_area.identificacao p.titulo,
+body.mini #form_cadastro .input_area.identificacao #checkbox_estrangeiro,
+body.mini #form_cadastro .input_area.identificacao #checkbox_estrangeiro+label,
+body.mini #form_cadastro .input_area.identificacao #rg,
+body.mini #form_cadastro .input_area.identificacao #rg+div,
+body.mini #form_cadastro .input_area.identificacao br,
+body.mini #form_cadastro .input_area.telefones #ddd_fixo,
+body.mini #form_cadastro .input_area.telefones #fixo,
+body.mini #form_cadastro .input_area.telefones #fixo+div,
+body.mini #form_cadastro .input_area.endereco,
+body.mini #form_cadastro .erro_help{
+	display: none;
+}
+
+body.mini #form_cadastro .input_area.identificacao {
+	margin-top: 0;
+}
+
+body.mini #form_cadastro input[type=checkbox].checkbox + label.checkbox {
+	margin: 0;
+}

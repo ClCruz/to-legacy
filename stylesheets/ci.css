@@ -1,0 +1,1297 @@
+/* Unidades básicas */
+a img { border:none;}
+html {
+	margin:0;
+	padding:0;
+}
+
+body {
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#background_holder {
+	background:#000 url('/images/background.jpg') no-repeat top center;
+	overflow:auto;
+}
+
+#respiro_home {
+	width:990px;
+	margin:0 auto;
+	background:#fff url('/images/background_respiro.jpg') repeat-x;
+	overflow:auto;
+}
+
+#respiro {
+	width:990px;
+	margin:0 auto;
+	background-color:#fff;
+	overflow:auto;
+}
+#content_container {
+	width:940px;
+	margin:0 auto;
+}
+
+#menu_menor {
+	margin:0 0 2px;
+	height:18px;
+	text-align:right;
+	font-size:11px;
+	color:gray;
+	padding:5px 35px 0;
+}
+
+#menu_menor a {
+	text-decoration:none;
+	color:gray;
+}
+
+#menu_menor a:hover {
+	color:#333;
+}
+#menu_principal {
+	height:40px;
+	background-color:gray;
+}
+
+#menu_principal img {
+	float:left;
+	margin:0;
+}
+
+#menu_principal div.btn_menu_principal {
+	background:transparent url('/images/menu_bt_up.jpg') no-repeat center;
+	text-align:center;
+	width:131px;
+	height:14px;
+	float:left;
+	font-size:12px;
+	margin:0;
+	padding:13px 0;
+	color:#991427;
+	cursor:pointer;
+}
+
+#menu_principal div.btn_menu_principal:hover, #menu_principal div.selected {
+	background:transparent url('/images/menu_bt_down.jpg') no-repeat center;
+	color:white;
+}
+
+#crumbs {
+	padding:3px 0 0 0;
+	font-size:11px;
+	color:gray;
+	height:13px;
+}
+
+#crumbs a {
+	color:gray;
+	text-decoration:none;
+	font-size:11px;
+}
+
+#crumbs a.selected {
+	font-weight:bold;
+}
+#home {
+	
+}
+
+#display {
+	height:180px;
+	margin:0;
+}
+
+.imagemVisor {
+	display:none;
+}
+
+#imagemVisor1 {
+	display:block;
+}
+#home #destaques {
+	height:280px;
+	color:white;
+	margin:10px 0 0;
+}
+
+#home #destaques #destaques_titulo {
+	width:100%;
+	overflow:auto;
+}
+#home #destaques #destaques_titulo h1 {
+	font-size:16px;
+	font-weight:normal;
+	width:50%;
+	float:left;
+	margin:17px 0 0 5px;
+}
+#home #destaques #destaques_titulo h2 {
+	float:right;
+	margin:5px 5px 0 0;
+	font-size:12px;
+	font-weight:normal;
+}
+
+.destaque_home {
+	float:left;
+	margin:5px 7px 0 8px;
+}
+
+.destaque_home h3 {
+	color:#991427;
+	font-size:15px;
+	margin:0 0 3px;
+	max-width:220px;
+}
+
+.destaque_home h3:hover {
+	color:#5B1128;
+}
+
+.destaque_home p {
+	font-size:11px;
+	margin:2px 0;	
+}
+
+p.teatro {
+	font-weight:bold;
+	font-size:11px;
+	margin:5px 0 0;
+}
+p.genero {
+	font-style:italic;
+}
+.botao_compre {
+	background:transparent url('/images/compreingressos.png') no-repeat;
+	width:113px;
+	height:15px;
+	cursor:pointer;
+	margin:5px 0;
+}
+
+.botao_compre:hover {
+	background:transparent url('/images/compreingressos_down.png') no-repeat;
+}
+
+
+#home_inferior {
+	width:100%;
+	overflow:hidden;
+	background-color:white;
+	color:#666;
+}
+#home #destaques_left {
+	width:399px;
+	float:left;
+	clear:left;
+}
+
+.destaque_menor {
+	margin:14px 0;
+	color:#666;
+	width:100%;
+	overflow:hidden;
+}
+
+.destaque_menor img {
+	float:left;
+}
+
+.destaque_menor .botao_compre {
+	margin:0 0 2px;
+}
+.destaque_menor .texto {
+	float:left;
+	margin:0 0 0 10px;
+	width:225px;
+}
+
+.destaque_menor h3 {
+	color:#991427;
+	font-size:14px;
+	margin:0 0 6px;
+}
+
+.destaque_menor p {
+	font-size:11px;
+	margin:2px 0;
+}
+
+#espetaculos .destaque_menor {
+	width:49%;
+	float:left;
+	min-height:140px;
+}
+
+#espetaculos .destaque_menor .texto {
+	width:140px;
+}
+
+#home #destaques_right {
+	width:359px;
+	border-right:1px solid gray;
+	border-left:1px solid gray;
+	min-height:600px;
+	float:left;
+}
+
+#home_videos {
+	width:323px;
+	border-bottom:1px solid #999;
+	margin:0 auto;
+	overflow:auto;
+	padding:0 0 10px;
+}
+
+#home_videos h1 {
+	font-size:20px;
+	margin:15px 0 10px;
+}
+
+#home_videos p {
+	font-style:italic;
+	margin:5px 0;
+	font-size:12px;
+}
+#home_videos a {
+	float:right;
+	font-size:12px;
+	font-weight:bold;
+}
+
+#outras_localidades {
+	width:323px;
+	margin:0 auto;
+}
+#outras_localidades h1 {
+	font-size:19px;
+}
+
+#outras_localidades .destaque_menor .texto {
+	width:150px;
+}
+#conteiner_banners {
+	width:180px;
+	float:left;
+	padding-bottom:20px;
+}
+
+.banner {
+	width:160px;
+	margin:20px 20px 0;
+}
+#square_banner {
+	background-color:gray;
+	width:160px;
+	height:160px;
+	margin:20px 20px 0;
+}
+
+#rect_banner {
+	background-color:gray;
+	margin:10px 20px 0;
+	width:160px;
+	height:390px;
+}
+#footer_container {
+	background-color:black;
+	width:100%;
+	background:black url('/images/background_footer.jpg') repeat-x top;
+}
+#footer {
+	width:940px;
+	margin:0 auto;
+	color:white;
+	overflow:auto;
+	height:300px;
+	overflow:hidden;
+}
+
+#footer h1 {
+	margin:10px 0;
+	font-size:20px;
+}
+
+#footer #tag_cloud {
+	text-align:center;
+}
+
+#footer a {
+	color:#666;
+}
+
+#footer a:hover {
+	color:#fff;
+}
+
+#menu_footer {
+	margin:20px 0 10px;
+	text-align:center;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:10px;
+}
+
+#submenu_footer {
+	margin:5px 0 0;
+	font-weight:normal;
+}
+#menu_footer a {
+	color:#fff;
+}
+
+#menu_footer a:hover {
+	color:#666;
+}
+
+#menu_footer p {
+	font-weight:normal;
+	text-transform:none;
+}
+#footer_left {
+	width:399px;
+	float:left;
+}
+
+#footer_right {
+	float:left;
+	border-left:1px solid #fff;
+	padding-left:20px;
+}
+
+#footer .destaque_menor p {
+	color:white;
+}
+
+#footer .destaque_menor .texto {
+	width:150px;
+}
+/* Centro */
+#center {
+	width:100%;
+	overflow:auto;
+}
+
+#espetaculo {
+	width:100%;
+	overflow:auto;
+}
+
+.aba_interna {
+	display:none;
+}
+
+#center_left {
+	width:278px;
+	float:left;
+	color:#616162;
+}
+
+#center_left h1 {
+	margin:5px 0;
+	font-size:18px;
+	color:#616162;
+}
+
+#center_left p{
+	font-size:11px;
+	margin:0 0 2px 0;
+}
+
+#center_left p a { font-weight:bold;}
+
+#center_left p.help_text {
+	font-size:12px;
+	margin:0 25px 0 0;
+	line-height:20px;
+	color:#616162;
+}
+
+.help_text {
+	font-size:12px;
+	margin:0 25px 0 0;
+	line-height:20px;
+	color:#616162;
+}
+#center_right .help_text {
+	font-size:12px;
+	margin:0 25px 0 0;
+	line-height:20px;
+	color:#616162;
+	font-style:italic;
+}
+
+#center_left p.teatro {
+	font-size:14px;
+}
+#center_left p.teatro_info {
+	font-size:11px;
+	margin:0 0 0;	
+}
+
+#center_left p.telefone {
+	font-size:14px;
+	margin:0;
+	font-style:italic;
+}
+
+p.telefone {
+	font-size:14px;
+	margin:0 0 0;
+	font-style:italic;	
+}
+
+p.maps a {
+	font-weight:bold;
+}
+
+#center_left .destaque_home {
+	margin:5px 0 10px;
+}
+#center_right {
+	float:left;
+	padding-left:20px;
+	min-height:600px;
+	border-left:1px solid gray;
+	width:641px;
+	color:#616162;
+}
+
+
+#center_right_border {
+	width:100%;
+	border-bottom:1px solid gray;
+	margin-bottom:20px;
+	min-height:400px;
+}
+
+#center_right_border .mapa_de_plateia {
+	margin-bottom:20px;
+	padding:0;
+	height:auto;
+	background-color:transparent;
+}
+#outros_espetaculos {
+	margin-bottom:30px;
+}
+#outros_espetaculos h1 {
+	font-size:18px;
+	color:#616162;
+	margin:5px 0 10px;	
+}
+
+#sinopse {
+	width:75%;
+	margin:15px 0 0;
+	display:block;
+}
+
+#sinopse p {
+	font-size:12px;
+	line-height:20px;
+}
+
+#ficha_tecnica {
+	width:75%;
+	margin:15px 0 0;
+}
+
+#ficha_tecnica h2 {
+	margin:0;
+	font-size:14px;
+}
+
+#ficha_tecnica p {
+	margin:0 0 11px;
+	font-size:12px;
+	font-style:italic;
+}
+
+#fotos {
+	width:90%;
+	margin:20px 0 0;
+	overflow:auto;
+}
+
+.foto {
+	width:160px;
+	float:left;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+
+.foto p {
+	font-size:12px;
+	font-style:italic;
+	margin:0;
+}
+
+#videos {
+	width:90%;
+	margin:20px 0 0;
+}
+
+.video {
+	width:480px;
+	margin-bottom:20px;
+}
+
+.video p {
+	font-size:12px;
+	font-style:italic;
+	margin:5px 0 0;
+}
+
+#em_cartaz {
+	margin:20px 0 0;
+}
+#em_cartaz h2 {
+	margin:0 0 5px;
+	font-size:14px;
+	color:#616162;
+}
+
+#detalhes_espetaculo {
+	margin-top:10px;
+	margin-left:0px;
+	overflow:auto;
+}
+.icone_espetaculo {
+	background-color:gray;
+	width:23px;
+	height:23px;
+	float:left;
+}
+
+.detalhe_espetaculo {
+	float:left;
+	overflow:auto;
+	width:225px;
+	margin:0 20px 3px 10px;
+}
+
+.detalhe_espetaculo h5 {
+	font-size:10px;
+	margin:0;
+	font-variant:small-caps;
+}
+
+.detalhe_espetaculo p {
+	font-size:11px;
+	font-style:italic;
+	margin:0;
+}
+
+#busca_rapida h4 {
+	font-size:12px;
+	margin:15px 0 5px;
+}
+
+#busca_rapida select {
+	width:80%;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#busca_rapida input.busca_input {
+	background:transparent url('/images/busca_campo.jpg') no-repeat center;
+	width:200px;
+	padding:0 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	height:30px;
+	border:none;
+	font-size:14px;
+}
+
+#busca_rapida input.busca_submit {
+	border:none;
+	vertical-align:middle;
+	float:right;
+	margin-right:57px;
+}
+
+#espetaculos h1 {
+	font-size:20px;
+	margin:10px 0;
+}
+
+#contato h1 {
+	font-size:20px;
+	margin:10px 0 0;
+}
+.pagination {
+	font-weight:bold;
+	margin:40px 0;
+}
+
+#cidades_teatros p {
+	font-size:18px;
+	margin:10px 0;
+}
+
+#cidades_teatros p a {
+	font-weight:normal;
+}
+
+#contato_left {
+	margin:20px 0;
+}
+#contato_left h2 {
+	font-size:12px;
+	margin:0;
+}
+
+#contato_left h3 {
+	font-size:16px;
+	margin:0 0 20px;
+}
+
+#contato_form {
+	border-top:1px solid gray;
+	padding-top:10px;
+}
+#contato_form p {
+	font-size:12px;
+	margin:10px 0 0;
+}
+
+#contato_form input.contato_submit {
+	background:transparent url('/images/bt_calcular_up.jpg') no-repeat center;
+	border:none;
+	width:81px;
+	height:20px;
+	cursor:pointer;
+	margin:10px 0;
+}
+
+#contato_form input.contato_submit:hover {
+	background:transparent url('/images/bt_calcular_down.jpg') no-repeat center;
+}
+
+#cadastro_form {
+	border-top:1px solid gray;
+	padding-top:10px;
+	font-size:12px;
+}
+
+#cadastro_form h2 {
+	font-size:12px;
+	margin:10px 0 0;
+}
+
+#cadastro_form p {
+	margin:10px 0 0;
+}
+
+#cadastro_form input.cadastro_submit {
+	background:transparent url('/images/bt_calcular_up.jpg') no-repeat center;
+	border:none;
+	width:81px;
+	height:20px;
+	cursor:pointer;
+	margin:10px 0;
+}
+
+#cadastro_form input.cadastro_submit:hover {
+	background:transparent url('/images/bt_calcular_down.jpg') no-repeat center;
+}
+
+#servicos_left {
+	margin:20px 0;
+}
+
+#servicos_left h2 {
+	margin:10px 0 0;
+	font-size:18px;
+	font-weight:normal;
+}
+
+#servicos_left p.help_text {
+	margin:0;
+}
+
+#servicos {
+	border-top:1px solid gray;
+	padding-top:10px;
+	width:75%;
+	line-height:18px;
+}
+#servicos p {
+	font-size:12px;
+	margin:5px 0 15px;
+}
+
+#iframe_ticket_net {
+	margin:20px 0 0;
+}
+
+#iframe_ticket_net h2 {
+	margin:0 0 19px 2px;
+	font-size:14px;
+	color:#616162;
+}
+
+#iframe_ticket_net .apresentacao_ticket {
+	font-size:12px;
+	color:#991427;
+	font-weight:bold;
+	margin-left:2px;
+	margin-bottom:10px;
+}
+
+#iframe_ticket_net .apresentacao_ticket td {
+	padding:2px 2px;
+}
+#ticket_net_container {
+	margin:5px 0 0;
+}
+
+#ticket_net_container h2 {
+	margin:0 0 5px 2px;
+	font-size:14px;
+	color:#616162;
+}
+
+#ticket_net_container .apresentacao_ticket {
+	font-size:12px;
+	color:#991427;
+	font-weight:bold;
+	margin-left:2px;
+	margin-bottom:10px;
+}
+
+.uppercase {
+	text-transform:uppercase;
+}
+
+.err_msg {
+	font-size:11px;
+	color:#991427;
+	margin:0 0 8px;
+	font-style:normal;
+	font-weight:normal;
+}
+
+a.link_atento {
+	color:#991427;
+	text-decoration:none;
+	font-size:12px;
+}
+
+.noborder {
+	border:none;
+}
+
+#servicos.noborder {
+	border:none;
+}
+/*** Telas TICKET NET ****/
+a img { border: none;}
+#ticket_net {
+	width:640px;
+	overflow:auto;
+	float:left;
+	border-left:2px solid #ccc;
+	min-height:500px;
+	padding:0 0 20px 20px;
+}
+
+#passos {
+	margin:0;
+	padding:0 0 11px;
+	border-bottom:2px solid #ddd;
+	font-size:12px;
+	text-align:center;
+	font-weight:bold;
+	color:gray;
+}
+
+#passos ul {
+	list-style-type:none;
+	margin:0;padding:0;
+}
+
+#passos li {
+	display:inline;
+	margin:0 13px 0;
+}
+
+#passos li.passo_ativo {
+	color:#000000;
+        background: yellow;
+        border: 3px solid;
+        border-color: yellow;
+}
+
+#passos li.passo_ativo .numero {
+	font-size:16px;
+        color: #000000;
+}
+
+.titulo {
+	color:#616162;
+	margin:12px 0 0 1px;
+	padding-bottom:10px;
+}
+.with_border_top {
+	border-top:2px solid #ddd;
+	padding-top:10px;
+}
+.with_border_bottom {
+	border-bottom:2px solid #ddd;
+	padding-bottom:10px;
+}
+.titulo h1 {
+	font-size:18px;
+	font-weight:normal;
+	margin:3px 0 0;
+}
+
+.titulo h3 {
+	margin:0 0 10px;
+}
+.titulo p {
+	font-size:12px;
+	margin:0;
+}
+
+.mapa_de_plateia {
+	height:512px;
+	background-color:#991427;
+	padding:5px;
+	margin:10px 0 0;
+	display:block;
+}
+
+#footer_ticket {
+	margin:0;
+	border-top:2px solid #ddd;
+	float:left;
+	width:100%;
+}
+
+#footer_ticket p {
+	margin:0;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 0;
+}
+
+.botoes_ticket {
+	min-width:140px;
+	height:19px;
+	padding:4px 0;
+	color:white;
+	font-weight:bold;
+	background-color:#991427;
+	text-align:center;
+	margin:0;
+	font-size:17px;
+}
+
+#botao_avancar { float:right; }
+#botao_voltar { float:left; }
+
+
+.resumo_pedido {
+	border-bottom:2px solid #ddd;
+	padding:10px 0 20px;
+	overflow:auto;
+}
+
+.resumo_pedido th {
+	font-size:12px;
+	text-align:left;
+	color:#616162;
+}
+
+.resumo_pedido td {
+	font-size:12px;
+	font-style:italic;
+	padding:4px 0;
+	color:#616262;
+}
+
+.resumo_pedido td .assento {
+	font-size:20px;
+	font-weight:bold;
+	color:#616162;
+}
+
+.resumo_pedido .remover {
+	text-align:center;
+}
+select {
+	border:1px solid #ddd;
+	font-size:12px;
+	font-style:italic;
+	font-family:Arial, Helvetica, sans-serif;
+	color:gray;
+}
+
+input {
+	border:1px solid #ddd;
+	font-size:12px;
+	font-style:italic;
+	font-family:Arial, Helvetica, sans-serif;
+	color:gray;
+}
+
+#forma_entrega {
+	overflow:auto;	
+}
+
+#forma_entrega_left {
+	float:left;
+}
+
+#forma_entrega_right {
+	float:right;
+	margin-right:155px;
+}
+
+#forma_entrega h2 {
+	font-size:12px;
+	margin:5px 0;
+	color:#616162;
+}
+#forma_entrega_totais {
+	float:right;
+	clear:right;
+	margin:20px 0 10px;
+	width:100%;
+}
+
+#forma_entrega_totais table {
+	float:right;
+}
+
+#forma_entrega_totais th {
+	font-size:12px;
+	text-align:right;
+	color:#616162;
+}
+
+#forma_entrega_totais td {
+	font-size:16px;
+	color:#A8A8A8;
+	text-align:right;
+	width:125px;
+	font-style:italic;
+	font-weight:bold;
+}
+
+#forma_entrega_totais td.valor_total {
+	color:#94B236;
+}
+
+#identificacao {
+	padding:10px 0;
+	overflow:auto;
+}
+
+#identificacao h1 {
+	font-size:20px;
+	margin:0;
+	color:#616162;
+}
+#identificacao p.help_text {
+	font-size:12px;
+	font-style:italic;
+	margin:2px 0 10px;
+	color:#616162;
+}
+
+#identificacao p.help_text2 {
+	font-size:6px;
+	font-style:italic;
+	margin:2px 0 10px;
+	color:#616162;
+}
+
+#identificacao h2 {
+	font-size:12px;
+	margin:5px 0 0;
+	color:#616162;
+}
+
+.icone_id {
+	float:left;
+	background-color:gray;
+	margin:5px 7px 5px;
+}
+
+#id_left {
+	float:left;
+	width:240px;
+}
+
+#id_left p.aviso {
+	font-size:13px;
+	color:#666;
+}
+
+#id_right_cadastro {
+	width:210px;
+	float:left;
+	margin-left:10%;
+}
+
+#id_right {
+	width:240px;
+	float:left;
+}
+
+#identificacao .botoes_ticket {
+	margin:5px 0;
+	width:140px;
+}
+
+#cadastreme { float: right;}
+
+a { color:#991427; text-decoration:none;}
+
+a:hover {
+	color:#5B1128;
+}
+
+#dados_entrega {
+	overflow:auto;
+	padding-bottom:10px;
+}
+#dados_entrega h1 {
+	font-size:20px;
+	margin:10px 0 0;
+	color:#616162;
+}
+
+#dados_entrega p {
+	font-size:12px;
+	font-style:italic;
+	margin:4px 0 0;
+	color:#616262;
+	line-height:12px;
+}
+
+#identificacao a {
+	font-size:12px;
+}
+.entrega { 
+	float: left;
+	margin:20px 10px 5px;
+	width:250px;
+}
+
+.entrega .endereco_radio {
+	float:left;
+	width:32px;
+}
+
+.entrega .endereco_entrega {
+	float:left;
+}
+
+#dados_entrega h2 {
+	font-size:13px;
+	margin:0;
+	color:#616262;
+	font-style:italic;
+	font-weight:bold;
+}
+#dados_entrega a { font-size: 12px; width:100%; float:left;}
+
+#botao_pagamento { float:right; width: 177px;}
+#botao_confirmar { float:right; width: 150px;}
+
+#forma_pagamento {
+	padding:10px 0 20px;
+}
+
+#credit_cards {
+	width:100%;
+	margin:20px 0;
+	overflow:auto;
+}
+.credit_card {
+	margin:0 10px;
+}
+.credit_card input {
+	float:left;
+}
+.cc_logo {
+	width:40px;
+	height:20px;
+	background-color:gray;
+	float:left;
+	margin:0 20px 0 10px;
+}
+
+#cc_form h2 {
+	font-size:12px;
+	margin:5px 0 0;
+	color:#616262;
+}
+
+.botoes_ticket:hover {
+	background-color:black;
+	color:#991427;
+}
+
+.calcular_btn {
+	background:transparent url('/images/bt_calcular_up.jpg') no-repeat center;
+	width:81px;
+	float:right;
+	text-align:center;
+	font-size:10px;
+	color:#666;
+	padding:2px;
+	cursor:pointer;
+}
+
+.calcular_btn:hover {
+	background:transparent url('/images/bt_calcular_down.jpg') no-repeat center;
+}
+#forma_entrega_right .calcular_btn {
+	margin:3px 20px 3px;
+	
+}
+
+#abas_minha_conta {
+	width:100%;
+	overflow:auto;
+}
+
+.aba_minha_conta {
+	background:transparent url('/images/submenu_bt_up.jpg') no-repeat center;
+	width:121px;
+	float:left;
+	color:#666;
+	text-transform:uppercase;
+	font-size:10px;
+	text-align:center;
+	padding:7px 0 8px;
+	cursor:pointer;
+}
+
+.aba_down, .aba_minha_conta:hover {
+	background:transparent url('/images/submenu_bt_down.jpg') no-repeat center;
+	color:white;
+}
+
+#pedidos {
+	margin:20px 0 0;
+}
+
+#pedidos table th {
+	font-size:12px;
+	text-align:left;
+	min-width:47px;
+	padding:0 34px 10px 0;
+	color:#616162;
+}
+
+#pedidos table td {
+	font-size:12px;
+	font-weight:normal;
+	padding:5px 0;
+	color:#616162;
+}
+
+.italico {
+	font-style:italic;
+}
+
+#suporte_script_div {
+	margin:20px 0;
+}
+
+/******** addthis **************/
+.addthis_toolbox {
+	margin:15px 0 5px;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.add_this_compartilhe {
+	float:left;
+}
+/*** RAILS ERRORS **/
+#errorExplanation {
+	color:red;
+}
+
+.fieldWithErrors {
+	color:red;
+	display:inline;
+}
+
+.fieldWithErrors input {
+	border-color:red;
+}
+
+.fieldWithErrors textarea {
+	border-color:red;
+}
+
+/** ADMIN-ONLY ***/
+
+#admin_right {
+	float:left;
+	padding-left:20px;
+	min-height:600px;
+	border-left:1px solid gray;
+	width:641px;
+	color:#616162;
+	padding-bottom:20px;
+}
+
+#admin_menu {
+	font-size:12px;
+	text-align:center;
+}
+#admin_menu ul {
+	list-style-type:none;
+	padding:5px 0;
+	margin:0;
+}
+
+#admin_menu li {
+	margin:10px 8px;
+	display:inline;
+}
+
+#ocorrencias {
+  font-size:12px;
+  color:#616162;
+  line-height:20px;
+  text-align:left;
+}
+
+#ocorrencia_form {
+  font-size:16px;
+  color:#616162;
+  text-align:left;
+}
+
+#new_atendente {
+  font-size:16px;
+  color:#616162;
+  text-align:left;
+}
+
+.edit_atendente {
+  font-size:16px;
+  color:#616162;
+  text-align:left;
+}
+
+#ocorrencias table {
+  width:95%;
+  margin:30px auto;
+}
+
+.ocorrencia_solicitacao {
+  display:none;
+}

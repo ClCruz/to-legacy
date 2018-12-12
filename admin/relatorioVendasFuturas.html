@@ -1,0 +1,68 @@
+<script src="../javascripts/fnRelVendasFuturas.js" type="text/javascript"></script>
+<style type="text/css">
+  .coluna-header{width: 80px;}  
+  .tb-form{margin-left: 40px;}
+  form select{min-width: 200px;}
+</style>
+<h2>Relatório de Vendas Futuras</h2>
+<form action="javascript:validar();" name="fPeca" id="fPeca" method="post">
+  <table cellpadding='0' class="tb-form" border='0' width='609' cellspacing='0'>
+    <tr>
+      <td class="coluna-header"><strong>Local:</strong></td>
+      <td>
+        <select name="cboTeatro" onChange="
+          ExibePeca(this.value, 'Peca', 'SP_PEC_CON009;5');PreencheDescricao()"
+                class="inputStyle" id="cboTeatro">
+          <option value="-1">Selecione o Local...</option>
+          <!-- BEGIN BLOCK_LOCAL -->
+          <option value="{idLocal}">{dsLocal}</option>
+          <!-- END BLOCK_LOCAL -->
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="coluna-header"><strong>Evento:</strong></td>
+      <td>
+        <div name="divPeca" Id="divPeca">
+          <select id="cboPeca" name="cboPeca" onchange="getSetor();">
+            <option value="">Selecione o Evento...</option>
+          </select>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="coluna-header"><strong>Setor:</strong></td>
+    <td>
+      <div name="divSala">
+        <select id="cboSala" name="cboSala" onchange="getPeriodo();">
+          <option value="">Selecione o Setor...</option>
+        </select>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="coluna-header"><strong>Data Inicial:</strong></td>
+    <td>
+      <div id="DataIni">
+        <input type="text" maxlength="10" size="15" class="datePicker" name="txtData1" readonly />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="coluna-header"><strong>Data Final:</strong></td>
+    <td>
+      <div id="DataFim">
+        <input type="text" maxlength="10" size="15" class="datePicker" name="txtData2" readonly />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <br />
+      <button type="submit" class="button" style="width:100">Visualizar</button>&nbsp;
+      <button class="button" onClick="limpar()">Limpar Campos</button>&nbsp;
+    </td>
+  </tr>
+</table>
+</form>
+<br/>

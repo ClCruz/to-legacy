@@ -1,0 +1,536 @@
+#sisbin div.cont_sistema div.descricao div.select{
+	float:right;
+	overflow:hidden;
+	margin:0 0 10px;
+}
+
+#sisbin div.cont_sistema div.descricao div.select div.left{
+	float:left;
+	width:15px;
+	height:31px;
+	overflow:hidden;
+	background:url('../images/itau/inputbig_left.png') left top no-repeat transparent;
+}
+
+#sisbin div.cont_sistema div.descricao div.select select{
+	float:left;
+	width:620px;
+	height:31px;
+	border:1px #939598 solid;
+	border-left-color:#E7E7E8;
+	line-height:25px;
+	outline:none;
+	background:#E7E7E8;
+	float:left;
+	color:#666;
+	padding:3px;
+	font-size:16px;
+}
+
+
+
+
+
+
+#sisbin {
+	color:#999;
+	font-size:12px;
+	font-family:Arial,Helvetica,sans-serif;
+	width:800px;
+	margin:0 auto;
+}
+
+#sisbin body, #sisbin div, #sisbin p, #sisbin h1, #sisbin h2, #sisbin h3, #sisbin h4, #sisbin h5, #sisbin h6, #sisbin a, #sisbin span, #sisbin input, #sisbin textarea, #sisbin form, #sisbin ul, #sisbin li, #sisbin img, #sisbin fieldset, #sisbin legend {margin:0;padding:0;}
+
+#sisbin a:link{text-decoration:none;}
+#sisbin a:hover{text-decoration:none;}
+#sisbin a:active{text-decoration:none;}
+#sisbin a:visited{text-decoration:none;}
+#sisbin a:visited:hover{text-decoration:none;}
+#sisbin a img{border:0;}
+
+#sisbin div.cabecalho{
+	width:786px;
+	overflow:hidden;
+	padding:0 0px 0 14px;
+}
+
+#sisbin div.usuario{
+	float:left;
+	max-width:500px;
+	overflow:hidden;
+	margin:48px 0 0;
+	line-height:12px;
+}
+
+#sisbin div.logo{
+	float:right;
+	width:200px;
+	overflow:hidden;
+}
+
+#sisbin div.bar_top{
+	width:100%;
+	height:52px;
+	background:#F57F21 url('../images/itau/bg_top.jpg') left top no-repeat;
+	color:#FFF;
+	text-align:center;
+	font-weight:bold;
+	font-size:16px;
+	padding:18px 0 0;
+	line-height:16px;
+}
+
+#sisbin div.bar_top div.sair{
+	margin:-16px 20px 0 750px;
+	position:absolute;
+}
+
+#sisbin div.bar_top div.sair a{
+	color:#FFF;
+	font-size:14px;
+	text-decoration:underline;
+}
+
+#sisbin div.bar_bottom{
+	width:100%;
+	height:20px;
+	background:#F57F21 url('../images/itau/bg_bottom.jpg') left top no-repeat;
+}
+
+#sisbin div.container{
+	width:770;
+	padding:10px;
+	border-left:5px solid #F57F21;
+	border-right:5px solid #F57F21;
+}
+
+/* CONTAINER INPUT */
+#sisbin div.cont_login div.login div.cont_input_login div.cont_input div.contorno_left, #sisbin div.cont_sistema div.top div.descricao div.cont_input div.contorno_left, #sisbin div.cont_sistema div.right div.resumo div.cont_input div.contorno_left{
+	width:15px;
+	height:31px;
+	background:url('../images/itau/inputbig_left.png') left top no-repeat transparent;
+	float:left;
+}
+
+#sisbin div.cont_login div.login div.cont_input_login div.cont_input input, #sisbin div.cont_sistema div.top div.descricao div.cont_input input, #sisbin div.cont_sistema div.right div.resumo div.cont_input input{
+	width:200px;
+	height:19px;
+	border:1px #939598 solid;
+	border-left:0;
+	border-right:0;
+	background:#E7E7E8;
+	float:left;
+	color:#666;
+	font-size:16px;
+	font-weight:bold;
+	padding:5px 0;
+	outline:none;
+}
+
+#sisbin div.cont_login div.login div.cont_input_login div.cont_input div.contorno_right, #sisbin div.cont_sistema div.top div.descricao div.cont_input div.contorno_right, #sisbin div.cont_sistema div.right div.resumo div.cont_input div.contorno_right{
+	width:15px;
+	height:31px;
+	background:url('../images/itau/inputbig_right.png') left top no-repeat transparent;
+	float:left;
+}
+
+
+
+/*
+ * LOGIN
+ */
+#sisbin div.cont_login{
+	margin:20px 80px 50px; 
+}
+
+#sisbin div.cont_login h1{
+	font-size:16px;
+	font-weight:normal;
+	margin:0 0 70px;
+}
+
+#sisbin div.cont_login div.login{
+	width:100%;
+	float:left;
+	margin:0 0 100px;
+}
+
+#sisbin div.cont_login div.login div p{
+	color:#F57F21;
+	font-size:16px;
+	text-transform:uppercase;
+	font-weight:bold;
+	line-height:17px;
+	margin:0 0 6px 6px;
+}
+
+#sisbin div.cont_login div.login div.cont_input_login{
+	float:left;
+	margin:0 10px 0 0;
+}
+
+#sisbin div.cont_login div.login div.cont_input_submit{
+	float:left;
+	margin:23px 0 0;
+}
+
+#sisbin div.cont_login div.login div.cont_input_submit input{
+	width:105px;
+	height:35px;
+	border:0;
+	background:url('../images/itau/bt_entrar.png') left top no-repeat transparent;
+	cursor:pointer;
+	outline:none;
+}
+
+#sisbin div.cont_login div.login div.cont_input_submit input:hover{
+	background-position:left bottom;
+}
+
+
+
+/*
+ * SISTEMA
+ */
+#sisbin div.cont_sistema{
+	margin:-20px 0 -25px;
+	overflow:hidden;
+}
+
+#sisbin div.cont_sistema h1{
+	float:left;
+	font-size:16px;
+	line-height:16px;
+	font-weight:bold;
+	color:#F57F21;
+	margin:0 0 6px;
+}
+
+
+/* TOP */
+#sisbin div.cont_sistema div.top{
+	float:left;
+	width:100%;
+	margin:0 0 10px;
+}
+
+
+#sisbin div.cont_sistema div.top div.descricao{
+	float:left;
+	width:100%;
+	margin:0 0 4px;
+}
+
+#sisbin div.cont_sistema div.top div.descricao p{
+	float:left;
+	font-size:16px;
+	line-height:16px;
+	margin:8px 0 0;
+	max-width:120px;
+	overflow:hidden;
+}
+
+#sisbin div.cont_sistema div.top div.descricao div.cont_input{
+	float:right;
+}
+
+#sisbin div.cont_sistema div.top div.descricao div.cont_input input{
+	width:620px;
+	outline:none;
+}
+
+/* LEFT */
+#sisbin div.cont_sistema div.left{
+	float:left;
+	width:500px;
+}
+
+#sisbin div.cont_sistema div.left div.ing_qtd{
+	float:left;
+	width:100%;
+	overflow:hidden;
+	margin:0 0 50px;
+}
+
+#sisbin div.cont_sistema div.left table.ing_qtd{
+	width:100%;
+	border:0;
+	border-collapse:collapse;
+	color:#666;
+}
+
+#sisbin div.cont_sistema div.left table.ing_qtd th{
+	font-weight:bold;
+	color:#666;
+	text-align:left;
+	background:#DCDDDF;
+	padding:4px 10px;
+}
+
+#sisbin div.cont_sistema div.left table.ing_qtd tr.e{
+	background-color:#E6E7E9;
+}
+
+#sisbin div.cont_sistema div.left table.ing_qtd tr.c{
+	background-color:#F2F3F4;
+}
+
+#sisbin div.cont_sistema div.left table.ing_qtd tr td{
+	padding:4px 10px;
+	text-transform:uppercase;
+}
+
+#sisbin div.cont_sistema div.left table.ing_qtd tr td.c input{
+	width:100%;
+	text-align:center;
+	outline:none;
+}
+
+#sisbin div.cont_sistema div.left table.ing_qtd tr td.r{
+	text-align:right;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli, #sisbin div.cont_sistema div.left div.dados_cli div.linha{
+	float:left;
+	width:100%;
+	overflow:hidden;
+	margin:0 0 10px;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.linha.nomargin{
+	margin:0;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.campo{
+	float:left;
+	margin:0 10px 0 0;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.campo.nomargin{
+	float:left;
+	margin:0;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.campo p{
+	line-height:12px;
+	margin:0 0 2px 8px;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.campo div.cont_input div.contorno_left{
+	width:15px;
+	height:21px;
+	background:url('../images/itau/inputsmallwhite_left.png') left top no-repeat transparent;
+	float:left;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.campo div.cont_input input{
+	height:19px;
+	border:1px #939598 solid;
+	border-left:0;
+	border-right:0;
+	background:#E7E7E8;
+	float:left;
+	color:#666;
+	outline:none;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.campo div.cont_input div.contorno_right{
+	width:15px;
+	height:21px;
+	background:url('../images/itau/inputsmallwhite_right.png') left top no-repeat transparent;
+	float:left;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.campo div.cont_input.dark div.contorno_left{
+	background:url('../images/itau/inputsmalldark_left.png') left top no-repeat transparent;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.campo div.cont_input.dark input{
+	background:#D1D2D4;
+	color:#666;
+	outline:none;
+}
+
+#sisbin div.cont_sistema div.left div.dados_cli div.campo div.cont_input.dark div.contorno_right{
+	background:url('../images/itau/inputsmalldark_right.png') left top no-repeat transparent;
+}
+
+
+
+/* RIGHT */
+#sisbin div.cont_sistema div.right{
+	float:right;
+	width:240px;
+}
+
+#sisbin div.cont_sistema div.right div.select{
+	float:left;
+	width:100%;
+	overflow:hidden;
+	margin:0 0 10px;
+}
+
+#sisbin div.cont_sistema div.right div.select div.left{
+	float:left;
+	width:15px;
+	height:31px;
+	overflow:hidden;
+	background:url('../images/itau/inputbig_left.png') left top no-repeat transparent;
+}
+
+#sisbin div.cont_sistema div.right div.select select{
+	float:left;
+	width:225px;
+	height:31px;
+	border:1px #939598 solid;
+	border-left-color:#E7E7E8;
+	line-height:25px;
+	outline:none;
+	background:#E7E7E8;
+	float:left;
+	color:#666;
+	padding:3px;
+	font-size:16px;
+}
+
+#sisbin div.cont_sistema div.right div.resumo{
+	float:left;
+	width:220px;
+	height:170px;
+	overflow:hidden;
+	background:url('../images/itau/box_orange.png') left top no-repeat transparent;
+	padding:10px;
+	margin:0 0 10px;
+}
+
+#sisbin div.cont_sistema div.right div.resumo h2{
+	color:#fff;
+	margin:0 10px 10px 0;
+	float:right;
+}
+
+#sisbin div.cont_sistema div.right div.resumo p{
+	color:#FFF;
+	float:right;
+	margin:0 10px 0;
+	clear:both;
+}
+
+#sisbin div.cont_sistema div.right div.resumo p.descricao{
+	font-size:12px;
+}
+
+#sisbin div.cont_sistema div.right div.resumo p.valor{
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:8px;
+}
+
+#sisbin div.cont_sistema div.right div.resumo div.cont_input{
+	float:right;
+	margin-bottom:8px;
+}
+
+#sisbin div.cont_sistema div.right div.resumo div.cont_input input{
+	color:#666;
+	text-align:right;
+	font-size:20px;
+	font-weight:normal;
+	outline:none;
+}
+
+#sisbin div.cont_sistema div.right div.container{
+	float:right;
+	overflow:hidden;
+	border:0;
+	padding:0;
+	margin:0;
+	width:240px;
+}
+
+#sisbin div.cont_sistema div.right div.container a {
+	float:right;
+	overflow:hidden;
+}
+
+#sisbin div.cont_sistema div.right div.bt, #sisbin div.cont_sistema div.right input.bt{
+	width:120px;
+	height:25px;
+	float:right;
+	margin:0 0 4px;
+	cursor:pointer;
+	text-indent:-20000px;
+	outline:none;
+}
+
+#sisbin div.cont_sistema div.right div.bt.confirmar{
+	width:160px;
+	height:35px;
+	float:right;
+	background:url('../images/itau/bt_confirmar.png') left top no-repeat transparent;
+}
+
+#sisbin div.cont_sistema div.right div.bt.confirmar:hover{
+	background-position:left bottom;
+}
+
+#sisbin div.cont_sistema div.right div.bt.estornar{
+	background:url('../images/itau/bt_estornar.png') left top no-repeat transparent;
+}
+
+#sisbin div.cont_sistema div.right div.bt.estornar:hover{
+	background-position:left bottom;
+}
+
+#sisbin div.cont_sistema div.right div.bt.reimprimir{
+	background:url('../images/itau/bt_reimprimir.png') left top no-repeat transparent;
+}
+
+#sisbin div.cont_sistema div.right div.bt.reimprimir:hover{
+	background-position:left bottom;
+}
+
+#sisbin div.cont_sistema div.right div.bt.reservar{
+	background:url('../images/itau/bt_reservar.png') left top no-repeat transparent;
+}
+
+#sisbin div.cont_sistema div.right div.bt.reservar:hover{
+	background-position:left bottom;
+}
+
+#sisbin div.cont_sistema div.right div.bt.reservas{
+	background:url('../images/itau/bt_reservas.png') left top no-repeat transparent;
+}
+
+#sisbin div.cont_sistema div.right div.bt.reservas:hover{
+	background-position:left bottom;
+}
+
+#sisbin div.cont_sistema div.right div.bt.confirmar.disable{
+	width:160px;
+	height:35px;
+	float:right;
+	background:url('../images/itau/bt_confirmar_di.png') left top no-repeat transparent;
+	cursor:default;
+}
+
+#sisbin div.cont_sistema div.right div.bt.estornar.disable{
+	background:url('../images/itau/bt_estornar_di.png') left top no-repeat transparent;
+	cursor:default;
+}
+
+#sisbin div.cont_sistema div.right div.bt.reimprimir.disable{
+	background:url('../images/itau/bt_reimprimir_di.png') left top no-repeat transparent;
+	cursor:default;
+}
+
+#sisbin div.cont_sistema div.right div.bt.reservar.disable{
+	background:url('../images/itau/bt_reservar_di.png') left top no-repeat transparent;
+	cursor:default;
+}
+
+#sisbin div.cont_sistema div.right div.bt.reservas.disable{
+	background:url('../images/itau/bt_reservas_di.png') left top no-repeat transparent;
+	cursor:default;
+}

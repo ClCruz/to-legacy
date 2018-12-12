@@ -1,0 +1,8 @@
+body {margin:0px 0px 0px 0px;}
+@media print {
+  body {margin: 0px 0px 0px 0px;}
+  .boxmenu {display: none;}
+}
+@media screen {
+  .top {border-left-width: 0em;}
+}

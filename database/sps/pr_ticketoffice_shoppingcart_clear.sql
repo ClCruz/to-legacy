@@ -1,0 +1,5 @@
+CREATE PROCEDURE dbo.pr_ticketoffice_shoppingcart_clear (@id_ticketoffice_user UNIQUEIDENTIFIER)
+
+AS
+
+DELETE FROM dbo.ticketoffice_shoppingcart WHERE id_ticketoffice_user=@id_ticketoffice_user

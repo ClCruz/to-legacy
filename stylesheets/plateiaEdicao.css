@@ -1,0 +1,102 @@
+.mapa_de_plateia {
+	width:630px;
+	height:500px;
+	border:5px solid #006;
+	margin-left:50px;
+	display:inline-block;
+	background-color:white;
+}
+
+	.mapa_de_plateia img {
+	}
+
+.mapa_de_plateia.edicao .ui-selecting {
+  border:2px solid #FF0;
+  margin: -2px;
+}
+
+.mapa_de_plateia.edicao .ui-selected {
+  border: 2px solid #F00;
+  margin: -2px;
+}
+
+#containerDados {
+	margin:0 10px 0 0;
+	display:inline-block;
+	vertical-align:top;
+}
+
+	#containerDados h2 {
+		border:none;
+		font-size:16px;
+	}
+	
+	#containerDados table {
+		width:100%;
+		margin-left:10px;
+	}
+	
+	#containerDados hr {
+		margin:25px 0 25px 0;
+	}
+	
+	.ui-selectable-helper { position: absolute; z-index: 999; border:1px dotted black; }
+	
+	#wrapped {
+		border:2px ;
+	}
+
+form#dados table {
+	margin-bottom: 30px;
+	width: 300px;
+}
+
+form#dados #lista_fotos {
+	border: 2px solid #808080;
+	min-height: 80px;
+	max-height: 200px;
+}
+
+#areaUploadFotos {
+	display: none;
+}
+
+#lista_fotos {
+	padding: 0 10px 10px 0;
+	overflow: scroll;
+}
+
+#lista_fotos *:hover {
+	outline: 2px solid #000;
+	cursor: pointer;
+}
+
+#lista_fotos img,
+#dialog-confirm img {
+	min-width: 80px;
+	max-width: 100px;
+	margin: 10px 0 0 10px;
+}
+
+#lista_fotos span.reset,
+#dialog-confirm span.reset {
+	width: 80px;
+	height: 40px;
+	margin: 10px 0 0 10px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	padding-top: 15px;
+	border: 3px solid #808080;
+}
+
+#dialog-confirm span {
+	float: left;
+	display: inline-block;
+}
+
+#dialog-confirm .text {
+	width: 50%;
+	height: 100%;
+	padding: 10px;
+}

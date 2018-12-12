@@ -1,0 +1,970 @@
+TRACE - cadastro.php... 
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi São Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi São Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi São Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi SÃ£o Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi SÃ£o Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi SÃ£o Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi SÃ£o Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi SÃ£o Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro São
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi SÃ£o Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro São
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi SÃ£o Teste
+TRACE - nome... Bruno Luigi S?o Teste
+TRACE - cadastro.php... 
+TRACE - post... Array
+(
+    [nome] => Bruno Luigi São Teste
+    [sobrenome] => Coccaro São
+    [sexo] => M
+    [nascimento_dia] => 20
+    [nascimento_mes] => 11
+    [nascimento_ano] => 1982
+    [tipo_documento] => 
+    [rg] => 35267349   
+    [cpf] => 30918711851
+    [ddd_fixo] => 13
+    [fixo] => 996736933
+    [ddd_celular] => 
+    [celular] => 
+    [cep] => 11070061
+    [estado] => 26
+    [cidade] => S?o Paulo
+    [bairro] => Marap?
+    [endereco] => Avenida Doutor Moura Ribeiro
+    [numero_endereco] => 125
+    [complemento] => 48b
+    [ddd1] => 13
+    [telefone] => 996736933
+    [ddd2] => 
+    [extra_info] => N
+    [extra_sms] => N
+    [concordo] => N
+)
+
+TRACE - nome... Bruno Luigi SÃ£o Teste
+TRACE - nome... Bruno Luigi S?o Teste
+TRACE - Entrando na tela loginOperador... 
+TRACE - Entrando na tela loginOperador... 
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Erro no pagarme... PagarMe_Exception Object
+(
+    [url:protected] => 
+    [method:protected] => 
+    [return_code:protected] => 
+    [parameter_name:protected] => 
+    [type:protected] => 
+    [errors:protected] => 
+    [message:protected] => Recebedor nÃ£o encontrado
+Recebedor nÃ£o encontrado
+
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => /var/www/html/settings/pagarme/lib/Pagarme/Model.php
+    [line:protected] => 24
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/CardHashCommon.php
+                    [line] => 32
+                    [function] => create
+                    [class] => PagarMe_Model
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/TransactionCommon.php
+                    [line] => 37
+                    [function] => create
+                    [class] => PagarMe_CardHashCommon
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/Transaction.php
+                    [line] => 7
+                    [function] => create
+                    [class] => PagarMe_TransactionCommon
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme_functions.php
+                    [line] => 146
+                    [function] => charge
+                    [class] => PagarMe_Transaction
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => /var/www/html/comprar/processarDadosCompra.php
+                    [line] => 706
+                    [function] => pagarPedidoPagarme
+                    [args] => Array
+                        (
+                            [0] => 1085122
+                            [1] => Array
+                                (
+                                    [paypal_data] => 
+                                    [paypal_payment] => 
+                                    [usuario_pdv] => 0
+                                    [codCartao] => 911
+                                    [nomeCartao] => 
+                                    [parcelas] => 1
+                                    [numCartao] => 
+                                    [codSeguranca] => 
+                                    [validadeMes] => 
+                                    [validadeAno] => 
+                                    [nomePresente] => 
+                                    [emailPresente] => 
+                                    [g-recaptcha-response] => 
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [file] => /var/www/html/comprar/formCartao.php
+                    [line] => 15
+                    [args] => Array
+                        (
+                            [0] => /var/www/html/comprar/processarDadosCompra.php
+                        )
+
+                    [function] => require
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Call configureSplit to pagarme isTest? 1
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.

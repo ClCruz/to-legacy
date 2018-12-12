@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">    
+  <head>
+    <title>Relatório Vendas Futuras</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/relVendasFuturas.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/estilos_ra.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/padraoRelat.CSS" />
+  </head>
+  <body>    
+    <!-- TABLE CABEÇALHO -->
+    <table width=650 class="tabela" border="0">
+      <tr>
+        <td colspan="1" rowspan="2"><img alt="Compreingressos" align="left" border="0" src="../images/logo.jpg" /></td>
+        <td colspan="1" height="15"></td>
+      </tr>
+      <tr>
+        <td class="tabela" align="center" bgcolor="LightGrey"><b><font size=2 face="tahoma,verdana,arial">Relatório Vendas Futuras</font><br/>Contabilização dos Ingressos</b></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <table class="tabela" width="648">
+            <tr>
+              <td align="right" width="70"><font size=1 face="tahoma,verdana,arial"><b>Evento:</b></font></td>
+              <td align="left" width="370">{evento}</td>
+              <td align="right" width="120"><font size=1 face="tahoma,verdana,arial"><b>Borderô nº</b></font></td>
+              <td align="left" width="220">{numBordero}</td>
+            </tr>
+            <tr>
+              <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Responsável:</b></font></td>
+              <td align="left">{responsavel}</td>
+              <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Apresentação nº</b></font></td>
+              <td align="left">{numBordero}</td>
+            </tr>
+            <tr>
+              <td align="right"><font size=1 face="tahoma,verdana,arial"><b>CNPJ/CPF:</b></font></td>
+              <td align="left">{cpfCnpj}</td>
+              <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Lotação/Capacidade:</b></font></td>
+              <td align="left">{lugares}</td>
+            </tr>
+            <tr>
+              <td align="right" rowspan="3" valign="top"><font size=1 face="tahoma,verdana,arial"><b>Endereço:</b></font></td>
+              <td align="left" rowspan="3" valign="top">{endereco}</td>
+              <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Datas:</b></font></td>
+              <td align="left">{dtInicio} à {dtFim}</td>
+            </tr>
+            <tr>
+              <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Local:</b></font></td>
+              <td align="left">{local}</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!-- TABLE CABEÇALHO -->
+    <br />
+
+    <!-- INICIO TABLE DADOS CANAIS DE VENDA -->
+    <table width=656 class="tabela" border="0" bgcolor="LightGrey">
+      <tr>
+        <td align="center" colspan="16"><font size=2 face="tahoma,verdana,arial"><b>CANAL DE VENDA</b></font></td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2" class="titulogrid">APRESENTAÇÃO</td>
+        <!-- BEGIN BLOCK_CANAL -->
+        <td align="center" colspan="2" class="titulogrid">{canal}</td>
+        <!-- END BLOCK_CANAL -->
+        <td align="center" colspan="2" class="titulogrid">TOTAIS</td>
+      </tr>
+      <tr>
+        <td align="center" class="titulogrid" colspan="2"></td>        
+        <!-- BEGIN BLOCK_HEADER_CANAL -->
+        <td align="center" class="titulogrid">QTDE</td>
+        <td align="center" class="titulogrid">VALOR-R$</td>
+        <!-- END BLOCK_HEADER_CANAL -->
+        <td align="center" class="titulogrid">QTDE</td>
+        <td align="center" class="titulogrid">VALOR-R$</td>
+      </tr>
+
+      <!-- BEGIN BLOCK_APRESENTACAO -->
+      <tr>
+        <td align="left"  class="texto">{data}</td>
+        <td align="center" class="texto">{hora}</td>
+        <!-- BEGIN BLOCK_ITENS -->
+        <td align="center" class="texto">{qtde}</td>
+        <td align="right" class="texto">{valor}</td>
+        <!-- END BLOCK_ITENS -->
+        <!-- BEGIN BLOCK_TOTAL -->
+        <td align="center" class="texto">{total_qtde}</td>
+        <td align="right" class="texto">{total_valor}</td>
+        <!-- END BLOCK_TOTAL -->
+      </tr>      
+      <!-- END BLOCK_APRESENTACAO -->
+
+      <tr>
+        <td bgcolor="LightGrey" align="left" colspan="2" class="label titulogrid">TOTAL GERAL</td>
+        <!-- BEGIN BLOCK_TOTAL_GERAL -->
+        <td bgcolor="LightGrey" align="center" class="label titulogrid">{total_qtde_geral}</td>
+        <td bgcolor="LightGrey" align="right" class="label titulogrid">{total_valor_geral}</td>
+        <!-- END BLOCK_TOTAL_GERAL -->
+        <td bgcolor="LightGrey" align="center" class="label titulogrid">{total_qtde_geral_final}</td>
+        <td bgcolor="LightGrey" align="right" class="label titulogrid">{total_valor_geral_final}</td>
+      </tr>
+      <tr>
+        <td colspan="6"><br/></td>
+      </tr>
+      <tr>
+        <td bgcolor="LightGrey" align="left" colspan="2" class="label titulogrid">TOTAL DE APRESENTAÇÕES</td>
+        <td bgcolor="LightGrey" align="center" class="label titulogrid">{total_apresentacao}</td>
+        <td bgcolor="LightGrey" align="right"  colspan="4"></td>
+      </tr>
+    </table>
+    <!-- FIM TABLE DADOS CANAIS DE VENDA -->
+    <br clear="all"/>
+    <table width="656" border=0>
+      <tr>
+        <td align="middle">
+          <input class="botao" type="button" value="Imprimir Relatório" name="cmdImprimi" onClick="javascript:window.print();" />
+          <input class="botao" type="button" value="Fechar Janela" name="cmdFecha" onClick="javascript:window.close()" />
+        </td>
+      </tr>
+    </table>
+    <br clear="all"/>
+  </body>
+</html>

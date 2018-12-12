@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RedirectMatch 404 \.json
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+</IfModule>
+

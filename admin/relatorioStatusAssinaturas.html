@@ -1,0 +1,81 @@
+<script src="../javascripts/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="../javascripts/fnRelatorios.js" type="text/javascript"></script>
+<style type="text/css">
+  .coluna-header{width: 200px;}
+  .tb-form{margin-left: 40px;}
+  form select{min-width: 200px;}
+</style>
+<script>
+    function validarLocal(){
+        if(document.fPeca.cboTeatro.value == "-1") {
+            $.dialog({
+                title: 'Alerta...',
+                text: 'Selecione o Local!'
+            });
+            return false;
+        }
+        if(document.fPeca.PARAM_ANO.value == "") {
+            $.dialog({
+                title: 'Alerta...',
+                text: 'Digite o ano da Temporada!'
+            });
+            return false;
+        }
+        return true;
+    }
+	$(function(){
+		$("#PARAM_DTTRAN").datepicker();
+	});
+</script>
+<h2>{titulo}</h2>
+<form action="https://{host}/admin/relStatusAssinaturas.php"
+      name="fPeca"  id="fPeca" method="POST" onsubmit="return validarLocal();"
+      enctype="multipart/form-data" target="_blank">
+  <input type="hidden" name="rs:Command" value="Render"/>
+  <input type="hidden" name="rc:Parameters" value="False"/>
+  <input type="hidden" name="rs:Format" value="HTML4.0"/>
+  <table cellpadding='0' class="tb-form" border='0' width='609' cellspacing='0'>
+    <tr>
+      <td class="coluna-header"><strong>Local:</strong></td>
+      <td>
+        <select name="cboTeatro" id="cboTeatro">
+          <option value="-1">Selecione o Local...</option>
+          <!-- BEGIN BLOCK_LOCAL -->
+          <option value="{idLocal}">{dsLocal}</option>
+          <!-- END BLOCK_LOCAL -->
+        </select>
+      </td>
+    </tr>  
+    <tr>
+      <td class="coluna-header"><strong>Status:</strong></td>
+      <td>
+        <select name="PARAM_STATUS">
+          <option value="-1">&lt; Todos &gt;</option>
+          <!-- BEGIN BLOCK_STATUS -->
+          <option value="{idStatus}">{dsStatus}</option>
+          <!-- END BLOCK_STATUS -->
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="coluna-header"><strong>Temporada (Ano):</strong></td>
+      <td>
+          <input type="text" id="cboPeca" name="PARAM_ANO" />
+      </td>
+    </tr>    
+    <tr>
+      <td class="coluna-header"><strong>Alteração do Status desde:</strong></td>
+      <td>
+          <input type="text" id="PARAM_DTTRAN" name="PARAM_DTTRAN" />
+      </td>
+    </tr>    
+	<tr>
+      <td align="center" colspan="2">
+        <br />
+        <input type="submit" value="Visualizar" class="button" />&nbsp;
+        <input type="button" value="Limpar Campos" class="button" onClick="limpar()">&nbsp;
+      </td>
+    </tr>
+  </table>
+</form>
+<br/>

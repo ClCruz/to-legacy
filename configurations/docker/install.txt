@@ -1,0 +1,33 @@
+Install for:
+
+ -- MEDIA - GERAL
+sudo docker run -it -d -p 2003:80 --name tixsme.media -v /var/www/tixsme/media:/var/www/html blcoccaro/linuxphpsql:v3
+
+
+- Tixs.ME
+ -- SITE
+sudo docker run -it -d -p 2001:80 --name tixsme.site -v /var/www/tixsme/site:/var/www/html blcoccaro/linuxphpsql:v4
+ -- Legacy (COMPRA)
+sudo docker run -it -d -p 2004:80 --name tixsme.compra -v /var/www/tixsme/compra:/var/www/html blcoccaro/linuxphpsql:v4
+ -- API
+sudo docker run -it -d -p 2002:80 --name tixsme.api -v /var/www/tixsme/api:/var/www/html -v /var/www/tixsme/media:/var/www/media  -v /var/www/tixsme/site:/var/www/site blcoccaro/linuxphpsql:v4
+
+wl_bringressos : 510X
+sudo docker run -it -d -p 5101:80 --name wl_bringressos.site -v /var/www/wl_bringressos/site:/var/www/html blcoccaro/linuxphpsql:v4
+sudo docker run -it -d -p 5102:80 --name wl_bringressos.api -v /var/www/wl_bringressos/api:/var/www/html -v /var/www/wl_bringressos/media:/var/www/media  -v /var/www/wl_bringressos/site:/var/www/site  blcoccaro/linuxphpsql:v4
+sudo docker run -it -d -p 5103:80 --name wl_bringressos.compra -v /var/www/wl_bringressos/compra:/var/www/html blcoccaro/linuxphpsql:v4
+
+wl_ciaingressos 520X
+sudo docker run -it -d -p 5201:80 --name wl_ciaingressos.site -v /var/www/wl_ciaingressos/site:/var/www/html blcoccaro/linuxphpsql:v4
+sudo docker run -it -d -p 5202:80 --name wl_ciaingressos.api -v /var/www/wl_ciaingressos/api:/var/www/html -v /var/www/wl_ciaingressos/media:/var/www/media  -v /var/www/wl_ciaingressos/site:/var/www/site  blcoccaro/linuxphpsql:v4
+sudo docker run -it -d -p 5203:80 --name wl_ciaingressos.compra -v /var/www/wl_ciaingressos/compra:/var/www/html blcoccaro/linuxphpsql:v4
+
+wl_sazarte 530X
+sudo docker run -it -d -p 5301:80 --name wl_sazarte.site -v /var/www/wl_sazarte/site:/var/www/html blcoccaro/linuxphpsql:v4
+sudo docker run -it -d -p 5302:80 --name wl_sazarte.api -v /var/www/wl_sazarte/api:/var/www/html -v /var/www/wl_sazarte/media:/var/www/media  -v /var/www/wl_sazarte/site:/var/www/site  blcoccaro/linuxphpsql:v4
+sudo docker run -it -d -p 5303:80 --name wl_sazarte.compra -v /var/www/wl_sazarte/compra:/var/www/html blcoccaro/linuxphpsql:v4
+
+wl_vivaingressos 540X
+sudo docker run -it -d -p 5401:80 --name wl_vivaingressos.site -v /var/www/wl_vivaingressos/site:/var/www/html blcoccaro/linuxphpsql:v4
+sudo docker run -it -d -p 5402:80 --name wl_vivaingressos.api -v /var/www/wl_vivaingressos/api:/var/www/html -v /var/www/wl_vivaingressos/media:/var/www/media  -v /var/www/wl_vivaingressos/site:/var/www/site  blcoccaro/linuxphpsql:v4
+sudo docker run -it -d -p 5403:80 --name wl_vivaingressos.compra -v /var/www/wl_vivaingressos/compra:/var/www/html blcoccaro/linuxphpsql:v4

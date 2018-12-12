@@ -1,0 +1,4 @@
+[08-Jun-2018 17:49:14 America/Sao_Paulo] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20151012/pdo_sqlsrv.so' - /usr/lib/php/20151012/pdo_sqlsrv.so: undefined symbol: php_pdo_register_driver in Unknown on line 0
+[13-Jun-2018 13:22:01 America/Sao_Paulo] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20151012/pdo_sqlsrv.so' - /usr/lib/php/20151012/pdo_sqlsrv.so: undefined symbol: php_pdo_register_driver in Unknown on line 0
+[13-Jun-2018 18:40:25 America/Sao_Paulo] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20151012/pdo_sqlsrv.so' - /usr/lib/php/20151012/pdo_sqlsrv.so: undefined symbol: php_pdo_register_driver in Unknown on line 0
+[15-Jun-2018 11:16:02 America/Sao_Paulo] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20151012/pdo_sqlsrv.so' - /usr/lib/php/20151012/pdo_sqlsrv.so: undefined symbol: php_pdo_register_driver in Unknown on line 0

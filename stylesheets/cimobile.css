@@ -1,0 +1,1157 @@
+@media only screen and (max-width:640px){
+  body, html{
+    -webkit-text-size-adjust:none;
+  }
+  div#guia_espetaculos, div#menu_topo div.topo div.facebook{
+    display:none;
+  }
+  div#top{
+    border-top:0;
+  }
+  div.centraliza{
+    width:320px;
+  }
+  div#menu_topo{
+    height:50px !important;
+  }
+  div#menu_topo div.topo{
+    display:none;
+  }
+  div#menu_topo div.bottom{
+    width:310px;
+    margin:10px auto;
+    height:30px;
+  }
+  div#menu_topo a.logo{
+    margin:0;
+    width:120px;
+    height:30px;
+    background:transparent url('../images/menu_logo_2x.jpg') 0 0 / 120px auto no-repeat;
+  }
+  div#menu_topo a.logo img{
+    display:none;
+  }
+  div#menu_topo div.bottom div.container_busca{
+    display:none;
+  }
+  #footer div.centraliza{
+    width:300px;
+  }
+  #footer ul{
+    width:150px;
+    margin:10px 0;
+  }
+  #footer ul li{
+    margin:0;
+    height:20px;
+  }
+  #footer ul li.title{
+    font-weight:400;
+    font-size:20px;
+    margin:0;
+    height:28px;
+  }
+  #footer ul li a{
+    font-size:12px;
+    line-height:20px;
+    padding:0;
+  }
+  #footer ul li a.minha_conta_mobile{
+    display:block;
+  }
+  #footer ul.midias_sociais{
+    float:left;
+    width:300px;
+    margin-top:0;
+  }
+  #footer ul li.midia{
+    width:150px;
+    float:left;
+    height:56px;
+  }
+  #selos div.centraliza{
+    width:300px;
+    margin:0 10px;
+    display:none;
+  }
+  #selos #certsign{
+    width:70px !important;
+    float:left !important;
+    margin:17px 0 6px !important;
+  }
+  #selos #certsign tr td, #selos #certsign tr td a{
+    padding:0;
+    width:70px !important;
+  }
+  #selos div#armored_website{
+    float:left;
+    width:80px !important;
+    margin:7px 0 0 0 !important;
+  }
+  #selos div#armored_website a{
+    width:80px !important;
+  }
+  #selos div#aw_malware, #selos div#aw_malware img{
+    width:80px !important;
+  }
+  #selos p.creditos{
+    margin:5px 0;
+    font-size:11px;
+  }
+  #selos p.creditos, a.link_adptativo{
+    margin-bottom:10px;
+  }
+  a.botao{
+    margin:0 5px 0 5px !important
+  }
+  a.botao, div.over a.botao.comprar, div.over a.botao.saiba_mais{
+    width:122px;
+    height:42px;
+    background-size:122px 84px;
+  }
+  a.botao:hover, div.over a.botao.comprar:hover, div.over a.botao.saiba_mais:hover{
+    background-position:0 -42px;
+  }
+  a.botao.voltar{
+    margin:0 0 0 5px;
+  }
+  #overlay div.centraliza, #pai div#background_holder #overlay div.centraliza{
+    width:310px;
+	margin-top:51px
+  }
+  #pai #overlay div.centraliza div.fechar{
+    background-image: url('../images/bot_fechar_2x.png');
+    background-color: transparent;
+    background-position: 44% 0;
+    background-size: 112px auto !important;
+    margin: 0 0 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #pai #overlay div.centraliza div.fechar:hover{
+    background-position: 44% -46px;
+  }
+  #overlay div.container_mini_topo{
+    margin:4px 0;
+  }
+  #overlay div.icone{
+    height:28px;
+  }
+  #overlay div.icone.fotos{
+    height:30px;
+    background-size:96px auto;
+    margin-bottom:7px;
+  }
+  #overlay div.icone.sinopse{
+    background-size:113px auto;
+  }
+  #overlay div.icone.video{
+    background-size:94px auto;
+    height:34px;
+  }
+  #overlay div.container_iframe_video{
+    width:310px;
+    height:181px;
+    margin-top:6px;
+  }
+  #overlay iframe#video_player{
+    margin:0;
+    padding:0;
+    width:310px;
+    height:181px;
+  }
+  #overlay div.slideshow-container{
+    float:left;
+    width:310px;
+    height:180px;
+  }
+  #overlay div.slideshow-container img, #overlay div.slideshow-container a{
+    max-width:310px;
+    max-height:180px;
+  }
+  #overlay div.thumbs_container{
+    float:left;
+    margin:7px 0 0 1px;
+    height:auto;
+  }
+  #overlay div.thumbs_container ul{
+    height:auto;
+  }
+  #overlay div.thumbs_container li{
+    margin:0 8px 8px 0;
+  }
+  #espetaculo #overlay div.container_overlay, #teatro #overlay div.container_overlay{
+    margin-top:20px;
+  }
+  #overlay div.informacoes{
+    margin-top:-14px;
+  }
+  #overlay div.icone.detalhes{
+    background-size:177px auto;
+  }
+  #espetaculo #overlay div.container_overlay p, #teatro #overlay div.container_overlay p{
+    font-size:12px;
+  }
+  #pai div#background_holder{
+    background-size:640px auto !important;
+  }
+  #pai #espetaculo.especial_mobile h1, #pai #espetaculo.especial_mobile div.cont_teatro p.teatro_info, #pai #espetaculo.especial_mobile div.cont_teatro p.teatro, #pai #espetaculo.especial_mobile div.container_mini_topo span, #pai div#espetaculo.especial_mobile div#iframe p.saiba_mais_aviso, #pai div#espetaculo.especial_mobile #div.container_mini_topo{
+    text-shadow:1px 1px 2px #000;
+  }
+  div.botoes_sessoes{
+    width:310px;
+    height:50px;
+    margin:0 5px 10px;
+  }
+  div.botoes_sessoes a.botao{
+    width:50px;
+    height:50px;
+    margin:0 10px;
+    background-size:50px auto;
+  }
+  div.botoes_sessoes a.botao:hover{
+    background-position:0 -50px;
+  }
+  div.botoes_sessoes a.botao.ativo{
+    background-position:0 -101px;
+  }
+  a.botao.assinar, a.botao.aguarde, a.botao.comprar_pacote{
+    margin:0 24px 10px;
+  }
+  a.botao.assinar:hover, a.botao.aguarde:hover, a.botao.comprar_pacote:hover{
+    background-position:0 0;
+  }
+  a.botao span.data{
+    width:38px;
+    font-size:17px;
+    line-height:17px;
+    margin:6px 5px 0 2px;
+  }
+  a.botao span.numero, a.botao span.mes{
+    width:38px;
+  }
+  a.botao span.dia_hora{
+    margin-top:9px;
+    font-size:10px;
+    font-weight:400;
+  }
+  a.botao span.comprar{
+    font-size:12px;
+  }
+  #overlay div.datas{
+    width:363px;
+    margin:20px 22px 0;
+  }
+  div#texts{
+    display:none;
+  }
+  div#content div.centraliza{
+    margin-top:10px;
+    width:300px;
+  }
+  div.descricao_pag{
+    margin-bottom:10px;
+  }
+  div.descricao_pag div.img{
+    width:42px;
+    height:42px;
+    margin-right:8px;
+  }
+  div.descricao_pag div.img img{
+    width:42px;
+    height:42px;
+  }
+  div.descricao_pag div.descricao{
+    width:250px !important;
+  }
+  div.descricao_pag div.descricao p.nome{
+    font-size:32px;
+  }
+  div.descricao_pag div.descricao p.descricao{
+    font-size:13px;
+  }
+  #tempoRestante{
+    font-weight:normal !important;
+    margin:3px 6px 0 0;
+    font-size:16px;
+  }
+  div.descricao_pag div.descricao div.sessao p.mensagem{
+    font-size:10px;
+    margin-top:0;
+  }
+  div.descricao_pag a.botao_avancar, div.descricao_pag a.botao.avancar{
+    display:none;
+  }
+  div.espetaculo_img{
+    display:none;
+  }
+  div.resumo_espetaculo{
+    width:300px;
+  }
+  div.resumo_espetaculo div.data{
+    width:60px;
+    height:60px;
+  }
+  div.resumo_espetaculo div.data p.nome_dia{
+    margin:0;
+    font-size:16px;
+    line-height:16px;
+  }
+  div.resumo_espetaculo div.data p.numero_dia{
+    margin:-1px 0 0;
+    font-size:28px;
+    line-height:28px;
+    font-weight:bold;
+  }
+  div.resumo_espetaculo div.data p.mes{
+    margin:0;
+    font-size:14px;
+    font-weight:400;
+    line-height:14px;
+  }
+  div.resumo_espetaculo div.resumo{
+    margin-left:5px;
+    width:233px;
+  }
+  div.resumo_espetaculo div.resumo p.nome{
+    font-size:18px;
+    margin-top:-2px;
+  }
+  div.resumo_espetaculo div.resumo p.endereco{
+    font-size:12px;
+    margin:0;
+  }
+  div.resumo_espetaculo div.resumo p.teatro{
+    font-size:15px;
+    min-height:15px !important;
+    line-height:15px;
+    margin:2px 0 0 0;
+  }
+  div.resumo_espetaculo div.resumo p.horario{
+    font-size:16px;
+    line-height:16px;
+    font-weight:bold;
+  }
+  div.resumo_espetaculo div.outras_datas{
+    display:none;
+  }
+  div.container_escolha_ingresso, div.container_escolha_ingresso div.container_ingressos{
+    width:300px;
+  }
+  div.container_escolha_ingresso div.container_locais_select{
+    width:300px;
+  }
+  div.container_escolha_ingresso div.ingresso{
+    width:288px;
+    height:44px;
+    padding:5px;
+    margin-top:5px;
+  }
+  div.container_escolha_ingresso div.ingresso.quantidade{
+    width:229px;
+  }
+  div.container_escolha_ingresso div.locais div.icone, div.container_escolha_ingresso div.ingresso div.icone{
+    margin-right:5px;
+  }
+  div.container_escolha_ingresso div.ingresso div.descricao{
+    width:243px;
+    margin:0;
+  }
+  div.container_escolha_ingresso div.ingresso.quantidade div.descricao{
+    width:184px;
+    margin:0;
+  }
+  .sbHolder{
+    font-size:14px;
+    line-height:14px;
+    z-index: initial;
+  }
+  .sbHolder li a{
+    height:14px;
+    padding:2px 7px;
+    line-height:14px;
+  }
+  .container_ingresso .sbHolder{
+    width:50px;
+    height:54px;
+    margin:5px 0 0 5px;
+    padding:0 1px;
+  }
+  .container_ingresso .sbSelector{
+    width:30px;
+    height:54px;
+    font-size:26px;
+    line-height:54px;
+    text-indent:4px;
+  }
+  .container_ingresso .sbToggle{
+    margin-top:10px;
+    background-image:url('../images/bt_select.png');
+    background-position:-5px -114px;
+    width:22px;
+  }
+  .container_ingresso .sbToggle.sbToggleOpen{
+    background-position:-5px -14px;
+  }
+  .container_ingresso .sbOptions{
+    width:52px;
+  }
+  div.container_escolha_ingresso div.locais div.icone.assinaturas, div.container_escolha_ingresso div.ingresso div.icone.assinaturas{
+    width:40px;
+    height:40px;
+    background-size:40px 40px !important;
+  }  
+  div.container_escolha_ingresso div.ingresso div.descricao p.nome{
+    font-size:15px;
+    line-height:16px;
+  }
+  div.container_escolha_ingresso div.ingresso div.descricao p.help{
+    font-size:13px !important;
+    line-height:15px;
+  }
+  div.container_escolha_ingresso div.ingresso.quantidade div.descricao p.help{
+    font-size:10px !important;
+  }
+  div.container_escolha_ingresso div.ingresso div.descricao p.desconto{
+    margin:0;
+    font-size:11px;
+    line-height:13px;
+  }
+  div.container_escolha_ingresso div.ingresso.quantidade div.descricao p.desconto{
+    font-size:10px;
+  }
+  div.container_escolha_ingresso div.container_locais_select{
+    margin-top:5px;
+  }
+  div.container_escolha_ingresso div.container_locais_select .sbHolder{
+    width:294px;
+    padding:0 2px;
+  }
+  div.container_escolha_ingresso div.container_locais_select .sbSelector{
+    width:299px;
+  }
+  div.container_escolha_ingresso div.container_locais_select .sbOptions{
+    width:298px;
+  }
+  div.container_escolha_ingresso{
+    margin-bottom:10px;
+  }
+  div#mapa_de_plateia_geral{
+    width:320px !important;
+    margin-left:-10px !important;
+    margin-bottom:0 !important;
+  }
+  div#mapa_de_plateia{
+    width:320px !important;
+  }
+  div#mapa_de_plateia img{
+    width:320px !important;
+    height:auto !important;
+  }
+  .diametro, .annotation{
+    width:3px !important;
+    height:3px !important;
+  }
+  div.alert{
+    top:0 !important;
+    padding:10px 0;
+  }
+  div.alert img{
+    margin:0;
+    width:30px;
+    height:30px;
+  }
+  div.alert div.container_erros{
+    width:222px;
+    margin:0 0 0 5px;
+  }
+  div.alert div.container_erros p{
+    font-size:13px;
+    line-height:15px;
+  }
+  div.alert a{
+    padding:3px 6px
+  }
+  #overlay div.centraliza, #pai div#background_holder #overlay div.centraliza{
+    margin-top:0;
+  }
+  #overlay img{
+    margin:100px 0 10px;
+    width:42px;
+    height:42px;
+  }
+  #overlay p.frase{
+    font-size:16px;
+  }
+  #overlay p.aviso{
+    font-size:20px;
+  }
+  #overlay a.opcao.unica{
+    margin:5px 0;
+    width: 100%;
+  }
+  #overlay a.opcao span.opcao{
+    font-size:28px;
+  }
+  #overlay a.opcao span.descricao{
+    font-size:14px;
+  }
+  table#pedido_resumo{
+    width:300px;
+    margin-top:10px;
+  }
+  table thead td, table#pedido_resumo thead td{
+    font-size:10px;
+    padding-bottom:2px;
+    text-align:center;
+  }
+  table#pedido_resumo tbody td{
+    font-size:9px;
+    padding:4px 0;
+    line-height:10px;
+    text-align:center;
+  }
+  table#pedido_resumo tbody td span{
+    font-size:11px;
+  }
+  table#pedido_resumo tbody td div.local{
+    border:0;
+    width:50px;
+    height:43px;
+    margin:0 2px;
+  }
+  table#pedido_resumo tbody td div.local td{
+    height:40px;
+    font-size:8px;
+    line-height:10px;
+  }
+  #pedido_resumo .sbHolder, div.resumo_espetaculo div.pedido_entrega div.tipo .sbHolder, div.resumo_espetaculo div.estado .sbHolder{
+    width:76px;
+    height:26px;
+  }
+  #pedido_resumo .sbToggle, div.resumo_espetaculo div.pedido_entrega div.tipo .sbToggle, div.resumo_espetaculo div.estado .sbToggle{
+    margin:-5px -10px 0 0;
+  }
+  #pedido_resumo .sbSelector, div.resumo_espetaculo div.pedido_entrega div.tipo .sbSelector, div.resumo_espetaculo div.estado .sbSelector{
+    width:70px;
+    height:26px;
+    line-height:26px;
+    font-size:12px;
+    text-indent:3px;
+    text-align:left;
+  }
+  #pedido_resumo .sbOptions, div.resumo_espetaculo div.pedido_entrega div.tipo .sbOptions, div.resumo_espetaculo div.estado .sbOptions{
+    width:88px;
+  }
+  #pedido_resumo .sbHolder, div.resumo_espetaculo div.pedido_entrega div.tipo .sbHolder, div.resumo_espetaculo div.estado .sbHolder{
+    font-size:10px;
+  }
+  table#pedido_resumo tbody td a.remover{
+    width:11px;
+    height:11px;
+    margin-left:4px;
+    background-size:11px auto;
+  }
+  div.resumo_espetaculo div.pedido_entrega{
+    width:300px;
+    margin:10px 0;
+  }
+  div.resumo_espetaculo div.pedido_entrega div.descricao{
+    width:100px;
+    font-size:12px;
+  }
+  div.resumo_espetaculo div.pedido_entrega div.tipo{
+    width:96px;
+  }
+  div.resumo_espetaculo div.pedido_entrega div.valor{
+    width:85px;
+    margin-left:6px;
+    font-size:11px;
+  }
+  div.selecione_estado{
+    margin:0;
+    width:188px;
+  }
+  div.selecione_estado div.descricao{
+    width:98px;
+    font-size:12px;
+  }
+  div.resumo_espetaculo p.pedido_total{
+    width:300px;
+    font-size:11px;
+    margin-bottom:0;
+  }
+  div.resumo_espetaculo p.pedido_total span.total{
+    font-size:13px;
+    margin:0 3px 0 6px;
+  }
+  div.resumo_espetaculo p.pedido_total span.cifrao{
+    font-size:15px;
+  }
+  div.resumo_espetaculo p.pedido_total span.valor{
+    font-size:18px;
+  }
+  #detalhes_pedido div.resumo_espetaculo, #pedido div.resumo_espetaculo{
+    margin-bottom:20px !important;
+  }
+  div.container_botoes_etapas{
+    left:0;
+    bottom:0;
+    width:100%;
+    padding:5px 0;
+    position:fixed;
+    background-color:#FFF;
+    z-index:10;
+    border-top:1px solid #ccc;
+    height:42px;
+  }
+  div#content div.container_botoes_etapas div.centraliza{
+    margin:0;
+    width:100%;
+  }
+  #selos{
+    margin-bottom:52px;
+  }
+  div.identificacao{
+    margin:0 0 20px;
+    width:300px;
+  }
+  div.identificacao p.frase, div.container_cartoes p.frase, div.container_dados p.frase{
+    margin:0;
+    font-size:22px;
+  }
+  div.identificacao p.frase b{
+    font-size:32px;
+  }
+  div.identificacao p.site{
+    font-size:23px;
+    margin-bottom:5px;
+  }
+  input{
+    width:290px;
+    padding:5px 4px;
+    font-size:12px;
+    line-height:14px;
+  }
+  div.erro_help{
+    width:300px;
+    height:12px;
+    margin-bottom:5px;
+  }
+  div.erro_help p.help{
+    float:right !important;
+    text-align:right !important;
+    width:100px;
+    font-size:10px;
+    line-height:14px;
+  }
+  div.erro_help p.erro{
+    width:180px;
+    font-size:10px;
+    line-height:14px;
+  }
+  input.submit{
+    width:122px;
+    height:42px;
+    background-size:122px auto;
+  }
+  input.submit:hover{
+    background-position:0 -43px;
+  }
+  div.identificacao a.esqueci_senha{
+    font-size:14px;
+    margin-top:14px;
+  }
+  div.identificacao div.container_esqueci_senha div.resultado span{
+    font-size:16px;
+  }
+  div.coluna{
+    margin:0 0 10px;
+    width:300px;
+  }
+  div.coluna p.frase{
+    font-size:32px;
+    margin:10px 0;
+  }
+  div.input_area{
+    margin-top:10px;
+  }
+  div.input_area div.icone{
+    width:20px;
+    height:20px;
+    background-size:20px auto;
+    margin:2px 5px 0 0;
+  }
+  div.input_area div.inputs{
+    width:275px;
+  }
+  div.input_area div.inputs p.titulo{
+    font-size:18px;
+    margin-bottom:5px;
+  }
+  input.radio[type="radio"] + label.radio{
+    font-size:13px;
+    line-height:14px;
+    padding-left:22px;
+    margin-bottom:0;
+    padding-top:2px;
+  }
+  div.input_area.identificacao{
+    margin-bottom:0;
+  }
+  #dados_conta input, #trocar_senha input, .input_area.endereco input{
+    width:265px;
+  }
+  #dados_conta div.erro_help, #trocar_senha div.erro_help, .input_area.endereco div.erro_help{
+    width:275px;
+  }
+  #dados_conta div.erro_help p.help, #trocar_senha div.erro_help p.help, .input_area.endereco div.erro_help p.help{
+    width:90px;
+  }
+  #dados_conta div.erro_help p.erro, #trocar_senha div.erro_help p.erro, .input_area.endereco div.erro_help p.erro{
+    width:165px;
+  }
+  input.checkbox[type="checkbox"] + label.checkbox{
+    font-size:12px;
+    line-height:14px;
+    padding-left:36px;
+    margin-bottom:3px;
+  }
+  div.input_area label#label_sms{
+    padding-top:12px;
+  }
+  input.salvar_dados, #trocar_senha input.salvar_dados{
+    width:122px !important;
+    margin-top:10px !important;
+  }
+div.input_area.endereco .sbHolder, div.input_area.identificacao .sbHolder{
+    width:261px;
+    height:27px;
+  }
+  div.input_area.endereco .sbSelector, div.input_area.identificacao .sbSelector{
+    width:238px;
+    height:27px;
+    font-size:13px;
+    line-height:27px;
+    text-indent:4px;
+  }
+  div.input_area.endereco .sbToggle, div.input_area.identificacao .sbToggle{
+    margin-top:-5px;
+  }
+  div.input_area.endereco .sbOptions, div.input_area.identificacao .sbOptions{
+    width:273px;
+  }
+  .input_area.guia_sms input.checkbox[type="checkbox"] + label.checkbox{
+    padding-top:5px;
+    height:32px;
+  }
+  div.input_area label#label_politica{
+    padding-top:5px;
+    height:32px;
+  }
+  #dados_conta div.input_area.identificacao div.erro_help{
+    height:12px !important;
+  }
+  #recaptcha_widget_div{
+    margin-left:0;
+  }
+  #dados_conta  div.input_area.nascimento .sbHolder{
+    width:50px;
+    height:27px;
+  }
+  #dados_conta  div.input_area.nascimento   .sbSelector{
+    width:30px;
+    height:27px;
+    font-size:13px;
+    line-height:27px;
+    text-indent:4px;
+  }
+  #dados_conta  div.input_area.nascimento  .sbOptions{
+    width:62px;
+  }
+  #dados_conta  div.input_area.nascimento .sbToggle{
+    margin-top:-5px;
+  }
+  #dados_conta  div.input_area.nascimento .mes .sbHolder{
+    width:75px;
+  }
+  #dados_conta  div.input_area.nascimento .mes .sbSelector{
+    width:55px;
+  }
+  #dados_conta  div.input_area.nascimento .mes .sbOptions{
+    width:87px;
+  }
+  #dados_conta  div.input_area.nascimento .ano .sbHolder{
+    width:80px;
+  }
+  #dados_conta  div.input_area.nascimento .ano .sbSelector{
+    width:60px;
+  }
+  #dados_conta  div.input_area.nascimento .ano .sbOptions{
+    width:92px;
+  }
+  #overlay div.centraliza, #loading div.centraliza{
+    width: 90%;
+    float: none;
+    margin: 0 auto !important;
+  }
+  #overlay div.centraliza{
+    margin: 0;
+  }
+  #loading div.centraliza img{
+    margin-top:240px;
+  }
+  div.container_cartoes{
+    margin:6px 0 0;
+    width: 100%;
+  }
+  div.container_cartoes div.inputs{
+    width:300px;
+    margin-top:0px;
+  }
+  div.container_cartoes div.inputs div.container_cartao{
+    width:100px;
+    height:80px;
+  }
+  #content div.container_cartoes div.container_cartao label.radio{
+    width:78px;
+    height:25px;
+    margin-top:15px;
+  }
+  div.container_cartoes div.container_cartao p.nome{
+    width:80px;
+    margin-top:0;
+    margin-left:0;
+    font-size:14px;
+  }
+  div.container_cartoes div.container_cartao label.radio img{
+    width:35px;
+    height:35px;
+    margin-top:-10px;
+  }
+  div.container_dados{
+    margin:15px 0 0;
+  }
+  div.container_dados{
+    width:300px;
+  }
+  div.container_dados p.frase{
+    margin-bottom:5px;
+  }
+  div.container_dados div.linha{
+    width:300px;
+    margin:0;
+  }
+  div.container_dados div.linha p.titulo{
+    margin:0;
+    font-size:12px;
+  }
+  div.container_dados div.linha div.input{
+    width:300px;
+    margin:0;
+  }
+  div.container_dados div.linha div.input.parcelas{
+    margin-bottom:17px;
+  }
+  div.container_dados div.erro_help{
+    width:300px;
+    margin:0 0 5px;
+  }
+  div.container_dados div.erro_help p.help{
+    width:125px;
+  }
+  div.container_dados div.erro_help p.erro{
+    width:155px;
+  }
+  div.container_dados  div.input .sbHolder{
+    width:288px;
+    height:27px;
+  }
+  div.container_dados  div.input .sbSelector{
+    width:264px;
+    height:27px;
+    font-size:13px;
+    line-height:27px;
+    text-indent:4px;
+  }
+  div.container_dados  div.input .sbOptions{
+    width:300px;
+  }
+  div.container_dados  div.input .sbToggle{
+    margin-top:-5px;
+  }
+  
+  div.container_dados  div.input.data .mes .sbHolder{
+    width:60px;
+  }
+  div.container_dados  div.input.data .mes .sbSelector{
+    width:40px;
+  }
+  div.container_dados  div.input.data .mes .sbOptions{
+    width:72px;
+  }
+  div.container_dados  div.input.data .ano .sbHolder{
+    width:70px;
+  }
+  div.container_dados  div.input.data .ano .sbSelector{
+    width:50px;
+  }
+  div.container_dados  div.input.data .ano .sbOptions{
+    width:82px;
+  }
+  div.container_dados div.linha div.input.data div.mes{
+    width:75px;
+  }
+  div.container_dados div.linha div.input.data div.ano{
+    width:85px;
+  }
+  div.container_dados div.linha div.input.codigo{
+    width:120px;
+  }
+  div.container_dados div.linha div.input.codigo input{
+    width:110px;
+  }
+  div.container_dados div.input.codigo div.erro_help{
+    width:120px;
+    margin-left:0;
+  }
+  div.container_dados div.erro_help p.help{
+    width:110px;
+  }
+  div.container_dados div.linha div.input.data{
+    float:right;
+    width:170px;
+  }
+  div.container_dados div.input.data div.erro_help{
+    width:169px;
+  }
+  div.compra_captcha{
+    margin:0 0 0 -10px;
+  }
+  div.img_cod_cartao{
+    width:244px;
+    padding:2px;
+    margin:534px 0 0;
+  }
+  div.img_cod_cartao img{
+    width:244px;
+    margin:0;
+  }
+  div.descricao_pag div.descricao.final, div.numero_pedido{
+    width:250px;
+    text-align:left;
+    margin-bottom:10px;
+  }
+  div.numero_pedido p.numero{
+    font-size:20px;
+  }
+  div.numero_pedido p.numero a{
+    font-size:26px;
+    line-height:26px;
+  }
+  div.numero_pedido p.minha_conta, div.numero_pedido p.minha_conta a{
+    font-size:13px;
+    line-height:13px;
+    font-weight:300;
+  }
+  div.imprima_agora{
+    width:300px;
+    margin:10px 0;
+  }
+  div.imprima_agora div.icone{
+    width:42px;
+    height:42px;
+    margin:-9px 6px 0 0;
+    background-size:42px auto;
+  }
+  div.imprima_agora a{
+    font-size:18px;
+  }
+  div.euvou{
+    width:300px;
+    margin:5px 0 20px;
+  }
+  div.euvou div.icone{
+    width:25px;
+    height:25px;
+    margin:-6px 6px 0 0;
+    background-size:25px auto;
+  }
+  div.euvou a{
+    font-size:12px;
+  }
+  div.euvou img{
+    width:60px;
+  }
+  table#pedido_resumo tbody td.tipo{
+    font-size:10px;
+  }
+  div.resumo_espetaculo div.pedido_entrega div.tipo{
+    width:88px;
+    font-size:11px;
+  }
+  div.descricao_pag div.descricao p.nome a{
+    font-size:14px;
+  }
+  div.descricao_pag div.menu_conta{
+    width:300px;
+    margin-left:-5px;
+  }
+  a.botao.ativo{
+    background-position:0 -42px;
+  }
+  div.menu_conta a.botao{
+    margin-bottom:10px !important;
+  }
+  table#meus_pedidos{
+    width:300px;
+    margin:0;
+  }
+  table#meus_pedidos tbody td{
+    font-size:11px;
+    line-height:12px;
+    text-align:center;
+  }
+  table#meus_pedidos tbody td.npedido a{
+    font-size:13px;
+  }
+  div.container_enderecos{
+    width:300px;
+    margin:0;
+  }
+  table.select_endereco{
+    margin:0 0 10px;
+  }
+  a.add_endereco{
+    margin:0;
+    font-size:14px;
+  }
+  div.container_endereco p.titulo{
+    font-size:20px;
+  }
+  div.container_endereco p.endereco{
+    font-size:14px;
+  }
+  div.container_endereco{
+    width:300px;
+  }
+  a.end_cancelar{
+    margin-left:25px;
+    font-size:12px;
+  }
+  a.end_salvar{
+    font-size:12px;
+  }
+  a.botao.avancar {
+    margin-right: 5px;
+  }
+  div.imprima_ingressos{
+    margin:10px 0 10px 0;
+  }
+  #overlay h2{
+    margin: 60px 0 5px;
+    font-size: 20px;
+  }
+  #overlay p.destaque {
+    font-size: 14px;
+  }
+  #overlay p.destaque a{
+    font-size: 16px;
+  }
+  #overlay h3 {
+    font-size: 18px;
+    margin: 20px 0 0;
+  }
+  #overlay p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .annotationHover {
+    border:none !important;
+    margin: 0 !important;
+  }
+  #overlay a.opcao{
+    width:100%;
+  }
+  #overlay a.opcao.a, #overlay a.opcao.b{
+    width:100%;
+    margin:10px 0 0 0;
+  }
+  table#pedido_resumo tbody tr.beneficio div.container_beneficio{
+    width:273px;
+    margin:0 0 0 -30px;
+    border:0;
+    height:48px;
+  }
+  table#pedido_resumo tbody tr.beneficio div.img_complemento, table#pedido_resumo tbody tr.beneficio div.img_complemento img{
+    width:80px;
+    height:48px;
+  }
+  table#pedido_resumo tbody tr.beneficio div.ajuda{
+    height:48px;
+  }
+  table#pedido_resumo tbody tr.beneficio div.ajuda p.frase1{
+    margin:16px 0 2px;
+  }
+  table#pedido_resumo tbody tr.beneficio div.icone_validador{
+    margin-top:17px;
+  }
+  table#pedido_resumo tbody tr.beneficio div.container_validador{
+    width:291px;
+    margin:0 0 0 -20px;
+    height:74px;
+  }
+  table#pedido_resumo tbody tr.beneficio div.container_validador input{
+    width:200px;
+    margin-top:26px;
+    margin-left:29px;
+    height:26px;
+    line-height:26px;
+    font-size:12px;
+    padding:0;
+    text-indent:3px;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  }
+  table#pedido_resumo tbody tr.beneficio div.container_validador a{
+    margin-top:35px;
+  }
+  table#pedido_resumo tbody tr.beneficio div.container_validador img{
+    width:291px;
+  }
+  table#pedido_resumo tbody tr.beneficio div.ajuda p.frase3{
+    margin-top:22px;
+  }
+  p.descricao_fase{
+    width:265px;
+    font-size:16px;
+    margin-top:10px;
+    line-height:30px;
+    padding-left:35px;
+    background-size:30px auto;
+  }
+  div.container_setor{
+  }
+  div.container_setor{
+  }
+  div.container_setor div.nome_setor{
+    font-size:12px;
+  }
+  div.container_setor.ativo div.nome_setor{
+  }
+  div.resumo_carrinho{
+    display:none;
+  }
+
+  #fastcashPaymentFrame {
+    margin: 150px 0 -40px 0;
+  }
+
+  div#novo_menu .centraliza {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (min-width:480px) and (max-width:640px){
+}

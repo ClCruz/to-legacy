@@ -1,0 +1,63 @@
+** After install, run for every docker.
+sudo docker exec -it {{DOCKER_NAME}} bash
+
+** Execute Step 1:
+nano /etc/apache2/apache2.conf
+** Find <Directory /var/www/> and change the content to:
+<-- INITIAL CONTENT -->
+        <Directory /var/www/>
+                Options FollowSymLinks
+                AllowOverride All
+                Require all granted
+        </Directory>
+<-- END CONTENT -->
+
+** Find the follow keys and change:
+        ** KEY: MaxKeepAliveRequests
+                MaxKeepAliveRequests 0
+        ** KEY: KeepAliveTimeout
+                KeepAliveTimeout 3
+        ** KEY: StartServers
+                StartServers 40
+        ** KEY: MinSpareServers
+                MinSpareServers 28
+        ** KEY: MaxSpareServers
+                MaxSpareServers 80
+        ** KEY: ServerLimit
+                ServerLimit 1024
+        ** KEY: MaxClients
+                MaxClients 1024
+        ** KEY: MaxRequestsPerChild
+                MaxRequestsPerChild 16000
+StartServers 40
+MinSpareServers 28
+MaxSpareServers 80
+ServerLimit 1024
+MaxClients 1024
+MaxRequestsPerChild 16000
+** End Step 1.
+
+** Execute Step 2:
+nano /etc/apache2/mods-available/mpm_prefork.conf
+** Find <IfModule mpm_prefork_module> and change the content to:
+<-- INITIAL CONTENT -->
+        <IfModule mpm_prefork_module>
+                StartServers 15
+                MinSpareServers 5
+                MaxSpareServers 15
+                MaxRequestWorkers 3000
+                MaxConnectionsPerChild 3000
+        </IfModule>
+<-- END CONTENT -->
+** End Step 2
+
+
+** Execute Step 3:
+** Run the follow commands:
+a2enmod rewrite
+a2dismod mpm_event
+a2enmod mpm_prefork
+
+service apache2 reload
+service apache2 restart
+

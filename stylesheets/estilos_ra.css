@@ -1,0 +1,47 @@
+/* Gerado pelas Ferramentas para Desenvolvedores. Pode não ser uma representação fiel do arquivo fonte original */
+BODY {
+	
+}
+TD {
+	FONT-FAMILY: Verdana, Arial, Tahoma; FONT-SIZE: xx-small; FONT-WEIGHT: 500
+}
+.normal {
+	FONT-FAMILY: Verdana, Arial, Tahoma; FONT-SIZE: xx-small; FONT-WEIGHT: normal
+}
+.txtnormal {
+	BACKGROUND-IMAGE: none; BORDER-BOTTOM: navy 1px solid; BORDER-LEFT: navy 1px solid; PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #ffffff; MARGIN: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND-REPEAT: repeat; FONT: 10px Verdana, Tahoma, Arial; COLOR: #990000; BORDER-TOP: navy 1px solid; BORDER-RIGHT: navy 1px solid; PADDING-TOP: 1px
+}
+.txtobrig {
+	BORDER-BOTTOM: navy 1px solid; BORDER-LEFT: navy 1px solid; PADDING-BOTTOM: 1px; MARGIN: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; FONT: 10px Verdana, Tahoma, Arial; BACKGROUND: #ffff99; COLOR: #990000; BORDER-TOP: navy 1px solid; BORDER-RIGHT: navy 1px solid; PADDING-TOP: 1px
+}
+.botao {
+	BACKGROUND-IMAGE: none; BORDER-BOTTOM: black 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: #cccccc 1pt solid; BACKGROUND-COLOR: silver; FONT-VARIANT: normal; BACKGROUND-REPEAT: repeat; FONT-FAMILY: tahoma,sans-serif; HEIGHT: 19px; COLOR: black; FONT-SIZE: 11px; BORDER-TOP: #cccccc 1pt solid; CURSOR: hand; FONT-WEIGHT: normal; BORDER-RIGHT: black 1pt solid; TEXT-DECORATION: none
+}
+.conteudo {
+	FONT-FAMILY: Arial, Verdana; COLOR: blue
+}
+.result {
+	FONT-FAMILY: Verdana, Arial, Tahoma; COLOR: blue; FONT-SIZE: xx-small
+}
+.marrom {
+	FONT-FAMILY: Arial, Verdana; COLOR: maroon; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+A:link {
+	COLOR: blue; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A:active {
+	FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: blue; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: blue; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.tipo1 {
+	BORDER-BOTTOM: #000000 0px; BORDER-LEFT: #000000 0px; PADDING-BOTTOM: 1px; MARGIN: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; FONT: 10px Verdana, Tahoma, Arial; BACKGROUND: #ffffff; COLOR: #990000; BORDER-TOP: #000000 0px; BORDER-RIGHT: #000000 0px; PADDING-TOP: 1px
+}
+.invisivel {
+	DISPLAY: none
+}
+ 

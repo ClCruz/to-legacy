@@ -1,0 +1,1516 @@
+
+* {
+}
+
+body {
+	@include MQ(S) {
+		font-style: normal;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		background: $gradiente;
+
+	}
+	@include MQ(NS) {
+
+		background-color: $black;
+		font-style: normal;
+		max-height: 99vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		max-width: 100vw;
+	}
+}
+
+#pai {
+	@include MQ(S) {
+		position: relative;
+		width: 94vw;
+		min-height: 88vh;
+		margin: 0 auto;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		box-shadow: none;
+		margin-top: 20px !important;
+
+	}
+	@include MQ(NS) {
+		position: relative;
+		-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+		box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+		width: 94vw;
+		min-height: 88vh;
+		max-height: 88vh;
+		margin: 0 auto;
+		margin-top: 5vh !important;
+		overflow-y: scroll;
+		background: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%);
+		overflow-x: hidden;
+	}
+}
+
+div#novo_menu {
+	background: none;
+}
+
+div#novo_menu .bottom input {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: none;
+	border: 1px solid #fff;
+}
+
+div#novo_menu .fim {
+	height: auto;
+}
+
+div#content {
+	margin-bottom: 100px;
+	background: none;
+
+	@include MQ(S) {
+		margin-bottom: 20px;
+	}
+}
+
+div#texts {
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+p.nome,
+.data {
+	margin-top: -4px !important;
+}
+
+div.resumo_espetaculo > div.data {
+	background: none;
+	width: 65px;
+	height: auto;
+	border: none;
+	/*background: $black;
+	border: none;
+	box-shadow: 0px 2.23393px 2.23393px rgba(0, 0, 0, 0.24), 0px 0px 2.23393px rgba(0, 0, 0, 0.12); */
+}
+
+div.resumo_espetaculo > div.data p {
+	color: white;
+}
+
+div.descricao_pag div.descricao {
+	/* margin-left: 70px; */
+}
+div.container_escolha_ingresso {
+	width: auto;
+}
+div#footer,
+#content > div.centraliza > div.descricao_pag > div.img {
+	display: none;
+}
+
+div.container_botoes_etapas {
+	z-index: 1000;
+	background-color: $black;
+}
+
+div.container_setor div.nome_setor {
+	color: $black;
+}
+
+div.container_setor.ativo div.nome_setor {
+	color: #fff !important;
+}
+
+div#novo_menu .logo {
+	padding: 0;
+	height: auto;
+	width: auto;
+}
+div.espetaculo_img {
+	width: auto;
+	border: none;
+	background: none;
+	margin-left: 0;
+	padding: 0;
+}
+
+div.espetaculo_img img {
+	width: 140px;
+	height: 160px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+div.resumo_espetaculo {
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	@include MQ(NS) {
+		padding: 20px;
+		/* width: 780px; */
+		width: 100%;
+	}
+}
+
+div.resumo_espetaculo {
+	color: white;
+}
+
+div.container_setor:hover span {
+	color: $black !important;
+}
+/*
+
+
+div.resumo_espetaculo {
+  background: $black;
+  float: unset;
+  margin: 0 auto;
+  width: 800px;
+  box-shadow: 0px 2.23393px 2.23393px rgba(0, 0, 0, 0.24), 0px 0px 2.23393px rgba(0, 0, 0, 0.12);
+  display: flex;
+}
+
+div.resumo_espetaculo div.data p, div.resumo p {
+  display: inline-block!important;
+  font-size: 14px!important;
+  width: auto!important;
+  text-align: unset!important;
+}
+
+*/
+
+div.resumo_espetaculo div.data p,
+div.resumo p {
+	font-size: 20px !important;
+}
+div.data {
+	margin-top: -2px !important;
+}
+div.resumo_espetaculo div.data p.nome_dia {
+	text-transform: uppercase;
+}
+div.resumo_espetaculo div.data p.numero_dia,
+div.resumo_espetaculo div.data p.mes,
+div.resumo_espetaculo div.data p.nome_dia {
+	font-weight: normal;
+	font-size: 18px;
+}
+div.resumo_espetaculo div.data p.numero_dia,
+div.resumo_espetaculo div.data p.mes {
+	margin-top: -7px;
+}
+
+p.mes {
+	margin-top: -9px !important;
+}
+
+p.numero_dia {
+}
+
+div.resumo {
+	margin-top: 6px !important;
+	width: 500px !important;
+	margin-left: 0 !important;
+	padding: 20px;
+
+	@include MQ(NS) {
+	}
+}
+
+p.descricao {
+	font-size: 20px;
+}
+
+p.descricao_fase {
+	width: 100%;
+	padding-left: 0;
+	background: none;
+	@include MQ(S) {
+		padding-left: 20px;
+	}
+}
+div.outras_datas {
+	width: unset !important;
+	height: unset !important;
+	/*float: unset !important;*/
+}
+
+div.container_setor span {
+	background-color: $black;
+}
+
+div.container_setor span:hover {
+	color: $black;
+}
+
+div.outras_datas:hover div.icone,
+div.resumo_espetaculo div.outras_datas div.icone:hover {
+	background-position: 0 0;
+}
+
+div.container_escolha_ingresso div.ingresso.quantidade {
+	width: 397px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.container_escolha_ingresso div.ingresso div.icone.assinaturas {
+	display: none;
+}
+
+div.container_escolha_ingresso div.ingresso {
+	height: 85px;
+}
+
+div.container_escolha_ingresso div.ingresso.quantidade {
+	width: 397px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.descricao_pag div.descricao p.nome,
+div.descricao_pag div.descricao p.descricao {
+	font-size: 24px;
+	color: white;
+}
+
+div.descricao p.nome {
+	margin: 15px 0 !important;
+}
+
+div.alert div.container_erros p {
+	@include MQ(S) {
+		font-size: 13px;
+		line-height: 25px;
+	}
+}
+
+div.descricao_pag div.descricao p.descricao {
+	font-size: 18px;
+}
+div.container_setor.ativo {
+	background-color: $primary;
+}
+
+div.container_setor:hover {
+	color: #fff !important;
+	background-color: #fff !important;
+}
+div.container_setores {
+	width: 960px;
+}
+div.container_setor {
+	-webkit-transition: 2s;
+	transition: 2s;
+	border: none;
+	color: $black !important;
+}
+
+div.container_setor:hover {
+	color: #fff;
+}
+
+.logo img {
+	height: 30px;
+}
+
+#novo_menu > div.centraliza > div > div.fim > div.div_header {
+	display: none;
+}
+
+div#novo_menu {
+	padding: 10px 20px 0 20px;
+}
+
+div#novo_menu .meio .bottom {
+	display: none;
+}
+
+div.container_escolha_ingresso div.ingresso.quantidade p {
+	color: $black !important;
+}
+
+.flaticon-magnifier {
+	display: none;
+}
+
+div#novo_menu .bottom {
+	padding-top: 0;
+}
+
+div#mapa_de_plateia_geral {
+	color: $black;
+}
+
+div.mapa_de_plateia img {
+	border-radius: 5px;
+}
+
+/*
+  Confirmação
+*/
+
+table#pedido_resumo tbody tr {
+	background: #222;
+	border: 1px solid #444;
+}
+
+table#pedido_resumo tbody td {
+	background: #222;
+}
+
+table#pedido_resumo tbody * {
+	color: #fff !important;
+	font-weight: normal;
+
+	@include MQ(NS) {
+		font-size: 16px !important;
+	}
+}
+
+table#pedido_resumo tbody li *,
+#pedido_resumo .sbHolder * {
+	color: $black !important;
+}
+
+table#pedido_resumo {
+	@include MQ(NS) {
+		width: 100%;
+	}
+}
+
+.sbHolder * {
+	font-size: 16px !important;
+	color: $black !important;
+}
+
+.container_ingresso .sbHolder {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.container_ingresso {
+	@include MQ(S) {
+		width: 100%;
+		position: relative;
+	}
+	.sbHolder {
+		@include MQ(S) {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+}
+
+#pedido > div.resumo_espetaculo > div.pedido_entrega > div.descricao,
+div.resumo_espetaculo div.pedido_entrega div.valor {
+	font-weight: normal;
+	font-size: 14px;
+}
+
+table#pedido_resumo tbody td div.local {
+	border-color: $black;
+}
+
+table#pedido_resumo tbody td div.local td span {
+	font-size: 14px;
+}
+
+div.resumo_espetaculo p.pedido_total span.valor {
+	font-size: 20px;
+
+	@include MQ(S) {
+		font-size: 16px;
+		margin-right: 10px;
+	}
+}
+
+a.botao,
+#trocar_senha > div > div > div.inputs > input.submit.salvar_dados,
+input.submit.salvar_dados,
+input.submit.avancar.passo4,
+input.submit {
+	background-image: none !important;
+	background-position: none !important;
+	font-size: 0.8rem !important;
+	line-height: 4 !important;
+	border-radius: 0.2rem !important;
+	background: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%) !important;
+	border: none !important;
+	color: white !important;
+	text-align: center !important;
+	text-indent: unset !important;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	text-transform: uppercase;
+	height: auto;
+	padding: 0 !important;
+
+	@include MQ(S) {
+		z-index: 5000;
+		font-size: 0.7rem !important;
+		line-height: 3 !important;
+	}
+}
+
+input.submit.avancar.passo4 {
+	padding: 0;
+}
+
+div.identificacao a.esqueci_senha,
+input.submit.trocar_senha {
+	margin: 12px 0 0;
+}
+
+a.botao:hover {
+	color: #fff !important;
+}
+
+div#content {
+	width: 960px;
+	margin-left: calc((100% - 960px) / 2);
+	box-sizing: border-box;
+	box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+	background: $black;
+
+	@include MQ(S) {
+		background: #222;
+		border-radius: 20px;
+		box-shadow: none;
+	}
+}
+
+div.resumo_espetaculo div.outras_datas p {
+	color: #fff;
+}
+
+a.botao:hover {
+	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+	opacity: 0.85;
+}
+
+div.resumo_carrinho span.quantidade {
+	font-size: 56px;
+	line-height: 70px!important;
+}
+
+div.resumo_carrinho span.frase {
+	font-size: 15px;
+}
+
+div.descricao_pag {
+	color: white !important;
+
+	border-radius: 5px;
+
+	padding: 0 20px;
+	@include MQ(NS) {
+	}
+
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.container_cartoes p.frase,
+div.container_dados p.frase {
+	color: white;
+	font-size: 25px;
+}
+
+div.img {
+	display: none;
+}
+
+div.descricao_pag div.descricao {
+	float: left;
+	width: 800px;
+}
+
+div.container_dados {
+	margin-left: 0;
+
+	@include MQ(S) {
+		padding-left: 20px;
+		margin-left: -20px;
+		width: 95%;
+	}
+
+	input {
+		@include MQ(S) {
+			width: 249px !important;
+		}
+	}
+}
+
+div.container_dados div.input .sbHolder {
+	@include MQ(S) {
+		width: 245px !important;
+	}
+}
+div.container_dados div.erro_help p.help {
+	@include MQ(S) {
+		margin-right: 40px;
+	}
+}
+
+#dadosPagamento
+	> div
+	> div:nth-child(2)
+	> div.container_dados.container_card_others
+	> div:nth-child(3)
+	> div.input.data
+	> div.erro_help
+	> p {
+	@include MQ(S) {
+		margin-right: 20px;
+	}
+}
+
+#dadosPagamento
+	> div
+	> div:nth-child(2)
+	> div.container_dados.container_card_others
+	> div:nth-child(3)
+	> div.input.codigo
+	> div
+	> p {
+	@include MQ(S) {
+		margin-right: 20px !important;
+	}
+}
+div.container_dados div.input.data .mes .sbHolder {
+	@include MQ(S) {
+		width: 50px !important;
+		margin-right: 0 !important;
+	}
+}
+div.container_dados div.linha div.input.data {
+	@include MQ(S) {
+		width: 190px;
+	}
+}
+div.container_dados div.linha div.input.data div.mes {
+	@include MQ(S) {
+		margin-right: 0;
+	}
+}
+
+div.container_dados div.linha div.input.codigo {
+	@include MQ(S) {
+		width: 110px;
+	}
+}
+
+div.container_dados div.linha div.input.codigo input {
+	@include MQ(S) {
+		width: 90px !important;
+	}
+}
+
+div.container_dados div.input.data .ano .sbHolder {
+	@include MQ(S) {
+		width: 60px !important;
+	}
+}
+
+div.compra_captcha {
+	margin-top: 20px;
+}
+
+div.container_cartoes {
+	margin-left: 0;
+}
+
+div.container_cartao p.nome {
+	font-size: 14px;
+	margin: 10px 0 5px -20px;
+
+	@include MQ(S) {
+		margin-top: 10px !important;
+	}
+}
+
+/* MENU */
+
+.header {
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	padding-top: 16px;
+
+	@include MQ(S) {
+		padding-top: 0;
+		width: 100%;
+		margin-top: 0;
+		background: transparent !important;
+		box-shadow: none;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	.header__logo {
+	}
+}
+
+.header__logo {
+	position: absolute;
+
+	@include MQ(S) {
+		margin-left: 15px;
+	}
+}
+
+.header__logo img {
+	height: 30px;
+}
+.header__logo img:hover {
+	opacity: 0.8;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	.nav__hamburger {
+		margin-left: 15px;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	.header__signin {
+		display: none;
+		margin-right: 15px;
+	}
+}
+
+.header__signin-mobile {
+	margin-right: 15px;
+	color: #fff;
+}
+
+.search {
+	margin: 0 auto;
+	position: absolute;
+	margin-left: 320px;
+	width: 300px;
+}
+
+.header input {
+	outline: none;
+}
+
+.header input[type=text] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+
+.header input::-webkit-search-decoration,
+.header input::-webkit-search-cancel-button {
+	display: none;
+}
+
+.header input[type=text] {
+	background: url(../../../assets/icons/search_white.svg) no-repeat 5px center;
+	border: solid 1px #fff;
+	padding: 5px 0px 5px 32px;
+	color: #fff;
+	border-radius: 10em;
+
+	-webkit-transition: all .5s;
+	transition: all .5s;
+}
+
+.header input:-moz-placeholder {
+	color: #999;
+}
+
+.header input::-webkit-.header input-placeholder {
+	color: #999;
+}
+
+/* Demo 2 */
+.header input[type=text] {
+	padding-left: 32px;
+	background: url(../images/search.svg) no-repeat 5px center;
+	width: calc(100% - 40px);
+	color: $black;
+	background-color: #fff;
+	cursor: auto;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.header input[type=text]:hover {
+}
+
+.header input[type=text]:focus {
+}
+
+.header input:-moz-placeholder {
+	color: transparent;
+}
+
+.header input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.v-suggestions {
+	margin: 0 auto;
+	margin-top: 3px;
+	-ms-flex-item-align: center;
+	align-self: center;
+	width: 300px;
+	/* Demo 2 */
+}
+.v-suggestions input {
+	outline: none;
+}
+.v-suggestions input[type=text] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+.v-suggestions input::-webkit-search-decoration,
+.v-suggestions input::-webkit-search-cancel-button {
+	display: none;
+}
+.v-suggestions input[type=text] {
+	background: url(../../../assets/icons/search_white.svg) no-repeat 5px center;
+	border: solid 1px #fff;
+	padding: 0px 0px 0px 32px;
+	color: #fff;
+	border-radius: 10em;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.v-suggestions input:-moz-placeholder {
+	color: #999;
+}
+.v-suggestions input::-webkit-input-placeholder {
+	color: #999;
+}
+.v-suggestions input[type=text] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+	margin: 0 auto;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.v-suggestions input[type=text]:focus {
+	padding-left: 32px;
+	background: url(../../../assets/icons/search.svg) no-repeat 5px center;
+	width: calc(100% - 40px);
+	color: $black;
+	background-color: #fff;
+	cursor: auto;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+.v-suggestions input:-moz-placeholder {
+	color: transparent;
+}
+.v-suggestions input::-webkit-input-placeholder {
+	color: transparent;
+}
+.v-suggestions .suggestions {
+	border-radius: 10px;
+	width: 100%;
+}
+.v-suggestions .items {
+	text-align: left;
+	max-height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-size: 0.8em;
+	border-radius: 10px;
+}
+.v-suggestions .items .item:hover {
+	background: #eee;
+}
+.v-suggestions .items a,
+.v-suggestions .items p {
+	color: $black;
+	padding: 2px;
+	text-decoration: none;
+}
+.__search-bar {
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+
+/* The Overlay (background) */
+.overlay {
+	/* Height & width depends on how you want to reveal the overlay (see JS below) */
+	height: 100%;
+	width: 0;
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	background-color: rgb(0, 0, 0);
+	/* Black fallback color */
+	background-color: rgba(0, 0, 0, 0.9);
+	/* Black w/opacity */
+	overflow-x: hidden;
+	/* Disable horizontal scroll */
+	transition: 0.5s;
+	/* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+	position: relative;
+	top: 25%;
+	/* 25% from the top */
+	width: 100%;
+	/* 100% width */
+	text-align: center;
+	/* Centered text/links */
+	margin-top: 15px;
+	/* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #818181;
+	display: block;
+	/* Display block instead of inline */
+	transition: 0.3s;
+	/* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+	color: #f1f1f1;
+}
+
+.toggle {
+	z-index: 5000;
+	color: #fff;
+	position: absolute;
+	cursor: pointer;
+	align-self: center;
+}
+
+a {
+	color: $primary !important;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+a:hover {
+	color: #fff !important;
+	opacity: 0.7;
+}
+
+.header__signin:after {
+}
+
+#nav-icon1,
+#nav-icon2,
+#nav-icon3,
+#nav-icon4 {
+	width: 24px;
+	height: 100%;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+	position: relative;
+}
+
+#nav-icon1 span,
+#nav-icon3 span,
+#nav-icon4 span {
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: #fff;
+	border-radius: 9px;
+	opacity: 1;
+	left: 40px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: 0.25s ease-in-out;
+	-moz-transition: 0.25s ease-in-out;
+	-o-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+	top: 5px;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+	top: 15px;
+}
+
+#nav-icon3 span:nth-child(4) {
+	top: 25px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+	top: 24px;
+	width: 0%;
+	left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+	.overlay a {
+		font-size: 20px;
+	}
+
+	.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+
+#overlay,
+#loading {
+	z-index: 10000;
+}
+
+a.botao span.numero {
+	width: 50px;
+	float: left;
+	display: block;
+	margin-top: 10px;
+	text-align: center;
+}
+a.botao span.data {
+	float: left;
+	width: 50px;
+	display: block;
+	margin: 5px 10px 0 2px;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+div.imprima_agora div.icone {
+	display: none;
+}
+
+div.imprima_ingressos div.icone {
+	display: none;
+}
+
+div.imprima_ingressos, div.euvou {
+	float: left;
+	width: 710px;
+	margin: 30px 0 20px 20px;
+}
+
+div.imprima_agora {
+	margin-left: 20px;
+}
+
+div.resumo_espetaculo div.pedido_entrega div.tipo {
+	color: $primary!important;
+}
+
+div#novo_menu .meio ul.opcoes li a:hover {
+	transition: all 0.3s;
+	color: #fff;
+}
+.opcoes {
+	@include MQ(S) {
+		margin-right: 15px;
+		margin-top: 5px;
+	}
+}
+div.imprima_ingressos div.icone {
+	@include MQ(S) {
+		display: none;
+	}
+}
+div.imprima_ingressos {
+	@include MQ(S) {
+		margin-left: 20px;
+	}
+}
+table#meus_pedidos {
+	@include MQ(S) {
+		margin-left: 0!important;
+	}
+}
+div#novo_menu .meio .bottom > div:hover *:before {
+	color: #fff;
+}
+
+a.botao:hover span.dia_hora,
+a.botao:hover span.comprar {
+	color: #fff !important;
+}
+
+div.container_setor span {
+	color: #fff;
+	font-size: 10px;
+	padding: 4px 8px;
+	cursor: pointer;
+	background-color: $black;
+}
+
+div.container_setor:hover {
+	background-color: $black;
+	color: #fff;
+}
+
+div.container_setor:hover span {
+	background-color: $black;
+	color: #fff !important;
+}
+
+div.container_setor span:hover {
+}
+
+div.descricao_pag div.descricao div.sessao p.tempo {
+	color: #fff;
+}
+
+div.descricao_pag div.descricao div.sessao {
+	margin-top: 20px;
+}
+
+li a {
+	color: $black;
+}
+
+div.identificacao {
+	float: left;
+	width: 342px;
+	margin: 0 60px 0 20px;
+	overflow: hidden;
+}
+
+div.identificacao p.frase,
+div.container_cartoes p.frase,
+div.container_dados p.frase {
+	font-size: 20px !important;
+	font-weight: 300;
+	line-height: 1.1em;
+	margin: 0 0 0 0;
+	color: white !important;
+}
+
+div.identificacao p.frase b {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.1em;
+	margin: 0;
+}
+
+div.identificacao p.site {
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.2em;
+	margin: 0;
+	margin-bottom: 20px;
+	color: white;
+}
+
+div.input_area div.icone {
+	display: none;
+}
+
+div.input_area div.inputs {
+	float: unset;
+}
+
+div.input_area.identificacao {
+	margin: 0 60px 0 0;
+}
+
+#form_cadastro div.coluna_tixs {
+	color: #fff !important;
+	float: left;
+	width: 387px;
+	margin: 0 5px 0 20px !important;
+}
+
+p.erro {
+	color: $primary !important;
+	font-size: 14px;
+	margin-left: 0 !important;
+}
+
+/*
+input[type=radio].radio {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 1.1em;
+	clip: initial !important;
+	border: initial !important;
+}
+
+.radio {
+}
+*/
+div.container_dados div.linha p.titulo {
+	margin: 0;
+}
+
+div.container_dados div.erro_help {
+	margin: 0;
+}
+
+div.container_dados div.input.codigo div.erro_help {
+	margin-left: 0;
+}
+
+div.presente img {
+	width: 32px;
+	margin-right: 10px;
+	margin: 20px 10px 20px 0;
+}
+
+div.container_cartao label.radio img {
+	width: 35px;
+	height: 35px;
+	margin-top: -10px;
+	border: 0;
+}
+
+div.container_cartao {
+	float: left;
+}
+
+div.container_dados div.linha p.titulop::first-letter {
+	text-transform: capitalize;
+}
+div.container_dados div.linha p.titulo {
+	font-size: 14px;
+
+	@include MQ(S) {
+		font-size: 12px;
+	}
+}
+
+a.sbSelector.sbFocus,
+a.sbSelector:hover,
+.sbHolder:hover a.sbSelector {
+	color: #777 !important;
+	font-size: 14px;
+}
+
+.sbToggle {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+}
+
+.sbToggleOpen {
+}
+
+.sbHolder {
+	border-radius: 5px;
+}
+
+div.container_dados div.linha div.input input,
+#trocar_senha > div > div > div.inputs input,
+#content input[type="text	"] {
+	border-radius: 3px !important;
+	background: #e9e9e9 !important;
+	box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25) !important;
+}
+
+div.alert {
+	padding: 15px 0;
+	position: fixed;
+	z-index: 10000;
+	cursor: pointer;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background: none;
+	background: #222;
+	box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+}
+
+div.alert a {
+	background: $gradiente;
+	border-radius: 5px;
+	margin: 0 0 -5px;
+	box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+	padding: 6px 20px;
+	color: #fff !important;
+}
+
+table#meus_pedidos {
+	margin-left: 20px;
+	color: #fff;
+}
+
+div.menu_conta a.botao,
+#trocar_senha > div > div > div.inputs > input.submit.salvar_dados,
+a.botao.avancar.passo6.salvar_dados {
+	line-height: 3 !important;
+	width: 120px;
+}
+
+div.coluna_endereco {
+	float: left;
+	width: 387px;
+	margin: 0 5px 0 20px;
+	color: white;
+}
+
+div.container_enderecos {
+	margin: 0;
+	color: white;
+}
+
+div.container_endereco p.titulo {
+	font-size: 16px;
+}
+
+div.container_endereco p.endereco {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+a.add_endereco {
+	margin: 0 0 50px 20px;
+}
+
+div.coluna p.frase {
+	font-size: 24px;
+}
+
+.header a {
+	color: white !important;
+}
+
+div#texts div.centraliza {
+	width: auto;
+	margin: 0 auto;
+	margin-left: 20px;
+	color: white !important;
+}
+
+div#texts div.centraliza p {
+	color: white !important;
+}
+
+#overlay div.centraliza div.fechar {
+	background-image: none !important;
+	background-position: none !important;
+	font-size: 0.8rem !important;
+	line-height: 3 !important;
+	border-radius: 0.2rem !important;
+	background: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%) !important;
+	border: none !important;
+	color: white !important;
+	text-align: center !important;
+	text-indent: unset !important;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	text-transform: uppercase;
+	margin-top: 10px;
+	height: auto;
+	padding: 0 !important;
+}
+
+a.end_salvar,
+a.end_cancelar {
+	margin-left: 0;
+}
+.container__search-list .card {
+	width: 100%;
+	margin-left: unset;
+}
+.card {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	border: 1px solid rgba(0, 0, 0, .125);
+	border-radius: .25rem;
+}
+.row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.card {
+	width: 90%;
+	margin: auto;
+	padding: .5rem;
+	font-size: .8rem;
+	background: #222;
+	border: 1px;
+	-o-border-image: linear-gradient(121.11deg, $secundary, $primary 43.45%);
+	border-image: linear-gradient(121.11deg, $secundary, $primary 43.45%);
+	color: #fff;
+	margin-top: 8px;
+	-webkit-box-shadow: 0 3px 8px rgba(51, 51, 51, .3);
+	box-shadow: 0 3px 8px rgba(51, 51, 51, .3);
+}
+.container__search-list img {
+	width: 65px;
+	height: 65px;
+}
+
+.container__search-list .card__description {
+	padding-left: 30px;
+}
+.card-body,
+.card__description {
+	padding: 0;
+}
+
+.card__btn,
+.card__btn button {
+	-webkit-box-pack: end;
+	justify-content: flex-end;
+}
+.card__date {
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+.card-body {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	padding: 1.25rem;
+}
+.card-body,
+.card__description {
+	padding: 0;
+}
+.card__btn {
+	justify-items: right;
+	-ms-flex-pack: end;
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+.text-center {
+	text-align: center !important;
+}
+
+a.remover {
+	filter: brightness(0%) invert(1) !important;
+}
+
+.sbFocus {
+}
+
+.container_setores {
+	@include MQ(S) {
+		display: inline !important;
+	}
+
+	.container_setor {
+		@include MQ(S) {
+			display: block;
+			width: 75vw;
+			margin-left: 30px;
+		}
+	}
+}
+
+div.container_botoes_etapas {
+	border-top: none !important;
+}
+
+.resumo_carrinho {
+	@include MQ(S) {
+		margin: 0 auto !important;
+		z-index: 1 !important;
+	}
+
+	.quantidade {
+		@include MQ(S) {
+			z-index: 0;
+			text-align: center !important;
+			font-size: 32px !important;
+			line-height: 1.2 !important;
+			width: 100vw !important;
+		}
+	}
+
+	.frase {
+		@include MQ(S) {
+			z-index: 0 !important;
+			display: none !important;
+		}
+	}
+}
+
+#pedido > div.resumo_espetaculo > div.pedido_entrega > div.descricao,
+div.resumo_espetaculo div.pedido_entrega div.valor {
+	@include MQ(S) {
+		text-align: left !important;
+		padding-left: 20px;
+		font-size: 12px;
+		display: inline;
+		box-sizing: border-box;
+	}
+}
+
+div#content div.container_botoes_etapas div.centraliza {
+	@include MQ(S) {
+		margin-top: 5px;
+	}
+}

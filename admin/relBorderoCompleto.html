@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">    
+  <head>
+    <title>Relatório Borderô</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/estilos_ra.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/padraoRelat.CSS" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/relBorderoCompleto.css" />
+  </head>
+    <body leftmargin="0" topmargin="0">
+	<script language="VBScript">
+		function ZeroData(data) {
+			ZeroData = Right(("0" & day(data)),2) & "/" & Right(("0" & month(data)),2) & "/" & year(data);
+	    }
+	</script>
+	<table width=650 class="tabela" border="0">
+	    <tr>
+		<td colspan="1" rowspan="2"><img align="left" border="0" src="../images/logo.jpg" alt="Compreingressos.com" /></td>
+		<td colspan="1" height="15"></td>
+	    </tr>
+	    <tr>
+		<td class="tabela" align="center" bgcolor="LightGrey"><b><font size=2 face="tahoma,verdana,arial">Borderô de Vendas Líquido</font><br/>Contabilização dos Ingressos</b></td>
+	    </tr>
+	    <tr>
+		<td colspan="2">
+		    <table class="tabela" width="648">
+			<tr>
+			    <td align="right" width="70"><font size=1 face="tahoma,verdana,arial"><b>Evento:</b></font></td>
+			    <td align="left" width="370">{evento}</td>
+			    <td align="right" width="120"><font size=1 face="tahoma,verdana,arial"><b>Borderô nº</b></font></td>
+			    <td align="left" width="220">{numBordero}</td>
+			</tr>
+			<tr>
+			    <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Responsável:</b></font></td>
+			    <td align="left">{responsavel}</td>
+			    <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Apresentação nº</b></font></td>
+			    <td align="left">{numBordero}</td>
+			</tr>
+			<tr>
+			    <td align="right"><font size=1 face="tahoma,verdana,arial"><b>CNPJ/CPF:</b></font></td>
+			    <td align="left">{cpf_cnpj}</td>
+                            <!-- BEGIN BLOCK_DT_SMALL -->
+				<td align="right"><font size=1 face="tahoma,verdana,arial"><b>Data e Horário:</b></font></td>
+				<td align="left">{dtSmall}</td>
+                            <!-- END BLOCK_DT_SMALL -->                            
+                            <!-- BEGIN BLOCK_DT_NORMAL -->
+				<td align="right"><font size=1 face="tahoma,verdana,arial"><b>Datas:</b></font></td>
+				<td align="left">{dtIni}" à "{dtFim}</td>
+			    <!-- END BLOCK_DT_NORMAL -->
+			</tr>
+			<tr>
+			    <td align="right" rowspan="3" valign="top"><font size=1 face="tahoma,verdana,arial"><b>Endereço:</b></font></td>
+			    <td align="left" rowspan="3" valign="top">{endereco}</td>
+			    <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Dia:</b></font></td>
+			    <td align="left">{dia}</td>
+			</tr>
+			<tr>
+			    <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Local:</b></font></td>
+			    <td align="left">{local}</td>
+			</tr>
+			<tr>
+			    <td align="right"><font size=1 face="tahoma,verdana,arial"><b>Lotação/Capacidade:</b></font></td>
+			    <td align="left">{lotacao}</td>
+			</tr>
+		    </table>
+		</td>
+	    </tr>
+	</table>
+	<br/>
+
+        <!-- BEGIN BLOCK_TOTAIS -->
+					<table width="656" class="tabela" border="0">
+					    <tr>
+						<td align=center width="162" class="tabela"><font size=1 face="tahoma,verdana,arial"><b>Ingressos Não Vendidos:</b>&nbsp;&nbsp;&nbsp;<?php echo $totNVendidos; ?></font></td>
+						<td align=center width="162" class="tabela"><font size=1 face="tahoma,verdana,arial"><b>Público Não Pagante:</b>&nbsp;&nbsp;&nbsp;<?php echo $totNPagantes; ?></font></td>
+						<td align=center width="162" class="tabela"><font size=1 face="tahoma,verdana,arial"><b>Público Pagante:</b>&nbsp;&nbsp;&nbsp;<?php echo $totPagantes; ?></font></td>
+						<td align=center width="163" class="tabela"><font size=1 face="tahoma,verdana,arial"><b>Público Total:</b>&nbsp;&nbsp;&nbsp;<?php echo $totPublico; ?></font></td>
+					    </tr>
+					</table>
+        <!-- END BLOCK_TOTAIS -->
+					<br>
+					<table width="656" class="tabela" border="0" bgcolor="LightGrey">
+					    <tr>
+						<td align="center" colspan="6"><font size="2" face="tahoma,verdana,arial"><B>1 - RECEITAS DO BORDERÔ</B></font></td>
+					    </tr>
+					    <tr>
+						<td	align="left" width="104" class="titulogrid">Setor</td>
+						<td	align="left" width="240" class="titulogrid">Tipo de Ingressos</td>
+						<td	align="right" width="104" class="titulogrid">Qtde Estornados</td>
+						<td	align="right" width="104" class="titulogrid">Qtde Vendidos</td>
+						<td	align="right" width="104" class="titulogrid">Preço</td>
+						<td	align="right" width="104" class="titulogrid">Sub Total</td>
+					    </tr>
+	    <?php
+					$strSqlBilhete = ($CodSala == 'TODOS')
+						? "SP_REL_BORDERO_VENDAS_2;5 '" . $DataIni . "','" . $DataFim . "'," . $CodPeca . ",'" . $HorSessao . "','" . $_SESSION["NomeBase"] . "'"
+						: "SP_REL_BORDERO_VENDAS_2;4 " . $pRSBordero["CodApresentacao"] . ",'" . $_SESSION["NomeBase"] . "'";
+					$queryBilhete = executeSQL($connGeral, $strSqlBilhete);
+					if (sqlErrors ()) {
+					    echo "Erro #003: ";
+					    print_r(sqlErrors());
+					}
+					while ($pRSBilhete = fetchResult($queryBilhete)) {
+					    if ($Resumido == "0") {
+	    ?>
+				    	    <tr>
+				    		<td	align=left class=texto><?php echo formatarConteudoVazio(utf8_encode2($pRSBilhete["NomSetor"])); ?></td>
+				    		<td	align=left  class=texto><?php echo formatarConteudoVazio(utf8_encode2($pRSBilhete["TipBilhete"])); ?></td>
+				    		<td	align=right  class=texto><?php echo formatarConteudoVazio($pRSBilhete["QtdeEstornados"]); ?></td>
+				    		<td	align=right  class=texto><?php echo formatarConteudoVazio($pRSBilhete["QtdeVendidos"]); ?></td>
+				    		<td	align=right class=texto>R$&nbsp;<?php echo number_format($pRSBilhete["Preco"], 2, ",", "."); ?></td>
+				    		<td	align=right class=texto >R$&nbsp;<?php echo number_format($pRSBilhete["Total"], 2, ",", "."); ?></td>
+				    	    </tr>
+<?php
+					    }
+					    $nTotalVendas = $nTotalVendas + $pRSBilhete["Total"];
+					}
+					if ($Resumido == "0") {
+?>
+					    <tr>
+						<td colspan="3" bgcolor="#FFFFFF" rowspan="2" align="center" class="tabela"><font size=2 face="tahoma,verdana,arial"><b>Taxa de Ocupação:</b>&nbsp;&nbsp;  <?php echo number_format((($totPublico / $lotacao) * 100), 2, ",", "."); ?> %</font></td>
+						<td bgcolor="LightGrey" colspan="2" align="center" class="label"><b>TOTAL DE VENDAS BRUTO</b></td>
+					    </tr>
+					    <tr>
+						<td bgcolor="LightGrey" colspan="2" align="right" class="label"><b>R$&nbsp;&nbsp;<?php echo number_format($nTotalVendas, 2, ",", "."); ?></b></td>
+					    </tr>
+					</table>
+					<br clear=all>
+<?php ob_start(); ?>
+					<table width="656" class="tabela" border="0" bgcolor="LightGrey">
+					    <tr>
+						<td align="center" colspan="5"><font size=2 face="tahoma,verdana,arial"><B>3 - DETALHAMENTO POR FORMA DE PAGAMENTO<BR>(apenas para conferência de valores e quantidades)</B></font></td>
+					    </tr>
+					    <tr>
+						<td	align="left" width="140" class="titulogrid">Tipo de Forma de Pagamento</td>
+						<td	align="right" width="104" class="titulogrid">Qtde Transações</td>
+						<td	align="right" width="104" class="titulogrid">Valores Brutos</td>
+						<td	align="right" width="104" class="titulogrid">Repasses</td>
+                                                <?php if($_GET['Small'] == 1){ ?>
+                                                <td	align="right" width="100" class="titulogrid">Pagamento em</td>
+                                                <?php } ?>
+					    </tr>
+<?php
+					    //$strSqlDet = "SP_REL_BORDERO_VENDAS;5 '20090419','20090419',18,3,'19:00','CI_COLISEU'";
+					    $strSqlDet = "SP_REL_BORDERO_VENDAS_2;" . (($CodSala == 'TODOS') ? '2' : '3') . " '" . $DataIni . "','" . $DataFim . "'," . $CodPeca . "," . $CodSala . ",'" . $HorSessao . "','" . $_SESSION["NomeBase"] . "'";
+					    $queryDet = executeSQL($connGeral, $strSqlDet);
+
+					    //$strSqlDet = "SP_REL_BORDERO_VENDAS;5 ?, ?, ?, ?, ?, ?";
+					    $paramsDet = array($DataIni, $DataFim, $CodPeca, $CodSala, $HorSessao, "'" . $_SESSION["NomeBase"] . "'");
+					    //$queryDet  = executeSQL($connGeral, $strSqlDet, $paramsDet);
+					    //$queryDet = executeSQL($connGeral, $strSqlDet, array('20090415','20090415',18,1,'20:30','CI_COLISEU'));
+
+					    if (sqlErrors ()) {
+						echo $strSqlDet . "<br>";
+						print_r($paramsDet);
+						echo "Erro #004: <br>";
+						die(print_r(sqlErrors()));
+					    } else {
+					    $forma_pagamento = array();
+
+						while ($pRSDetalhamento = fetchResult($queryDet)) {
+
+							$forma_pagamento[] = array('nome' => $pRSDetalhamento["forpagto"], 'valor' => $pRSDetalhamento["liquido"]);
+?>
+						    <tr>
+							<td	align=left  class=texto><?php echo utf8_encode2($pRSDetalhamento["forpagto"]); ?></td>
+							<td	align=right class=texto><?php echo $pRSDetalhamento["qtdBilh"]; ?></td>
+							<td	align=right class=texto>R$&nbsp;<?php echo number_format($pRSDetalhamento["totfat"], 2, ",", "."); ?></td>
+							<td	align=right class=texto>R$&nbsp;<?php echo number_format($pRSDetalhamento["liquido"], 2, ",", "."); ?></td>
+                                                        <?php
+                                                            if($_GET['Small'] == 1){
+                                                            $dataRepasseTemp = explode("/",$DataFim2);
+                                                            $dataRepasse = mktime(24*$pRSDetalhamento["PrzRepasseDias"],0,0, $dataRepasseTemp["1"],$dataRepasseTemp["0"],$dataRepasseTemp["2"]). "  ".$pRSDetalhamento["PrzRepasseDias"];
+                                                        ?>
+                                                        <td	align=right class=texto><?php echo date("d/m/Y",$dataRepasse);  ?></td>
+                                                        <?php } ?>
+						    </tr>
+<?php
+						    $nQt += $pRSDetalhamento["qtdBilh"];
+						    $nBrutoTot += $pRSDetalhamento["totfat"];
+						    $nTotDesc += $pRSDetalhamento["Descontos"];
+						    $nTotLiqu += $pRSDetalhamento["liquido"];
+						}
+					    }
+?>
+					</table>
+					<br clear=all>
+<?php $table3 = ob_get_clean(); ?>
+					<table width=656 class="tabela" border="0" bgcolor="LightGrey">
+					    <tr>
+						<td align="center" colspan="5"><font size=2 face="tahoma,verdana,arial"><B>2 - DESPESAS DO BORDERÔ</B></font></td>
+					    </tr>
+					    <tr>
+						<td	align="left" width="219" class="titulogrid">Tipo de Débito</td>
+						<td	align="right" width="219" class="titulogrid">% ou R$ Fixo</td>
+						<td	align="right" width="219" class="titulogrid">Valor</td>
+					    </tr>
+<?php
+					}
+					$nTotalDesp = 0;
+					$nLin = $nLin + 4;
+
+					if ($CodSala == 'TODOS') {
+					    $gSQL = "select CodApresentacao from ".$_SESSION["NomeBase"]."..tabapresentacao where
+							    datapresentacao between ? and ?
+							    and codpeca = ?" . (($_GET['Small'] != '1') ? ' and horsessao = ?' : '');
+					    $paramsApresentacoes = (($_GET['Small'] == '1')
+								    ? array($DataIni, $DataFim, $CodPeca)
+								    : array($DataIni, $DataFim, $CodPeca, $HorSessao));
+					    //print_r(array($gSQL, $paramsApresentacoes));
+					    $resultApresentacoes = executeSQL($connGeral, $gSQL, $paramsApresentacoes);
+					    $rsApresentacoes = fetchResult($resultApresentacoes);
+					}
+
+					$despesas = array();
+
+					do {
+					    $strSqlDebito = ($CodSala == 'TODOS')
+								? "SP_REL_BORDERO_VENDAS_2 " . $CodPeca . "," . $rsApresentacoes["CodApresentacao"] . ",'" . $DataIni . "','" . $_SESSION["NomeBase"] . "'"
+								: "SP_REL_BORDERO_VENDAS_2 " . $pRSBordero["CodPeca"] . "," . $pRSBordero["CodApresentacao"] . ",'" . $pRSBordero["DatApresentacao"]->format("Ymd") . "','" . $_SESSION["NomeBase"] . "'";
+					    $queryDebito = executeSQL($connGeral, $strSqlDebito);
+
+					    while ($pRSDebito = fetchResult($queryDebito)) {
+							if ($pRSDebito["TipValor"] == "P")
+							    $simbolo = "%";
+							else
+							    $simbolo = "R$";
+
+							$nTotalDesp += $pRSDebito["Valor"];
+							$despesas[$pRSDebito["CodTipDebBordero"]]['nome'] = $pRSDebito["DebBordero"];
+							$despesas[$pRSDebito["CodTipDebBordero"]]['tipoValor'] = $simbolo . " " . number_format($pRSDebito["PerDesconto"], 2, ",", ".");
+							$despesas[$pRSDebito["CodTipDebBordero"]]['valor'] += $pRSDebito["Valor"];
+							$despesas[$pRSDebito["CodTipDebBordero"]]['valor_real'] += $pRSDebito["ValorReal"];
+							$despesas[$pRSDebito["CodTipDebBordero"]]['limite'] += $pRSDebito["VlMinimoDebBordero"];
+					    }
+					} while ($rsApresentacoes = fetchResult($resultApresentacoes));
+
+					if (!empty($forma_pagamento)) {
+						foreach ($forma_pagamento as $forma) {
+							$despesas[] = array(
+								'nome' => $forma['nome'],
+								'valor' => $forma['valor'],
+								'tipoValor' => ' - '
+							);
+
+							$nTotalDesp += $forma['valor'];
+						}
+					}
+
+					$taxaDosCartoes = $nBrutoTot - $nTotLiqu;
+					$nTotalDesp += $taxaDosCartoes;
+
+					foreach ($despesas as $desp) {
+						/*
+						https://portal.cc.com.br:8084/projetos/ticket/191
+
+						colunas VlMinimoDebBordero e Valor as ValorReal adicionadas
+						as colunas de retorno devido a um problema com os calculos de
+						limite com multiplas apresentacoes representando uma mesma apresentacao, por exemplo:
+
+						0- O TOTAL DE VENDAS BRUTO foi de R$ 10.800,00.
+						 1- Foi criado uma apresentação em duas salas (do mesmo dia e hora), ou
+						 seja, foi gerado duas apresentações.
+						 2- Criou o valor mínimo do débito do borderô de R$ 750,00 no módulo
+						 Administrativo (só que na descrição do débito informada que o mínimo é de
+						 R$ 1.500,00).
+						 3- Em uma sala (apresentação) o valor da venda apurado foi de R$ 700,00,
+						 sendo assim o sistema assumiu o valor mínimo cadastrado de R$ 750,00.
+						 4- Na outra sala (apresentação) o valor apurado foi de R$ 1.460,00,
+						 superando o mínimo de R$ 750,00, portanto assumindo o R$ 1.460,00.
+						 5- Desta forma o sistema somou R$ 1.460,00 + R$ 750,00 = R$ 2.210,00.
+
+						 O sistema deverá calcular o valor do mínimo a ser cobrado do teatro depois
+						 que somar os valores das vendas de cada sala, ou seja, se o valor total
+						 das salas superar o mínimo deverá ser calculado o percentual cadastrado no
+						 sistema.
+						 No exemplo acima, o valor que deveria ser cobrado seria de R$ 2.160,00
+						 (1460,00+700,00) e não R$ 2.210,00 (1460,00+750,00).
+						*/
+						if ($desp["limite"] > 0) {
+							$nTotalDesp -= $desp["valor"];
+
+							if ($desp["limite"] > $desp["valor_real"]) {
+								$nTotalDesp += $desp["limite"];
+								$desp["valor"] = $desp["limite"];
+							} else {
+								$nTotalDesp += $desp["valor_real"];
+								$desp["valor"] = $desp["valor_real"];
+							}
+						}
+					    if ($Resumido == "0") {
+    ?>
+						<tr>
+						    <td	align=left  class=texto><?php echo utf8_encode2($desp["nome"]); ?></td>
+						    <td	align=right class=texto><?php echo $desp["tipoValor"]; ?></td>
+						    <td	align=right class=texto><?php echo number_format($desp["valor"], 2, ",", "."); ?></td>
+						</tr>
+    <?php
+					    }
+					}
+?>
+			    	    <tr>
+			    		<td	align=left  class=texto>TAXA DOS CARTÕES (DÉBITO E CRÉDITO)</td>
+			    		<td	align=right class=texto> - </td>
+			    		<td	align=right class=texto><?php echo number_format($taxaDosCartoes, 2, ",", "."); ?></td>
+			    	    </tr>
+			    	    <tr>
+			    		<td bgcolor="#FFFFFF" align="left" valign="top" rowspan="3" colspan="2"><font size=1 face="tahoma,verdana,arial">assinaturas dos responsáveis, <?php echo date("d/m/Y G:i:s"); ?></font></td>
+			    		<td bgcolor="LightGrey" colspan="2" align="center" class="label"><b>TOTAL DE DESPESAS</b></td>
+			    	    </tr>
+			    	    <tr>
+			    		<td align="right" bgcolor="LightGrey" class="label">R$&nbsp;&nbsp;&nbsp;<?php echo number_format($nTotalDesp, 2, ",", "."); ?><br>
+			    		    <br>
+			    		</td>
+			    	    </tr>
+			    	    <tr>
+			    		<td bgcolor="LightGrey" align="center" class="label"><b>RECEITA LÍQUIDA</b></td>
+			    	    </tr>
+			    	    <tr>
+			    		<td width="440" bgcolor="#FFFFFF" colspan="2">
+			    		    <table border="0">
+			    			<tr>
+			    			    <td class="linha_assinatura" width="200">_______________________</td>
+			    			    <td class="linha_assinatura" width="200">_______________________</td>
+			    			    <td class="linha_assinatura" width="200">_______________________</td>
+			    			</tr>
+			    			<tr>
+			    			    <td align="center">BILHETERIA</td>
+			    			    <td align="center">LOCAL</td>
+			    			    <td align="center">PRODUÇÃO</td>
+			    			</tr>
+			    		    </table>
+			    		</td>
+			    		<td bgcolor="LightGrey" align="right" class="label" valign="top"><b>R$&nbsp;&nbsp;&nbsp;<?php echo number_format(($nTotalVendas - $nTotalDesp), 2, ",", "."); ?></b></td>
+			    	    </tr>
+			    	    <tr>
+			    		<td colspan="4" bgcolor="#FFFFFF" width="650"><font size=1 face="tahoma,verdana,arial">
+			    			O Borderô de vendas assinados pelas partes envolvidas, dará a plena  quitação dos valores pagos em dinheiro no momento do fechamento,  portanto, confira atentamente os valores recebidos em dinheiro, vales/recibos de saques e comprovantes de depósito.<br>
+			    			Os valores vendidos através dos cartões de crédito e débito serão  repassados aos favorecidos de acordo com os prazos firmados  através do contrato prestação de serviços assinado pelas partes.</font>
+			    		</td>
+			    	    </tr>
+			    	</table>
+			    	<br clear=all>
+<?php if ($_REQUEST['Small'] != '2') {
+	/*
+				echo $table3; ?>
+			    	<table width=656 class="tabela" border="0" bgcolor="LightGrey">
+			    	    <tr>
+			    		<td align="center" colspan="4"><font size=2 face="tahoma,verdana,arial"><B>4 - ESTATÍSTICA POR CANAL DE VENDA</B></font></td>
+			    	    </tr>
+			    	    <tr>
+			    		<td	align="left" width="162" class="titulogrid">Canais de Venda</td>
+			    		<td	align="right" width="162" class="titulogrid">Qtde Ingressos</td>
+			    		<td	align="right" width="162" class="titulogrid">Total</td>
+			    		<td	align="right" width="163" class="titulogrid">% do Total de Ingressos</td>
+			    	    </tr>
+<?php
+					$strSqlDet = "SP_REL_BORDERO_VENDAS;" . (($CodSala == 'TODOS') ? '12' : '9') . " '" . $DataIni . "','" . $DataFim . "'," . $CodPeca . "," . $CodSala . ",'" . $HorSessao . "','" . $_SESSION["NomeBase"] . "'";
+					$queryDet2 = executeSQL($connGeral, $strSqlDet);
+					$nQt = 0;
+					$nBrutoTot = 0;
+					$cont = 0;
+					if ($totPublico == 0)
+					    $totPublico = 1;
+
+					while ($pRSDet = fetchResult($queryDet2)) {
+?>
+					    <tr>
+						<td	align=left  class=texto><?php echo utf8_encode2($pRSDet["Venda"]); ?></td>
+						<td	align=right  class=texto><?php echo $pRSDet["Quant"]; ?></td>
+						<td	align=right class=texto>R$&nbsp;<?php echo number_format($pRSDet["Total"], 2, ",", "."); ?></td>
+						<td	align=right class=texto><?php echo number_format(($pRSDet["Quant"] / $totPagantes) * 100, 2, ",", "."); ?>%</td>
+					    </tr>
+<?php
+					    $nQt = $nQt + $pRSDet["Quant"];
+					    $nBrutoTot = $nBrutoTot + $pRSDet["Total"];
+					    $cont = $cont + number_format(($pRSDet["Quant"] / $totPagantes ) * 100, 2);
+					}
+?>
+			    	    <tr>
+			    		<td bgcolor="LightGrey" align="left" class="label"><b>TOTAL DE VENDAS</b></td>
+			    		<td bgcolor="LightGrey" align="right" class="label"><b><?php echo $nQt; ?></b></td>
+			    		<td bgcolor="LightGrey" align="right" class="label"><b>R$&nbsp;&nbsp;<?php echo number_format($nBrutoTot, 2, ",", "."); ?></b></td>
+			    		<td bgcolor="LightGrey" align="right" class="label"><b><?php echo number_format($cont, 0); ?>%</b></td>
+			    	    </tr>
+
+			    	</table>
+			    	<br clear=all>
+
+<?php */
+					/* <table width=656 class="tabela" border="0" bgcolor="LightGrey">
+					  <tr>
+					  <td align="center" colspan="4"><font size=2 face="tahoma,verdana,arial"><B>5 - ESTATÍSTICA POR PONTO DE VENDA</B></font></td>
+					  </tr>
+					  <tr>
+					  <td	align="left" width="162" class="titulogrid">Ponto de Venda</td>
+					  <td	align="right" width="162" class="titulogrid">Qtde Ingressos</td>
+					  <td	align="right" width="162" class="titulogrid">Total</td>
+					  <td	align="right" width="163" class="titulogrid">% do Total de Ingressos</td>
+					  </tr>
+					  <?php
+					  $strSqlDet = "SP_REL_BORDERO_VENDAS;8 '" . $DataIni . "','" . $DataFim . "'," . $CodPeca . "," . $CodSala . ",'" . $HorSessao . "','" . $_SESSION["NomeBase"] . "'";
+					  $queryDet2 = executeSQL($connGeral, $strSqlDet);
+					  $nQt = 0;
+					  $nBrutoTot = 0;
+					  $cont = 0;
+					  if ($totPublico == 0)
+					  $totPublico = 1;
+
+					  while ($pRSDet = fetchResult($queryDet2)) {
+					  ?>
+					  <tr>
+					  <td	align=left  class=texto><?php echo utf8_encode2($pRSDet["Venda"]); ?></td>
+					  <td	align=right  class=texto><?php echo $pRSDet["Quant"]; ?></td>
+					  <td	align=right class=texto>R$&nbsp;<?php echo number_format($pRSDet["Total"], 2, ",", "."); ?></td>
+					  <td	align=right class=texto><?php echo number_format(($pRSDet["Quant"] / $totPagantes) * 100, 2, ",", "."); ?>%</td>
+					  </tr>
+					  <?php
+					  $nQt = $nQt + $pRSDet["Quant"];
+					  $nBrutoTot = $nBrutoTot + $pRSDet["Total"];
+					  $cont = $cont + number_format(($pRSDet["Quant"] / $totPagantes ) * 100, 2);
+					  }
+					  ?>
+					  <tr>
+					  <td bgcolor="LightGrey" align="left" class="label"><b>TOTAL DE VENDAS</b></td>
+					  <td bgcolor="LightGrey" align="right" class="label"><b><?php echo $nQt; ?></b></td>
+					  <td bgcolor="LightGrey" align="right" class="label"><b>R$&nbsp;&nbsp;<?php echo number_format($nBrutoTot, 2, ",", "."); ?></b></td>
+					  <td bgcolor="LightGrey" align="right" class="label"><b><?php echo number_format($cont, 0); ?>%</b></td>
+					  </tr>
+
+					  </table>
+					  <br clear=all>
+					 */
+}
+?>
+					<table width="656" border=0>
+					    <tr>
+						<td align="middle">
+						    <br>
+						    <input class="botao" type="button" value="Imprimir Relatório" name="cmdImprimi" onClick="javascript:window.print();">
+						    <input class="botao" type="button" value="Fechar Janela" name="cmdFecha" onClick="javascript:window.close()">
+						</td>
+					    </tr>
+					</table>
+<?php
+				    }
+				}
+?>
+    </body>
+</html>

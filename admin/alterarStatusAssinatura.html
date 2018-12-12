@@ -1,0 +1,134 @@
+<script src="../javascripts/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="../javascripts/fnRelatorios.js" type="text/javascript"></script>
+<style type="text/css">
+    .coluna-header{width: 200px;}
+    .tb-form{margin-left: 40px; width: 609px; padding: 0px;}
+    form select{min-width: 200px;}
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[name="PARAM_ANO"]').mask("9999");
+    });
+    
+    function validar() {
+        if (document.fStatus.cboTeatro.value === "-1") {
+            $.dialog({
+                title: 'Alerta...',
+                text: 'Selecione o Local!'
+            });
+            return false;
+        }
+        if (document.fStatus.PARAM_STATUS.value === "-1") {
+            $.dialog({
+                title: 'Alerta...',
+                text: 'Selecione o Status!'
+            });
+            return false;
+        }
+        if (document.fStatus.PARAM_ANO.value === "") {
+            $.dialog({
+                title: 'Alerta...',
+                text: 'Digite o ano da Temporada!'
+            });
+            return false;
+        }
+        return true;
+    }
+
+    function limparCamposLocal() {
+        document.fStatus.cboTeatro.value = "-1";
+        document.fStatus.PARAM_STATUS.value = "-1";
+        document.fStatus.PARAM_ANO.value = "";
+    }
+
+    function enviar() {
+        var href = "alterarStatusAssinatura.php?action=update";
+        var status = $("select[name='PARAM_STATUS']").find('option').filter(':selected').text(); 
+        if (validar()) {
+            $.confirmDialog({
+                text: 'Todas as assinaturas com o status '+ status +' serão canceladas e os lugares serão disponibilizados para a Gerência do teatro efetuar a devida gestão. <br>Deseja continuar a atualização?',
+                uiOptions: {
+                    buttons: {
+                        'Sim': function() {
+                            $(this).dialog('close');                            
+                            $.ajax({
+                                url: href,
+                                type: 'post',
+                                data: $("form[name='fStatus']").serialize(),
+                                success: function(data) {
+                                    if (data.substr(0, 4) == 'true') {
+                                        $.dialog({text: 'Ação efetuada com sucesso!'});
+                                        limparCamposLocal();
+                                    } else {
+                                        $.dialog({text: data});
+                                    }
+                                }
+                            });                       
+                        }
+                    }
+                }
+            });            
+        } else{
+            return false;
+        }
+    }
+
+    function getStatus(){
+        var href = "alterarStatusAssinatura.php?action=loadStatus";
+        $.ajax({
+            url: href,
+            type: 'post',
+            data: $("form[name='fStatus']").serialize(),
+            success: function(data){
+                $("select[name='PARAM_STATUS']").html(data);
+            },
+            error: function(){
+                $.dialog({
+                    title: 'Erro...',
+                    text: 'Houve um erro ao obter os Status!'
+                });
+            }
+        });
+    }
+</script>
+<h2>{titulo}</h2>
+<form action="action/alterarStatusAssinatura.php" name="fStatus" method="POST">
+    <table class="tb-form">
+        <tr>
+            <td class="coluna-header"><strong>Local:</strong></td>
+            <td>
+                <select name="cboTeatro" id="cboTeatro" onchange="getStatus()">
+                    <option value="-1">Selecione o Local...</option>
+                    <!-- BEGIN BLOCK_LOCAL -->
+                    <option value="{idLocal}">{dsLocal}</option>
+                    <!-- END BLOCK_LOCAL -->
+                </select>
+            </td>
+        </tr>  
+        <tr>
+            <td class="coluna-header"><strong>Do Status:</strong></td>
+            <td>
+                <select name="PARAM_STATUS">
+                    <option value="-1">Selecione o Status...</option>                    
+                </select>
+                &nbsp;&nbsp;&nbsp;
+                <span><b>Para o Status:</b> Assinatura Cancelada</span>  
+            </td>
+        </tr>
+        <tr>
+            <td class="coluna-header"><strong>Temporada (Ano):</strong></td>
+            <td>
+                <input type="text" name="PARAM_ANO" />
+            </td>
+        </tr>    
+        <tr>
+            <td></td>
+            <td>
+                <br />
+                <input type="button" class="button" onclick="enviar();" value="Atualizar"  />&nbsp;
+                <input type="button" class="button" onClick="limparCamposLocal()" value="Limpar Campos">
+            </td>
+        </tr>
+    </table>
+</form>
+<br/>

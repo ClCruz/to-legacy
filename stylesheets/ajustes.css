@@ -1,0 +1,274 @@
+.readonly {
+	display:inline;
+	font:inherit;
+	text-align:inherit;
+	border:none;
+	color:inherit;
+}
+
+#forma_entrega_totais table {
+	width:100%;
+}
+
+#cadastro {
+	padding:10px 0;
+	overflow:auto;
+}
+
+#cadastro h1 {
+	font-size:20px;
+	margin:0;
+	color:#616162;
+}
+#cadastro .help_text {
+	font-size:12px;
+	font-style:italic;
+	margin:2px 0 10px;
+	color:#616162;
+}
+
+#cadastro h2 {
+	font-size:12px;
+	margin:5px 0 0;
+	color:#616162;
+}
+
+#cadastro .botoes_ticket {
+	margin:5px 0;
+	width:140px;
+}
+
+#cadastro a {
+	font-size:12px;
+}
+
+#id_left_cadastro {
+	float:left;
+	width:240px;
+}
+
+#id_left_cadastro p.aviso {
+	font-size:13px;
+	color:#666;
+}
+
+#loadingIcon {
+	position:absolute;
+}
+
+.totalIngressosApresentacao {
+	text-align:right;
+}
+
+#tempoRestante {
+	font-size:16px;
+	font-weight:bold;
+	color:#900
+}
+
+#dados_entrega a {
+	margin: 2px 0px 0px 7px;
+}
+
+.legenda {
+	background-position:center
+}
+
+#seloCertificado {
+	margin:15px;
+}
+
+#iframe_ticket_net .apresentacao_ticket td {
+	padding:0px;
+}
+
+#iframe_ticket_net {
+	margin: -20px 0 0;
+}
+
+#iframe_ticket_net .apresentacao_ticket {
+	font-size:11px;
+}
+
+#shadow {
+	background:url(../images/shadow.png);
+	position:absolute;
+	top:5px;
+	left:5px;
+	z-index:10000;
+	text-align:center;
+	color:#FFF;
+	font-weight:bold;
+}
+	#shadow p {
+		margin-top:25%;
+		-background:url(../images/shadow.png);
+	}
+
+.botao_cancelar {
+	float: left;
+	margin-left: 15px;
+	width: 140px;
+}
+
+.required input, .required {
+	background-color:#FFC;
+}
+
+/* CORREÇÕES ------------------------------------------------------------------------------------- */
+
+#background_holder {
+	background:#000 url('../images/background.jpg') no-repeat top center;
+}
+
+#respiro_home {
+	background:#fff url('../images/background_respiro.jpg') repeat-x;
+}
+
+#menu_principal div.btn_menu_principal {
+	background:transparent url('../images/menu_bt_up.jpg') no-repeat center;
+}
+
+#menu_principal div.btn_menu_principal:hover, #menu_principal div.selected {
+	background:transparent url('../images/menu_bt_down.jpg') no-repeat center;
+}
+
+.botao_compre {
+	background:transparent url('../images/compreingressos.png') no-repeat;
+}
+
+.botao_compre:hover {
+	background:transparent url('../images/compreingressos_down.png') no-repeat;
+}
+
+#footer_container {
+	background:black url('../images/background_footer.jpg') repeat-x top;
+}
+
+#busca_rapida input.busca_input {
+	background:transparent url('../images/busca_campo.jpg') no-repeat center;
+}
+
+#contato_form input.contato_submit {
+	background:transparent url('../images/bt_calcular_up.jpg') no-repeat center;
+}
+
+#contato_form input.contato_submit:hover {
+	background:transparent url('../images/bt_calcular_down.jpg') no-repeat center;
+}
+
+#cadastro_form input.cadastro_submit {
+	background:transparent url('../images/bt_calcular_up.jpg') no-repeat center;
+}
+
+#cadastro_form input.cadastro_submit:hover {
+	background:transparent url('../images/bt_calcular_down.jpg') no-repeat center;
+}
+
+.calcular_btn {
+	background:transparent url('../images/bt_calcular_up.jpg') no-repeat center;
+	float:right;
+}
+
+.calcular_btn:hover {
+	background:transparent url('../images/bt_calcular_down.jpg') no-repeat center;
+}
+
+.aba_minha_conta {
+	background:transparent url('../images/submenu_bt_up.jpg') no-repeat center;
+}
+
+.aba_down, .aba_minha_conta:hover {
+	background:transparent url('../images/submenu_bt_down.jpg') no-repeat center;
+}
+
+#passos {
+	border-bottom:1px solid gray;
+	margin-top:5px;
+}
+
+.mapa_de_plateia {
+	height:auto;
+}
+
+#center {
+	overflow:inherit;
+}
+
+.scroll {
+	overflow:auto;
+}
+
+#footer_ticket {
+	margin:10px 0 20px 0;
+}
+
+#header_ticket {
+	margin:10px 0 10px 0;
+	border-bottom:2px solid #ddd;
+	float:left;
+	width:100%;
+}
+
+#header_ticket p {
+	margin:0;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 0;
+}
+
+#forma_entrega_totais .colunaServico {
+	width: 100px;
+	display: none;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.meia-entrada {
+	position: relative;
+	display: inline-block;
+	padding: 5px;
+	margin: 7px 0;
+	border: 2px solid #991427;
+	background-color: whitesmoke;
+}
+
+.meia-entrada .contagem-meia {
+	color: #F00;
+	font-size: larger;
+	font-weight: bold;
+}
+
+.bilhete_lote_indisponivel {
+	display: none;
+}
+
+.selecionar{
+	float: right;
+	margin-right: 20px;
+	padding-top: 5px;
+}
+
+.custom-combobox {
+	position: relative;
+	display: inline-block;
+}
+.custom-combobox-toggle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-left: -1px;
+	padding: 0;
+}
+.custom-combobox-input {
+	font-size: inherit;
+	font-weight: inherit;
+	margin: 0;
+	padding: 5px 10px;
+}
+
+tr.ui-state-hover {
+	border: none !important;
+	font-weight: normal !important;
+	outline: 1px solid #D3D3D3;
+}

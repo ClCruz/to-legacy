@@ -1,0 +1,7 @@
+[CLISITEF]
+HabilitaTrace=0
+[TabTraducao]
+NomeArqTraducao=F:MensVF.txt
+[Geral]
+TransacoesHabilitadas=16;26;30;56;57;58
+TransacoesDesabilitadas=28;31

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>Relatório - Comprovante de Entrega de Ingressos</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/relComprovanteEntrega.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/customred/jquery-ui-1.10.3.custom.css"/>
+    
+    <script type='text/javascript' src='../javascripts/jquery.js'></script>
+    <script type='text/javascript' src='../javascripts/jquery-ui.js'></script>
+    <script type='text/javascript' src='../javascripts/jquery.utils.js'></script>
+    <script language="javascript" type="text/javascript">
+        $('document').ready(function(){
+            $.dialog({
+                title: 'Alerta...',
+                text: 'Para melhor visualização deste relatório utilize o navegador Internet Explorer!'
+            });
+
+            $('.button').button();
+        });
+    </script>
+</head>        
+<body>
+    <div id="main">
+        <!-- BEGIN BLOCK_COMPROVANTE -->
+        <div id="box-geral">
+            <div id="box-left">
+                <span>RECIBO | COMPROVANTE DE VENDA DE INGRESSOS</span>
+                <div class="box-ingressos">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td class="detalhe">DETALHE DO PEDIDO</td>
+                                <td>Quantidade</td>
+                                <td>Preço Unitário</td>
+                                <td>Total(R$)</td>
+                            </tr>
+
+                            <!-- BEGIN BLOCK_TABLE -->
+                            <tr>
+                                <td class="detalhe">{tipoBilhete}</td>
+                                <td>{quantidade}</td>
+                                <td>{valorUnitario}</td>
+                                <td>{valorTotal}</td>
+                            </tr>
+                            <!-- END BLOCK_TABLE -->
+                            <tr>
+                                <td class="detalhe">Taxa de Serviço</td>
+                                <td>{quantidade}</td>
+                                <td>{valorTaxaDeServico}</td>
+                                <td>{valorTotalDeServico}</td>
+                            </tr>
+                            <tr>
+                                <td class="detalhe">Taxa de Entrega</td>
+                                <td>1</td>
+                                <td>{valorTaxaDeEntrega}</td>
+                                <td>{valorTaxaDeEntrega}</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">TOTAL A PAGAR:</td>
+                                <td>{valorTotalDoPedido}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="box-endereco">
+                    {nome}<br/>
+                    {endereco}<br />
+                    {complemento}<br/>
+                    {cep} | {cidade} | {estado}
+                </div><br /><br/>
+                <div class="codbarras">
+                    <span>Pedido Nº {codigoPedido}</span><br />
+                    <div class="codbarra">{codigoDeBarras}</div>
+                   {codigoPedido}
+                </div>
+
+                <div class="rodape">
+                    <span>Reconheço e Pagarei a dívida aqui representada</span><br/><br/>
+                    Data | Horário do Pedido | Venda: {dtVenda}<br/>
+                    Recibo | Comprovante Impresso em: {dtImpressao}<br/>
+                    Canal: {canalVenda}<br/>
+                    Usuário: {login}
+                </div>
+            </div>
+            <div id="box-right">
+                <span>COMPREINGRESSOS</span><br/>
+                <span>RUA GENERAL JARDIM, 618 CJ11 | HIGIENÓPOLIS</span><br/>
+                <span>01223-010 | SÃO PAULO | SP</span>
+
+                <div class="box-cliente">
+                    Cliente: {nome}<br/>
+                    Telefone: {telefone}<br/>
+                    Email: {emailLogin}
+                </div>
+
+                <div class="box-local">
+                    Local: {teatro}<br/>
+                    Espetáculo: {evento}<br/>
+                    Data da Apresentação: {dataApresentacao}<br/>
+                    Horário da Sessão: {horaApresentacao}<br/>
+                    Setor: {setor}<br/>
+                    Lugares: {lugares}
+                </div>
+
+                <div class="box-pagamento">
+                    Forma de Pagamento: CARTÃO<br/>
+                    Autorização: {autorizacao}<br/>
+                    Comprovante de Venda: {transacao}<br/>
+                    Cartão de Crédito: {cartao}
+                </div>
+            </div>
+        </div>
+        <!-- BEGIN BLOCK_PROXIMA -->
+        <br style="page-break-after: always;" clear="all" />
+        <!-- END BLOCK_PROXIMA -->
+        <!-- END BLOCK_COMPROVANTE -->
+        <div class="esconder" {vazio}>
+            <p align="center"><a href="javascript:window.print()" class="link button">Imprimir</a><br /><br/></p>
+        </div>
+        <!-- BEGIN BLOCK_VAZIO -->
+        <div id="vazio" style="width: 100%; text-align: center; font-size: 24px; padding-top: 300px;">Nenhum registro encontrado!</div>
+        <!-- END BLOCK_VAZIO -->
+    </div>
+</body>
+</html>
