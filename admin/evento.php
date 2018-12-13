@@ -419,6 +419,8 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                         this.form.id_genre = res.body.id_genre;
                         this.form.showInBanner = res.body.showInBanner;
                         this.form.bannerDescription = res.body.bannerDescription;
+                        this.form.hasImage = true;
+                        this.form.changedImage = false;
                     }, err => {
                         this.loading = false;
                         console.log(2,err)
