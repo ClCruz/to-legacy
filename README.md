@@ -1,4 +1,4 @@
-# API 
+# LEGACY 
 ### Builded in PHP.  
 
 #### How to install  
