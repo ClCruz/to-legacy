@@ -14,7 +14,7 @@ blcoccaro/linuxphpsql:v4
 ### meanings 
 | location | what |
 | -------- | ----- |
-| /var/www/tixsme/legacy | where is the source of legacy |
+| /var/www/unique/legacy | where is the source of legacy |
 
 ### .htaccess
 ```.htaccess
