@@ -280,7 +280,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                     hasImage: true,
                     loaded: false,
                     id_base: null,
-                    id_evento: 22700,//null,//22666,
+                    id_evento: null,//22666,
                     content: "",
                     changedImage: false,
                     uri: "",
