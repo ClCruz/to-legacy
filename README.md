@@ -6,8 +6,8 @@
 #### Install for:  
 
 ```bash
-sudo docker run -it -d -p 2004:80 --name tixsme.legacy \
--v /var/www/tixsme/legacy:/var/www/html \
+sudo docker run -it -d -p 2004:80 --name unique.legacy \
+-v /var/www/unique/legacy:/var/www/html \
 blcoccaro/linuxphpsql:v4
 ```
 
