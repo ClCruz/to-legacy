@@ -49,7 +49,7 @@ session_start();
 <body>
 <div id='holder'>
 	<div id='header'>
-    	<p style='font-weight:bold' id="clock"><?php echo date('d/m/Y - H:i (T)'); ?></p>
+		 <img src="<?php echo getwhitelabel("logo") ?>" width="60" height="60" /> 
 		<?php
 		if (isset($_SESSION['admin'])) {
 			$mainConnection = mainConnection();
@@ -62,7 +62,7 @@ session_start();
 		
     	<?php
 		}
-		echo getSiteLogo();
+		
 		?>
     </div>
     
