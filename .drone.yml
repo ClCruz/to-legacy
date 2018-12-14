@@ -10,7 +10,7 @@ steps:
   commands:
   - rsync -vr /tmp/host/legacy/ /tmp/host/bk/legacy
   - cd comprar
-  - npm install
+  - npm install gulp --save
   - gulp sass
   - cd ..
   - rsync -vrR --exclude='.git' * /tmp/host/legacy
