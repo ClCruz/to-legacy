@@ -25,7 +25,8 @@
     "description": "Venda de Ingressos",
     "siteName": "cafeteatrorubi.tk",
     "CNPJ": "",
-    "companyName": ""
+    "companyName": "",
+    "isNewTemplate": false
   },
   "templates": {
     "print": {

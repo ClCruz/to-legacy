@@ -1,0 +1,1 @@
+sudo docker run -it -d -p 2002:80 --name tixsme.api -v /Users/intuiti/Documents/Projetos/tixs/to-api:/var/www/html -v /Users/intuiti/Documents/Projetos/tixs/to-site/public/img:/var/www/media  -v /Users/intuiti/Documents/Projetos/tixs/to-site/dist:/var/www/site blcoccaro/linuxphpsql:v4
