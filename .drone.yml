@@ -11,7 +11,8 @@ steps:
   - rsync -vr /tmp/host/legacy/ /tmp/host/bk/legacy
   - cd comprar
   - apt-get install libpng-dev -y
-  - npm install gulp
+  - npm install gulp --silent
+  - npm install gulp -g --silent
   - gulp sass
   - cd ..
   - rsync -vrR --exclude='.git' * /tmp/host/legacy
