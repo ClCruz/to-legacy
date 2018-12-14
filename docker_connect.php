@@ -5,6 +5,7 @@
 
 <?php
 function prodConnection() {
+    
 	$host = '192.168.91.17';
 	$port = '1433';
 	$dbname = 'CI_MIDDLEWAY';

@@ -173,13 +173,15 @@ a.botao {
 									{
 										return false;
 									}else{
-										$btn.click();
+										window.location = "<?php echo multiSite_getSearch("+$busca.val()+") ?>";
+										//$btn.click();
 									}
 								}
 							</script>
 							<div class="bottom">
 								<div class="search">
-									<form method="get" action="<?php echo multiSite_getSearch(); ?>">
+									PUTA Q PARIO
+									<form method="get" onsubmit="buscaEspetaculos();return false;">
 										<span class="flaticon-magnifier" onclick="buscaEspetaculos();"></span>
 										<input type="submit" id="busca-espetaculos" class="hidden" />
 										<span><input name="busca" type="text" placeholder="Espetáculo, diretor, teatro, elenco"></span>

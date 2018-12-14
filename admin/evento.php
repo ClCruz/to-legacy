@@ -64,7 +64,14 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             <br />
             <div class="card" v-if="form.loaded">
                 <div class="card-header">
-                    Informações do Evento
+                    <div class="row justify-content-between">
+                        <div class="col-4">Informações do Evento</div>
+                        <div class="col-4">
+                            <button v-on:click="save" type="button" class="btn btn-sm" style="float: right;">
+                                    Salvar
+                            </button>
+                        </div>
+                    </div>                    
                 </div>
                 <div style="padding-left: 25px; padding-top: 15px;">
                     <div class="row">
@@ -111,6 +118,24 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                         </div>
                     </div>
                     <div class="row">
+                        <div class="form-group" style="margin-left: 26px;">
+                            <input id="showInBanner" type="checkbox" name="showInBanner" v-model="form.showInBanner" autocomplete="off" true-value="1" class="custom-control-input" value="1">
+                            <label for="showInBanner" class="custom-control-label" style="padding-top: 6px;">
+                                <span>Mostrar no banner</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text labelinput" id="inputGroup-sizing">Descrição extra no banner</span>
+                                </div>
+                                <input class="form-control inputbig" type="text" :disabled="form.showInBanner != 1" v-model="form.bannerDescription" placeholder="Descrição para o banner" name="bannerDescription" id="bannerDescription" maxlength="400">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="form-group">
                             <div class="input-group input-group-sm">
                                 <div class="input-group-prepend">
@@ -130,11 +155,36 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                             </div>
                         </div>
                     </div>
-                    <div class="row" v-if="form.hasImage">
-                        <div id="inputGroup-sizing-sm" style="padding-bottom: 10px;">Imagem do Evento</div>
+                    <div class="row">
+                        <span id="inputGroup-sizing-sm" style="padding-bottom: 10px; padding-top:20px;">Descrição</span>
+                    </div>
+                    <div class="row" style="height:150px; margin-bottom:50px;">
+                        <quill-editor v-model="form.content"
+                            ref="editor"
+                            :options="quillOptions"
+                            @blur="onEditorBlur($event)"
+                            @focus="onEditorFocus($event)"
+                            @ready="onEditorReady($event)">
+                        </quill-editor>
+
                     </div>
                     <div class="row" v-if="form.hasImage">
-                        <img v-if="!form.changedImage" v-on:click="imageClick" width="160" height="180" :src="form.imageURI" alt="" title="Clique em cima para trocar a imagem." style="cursor: pointer;" />
+                        <div id="inputGroup-sizing-sm" style="padding-bottom: 10px;">Imagem do Evento - Card</div>
+                    </div>
+                    <div class="row" v-if="form.hasImage">
+                        <img v-if="!form.changedImage" v-on:click="imageClick" :src="form.imageURI" alt="" title="Clique em cima para trocar a imagem." style="cursor: pointer;" />
+                    </div>
+                    <div class="row" v-if="form.hasImage" style="padding-top: 10px;">
+                        <div id="inputGroup-sizing-sm" style="padding-bottom: 10px;">Imagem do Evento - Banner</div>
+                    </div>
+                    <div class="row" v-if="form.hasImage">
+                        <img v-if="!form.changedImage" v-on:click="imageClick" :src="form.imageBigURI" alt="" title="Clique em cima para trocar a imagem." style="cursor: pointer;" />
+                    </div>
+                    <div class="row" v-if="form.hasImage" style="padding-top: 10px;">
+                        <div id="inputGroup-sizing-sm" style="padding-bottom: 10px;">Imagem do Evento - Original</div>
+                    </div>
+                    <div class="row" v-if="form.hasImage">
+                        <img v-if="!form.changedImage" v-on:click="imageClick" :src="form.imageOriginalURI" alt="" title="Clique em cima para trocar a imagem." style="cursor: pointer; max-width: 80vw;" />
                     </div>
                     <div class="row" v-if="!form.hasImage" style="padding-bottom: 10px;">
                         <div id="inputGroup-sizing-sm">Imagem do Evento</div>
@@ -153,28 +203,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                             button-class="btn"
                             :custom-strings="picOptions"
                             ></picture-input>
-                    </div>
-                    <div class="row">
-                        <span id="inputGroup-sizing-sm" style="padding-bottom: 10px; padding-top:20px;">Descrição</span>
-                    </div>
-                    <div class="row">
-                        <quill-editor v-model="form.content"
-                            ref="editor"
-                            :options="quillOptions"
-                            @blur="onEditorBlur($event)"
-                            @focus="onEditorFocus($event)"
-                            @ready="onEditorReady($event)">
-                        </quill-editor>
-
-                    </div>
-                    <div class="row" style="padding-top: 10px;">
-                        <div class="form-group">
-                            <div class="input-group input-group-sm mb-3 col-6">
-                                <button v-on:click="save" type="button" class="btn btn-sm">
-                                        Salvar
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -204,6 +232,9 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
         },
         mounted() {
             this.checkAllowed();
+            if (this.form.id_evento != null) { 
+                this.getEvent();
+            }
         },
         computed: {
         
@@ -257,6 +288,8 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                     uri_changeable: "",
                     image: "",
                     imageURI: "",
+                    imageOriginalURI: "",
+                    imageBigURI: "",
                     imageBase64: "",
                     ticketsPerPurchase: 12,
                     minuteBefore: 1440,
@@ -264,6 +297,9 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                     meta_description: "",
                     meta_keyword: "",
                     id_genre: 0,
+                    showInBanner: 0,
+                    bannerDescription: '',
+
                 },
                 optionsBases : [],
                 optionsEvents : [],
@@ -299,7 +335,9 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                     base64: this.form.image,
                     meta_description: this.form.meta_description,
                     meta_keyword: this.form.meta_keyword,
-                    id_genre: this.form.id_genre
+                    id_genre: this.form.id_genre,
+                    showInBanner: this.form.showInBanner,
+                    bannerDescription: this.form.bannerDescription,
                 };
 
                 Vue.http.post(url, obj, { emulateJSON: true }).then(res => {
@@ -371,13 +409,18 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                             }
                         }
                         this.form.imageURI = res.body.imageURI + "?" + new Date().getTime();
-                        this.form.imageBase64 = res.body.imageBase64;
+                        this.form.imageOriginalURI = res.body.imageOriginalURI + "?" + new Date().getTime();
+                        this.form.imageBigURI = res.body.imageBigURI + "?" + new Date().getTime();
                         this.form.ticketsPerPurchase = res.body.ticketsPerPurchase;
                         this.form.minuteBefore = res.body.minuteBefore;
                         this.form.addressForMaps = res.body.address;
                         this.form.meta_description = res.body.meta_description;
                         this.form.meta_keyword = res.body.meta_keyword;
                         this.form.id_genre = res.body.id_genre;
+                        this.form.showInBanner = res.body.showInBanner;
+                        this.form.bannerDescription = res.body.bannerDescription;
+                        this.form.hasImage = true;
+                        this.form.changedImage = false;
                     }, err => {
                         this.loading = false;
                         console.log(2,err)
