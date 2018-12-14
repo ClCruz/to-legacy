@@ -84,6 +84,10 @@ function multiSite_getTomTicket() {
     $ret = "";
     return $ret;
 }
+function multiSite_isNewTemplate() {
+    $ret = getwhitelabel("isNewTemplate");
+    return $ret;
+}
 function multiSite_getSearch($concat = "") {
     $ret = multiSite_getURI("URI_SSL");
     $ret .= "/espetaculos";

@@ -353,12 +353,12 @@ div.mapa_de_plateia img {
 */
 
 table#pedido_resumo tbody tr {
-	background: #222;
+	background: $black;
 	border: 1px solid #444;
 }
 
 table#pedido_resumo tbody td {
-	background: #222;
+	background: $black;
 }
 
 table#pedido_resumo tbody * {
@@ -478,7 +478,7 @@ div#content {
 	background: $black;
 
 	@include MQ(S) {
-		background: #222;
+		background: $black;
 		border-radius: 20px;
 		box-shadow: none;
 	}
@@ -1273,7 +1273,7 @@ div.alert {
 	top: 0;
 	left: 0;
 	background: none;
-	background: #222;
+	background: $black;
 	box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 }
 
@@ -1398,7 +1398,7 @@ a.end_cancelar {
 	margin: auto;
 	padding: .5rem;
 	font-size: .8rem;
-	background: #222;
+	background: $black;
 	border: 1px;
 	-o-border-image: linear-gradient(121.11deg, $secundary, $primary 43.45%);
 	border-image: linear-gradient(121.11deg, $secundary, $primary 43.45%);

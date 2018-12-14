@@ -25,7 +25,8 @@
     "description": "Venda de Ingressos",
     "siteName": "sazarteingressos.com.br",
     "CNPJ": "",
-    "companyName": ""
+    "companyName": "",
+    "isNewTemplate": false
   },
   "templates": {
     "print": {

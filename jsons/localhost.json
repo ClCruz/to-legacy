@@ -25,7 +25,8 @@
     "description": "Venda de Ingressos",
     "siteName": "Tixs.ME",
     "CNPJ": "",
-    "companyName": ""
+    "companyName": "",
+    "isNewTemplate": false
   },
   "templates": {
     "print": {

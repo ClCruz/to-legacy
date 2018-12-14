@@ -157,6 +157,10 @@
             case "recaptcha_public":
                 return getwhitelabelobj()["recaptcha"]["public"];
             break;
+            case "isNewTemplate":
+                return getwhitelabelobj()["info"]["isNewTemplate"];
+            break;
+
         }
     }
 ?>

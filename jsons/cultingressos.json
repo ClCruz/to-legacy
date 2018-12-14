@@ -25,7 +25,8 @@
     "description": "Venda de Ingressos",
     "siteName": "cultingressos.tixs.me",
     "CNPJ": "",
-    "companyName": ""
+    "companyName": "",
+    "isNewTemplate": false
   },
   "templates": {
     "print": {

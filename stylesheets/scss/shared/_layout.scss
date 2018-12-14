@@ -361,7 +361,7 @@ div#mapa_de_plateia {
 
 div#mapa_de_plateia_geral {
 	color: $black;
-	background: #222;
+	background: $black;
 	box-shadow: aquamarine;
 	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 	border-radius: 5px;
@@ -626,7 +626,7 @@ div.descricao_pag {
 	position: relative;
 	color: white !important;
 
-	background: #222;
+	background: $black;
 	box-shadow: aquamarine;
 	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 
@@ -759,7 +759,7 @@ div.compra_captcha {
 	margin-top: 20px;
 
 	@include MQ(S) {
-		width: 260px !important;
+		width: 255px !important;
 	}
 }
 
@@ -1452,7 +1452,7 @@ div.resumo_espetaculo,
 .container_pedido {
 	width: 100%;
 	padding: 20px;
-	background: #222;
+	background: $black;
 	box-shadow: aquamarine;
 	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 
@@ -1640,7 +1640,7 @@ div.alert {
 	top: 0;
 	left: 0;
 	background: none;
-	background: #222;
+	background: $black;
 	box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 }
 
@@ -1831,7 +1831,7 @@ a.end_cancelar {
 	margin: auto;
 	padding: .5rem;
 	font-size: .8rem;
-	background: #222;
+	background: $black;
 	border: 1px;
 	-o-border-image: linear-gradient(121.11deg, $secundary, $primary 43.45%);
 	border-image: linear-gradient(121.11deg, $secundary, $primary 43.45%);
@@ -2078,7 +2078,7 @@ div.container_setor span {
 	padding: 4px 8px;
 	cursor: pointer;
 	text-decoration: none;
-	background-color: #222;
+	background-color: $black;
 	border-radius: 5px;
 	color: white;
 }
@@ -2128,7 +2128,7 @@ div.container_setor.ativo span {
 .content__minha-conta {
 	width: 100%;
 
-	background: #222;
+	background: $black;
 	box-shadow: aquamarine;
 	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 
@@ -2296,7 +2296,7 @@ a.badge {
 .container__cadastro {
 	width: 100%;
 	color: $black;
-	background: #222;
+	background: $black;
 	box-shadow: aquamarine;
 	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 
@@ -2304,11 +2304,15 @@ a.badge {
 	padding-top: 20px;
 }
 
+.bg__main {
+	display: none;
+}
+
 .container__login, 
 .container__imprima {
 	width: 100%;
 	color: $black;
-	background: #222;
+	background: $black;
 	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 
 	border-radius: 5px;

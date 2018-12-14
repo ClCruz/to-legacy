@@ -72,6 +72,7 @@ require_once('../settings/multisite/unique.php');
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNN2XTF" 
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+  <div class="bg__main" style=""></div>
 
 	<div id="pai">
 		<?php require "header.php"; ?>

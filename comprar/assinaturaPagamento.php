@@ -79,7 +79,7 @@ if ($rs[0] != 1) header("Location: " . multiSite_getURI("URI_SSL"));
 	<title><?php echo multiSite_getTitle()?></title>
 </head>
 <body>
-	<div id="pai">
+	<div class="bg__main" style=""></div><div id="pai">
 		<?php require "header.php"; ?>
 		<div id="content">
 			<div class="alert">
