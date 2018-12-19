@@ -44,7 +44,7 @@ require_once('../settings/multisite/unique.php');
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	
-	<div id="pai">
+	<div class="bg__main" style=""></div><div id="pai">
 		<?php require "header.php"; ?>
 		<div id="row content">
 			<div class="alert">

@@ -120,7 +120,7 @@ unset($_SESSION['id_braspag']);
 	<title><?php echo multiSite_getTitle()?></title>
 </head>
 <body>
-	<div id="pai">
+	<div class="bg__main" style=""></div><div id="pai">
 		<?php require "header.php"; ?>
 		<div id="content">
 			<div class="alert">

@@ -311,7 +311,7 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNN2XTF" 
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-    
+  <div class="bg__main" style=""></div>
   <!-- conteudo para exibir em popup -->
   <div class="hidden">
     <div id="login_assinante">

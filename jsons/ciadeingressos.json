@@ -25,7 +25,8 @@
     "description": "Venda de Ingressos",
     "siteName": "ciadeingressos.com",
     "CNPJ": "",
-    "companyName": ""
+    "companyName": "",
+    "isNewTemplate": false
   },
   "templates": {
     "print": {
