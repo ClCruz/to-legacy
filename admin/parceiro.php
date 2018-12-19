@@ -299,7 +299,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             base_add(item) {
                 config.setapikey();
-                let url = config.api + `/v1/admin/partner/base/save`;
+                let url = config.api + `/v1/admin/tolegacy/partner/base/save`;
                 this.loading = true;
                 let obj = {
                     id_partner: this.form.id,
@@ -323,7 +323,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             save() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/partner/save`;
+                let url = config.api + `/v1/admin/tolegacy/partner/save`;
                 this.loading = true;
                 let obj = {
                     id: this.form.id,
@@ -380,7 +380,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             populatePartner() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/partner/list`;
+                let url = config.api + `/v1/admin/tolegacy/partner/list`;
                 this.loading = true;
                 Vue.http.get(url).then(res => {
                     this.loading = false;
@@ -393,7 +393,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             populateBases() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/partner/base/list?id_partner=${this.form.id}`;
+                let url = config.api + `/v1/admin/tolegacy/partner/base/list?id_partner=${this.form.id}`;
                 this.loading = true;
                 Vue.http.get(url).then(res => {
                     this.loading = false;
