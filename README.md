@@ -6,9 +6,9 @@
 #### Install for:  
 
 ```bash
-sudo docker run -it -d -p 2004:80 --name unique.legacy \
+sudo docker run -it -d -p 2004:80 --restart=always --name unique.legacy \
 -v /var/www/unique/legacy:/var/www/html \
-blcoccaro/linuxphpsql:v4
+blcoccaro/linuxphpsql:v5
 ```
 
 ### meanings 
