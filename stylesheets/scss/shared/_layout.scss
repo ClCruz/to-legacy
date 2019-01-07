@@ -343,7 +343,6 @@ div#novo_menu .bottom {
 }
 
 div#mapa_de_plateia {
-	
 	@include MQ(S) {
 		width: auto !important;
 	}
@@ -365,7 +364,7 @@ div#mapa_de_plateia_geral {
 	box-shadow: aquamarine;
 	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 	border-radius: 5px;
-	padding-bottom: 30px!important;
+	padding-bottom: 30px !important;
 
 	@include MQ(S) {
 		// width: 98% !important;
@@ -374,6 +373,9 @@ div#mapa_de_plateia_geral {
 }
 div#mapa_de_plateia_geral {
 	padding-bottom: 30px;
+	@include MQ(S) {
+		margin: 0 auto !important;
+	}
 }
 div.mapa_de_plateia {
 }
@@ -414,8 +416,8 @@ table#pedido_resumo {
 
 .sbHolder * {
 	font-size: 13px !important;
-    width: 100% !important;
-    text-transform: capitalize;
+	width: 100% !important;
+	text-transform: capitalize;
 	color: $black !important;
 	width: 100% !important;
 }
@@ -533,7 +535,7 @@ div.resumo_espetaculo p.pedido_total span.valor {
 
 .avancar {
 	&:before {
-		content: '',
+		content: '';
 	}
 }
 
@@ -615,7 +617,7 @@ a.botao:hover {
 
 div.resumo_carrinho span.quantidade {
 	font-size: 56px;
-	line-height: 70px!important;
+	line-height: 70px !important;
 }
 
 div.resumo_carrinho span.frase {
@@ -1169,7 +1171,7 @@ a:hover {
 		width: 0;
 		position: fixed;
 		/* Stay in place */
-		z-index: 4999!important;
+		z-index: 4999 !important;
 		/* Sit on top */
 		left: 0;
 		top: 0;
@@ -1311,9 +1313,7 @@ a:hover {
 	}
 }
 
-
 @media screen and (max-height: 450px) {
-	
 	.overlay a {
 		font-size: 20px;
 	}
@@ -1367,7 +1367,7 @@ div.euvou {
 }
 
 div.imprima_agora a {
-	font-size: 18px!important;
+	font-size: 18px !important;
 }
 
 div.resumo_espetaculo div.pedido_entrega div.tipo {
@@ -1913,7 +1913,6 @@ div.container_botoes_etapas {
 		padding-bottom: 0;
 		height: 60px;
 	}
-	
 }
 
 .resumo_carrinho {
@@ -2308,7 +2307,7 @@ a.badge {
 	display: none;
 }
 
-.container__login, 
+.container__login,
 .container__imprima {
 	width: 100%;
 	color: $black;
@@ -2320,7 +2319,6 @@ a.badge {
 	margin-bottom: 30px;
 	padding-bottom: 20px;
 }
-
 
 .container__imprima {
 	padding: 20px;
@@ -2338,7 +2336,7 @@ a.badge {
 }
 
 #overlay a.opcao span.opcao {
-	font-size: 30px!important;
+	font-size: 30px !important;
 	color: $secundary;
 }
 input[type=checkbox].checkbox + label.checkbox {
@@ -2389,11 +2387,11 @@ div.container_dados p.frase {
 .header__logo .img {
 	height: 30px;
 	background-image: url($logo);
-	max-width: 45px!important;
+	max-width: 45px !important;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right center;
-	float: right!important;
+	float: right !important;
 	&:hover {
 		opacity: 0.8;
 	}
@@ -2685,12 +2683,12 @@ div.container_dados p.frase {
 }
 
 div.numero_pedido * {
-	font-size: 18px!important;
+	font-size: 18px !important;
 	text-align: left;
 }
 
 div.numero_pedido {
-	float: unset!important;
+	float: unset !important;
 	margin-top: 30px;
 	width: 100%;
 }
@@ -2703,6 +2701,7 @@ div.descricao_pag div.descricao.final .descricao {
 	width: 40px;
 }
 
-table#pedido_resumo tbody li *, #pedido_resumo .sbHolder * {
-font-size: 12px!important;
+table#pedido_resumo tbody li *,
+#pedido_resumo .sbHolder * {
+	font-size: 12px !important;
 }
