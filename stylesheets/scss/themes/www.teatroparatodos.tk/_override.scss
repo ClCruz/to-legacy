@@ -4,9 +4,19 @@
 }
 
 .body {
-  background-color: black;
+	background-color: black;
 }
 
+$gradiente: $secundary;
+
 .main__tixsme {
-  background: black;
+	background: black;
+}
+
+a.botao {
+	background: $secundary !important;
+}
+
+.btn__help {
+	background-color: none !important;
 }

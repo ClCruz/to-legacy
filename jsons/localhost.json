@@ -9,7 +9,7 @@
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/vivaingressos/main.scss",
-  "css": "/stylesheets/themes/tixsme/main.css",
+  "css": "/stylesheets/themes/www.teatroparatodos.tk/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "favico": "/img/vivaingressos/",
   "meta": {
@@ -26,7 +26,7 @@
     "siteName": "Tixs.ME",
     "CNPJ": "",
     "companyName": "",
-    "isNewTemplate": false
+    "isNewTemplate": true
   },
   "templates": {
     "print": {

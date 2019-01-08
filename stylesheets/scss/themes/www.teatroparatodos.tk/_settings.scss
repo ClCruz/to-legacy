@@ -2,8 +2,8 @@
 @import 'colors.scss';
 @import 'media.scss';
 
-$gradiente: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%);
-$gradiente-inv: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%);
+$gradiente: $primary;
+$gradiente-inv: $primary;
 
 $logo: '../../../../../images/logo-teatroparatodos.png' !default;
 
