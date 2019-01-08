@@ -324,7 +324,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             save() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/event/save`;
+                let url = config.api + `/v1/admin/tolegacy/event/save`;
                 this.loading = true;
                 let obj = {
                     id: this.form.id_evento,
@@ -387,7 +387,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             getEvent() {
                 Vue.nextTick().then(response => {
                     config.setapikey();
-                    let url = config.api + `/v1/admin/event/get?&id_evento=${this.form.id_evento}`;
+                    let url = config.api + `/v1/admin/tolegacy/event/get?&id_evento=${this.form.id_evento}`;
                     this.loading = true;
                     Vue.http.get(url).then(res => {
                         this.form.loaded = true;
@@ -430,7 +430,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             populateGenre() {
                 Vue.nextTick().then(response => {
                     config.setapikey();
-                    let url = config.api + `/v1/admin/genre/list`;
+                    let url = config.api + `/v1/admin/tolegacy/genre/list`;
                     this.loading = true;
                     Vue.http.get(url).then(res => {
                         this.loading = false;
@@ -444,7 +444,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             populateEvents() {
                 Vue.nextTick().then(response => {
                     config.setapikey();
-                    let url = config.api + `/v1/admin/event/list?&id_base=${this.form.id_base}`;
+                    let url = config.api + `/v1/admin/tolegacy/event/list?&id_base=${this.form.id_base}`;
                     this.loading = true;
                     Vue.http.get(url).then(res => {
                         this.loading = false;
@@ -457,7 +457,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             populateBases() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/bases/list`;
+                let url = config.api + `/v1/admin/tolegacy/bases/list`;
                 this.loading = true;
                 Vue.http.get(url).then(res => {
                     this.loading = false;

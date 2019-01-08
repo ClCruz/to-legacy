@@ -227,7 +227,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                 if (item.active == 1) return;
 
                 config.setapikey();
-                let url = config.api + `/v1/admin/genre/base/save`;
+                let url = config.api + `/v1/admin/tolegacy/genre/base/save`;
                 this.loading = true;
                 let obj = {
                     id_base: item.id_base
@@ -250,7 +250,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             save() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/genre/save`;
+                let url = config.api + `/v1/admin/tolegacy/genre/save`;
                 this.loading = true;
                 let obj = {
                     id: this.form.id,
@@ -290,7 +290,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             populateGenre() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/genre/list`;
+                let url = config.api + `/v1/admin/tolegacy/genre/list`;
                 this.loading = true;
                 Vue.http.get(url).then(res => {
                     this.loading = false;
@@ -303,7 +303,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             populateBases() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/genre/base/list`;
+                let url = config.api + `/v1/admin/tolegacy/genre/base/list`;
                 this.loading = true;
                 Vue.http.get(url).then(res => {
                     this.loading = false;

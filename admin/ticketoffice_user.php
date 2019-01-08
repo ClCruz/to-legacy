@@ -272,7 +272,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             base_add(item) {
                 config.setapikey();
-                let url = config.api + `/v1/admin/user/base/save`;
+                let url = config.api + `/v1/admin/tolegacy/user/base/save`;
                 this.loading = true;
                 let obj = {
                     id: this.form.id,
@@ -298,7 +298,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             save() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/user/save`;
+                let url = config.api + `/v1/admin/tolegacy/user/save`;
                 this.loading = true;
                 let obj = {
                     id: this.form.id == null ? '' : this.form.id,
@@ -327,7 +327,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             resetpass(id) {
                 config.setapikey();
-                let url = config.api + `/v1/admin/user/resetpass`;
+                let url = config.api + `/v1/admin/tolegacy/user/resetpass`;
                 this.loading = true;
                 let obj = {
                     id: id,
@@ -375,7 +375,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             populateUser() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/user/list`;
+                let url = config.api + `/v1/admin/tolegacy/user/list`;
                 this.loading = true;
                 Vue.http.get(url).then(res => {
                     this.loading = false;
@@ -388,7 +388,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
             },
             populateBases() {
                 config.setapikey();
-                let url = config.api + `/v1/admin/user/base/list?id=${this.form.id}`;
+                let url = config.api + `/v1/admin/tolegacy/user/base/list?id=${this.form.id}`;
                 this.loading = true;
                 Vue.http.get(url).then(res => {
                     this.loading = false;
