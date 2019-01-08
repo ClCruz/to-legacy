@@ -49,7 +49,7 @@ session_start();
 <body>
 <div id='holder'>
 	<div id='header'>
-		 <img src="<?php echo getwhitelabel("logo") ?>" width="60" height="60" /> 
+		 <img src="<?php echo getwhitelabel("logo") ?>" height="60" /> 
 		<?php
 		if (isset($_SESSION['admin'])) {
 			$mainConnection = mainConnection();
