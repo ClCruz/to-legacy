@@ -385,6 +385,10 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/acessoLogado.php');
                 this.getEvent();
             },
             getEvent() {
+                this.form.hasImage = false;
+                this.form.image = null;
+                this.form.imageURI = "";
+
                 Vue.nextTick().then(response => {
                     config.setapikey();
                     let url = config.api + `/v1/admin/tolegacy/event/get?&id_evento=${this.form.id_evento}`;
