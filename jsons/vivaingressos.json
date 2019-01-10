@@ -8,6 +8,7 @@
   "apikey": "live_b790768c6ea74d2f8eaabc9e8c7354c3bc89a3ed15a54c2fa25d02dfe5854a87",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
+  "newTemplate": true,
   "scss": "./src/scss/themes/vivaingressos/main.scss",
   "css": "/stylesheets/themes/vivaingressos/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
@@ -25,8 +26,7 @@
     "description": "Venda de Ingressos",
     "siteName": "vivaingressos.com.br",
     "CNPJ": "",
-    "companyName": "",
-    "isNewTemplate": false
+    "companyName": ""
   },
   "templates": {
     "print": {
