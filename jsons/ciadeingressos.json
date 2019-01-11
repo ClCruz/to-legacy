@@ -12,7 +12,9 @@
   "css": "/stylesheets/themes/ciadeingressos/main.css",
   "logo": "https://media.tixs.me/logos/logo-ciadeingressos.jpeg",
   "favico": "/img/ciadeingressos/",
+  "newTemplate": true,
   "meta": {
+
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,cia,ingressos,ciadeingressos,br,me"
   },

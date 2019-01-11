@@ -12,6 +12,7 @@
   "css": "/stylesheets/themes/www.construcaoteatral.tixs.me/main.css",
   "logo": "https://media.tixs.me/logos/logo-construcaoteatral.jpg",
   "favico": "/img/construcaoteatral/",
+  "newTemplate": true,
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,construcaoteatral,br,me"

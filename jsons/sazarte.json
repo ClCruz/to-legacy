@@ -12,6 +12,7 @@
   "css": "/stylesheets/themes/sazarte/main.css",
   "logo": "https://media.tixs.me/logos/logo-sazarte.jpeg",
   "favico": "/img/sazarte/",
+  "newTemplate": true,
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,sazarte,br,me"
@@ -26,7 +27,7 @@
     "siteName": "sazarteingressos.com.br",
     "CNPJ": "",
     "companyName": "",
-    "isNewTemplate": false
+    "isNewTemplate": true
   },
   "templates": {
     "print": {
