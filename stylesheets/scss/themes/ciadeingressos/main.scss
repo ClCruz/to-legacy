@@ -8,4 +8,17 @@
 	@include header;
 	@include content;
 	@include footer;
+
+	.container__header {
+		background-color: $primary;
+	}
+
+	.container__header {
+		height: 60px !important;
+	}
+	.header__logo .logo-header {
+		height: 35px !important;
+		margin-top: -8px;
+	}
+	$gradiente: $primary;
 }
