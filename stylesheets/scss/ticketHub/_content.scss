@@ -1,4 +1,9 @@
 @mixin content {
+	$S: 320px;
+	$M: 768px;
+	$L: 1080px;
+	$XL: 1200px;
+
 	#pai {
 		max-height: none !important;
 		max-width: none !important;
@@ -61,5 +66,18 @@
 		background: none !important;
 		box-shadow: none !important;
 		padding: 0 !important;
+	}
+}
+
+.container__identificacao {
+	padding: 10px;
+	padding-top: 20px;
+}
+
+.container__header {
+	// media queries
+
+	@media only screen and (min-width: 320px) and (max-width: 720px) {
+		display: none;
 	}
 }

@@ -1,10 +1,21 @@
 #pai {
-  background: $secundary!important;
+	background: $secundary !important;
 }
 
 $gradiente-bg: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%);
 $gradiente: $primary;
 
 .main__tixsme {
-  background: $gradiente-bg;
+	background: $gradiente-bg;
+}
+
+a.botao,
+input.submit.salvar_dados,
+input.submit.avancar.passo4,
+input.submit {
+	background: $secundary !important;
+}
+
+.btn__help {
+	background-color: none !important;
 }

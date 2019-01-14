@@ -1,6 +1,16 @@
-
 $gradiente: $primary;
 
 body {
-  background: #secundary;
+	background: #secundary;
+}
+
+a.botao,
+input.submit.salvar_dados,
+input.submit.avancar.passo4,
+input.submit {
+	background: $secundary !important;
+}
+
+.btn__help {
+	background-color: none !important;
 }
