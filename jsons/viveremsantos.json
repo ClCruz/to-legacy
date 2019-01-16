@@ -9,7 +9,7 @@
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/viveremsantos/main.scss",
-  "css": "/stylesheets/themes/viveremsantos/main.css",
+  "css": "/stylesheets/themes/www.viveremsantosdemo.tk/main.css",
   "logo": "https://media.tixs.me/logos/logo-viveremsantos.jpeg",
   "favico": "/img/viveremsantos/",
   "meta": {
@@ -21,9 +21,9 @@
     "public": ""
   },
   "info": {
-    "title": "viveremsantosdemo.tk | Venda de Ingressos",
+    "title": "Viver em Santos | Venda de Ingressos",
     "description": "Venda de Ingressos",
-    "siteName": "viveremsantosdemo.tk",
+    "siteName": "Viver em Santos",
     "CNPJ": "",
     "companyName": ""
   },

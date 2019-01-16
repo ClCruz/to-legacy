@@ -1,16 +1,16 @@
 {
   "env": "production",
-  "host": "ingressonanet.tk",
-  "uri": "https://www.ingressonanet.tk",
-  "api": "https://api.ingressonanet.tk",
+  "host": "ingressonanetdemo.tk",
+  "uri": "https://www.ingressonanetdemo.tk",
+  "api": "https://api.ingressonanetdemo.tk",
   "pinpad": "http://localhost:7001/api",
-  "legacy": "https://compra.ingressonanet.tk",
+  "legacy": "https://compra.ingressonanetdemo.tk",
   "apikey": "live_0aeae6ff88784a9bb0a704359699051677c08991c03d46759ec943ec415a71e8",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/ingressonanet/main.scss",
-  "css": "/stylesheets/themes/ingressonanet/main.css",
-  "logo": "https://media.tixs.me/logos/logo-ingressonanet.jpeg",
+  "css": "/stylesheets/themes/www.ingressonanetdemo.tk/main.css",
+  "logo": "https://media.tixs.me/logos/logo-ingressonanet.png",
   "favico": "/img/ingressonanet/",
   "meta": {
     "description": "Venda de Ingressos",
@@ -21,9 +21,9 @@
     "public": ""
   },
   "info": {
-    "title": "ingressonanet.tk | Venda de Ingressos",
+    "title": "Ingresso na Net | Venda de Ingressos",
     "description": "Venda de Ingressos",
-    "siteName": "ingressonanet.tk",
+    "siteName": "Ingresso na Net",
     "CNPJ": "",
     "companyName": ""
   },
