@@ -1,0 +1,44 @@
+{
+  "env": "production",
+  "host": "jjrproducoes.com.br",
+  "uri": "https://www.jjrproducoes.com.br",
+  "api": "https://api.jjrproducoes.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.jjrproducoes.com.br",
+  "apikey": "live_0aeae6ff88784a9bb0a704359699051677c08991c03d46759ec943ec415a71e8",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/jjrproducoes/main.scss",
+  "css": "/stylesheets/themes/jjrproducoes/main.css",
+  "logo": "https://media.tixs.me/logos/logo-jjrproducoes.jpeg",
+  "favico": "/img/jjrproducoes/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,jjrproducoes,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "jjrproducoes.com.br | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "jjrproducoes.com.br",
+    "CNPJ": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_jjrproducoes/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_jjrproducoes/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_jjrproducoes/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_jjrproducoes/emailComprador.html",
+      "gift": "../comprar/templates/multi_jjrproducoes/emailPresente.html",
+      "signature": "../comprar/templates/multi_jjrproducoes/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_jjrproducoes/confirmacaoEmail.html"
+
+    }
+  }
+}
