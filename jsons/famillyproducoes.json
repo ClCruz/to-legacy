@@ -1,0 +1,44 @@
+{
+  "env": "production",
+  "host": "famillyproducoesdemo.tk",
+  "uri": "https://www.famillyproducoesdemo.tk",
+  "api": "https://api.famillyproducoesdemo.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.famillyproducoesdemo.tk",
+  "apikey": "live_0aeae6ff88784a9bb0a704359699051677c08991c03d46759ec943ec415a71e8",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/famillyproducoes/main.scss",
+  "css": "/stylesheets/themes/www.famillyproducoesdemo.tk/main.css",
+  "logo": "https://media.tixs.me/logos/logo-famillyproducoes.jpeg",
+  "favico": "/img/famillyproducoes/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,famillyproducoes,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Familly Producoes | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "sitename": "Familly Produções",
+    "CNPJ": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_famillyproducoes/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_famillyproducoes/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_famillyproducoes/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_famillyproducoes/emailComprador.html",
+      "gift": "../comprar/templates/multi_famillyproducoes/emailPresente.html",
+      "signature": "../comprar/templates/multi_famillyproducoes/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_famillyproducoes/confirmacaoEmail.html"
+
+    }
+  }
+}

@@ -9,7 +9,7 @@
   "www.ciadeingressos.com": "ciadeingressos",
   "api.ciadeingressos.com": "ciadeingressos",
   "compra.ciadeingressos.com": "ciadeingressos",
-  "localhost:2004": "ingressonanet",
+  "localhost:2004": "teatromodulo",
   "localhost:2002": "localhost",
   "localhost:8080": "teatroparatodos",
   "localhost": "teatroparatodos",
@@ -53,5 +53,8 @@
   "compra.ingressonanetdemo.tk": "ingressonanet",
   "www.teatromodulodemo.tk": "teatromodulo",
   "api.teatromodulodemo.tk": "teatromodulo",
-  "compra.teatromodulodemo.tk": "teatromodulo"
+  "compra.teatromodulodemo.tk": "teatromodulo",
+  "www.famillyproducoesdemo.tk": "famillyproducoes",
+  "api.famillyproducoesdemo.tk": "famillyproducoes",
+  "compra.famillyproducoesdemo.tk": "famillyproducoes"
 }
