@@ -12,7 +12,7 @@
   "css": "/stylesheets/themes/www.cultingressos.tixs.me/main.css",
   "logo": "https://media.tixs.me/logos/logo-cultingressos.png",
   "favico": "/img/cultingressos/",
-  "newTemplate": true,
+  "template": "ticketHub",
 
   "meta": {
     "description": "Venda de Ingressos",

@@ -12,7 +12,7 @@
   "css": "/stylesheets/themes/www.teatroumc.com.br/main.css",
   "logo": "https://media.tixs.me/logos/teatroumc.png",
   "favico": "/img/teatroumc/",
-  "newTemplate": true,
+  "template": "ticketHub",
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,teatroumc,br,me"
