@@ -1,0 +1,44 @@
+{
+  "env": "production",
+  "host": "eventoslitoraldemo.tk",
+  "uri": "https://www.eventoslitoraldemo.tk",
+  "api": "https://api.eventoslitoraldemo.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.eventoslitoraldemo.tk",
+  "apikey": "live_0aeae6ff88784a9bb0a704359699051677c08991c03d46759ec943ec415a71e8",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/eventoslitoral/main.scss",
+  "css": "/stylesheets/themes/eventoslitoral/main.css",
+  "logo": "https://media.tixs.me/logos/logo-eventoslitoral.jpeg",
+  "favico": "/img/eventoslitoral/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,eventoslitoral,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "eventoslitoraldemo.tk | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "eventoslitoraldemo.tk",
+    "CNPJ": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_eventoslitoral/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_eventoslitoral/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_eventoslitoral/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_eventoslitoral/emailComprador.html",
+      "gift": "../comprar/templates/multi_eventoslitoral/emailPresente.html",
+      "signature": "../comprar/templates/multi_eventoslitoral/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_eventoslitoral/confirmacaoEmail.html"
+
+    }
+  }
+}

@@ -9,9 +9,9 @@
   "www.ciadeingressos.com": "ciadeingressos",
   "api.ciadeingressos.com": "ciadeingressos",
   "compra.ciadeingressos.com": "ciadeingressos",
-  "localhost:2004": "teatromodulo",
+  "localhost:2004": "amigosecia",
   "localhost:2002": "localhost",
-  "localhost:8080": "teatroparatodos",
+  "localhost:8080": "amigosecia",
   "localhost": "teatroparatodos",
   "10.0.2.2:8080": "localhostpinpad",
   "10.0.2.2": "pinpad_lh",
@@ -59,5 +59,11 @@
   "compra.jjrproducoes.com.br": "jjrproducoes",
   "www.famillyproducoesdemo.tk": "famillyproducoes",
   "api.famillyproducoesdemo.tk": "famillyproducoes",
-  "compra.famillyproducoesdemo.tk": "famillyproducoes"
+  "compra.famillyproducoesdemo.tk": "famillyproducoes",
+  "www.amigoseciademo.tk": "amigosecia",
+  "api.amigoseciademo.tk": "amigosecia",
+  "compra.amigoseciademo.tk": "amigosecia",
+  "www.eventoslitoraldemo.tk": "eventoslitoral",
+  "api.eventoslitoraldemo.tk": "eventoslitoral",
+  "compra.eventoslitoraldemo.tk": "eventoslitoral"
 }
