@@ -9,7 +9,7 @@
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/marketplayclub/main.scss",
-  "css": "/stylesheets/themes/marketplayclub/main.css",
+  "css": "/stylesheets/themes/www.marketplay.club/main.css",
   "template": "ticketHubSearchHeader",
   "logo": "https://media.tixs.me/logos/logo-marketplayclub.jpg",
   "favico": "/img/marketplayclub/",
