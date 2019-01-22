@@ -1,0 +1,80 @@
+{
+  "config": {
+    "type": "api",
+    "smtp": {
+      "uri": "smtp-relay.gmail.com",
+      "port": "587",
+      "smtpsecure": "tls"
+    },
+    "api": {
+      "login": "leonel.costa@tixs.me",
+      "apikey": "b175cc5be004456855e061f1fb8f113b",
+      "uri": "http://app1.iagentesmtp.com.br/api/v1/send.json"
+    }
+  },
+  "formto": {
+    "email":"atendimento@marketplay.club",
+    "from": "formto",
+    "pass":""
+  },
+  "noreply": {
+    "email":"noreply@marketplay.club",
+    "from": "noreply",
+    "pass":""
+  },
+  "register": {
+    "email":"cadastro@marketplay.club",
+    "from": "cadastro",
+    "pass":""
+  },
+  "shopping": {
+    "email":"pedido@marketplay.club",
+    "from": "pedido",
+    "pass":""
+  },
+  "lembrete": {
+    "email":"pedido@marketplay.club",
+    "from": "pedido",
+    "pass":""
+  },
+  "marketing": {
+    "email":"pedido@marketplay.club",
+    "from": "pedido",
+    "pass":""
+  },
+  "info": {
+    "email":"pedido@marketplay.club",
+    "from": "pedido",
+    "pass":""
+  },
+  "sac": {
+    "email":"pedido@marketplay.club",
+    "from": "noreply",
+    "pass":""
+  },
+  "pedido": {
+    "email":"pedido@marketplay.club",
+    "from": "pedido",
+    "pass":""
+  },
+  "assinantea@siscompre": {
+    "email":"pedido@marketplay.club",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressospedidos@hotmail": {
+    "email":"pedido@marketplay.club",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@siscompre": {
+    "email":"pedido@marketplay.club",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@gmail": {
+    "email":"pedido@marketplay.club",
+    "from": "pedido",
+    "pass":""
+  }
+}
