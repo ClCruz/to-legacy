@@ -8,7 +8,7 @@
 ```bash
 sudo docker run -it -d -p 2004:80 --restart=always --name unique.legacy \
 -v /var/www/unique/legacy:/var/www/html \
-blcoccaro/linuxphpsql:v5
+blcoccaro/phpwithsql:v1
 ```
 
 ### meanings 
