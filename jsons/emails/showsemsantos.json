@@ -1,0 +1,80 @@
+{
+  "config": {
+    "type": "api",
+    "smtp": {
+      "uri": "smtp-relay.gmail.com",
+      "port": "587",
+      "smtpsecure": "tls"
+    },
+    "api": {
+      "login": "leonel.costa@tixs.me",
+      "apikey": "b175cc5be004456855e061f1fb8f113b",
+      "uri": "http://app1.iagentesmtp.com.br/api/v1/send.json"
+    }
+  },
+  "formto": {
+    "email":"atendimento@showsemsantosdemo.tk",
+    "from": "formto",
+    "pass":""
+  },
+  "noreply": {
+    "email":"noreply@showsemsantosdemo.tk",
+    "from": "noreply",
+    "pass":""
+  },
+  "register": {
+    "email":"cadastro@showsemsantosdemo.tk",
+    "from": "cadastro",
+    "pass":""
+  },
+  "shopping": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "pedido",
+    "pass":""
+  },
+  "lembrete": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "pedido",
+    "pass":""
+  },
+  "marketing": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "pedido",
+    "pass":""
+  },
+  "info": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "pedido",
+    "pass":""
+  },
+  "sac": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "noreply",
+    "pass":""
+  },
+  "pedido": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "pedido",
+    "pass":""
+  },
+  "assinantea@siscompre": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressospedidos@hotmail": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@siscompre": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@gmail": {
+    "email":"pedido@showsemsantosdemo.tk",
+    "from": "pedido",
+    "pass":""
+  }
+}
