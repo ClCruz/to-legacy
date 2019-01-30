@@ -110,7 +110,7 @@
                 if (getwhitelabelobj()["host"] == "localhost:8080")
                     return "http://".getwhitelabelobj()["host"];
                 else
-                    return "https://www.".getwhitelabelobj()["host"];
+                    return "https://".getwhitelabelobj()["uri"];
             break;
             case "legacy":
                 return getwhitelabelobj()["legacy"];

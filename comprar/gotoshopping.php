@@ -3,7 +3,7 @@ session_start();
 header("Access-Control-Allow-Origin: *");
 require_once('../settings/settings.php');
 require_once('../settings/functions.php');
-
+require_once($_SERVER['DOCUMENT_ROOT']."/v1/config/whitelabel.php");
 
 if ($_REQUEST['token']!='') {
     $mainConnection = mainConnection();
@@ -18,7 +18,7 @@ if ($_REQUEST['token']!='') {
     }   
 }
 if ($_REQUEST["id"] == "") {
-    header('Location: www.tixs.me');
+    header('Location: '.getwhitelabelobj()["uri"]);
 }
 else {
     header('Location: /comprar/etapa1.php?apresentacao='.$_REQUEST["id"]);
