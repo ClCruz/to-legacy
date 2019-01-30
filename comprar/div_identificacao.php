@@ -71,11 +71,11 @@ require_once($_SERVER['DOCUMENT_ROOT']."/settings/multisite/unique.php");
 				<?php if ( $assinante ): ?>
 				<a id="lembrei_senha" href="#">Voltar para Login</a>
 				<?php endif; ?>
-				<div class="nome">
-					um email com instruções para recuperar<br>
-					sua senha foi enviado para:<br>
-					<span>fulano@host.com.br</span><br>
-					se não encontrar o e-mail verifique sua caixa de spam
+				<br>
+				<div class="nome" style="float: left; margin-top: 30px">
+					Um email com instruções para recuperar<br>
+					sua senha será enviado para o seu email.
+					Se não encontrar o e-mail verifique sua caixa de spam
 				</div>
 			</div>
 		</div>
