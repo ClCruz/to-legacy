@@ -190,7 +190,7 @@ function finalizar($qtdIngressos, $totalIngressos, $rsPedido) {
 	</table>
 	<div class="pedido_entrega">
 		<div class="descricao">forma de entrega</div>
-		<div class="tipo"><?php echo $rsPedido['IN_RETIRA_ENTREGA']; ?></div>
+		<div class="tipo"><?php //echo $rsPedido['IN_RETIRA_ENTREGA']; ?></div>
 		<div class="valor"><?php echo ($rsPedido['VL_FRETE'] == 0 or $rsPedido['VL_FRETE'] == null) ? "" : '<span>R$</span> '.number_format($rsPedido['VL_FRETE'], 2, ',', ''); ?></div>
 	</div>
 	<?php

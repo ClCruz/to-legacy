@@ -121,9 +121,9 @@ while ($rs = fetchResult($result)) {
 							<img src="">
 						</div>
 						<div class="ajuda">
-							<p class="frase1 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">valide o benefício</p>
-							<p class="frase2 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">insira o número e clique validar</p>
-							<p class="frase3 <?php echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">benefício válido</p>
+							<span class="frase1 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">valide o benefício</span>
+							<span class="frase2 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">insira o número e clique validar</span>
+							<span class="frase3 <?php echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">benefício válido</span>
 						</div>
 						<div class="icone_validador <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'valido' : ''; ?>"></div>
 						<div class="container_validador">

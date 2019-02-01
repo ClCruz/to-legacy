@@ -102,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 				</div>
 
-				<span id="row identificacao container__login" class="row contaner__login">
+				<span id="row identificacao container__login" class="row container__login">
 					<form id="confirmacaoForm" method="post" action="confirmacaoEmail.php">
 						<div class="identificacao">
 							<p class="frase"><b>Já recebi</b><br/>o código</p>

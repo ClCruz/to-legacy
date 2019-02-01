@@ -2310,7 +2310,7 @@ a.badge {
 .container__login,
 .container__imprima {
 	width: 100%;
-	color: $black;
+	color: #fff !important;
 	background: $black;
 	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 
@@ -2704,4 +2704,21 @@ div.descricao_pag div.descricao.final .descricao {
 table#pedido_resumo tbody li *,
 #pedido_resumo .sbHolder * {
 	font-size: 12px !important;
+}
+
+div.input div.mes .sbOptions,
+div.input div.ano .sbOptions {
+	max-height: 150px !important;
+}
+
+.container_beneficio {
+	color: white !important;
+}
+
+.pedido_total {
+	color: white !important;
+}
+
+table#pedido_resumo tbody tr.beneficio div.container_validador input {
+	color: #666 !important;
 }

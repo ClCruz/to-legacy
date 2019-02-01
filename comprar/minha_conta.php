@@ -436,7 +436,7 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                                                 <a href="detalhes_pedido.php?pedido=<?php echo $rs['ID_PEDIDO_VENDA']; ?>"><?php echo $rs['ID_PEDIDO_VENDA']; ?></a>
                                             </td>
                                         <?php } ?>
-                                        <td><?php echo $rs['IN_RETIRA_ENTREGA']; ?></td>
+                                        <td><?php //echo $rs['IN_RETIRA_ENTREGA']; ?></td>
                                         <td><?php echo $rs['DT_PEDIDO_VENDA']; ?></td>
                                         <td>R$ <?php echo number_format($rs['VL_TOTAL_PEDIDO_VENDA'], 2, ',', ''); ?></td>
                                         <td>
