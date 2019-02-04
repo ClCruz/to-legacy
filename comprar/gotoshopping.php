@@ -3,7 +3,7 @@ session_start();
 header("Access-Control-Allow-Origin: *");
 require_once('../settings/settings.php');
 require_once('../settings/functions.php');
-require_once($_SERVER['DOCUMENT_ROOT']."/v1/config/whitelabel.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/config/whitelabel.php");
 
 if ($_REQUEST['token']!='') {
     $mainConnection = mainConnection();

@@ -39,12 +39,6 @@
     "www.teatroumc.tk": "teatroumc",
     "api.teatroumc.tk": "teatroumc",
     "compra.teatroumc.tk": "teatroumc",
-    "www.cafeteatrorubi.com.br": "cafeteatrorubi",
-    "api.cafeteatrorubi.com.br": "cafeteatrorubi",
-    "compra.cafeteatrorubi.com.br": "cafeteatrorubi",
-    "www.cafeteatrorubi.tk": "cafeteatrorubi",
-    "api.cafeteatrorubi.tk": "cafeteatrorubi",
-    "compra.cafeteatrorubi.tk": "cafeteatrorubi",
     "www.viveremsantosdemo.tk": "viveremsantos",
     "api.viveremsantosdemo.tk": "viveremsantos",
     "compra.viveremsantosdemo.tk": "viveremsantos",
@@ -71,5 +65,9 @@
     "compra.marketplay.club": "marketplayclub",
     "www.showsemsantosdemo.tk": "showsemsantos",
     "api.showsemsantosdemo.tk": "showsemsantos",
-    "compra.showsemsantosdemo.tk": "showsemsantos"
+    "compra.showsemsantosdemo.tk": "showsemsantos",
+    "ingressos.cafeteatrorubi.com.br": "cafeteatrorubi",
+    "api.cafeteatrorubi.com.br": "cafeteatrorubi",
+    "compra.cafeteatrorubi.com.br": "cafeteatrorubi",
+    "admin.cafeteatrorubi.com.br": "cafeteatrorubi"
 }
