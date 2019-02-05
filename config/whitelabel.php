@@ -106,12 +106,6 @@
     function getwhitelabel($property) {
         //die(json_encode(getwhitelabelobj()));
         switch ($property) {
-            case "uri":
-                if (getwhitelabelobj()["host"] == "localhost:8080")
-                    return "http://".getwhitelabelobj()["host"];
-                else
-                    return "https://".getwhitelabelobj()["uri"];
-            break;
             case "legacy":
                 return getwhitelabelobj()["legacy"];
             break;
