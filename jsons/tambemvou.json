@@ -1,7 +1,7 @@
 {
   "env": "production",
   "host": "www.tambemvoudemo.tk",
-  "uri": "www.tambemvoudemo.tk",
+  "uri": "https://www.tambemvoudemo.tk",
   "api": "https://api.tambemvoudemo.tk",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.tambemvoudemo.tk",

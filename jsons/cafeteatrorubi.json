@@ -1,7 +1,7 @@
 {
   "env": "production",
   "host": "ingressos.cafeteatrorubi.com.br",
-  "uri": "ingressos.cafeteatrorubi.com.br",
+  "uri": "https://ingressos.cafeteatrorubi.com.br",
   "api": "https://api.cafeteatrorubi.com.br",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.cafeteatrorubi.com.br",

@@ -1,7 +1,7 @@
 {
   "env": "production",
   "host": "www.showsemsantosdemo.tk",
-  "uri": "www.showsemsantosdemo.tk",
+  "uri": "https://www.showsemsantosdemo.tk",
   "api": "https://api.showsemsantosdemo.tk",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.showsemsantosdemo.tk",
