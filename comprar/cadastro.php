@@ -158,13 +158,15 @@ if (isset($_GET['action'])) {
 			die("oi3");
 
 			if (executeSQL($mainConnection, $query, $params)) {
-				die("oi2");
+				// die("oi2");
 				$errors = sqlErrors();
 				if (empty($errors)) {
 
 					if (!(isset($_SESSION['operador']) and is_numeric($_SESSION['operador']))) {
 						sendConfirmationMail($reg['id_cliente']);
 						$retorno = 'true';
+				
+
 					}else{
 						dispararTrocaSenha($_POST['email1']);
 						//$retorno = 'Usuário pré registrado em POS atualizado com sucesso.';
@@ -268,15 +270,22 @@ if (isset($_GET['action'])) {
 							);
 
 		if (executeSQL($mainConnection, $query, $params)) {
+			
 			if (!(isset($_SESSION['operador']) and is_numeric($_SESSION['operador']))) {
 				sendConfirmationMail($newID, preg_match('/assinatura/', $_GET['redirect']));
+				header("Location: minha_conta.php",  true,  301 );  exit;
 			}
-
+			
 			$retorno = 'true';
 			$send_mailchimp = true;
 			$email = $_POST['email1'];
 			
 			dispararTrocaSenha($_POST['email1']);
+			
+			// $_SESSION['user'] = $newID;
+			
+			
+
 		} else {
 			$retorno = sqlErrors();
 		}
