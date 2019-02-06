@@ -37,15 +37,15 @@ $rs = executeSQL($mainConnection, $query, $params, true);
 // se nao encontrar nenhum registro pode ser usuario tentando acessar
 // um pedido de outro usuario ou meio de pagamento que nao bate com o selecionado
 if (empty($rs)) {
-    header("Location: ". multiSite_getURI("URI_SSL"));
+	header("Location: ". multiSite_getURI("URI_SSL"));
     die();
 } else {
-
-	$transaction = unserialize(base64_decode($rs['OBJ_PAGSEGURO']));
+	
+	$transaction = json_decode($rs['OBJ_PAGSEGURO']);
 	// var_dump($transaction);
 	// se for boleto
-	if ($transaction['payment_method'] == 'boleto') {
-		$boleto_url = $transaction['boleto_url'];
+	if ($transaction->payment_method == 'boleto') {
+		$boleto_url = $transaction->boleto_url;
 	}
 }
 ?>
@@ -130,7 +130,7 @@ if (empty($rs)) {
 					<div class="numero_pedido">
 						<p class="numero">
 							Seu pedido com o número
-							<a href="minha_conta.php?pedido=<?php echo $_GET['pedido']; ?>" <?php echo (isset($_SESSION['operador']) and is_numeric($_SESSION['operador'])) ? 'target="_blank"' : ''; ?>><?php echo $_GET['pedido']; ?></a> está emprocesso de análise.
+							<a href="minha_conta.php?pedido=<?php echo $_GET['pedido']; ?>" <?php echo (isset($_SESSION['operador']) and is_numeric($_SESSION['operador'])) ? 'target="_blank"' : ''; ?>><?php echo $_GET['pedido']; ?></a> está em processo de análise.
 						</p>
 						<p class="minha_conta">
 							Você pode conferir essa compra e as
@@ -139,7 +139,6 @@ if (empty($rs)) {
 					</div>
 				</div>
 				<div class="row container__imprima">
-
 				<?php if ($boleto_url) { ?>
 				<div class="imprima_agora"><a href="<?php echo $boleto_url; ?>" target="_new"><div class="icone"></div>Imprima agora seu boleto.</a></div>
 				<?php } ?>

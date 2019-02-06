@@ -103,7 +103,28 @@ $(function(){
 				type: $this.attr('method'),
 				data: $this.serialize()
     		}).done(function(data){
+				// console.log("ret of...");
+				// console.log(data);
 				$('#dadosPagamento').removeClass('dirty');
+
+				if (data.substr(0, 7) == 'myobj::') {
+					let objAux = JSON.parse(data.substr(7, data.length));
+					if (objAux.success) {
+						fecharOverlay();
+						$.dialog({text: "Compra efetuada com sucesso!"});	
+						if (objAux.printisafter == true || objAux.printisafter == "true" || objAux.printisafter == 1 || objAux.printisafter == "1") {
+							document.location = "pagamento_pagarme.php?pedido="+objAux.id_pedido_venda;
+						}
+						else {
+							document.location = "pagamento_ok.php?pedido="+objAux.id_pedido_venda;
+						}
+					}
+					else {
+						fecharOverlay();
+						$.dialog({text: objAux.msg});	
+					}
+					return;
+				}
 
 				if (data.substr(0, 8) == 'redirect') {
 					document.location = data;

@@ -1,4 +1,14 @@
 <?php
+    function getconf() {
+        $jsonFile = $_SERVER['DOCUMENT_ROOT']."/jsons/conf/conf.json";
+
+        if (!file_exists($jsonFile)) {
+            die("Falha de configuração no JSON de configuração.");
+        }
+
+        $ret = json_decode(file_get_contents($jsonFile), true);
+        return $ret;
+    }
     function gethost() {
         $fullHost = $_SERVER["HTTP_HOST"];
         $jsonFile = $_SERVER['DOCUMENT_ROOT']."/jsons/domains.json";
@@ -105,13 +115,7 @@
     }
     function getwhitelabel($property) {
         //die(json_encode(getwhitelabelobj()));
-        switch ($property) {
-            case "uri":
-                if (getwhitelabelobj()["host"] == "localhost:8080")
-                    return "http://".getwhitelabelobj()["host"];
-                else
-                    return "https://".getwhitelabelobj()["uri"];
-            break;
+        switch (@$property) {
             case "legacy":
                 return getwhitelabelobj()["legacy"];
             break;
