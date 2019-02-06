@@ -273,7 +273,6 @@ if (isset($_GET['action'])) {
 			
 			if (!(isset($_SESSION['operador']) and is_numeric($_SESSION['operador']))) {
 				sendConfirmationMail($newID, preg_match('/assinatura/', $_GET['redirect']));
-				header("Location: minha_conta.php",  true,  301 );  exit;
 			}
 			
 			$retorno = 'true';
