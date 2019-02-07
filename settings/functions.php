@@ -2501,7 +2501,7 @@ function sendErrorMail($subject, $message) {
 function sendConfirmationMail($id_cliente, $assinatura = false) {
     $mainConnection = mainConnection();
 
-    $query = "SELECT C.DS_NOME, C.CD_EMAIL_LOGIN, E.CD_CONFIRMACAO
+    $query = "SELECT C.DS_NOME, C.CD_EMAIL_LOGIN, replace(newid(),'-','') CD_CONFIRMACAO
                 FROM MW_CLIENTE C
                 LEFT JOIN MW_CONFIRMACAO_EMAIL E ON E.ID_CLIENTE = C.ID_CLIENTE
                 WHERE C.ID_CLIENTE = ?";

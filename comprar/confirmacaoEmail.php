@@ -4,6 +4,31 @@
 	require_once('../settings/settings.php');
 	require_once('../settings/functions.php');
 	require_once('../settings/multisite/unique.php');
+	
+	if($_REQUEST['codigo'] != '') {
+		$mainConnection = mainConnection();
+		
+		$query = 'SELECT 1 FROM MW_CONFIRMACAO_EMAIL WHERE CD_CONFIRMACAO = ?';
+		$params = array(trim($_REQUEST['codigo']));
+		
+		$rs = executeSQL($mainConnection, $query, $params, true);
+		
+		if ($rs[0]) {
+			$query = 'DELETE FROM MW_CONFIRMACAO_EMAIL WHERE CD_CONFIRMACAO = ?';
+			executeSQL($mainConnection, $query, $params, true);
+			
+			unset($_SESSION['confirmar_email']);
+			
+			header("Location: " . urldecode($_GET['redirect']));
+			
+		} else {
+			
+			header("Location: " . urldecode($_GET['redirect']));
+		}
+	
+		die();
+	}
+
 	if (!isset($_SESSION['user'])) {
 		header("Location: login.php?redirect=" . urlencode(getCurrentUrl()));
 		die();
