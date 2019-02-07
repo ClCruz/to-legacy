@@ -36,7 +36,7 @@ require_once('../settings/multisite/unique.php');
 
 	<script src="../javascripts/identificacao_cadastro.js" type="text/javascript"></script>
 
-	<title><?php echo multiSite_getTitle()?></title>
+	<title><?php echo multiSite_getTitle();?></title>
 </head>
 <body<?php echo (preg_match('/assinatura/', $_GET['redirect']) ? ' class="mini"' : ''); ?>>
 	<!-- Google Tag Manager (noscript) -->
@@ -84,11 +84,15 @@ require_once('../settings/multisite/unique.php');
 			</div>
 		</div>
 
-
-		<?php include "footer.php"; ?>
-
-		<?php //include "selos.php"; ?>
-
+			
+			
+			<?php include "footer.php"; ?>
+			
+			<?php //include "selos.php"; ?>
+			
+		<script>
+			$('#identificacao').show();
+			</script>
 		<div id="overlay">
 			<?php require 'termosUso.php'; ?>
 		</div>
