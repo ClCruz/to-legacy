@@ -1,4 +1,3 @@
-
 * {
 }
 
@@ -8,10 +7,8 @@ body {
 		overflow-y: scroll;
 		overflow-x: hidden;
 		background: $gradiente;
-
 	}
 	@include MQ(NS) {
-
 		background-color: $black;
 		font-style: normal;
 		max-height: 99vh;
@@ -31,7 +28,6 @@ body {
 		overflow-x: hidden;
 		box-shadow: none;
 		margin-top: 20px !important;
-
 	}
 	@include MQ(NS) {
 		position: relative;
@@ -135,8 +131,8 @@ div.espetaculo_img {
 }
 
 div.espetaculo_img img {
-	width: 140px;
-	height: 160px;
+	width: 300px !important;
+	height: auto !important;
 	text-align: left;
 	margin: 0 auto;
 }
@@ -403,7 +399,6 @@ table#pedido_resumo {
 			right: 0;
 		}
 	}
-
 }
 
 #pedido > div.resumo_espetaculo > div.pedido_entrega > div.descricao,
@@ -496,7 +491,7 @@ a.botao:hover {
 
 div.resumo_carrinho span.quantidade {
 	font-size: 56px;
-	line-height: 70px!important;
+	line-height: 70px !important;
 }
 
 div.resumo_carrinho span.frase {
@@ -1045,7 +1040,8 @@ div.imprima_ingressos div.icone {
 	display: none;
 }
 
-div.imprima_ingressos, div.euvou {
+div.imprima_ingressos,
+div.euvou {
 	float: left;
 	width: 710px;
 	margin: 30px 0 20px 20px;
@@ -1056,7 +1052,7 @@ div.imprima_agora {
 }
 
 div.resumo_espetaculo div.pedido_entrega div.tipo {
-	color: $primary!important;
+	color: $primary !important;
 }
 
 div#novo_menu .meio ul.opcoes li a:hover {
@@ -1081,7 +1077,7 @@ div.imprima_ingressos {
 }
 table#meus_pedidos {
 	@include MQ(S) {
-		margin-left: 0!important;
+		margin-left: 0 !important;
 	}
 }
 div#novo_menu .meio .bottom > div:hover *:before {

@@ -26,7 +26,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 620, true)) {
 			die();
 		}
 
-		$query = "INSERT INTO mw_produtor VALUES(?, ?, ?, ?, ?, ?, ?, ?, 1, ?);";
+		$query = "INSERT INTO mw_produtor (ds_razao_social,cd_cpf_cnpj,ds_nome_contato,cd_email,ds_ddd_telefone,ds_telefone,ds_ddd_celular,ds_celular,in_ativo,id_gateway) VALUES(?, ?, ?, ?, ?, ?, ?, ?, 1, ?);";
 		$params = array(strtoupper(utf8_encode2(trim($_POST["razao_social"]))), 
 						trim($_POST["cpf_cnpj"]), 
 						ucwords(utf8_encode2(trim($_POST["nome"]))), 

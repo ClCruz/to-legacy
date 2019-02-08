@@ -78,7 +78,7 @@ a.botao {
 									<li><a href="minha_conta.php">Minha Conta</a></li>
 									<li><a href="<?php echo multiSite_getURI("URI_SSL", "espetaculos") ?>">Todos os Espetáculos</a></li>
 									<li><a href="<?php echo multiSite_getURI("URI_SSL", "teatros") ?>">Teatros e Casas de Show</a></li>
-									<!-- <li><a href="https://compreingressos.tomticket.com/kb/" >SAC & Suporte</a></li> -->
+ 
 								</ul>
 							</div>
 
@@ -365,7 +365,7 @@ a.botao {
 									<li><a href="minha_conta.php">Minha Conta</a></li>
 									<li><a href="<?php echo multiSite_getURI("URI_SSL", "espetaculos") ?>">Todos os Espetáculos</a></li>
 									<li><a href="<?php echo multiSite_getURI("URI_SSL", "teatros") ?>">Teatros e Casas de Show</a></li>
-									<!-- <li><a href="https://compreingressos.tomticket.com/kb/" >SAC & Suporte</a></li> -->
+ 
 								</ul>
 							</div>
 

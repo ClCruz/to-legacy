@@ -165,6 +165,8 @@ if (isset($_GET['action'])) {
 					if (!(isset($_SESSION['operador']) and is_numeric($_SESSION['operador']))) {
 						sendConfirmationMail($reg['id_cliente']);
 						$retorno = 'true';
+				
+
 					}else{
 						dispararTrocaSenha($_POST['email1']);
 						//$retorno = 'Usuário pré registrado em POS atualizado com sucesso.';
@@ -268,15 +270,21 @@ if (isset($_GET['action'])) {
 							);
 
 		if (executeSQL($mainConnection, $query, $params)) {
+			
 			if (!(isset($_SESSION['operador']) and is_numeric($_SESSION['operador']))) {
 				sendConfirmationMail($newID, preg_match('/assinatura/', $_GET['redirect']));
 			}
-
-			$retorno = 'true';
+			
+			$retorno = ' Cadastro efetuado com sucesso! Acesse agora seu e-mail para confirmar e ativar sua conta.';
 			$send_mailchimp = true;
 			$email = $_POST['email1'];
 			
 			dispararTrocaSenha($_POST['email1']);
+			
+			// $_SESSION['user'] = $newID;
+			
+			
+
 		} else {
 			$retorno = sqlErrors();
 		}
@@ -547,6 +555,23 @@ if (isset($_GET['action'])) {
 		}
 	} else {
 		echo $retorno;
+
+
+		// header("Refresh:0");
+		// header("Location: login.php?");
+		?> 
+	
+		<script>
+		if ($('#dados_conta').is(':hidden')) {
+			$('#identificacao').slideUp('slow');
+			$('#dados_conta').slideDown('slow');
+		} else {
+			$('#dados_conta').slideUp('slow');
+			$('#identificacao').slideDown('slow');
+		}
+		</script>
+		
+		<?php
 	}
 }
 ?>

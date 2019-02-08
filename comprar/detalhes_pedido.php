@@ -118,17 +118,17 @@ while ($rs = fetchResult($result)) {
 		if ($eventoAtual != NULL) echo "</tbody></table></div>";
 ?>
 
-	<div class="resumo_espetaculo" data-evento="<?php echo $rs['ID_EVENTO']; ?>">
-<div class="espetaculo_img"><img src="<?php echo getMiniature($rs['ID_EVENTO']); ?>"></div>
+	<div class="resumo_espetaculo" style="padding: 20px;" data-evento="<?php echo $rs['ID_EVENTO']; ?>">
+<div class="espetaculo_img"><img style="max-height: 170px;" src="<?php echo getMiniature($rs['ID_EVENTO']); ?>"></div>
 
 
-<div class="resumo">
-	<p class="nome"><?php echo utf8_encode2($rs['DS_EVENTO']); ?></p>
+<div class="resumo" style="width: 60% !important; margin-top: 30px">
+	<p class="nome" style="margin-bottom: 10px; font-size: 16px !important"> <?php echo utf8_encode2($rs['DS_EVENTO']); ?></p>
 	<p class="nome" style="text-transform: uppercase"><?php echo utf8_encode2(strftime("%a", $tempo)); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo strftime("%b", $tempo); ?> - <?php echo $rs['HR_APRESENTACAO']; ?></p>
 	<p class="endereco<?php echo $is_pacote ? ' hidden' : ''; ?>"><?php echo utf8_encode2($evento_info['nome_teatro']); ?> <?php echo utf8_encode2($evento_info['endereco'] . ' - ' . $evento_info['cidade'] . ', ' . $evento_info['sigla_estado']); ?></p>
 	<p class="horario<?php echo $is_pacote ? ' hidden' : ''; ?>"></p>
 </div>
-	<table id="pedido_resumo">
+	<table id="pedido_resumo"  style="margin-top: 30px">
 		<thead>
 			<tr>
 				<td width="90"></td>
@@ -189,8 +189,8 @@ function finalizar($qtdIngressos, $totalIngressos, $rsPedido) {
 		</tbody>
 	</table>
 	<div class="pedido_entrega">
-		<div class="descricao">forma de entrega</div>
-		<div class="tipo"><?php //echo $rsPedido['IN_RETIRA_ENTREGA']; ?></div>
+		<!-- <div class="descricao">Forma de entrega</div> -->
+		<!-- <div class="tipo"><?php //echo $rsPedido['IN_RETIRA_ENTREGA']; ?></div> -->
 		<div class="valor"><?php echo ($rsPedido['VL_FRETE'] == 0 or $rsPedido['VL_FRETE'] == null) ? "" : '<span>R$</span> '.number_format($rsPedido['VL_FRETE'], 2, ',', ''); ?></div>
 	</div>
 	<?php
