@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/teatroparatodosclub/main.scss",
   "css": "/stylesheets/themes/www.teatroparatodos.club/main.css",
   "template": "ticketHubSearchHeader",
-  "logo": "/assets/logo-teatroparatodosclub.jpeg",
+  "logo": "/assets/logo-teatroparatodosclub.png",
   "favico": "/img/teatroparatodosclub/",
   "videos": {
     "list": []
