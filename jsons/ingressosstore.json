@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/ingressosstore/main.scss",
   "css": "/stylesheets/themes/www.ingressos.store/main.css",
   "template": "ticketHubSearchHeader",
-  "logo": "/assets/logo-ingressosstore.jpeg",
+  "logo": "/assets/logo-ingressosstore.png",
   "favico": "/img/ingressosstore/",
   "videos": {
     "list": []
