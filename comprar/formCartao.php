@@ -4,6 +4,7 @@ require_once('../settings/settings.php');
 
 session_start();
 
+
 if ($_POST) {
     sale_trace($_SESSION['user'],NULL,NULL,NULL,NULL,NULL,session_id(),'formCartao.php','Chamando bin','',0);
     require('validarBin.php');
@@ -111,7 +112,34 @@ if ($_POST) {
         $query = 'select qt_parcelas from tabpeca where codpeca = ?';
         $rsParcelas = executeSQL($conn, $query, array($rsParcelas['codpeca']), true);
         $parcelas = $rsParcelas['qt_parcelas'];
+
+        
     ?>
+
+    <script>
+            <?php if (gethost()=="bringressos") {
+                
+?>
+                $.getJSON('<?php echo multiSite_getURIAPI() ?>/v1/purchase/site/getinstallments.php?codCliente=<?php echo $_SESSION['user'] ?>&idSession=<?php echo session_id() ?>', function ( data ) { 
+                        var data = data.installments;
+                        var selectbox = $('#qt_parcelas');
+                        selectbox.find('option').remove();
+                        $.each(data, function (i, d) {
+                            console.log(d);
+                            if (d.installment == 1) {
+                                $('<option class="sbOptions">').val(d.installment).text('à vista R$' + (d.installment_amount / 100 )).appendTo(selectbox);
+                            } else {
+                                $('<option class="sbOptions">').val(d.installment).text(d.installment + 'x R$' + (d.installment_amount / 100.0 )).appendTo(selectbox);
+                            }
+                        });
+                        
+                    } );
+                    <?php
+            } else {
+
+            }
+            ?>
+                </script>
         <input type="hidden" name="usuario_pdv" value="<?php echo (isset($_SESSION["usuario_pdv"])) ? $_SESSION["usuario_pdv"] : 0; ?>" />
         
         <div class="container_cartoes">
@@ -211,8 +239,8 @@ if ($_POST) {
                 }
                 ?>
                     <div class="input parcelas ">
-                        <p class="titulo">Forma de pagamento</p>
-                        <select name="parcelas">
+                        <p class="titulo">Quantidade de parcelas</p>
+                        <select name="qt_parcelas" style="display: block!important; color: black!important" class="sbHolder" id="qt_parcelas">
                             <?php
                             for ($i = 1; $i <= $parcelas; $i++) {
                                 $valor = number_format(round(str_replace(',', '.', $_COOKIE['total_exibicao']) / $i, 2), 2, ',', '');
@@ -220,6 +248,13 @@ if ($_POST) {
 
                                 echo "<option value='$i'>$desc - R$ $valor</option>";
                             }
+                            // for ($i = 1; $i <= count($parcelasPagarme); $i++) {
+                            //     $valor = $parcelasPagarme[$i].amount;
+                            //     $desc = $i == 1 ? 'à vista' : $i . 'x';
+                                
+
+                            //     echo "<option value='$i'>$desc - R$ $valor</option>";
+                            // }
                             ?>
                         </select>
                     </div>
@@ -285,4 +320,28 @@ if ($_POST) {
 <?php
     }
 }
+
+    ?>
+
+    <script>
+
+
+                $('#qt_parcelas').show();
+                $('#dadosPagamento > div > div:nth-child(2) > div.container_dados.container_card_others > div:nth-child(2) > div.input.parcelas > div').hide();
+
+    </script>
+
+    <style>
+            #qt_parcelas {
+                display: block!important;
+            }
+            #dadosPagamento > div > div:nth-child(2) > div.container_dados.container_card_others > div:nth-child(2) > div.input.parcelas > div {
+                display: none!important;
+            }
+
+    </style>
+    
+    <?php
+
+
 ?>

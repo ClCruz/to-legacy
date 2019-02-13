@@ -125,6 +125,9 @@
             case "uri":
                 return getwhitelabelobj()["uri"];
             break;
+            case "api":
+                return getwhitelabelobj()["api"];
+            break;
             case "host":
                 return getwhitelabelobj()["host"];
             break;

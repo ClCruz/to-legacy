@@ -64,7 +64,7 @@ if (gethost()=="bringressos") {
     $card_expirationdate=$_POST["validadeMes"].substr($_POST["validadeAno"],-2);
     $card_cvv=$_POST["codSeguranca"];
     $payment_method="";
-    $installments=$_POST["parcelas"];
+    $installments=$_POST["qt_parcelas"];
     $voucher_name=$_POST["nomePresente"];
     $voucher_email=$_POST["emailPresente"];
     callapi_purchase($session, $id_client, $id_payment_method, $card_number, $card_holdername, $card_expirationdate, $card_cvv, $payment_method, $installments, $voucher_name, $voucher_email);

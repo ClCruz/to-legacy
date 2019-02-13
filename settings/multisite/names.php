@@ -72,6 +72,10 @@ function multiSite_getURIAdmin($concat = "") {
     $ret = $ret . "/admin/" . $concat;
     return $ret;
 }
+function multiSite_getURIAPI() {
+    $ret = getwhitelabel("api");
+    return $ret;
+}
 function multiSite_seloCertificado() {
     $ret = "https://seal.verisign.com/getseal?host_name=".getwhitelabel("host")."&size=S&use_flash=NO&use_transparent=getsealjs_b.js&lang=pt";
     return $ret;    

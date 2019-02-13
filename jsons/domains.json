@@ -12,7 +12,7 @@
     "localhost:2004": "localhost",
     "localhost:2002": "localhost",
     "localhost:8080": "localhost",
-    "localhost": "teatroparatodos",
+    "localhost": "localhost",
     "10.0.2.2:8080": "localhostpinpad",
     "10.0.2.2": "pinpad_lh",
     "www.sazarteingressos.com.br": "sazarte",
