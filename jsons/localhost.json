@@ -8,8 +8,10 @@
   "apikey": "live_185e1621cf994a99ba945fe9692d4bf6d66ef03a1fcc47af8ac909dbcea53fb5",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "scss": "./src/scss/themes/www.marketplay.club/main.scss",
-  "css": "/stylesheets/themes/www.marketplay.club/main.css",
+  "template": "ticketHub",
+
+  "scss": "./src/scss/themes/www.bringressos.com.br/main.scss",
+  "css": "/stylesheets/themes/bringressos/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "favico": "/img/vivaingressos/",
   "meta": {

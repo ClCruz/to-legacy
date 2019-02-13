@@ -316,5 +316,6 @@ $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
 		echo '<script src="https://www.paypalobjects.com/api/checkout.js"></script>';
 	}
 	?>
+	
 </body>
 </html>
