@@ -1996,16 +1996,35 @@ div#content div.container_botoes_etapas div.centraliza {
 }
 
 .sbToggle {
-	background-image: none !important;
+	//background-image: none !important;
+	display: block !important;
+	height: 35px !important;
+	outline: none !important;
+	position: absolute !important;
+	right: 0 !important;
+	top: 0 !important;
+	margin: 1px 0 0 !important;
+	width: 35px !important;
+	transition: none !important;
+	transform: scale(0.75);
 }
 .sbToggle:hover {
-	background-image: none !important;
+	//background-image: none !important;
 }
 .sbToggleOpen {
-	background-image: none !important;
+	// background-image: none !important;
+	display: block !important;
+	height: 35px !important;
+	outline: none !important;
+	position: absolute !important;
+	right: 0 !important;
+	top: 0 !important;
+	margin: 1px 0 0 !important;
+	width: 35px !important;
+	transition: none !important;
 }
 .sbToggleOpen:hover {
-	background-image: none !important;
+	// background-image: none !important;
 }
 
 div.container_escolha_ingresso div.ingresso div.descricao p.nome {
