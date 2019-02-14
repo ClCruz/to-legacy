@@ -57,7 +57,7 @@ while ($rs = fetchResult($result)) {
                 <br /> 
                 <span style="margin-top: 10px"></span>
               <img class="endereco__icon" src="../images/icons/map-pin-white.svg" alt="">
-                <?php echo strtolower(utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ')) . utf8_encode2($evento_info['sigla_estado']); ?>
+                <?php echo utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ') . utf8_encode2($evento_info['sigla_estado']); ?>
                 <br />
         </p>
 			</div>

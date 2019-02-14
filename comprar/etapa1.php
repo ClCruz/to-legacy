@@ -365,9 +365,9 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
               <img class="endereco__icon" src="../images/icons/calendar.svg" alt="">
                 <?php echo getDateToString($tempo,"week-small"); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo getDateToString($tempo,"month-small"); ?> - <?php echo $rs['HR_APRESENTACAO']; ?> 
                 <br /> 
-                <span style="margin-top: 10px"></span>
+                <span style="margin-top: 13px"></span>
               <img class="endereco__icon" src="../images/icons/map-pin-white.svg" alt="">
-                <?php echo strtolower(utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ')) . utf8_encode2($evento_info['sigla_estado']); ?>
+                <?php echo utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ') . utf8_encode2($evento_info['sigla_estado']); ?>
                 <br />
               <div class="outras_datas <?php echo $is_pacote ? ' hidden' : ''; ?>">
                 <a href="#" class="other__dates-btn">Ver outras datas</a>
