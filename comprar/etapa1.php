@@ -361,10 +361,14 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
            
             <div class="resumo">
             <button type="button" class="btn btn-primary botao btn__help" data-toggle="modal" data-target="#sideModalTR"></button>
-              <p class="endereco" style="text-transform: uppercase">
-                <?php echo getDateToString($tempo,"week-small"); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo getDateToString($tempo,"month-small"); ?> - <?php echo $rs['HR_APRESENTACAO']; ?> <br /> <?php echo utf8_encode2($evento_info['nome_teatro']); ?><br /><?php echo utf8_encode2($evento_info['endereco'] . ' - ' . $evento_info['cidade'] . ', ' . $evento_info['sigla_estado']); ?>
-              </p>
-
+              <p class="endereco" style="text-transform: capitalize">
+              <img class="endereco__icon" src="../images/icons/calendar.svg" alt="">
+                <?php echo getDateToString($tempo,"week-small"); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo getDateToString($tempo,"month-small"); ?> - <?php echo $rs['HR_APRESENTACAO']; ?> 
+                <br /> 
+                <span style="margin-top: 10px"></span>
+              <img class="endereco__icon" src="../images/icons/map-pin-white.svg" alt="">
+                <?php echo strtolower(utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ')) . utf8_encode2($evento_info['sigla_estado']); ?>
+                <br />
               <div class="outras_datas <?php echo $is_pacote ? ' hidden' : ''; ?>">
                 <a href="#" class="other__dates-btn">Ver outras datas</a>
               </div>

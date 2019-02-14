@@ -1689,9 +1689,9 @@ p.endereco {
 	@include MQ(S) {
 		width: 80%;
 	}
-	font-size: 16px !important;
+	font-size: 14px !important;
 	margin-top: 12px !important;
-	color: #ccc;
+	color: #fff;
 }
 
 div.resumo_espetaculo div.resumo p.endereco {
@@ -2741,3 +2741,7 @@ div.input div.ano .sbOptions {
 table#pedido_resumo tbody tr.beneficio div.container_validador input {
 	color: #666 !important;
 }
+ .endereco__icon {
+	height: 15px;
+	margin-bottom: 3px;
+ }
