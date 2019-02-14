@@ -118,7 +118,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
             // VENDAS PELO PDV, PEDIDOS FILHOS (DE ASSINATURAS), PEDIDOS COM INGRESSOS PROMOCIONAIS, VALOR 0 E FEITOS PELO POS NÃO SÃO ESTORNADAS DO BRASPAG
             $is_estorno_brasbag = ($pedido["IN_TRANSACAO_PDV"] == 0 and !$pedido["FILHO"] and ($pedido['INGRESSOS_PROMOCIONAIS'] == 0 and $pedido['VALOR'] != 0)
                                     and !($pedido_principal["BRASPAG_ID"] == 'POS' and isset($_POST['pos_serial'])) and $pedido_principal["BRASPAG_ID"] != 'Fastcash'
-                                    and $pedido_principal["ID_PEDIDO_IPAGARE"] != 'PagSeguro' and $pedido_principal["ID_PEDIDO_IPAGARE"] != 'Pagar.me' and $pedido_principal["ID_PEDIDO_IPAGARE"] != 'Paypal'
+                                    and $pedido_principal["ID_PEDIDO_IPAGARE"] != 'PagSeguro' and $pedido_principal["ID_PEDIDO_IPAGARE"] != 'Pagar.me' and $pedido_principal["ID_PEDIDO_IPAGARE"] != 'pagarme' and $pedido_principal["ID_PEDIDO_IPAGARE"] != 'Paypal'
                                     and $pedido_principal["ID_PEDIDO_IPAGARE"] != 'Cielo' and $pedido_principal["ID_PEDIDO_IPAGARE"] != 'TiPagos');
 
             $options = array(
@@ -245,7 +245,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
             }
 
             // tratamento para pagarme
-            elseif ($pedido_principal["ID_PEDIDO_IPAGARE"] == 'Pagar.me') {
+            elseif ($pedido_principal["ID_PEDIDO_IPAGARE"] == 'Pagar.me' && $pedido_principal["ID_PEDIDO_IPAGARE"] == 'pagarme') {
 
                 require_once('../settings/pagarme_functions.php');
 
