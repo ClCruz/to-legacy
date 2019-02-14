@@ -113,10 +113,10 @@ $(function(){
 						fecharOverlay();
 						$.dialog({text: "Compra efetuada com sucesso!"});	
 						if (objAux.printisafter == true || objAux.printisafter == "true" || objAux.printisafter == 1 || objAux.printisafter == "1") {
-							document.location = "pagamento_pagarme.php?pedido="+objAux.id_pedido_venda;
+							document.location = "pagamento_ok.php?pedido="+objAux.id_pedido_venda;
 						}
 						else {
-							document.location = "pagamento_ok.php?pedido="+objAux.id_pedido_venda;
+							document.location = "pagamento_pagarme.php?pedido="+objAux.id_pedido_venda;
 						}
 					}
 					else {
