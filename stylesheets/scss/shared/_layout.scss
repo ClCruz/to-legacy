@@ -1534,7 +1534,7 @@ div.input_area.identificacao {
 }
 
 p.erro {
-	color: $primary !important;
+	// color: $primary !important;
 	font-size: 14px;
 	margin-left: 0 !important;
 }
@@ -2741,7 +2741,7 @@ div.input div.ano .sbOptions {
 table#pedido_resumo tbody tr.beneficio div.container_validador input {
 	color: #666 !important;
 }
- .endereco__icon {
+.endereco__icon {
 	height: 15px;
 	margin-bottom: 3px;
- }
+}
