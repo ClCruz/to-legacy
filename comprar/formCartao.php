@@ -117,6 +117,13 @@ if ($_POST) {
     ?>
 
     <script>
+
+        function numberToReal(numero) {
+            var numero = numero.toFixed(2).split('.');
+            numero[0] = numero[0].split(/(?=(?:...)*$)/).join('.');
+            return numero.join(',');
+        }
+
             <?php if (gethost()=="bringressos") {
                 
 ?>
@@ -127,9 +134,9 @@ if ($_POST) {
                         $.each(data, function (i, d) {
                             console.log(d);
                             if (d.installment == 1) {
-                                $('<option class="sbOptions" selected="selected">').val(d.installment).text('à vista R$' + (d.installment_amount / 100 )).appendTo(selectbox);
+                                $('<option class="sbOptions" selected="selected">').val(d.installment).text('à vista R$' + numberToReal((d.installment_amount / 100 ))).appendTo(selectbox);
                             } else {
-                                $('<option class="sbOptions">').val(d.installment).text(d.installment + 'x R$' + (d.installment_amount / 100.0 )).appendTo(selectbox);
+                                $('<option class="sbOptions">').val(d.installment).text(d.installment + 'x R$' + numberToReal((d.installment_amount / 100.0 ))).appendTo(selectbox);
                             }
                         });
                         

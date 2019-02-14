@@ -213,12 +213,12 @@ $(function(){
 
 			$('#validadeMes').selectbox('detach');
 			$('#validadeAno').selectbox('detach');
-			$('select[name=parcelas]').selectbox('detach');
+			$('select[name=qt_parcelas]').selectbox('detach');
 			$('.container_dados :input:not(:radio)').val('');
-			$('select[name=parcelas]').val(1)
+			$('select[name=qt_parcelas]').val(1)
 			$('#validadeMes').selectbox('attach');
 			$('#validadeAno').selectbox('attach');
-			$('select[name=parcelas]').selectbox('attach');
+			$('select[name=qt_parcelas]').selectbox('attach');
 
 			$('input[name=numCartao]').mask($cartao.attr('formatoCartao'));
 			$('input[name=numCartao]').next('.erro_help').find('.help').text($cartao.attr('formatoCartao').replace(/0/g, 'X'));
