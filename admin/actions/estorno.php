@@ -263,9 +263,9 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
                     );
                 }
 
-                $response = estonarPedidoPagarme($pedido['ID_PEDIDO_VENDA'], $bank_data);
+                $response = callapi_refund($pedido['ID_PEDIDO_VENDA']); //estonarPedidoPagarme($pedido['ID_PEDIDO_VENDA'], $bank_data);
 
-                if ($response['success']) {
+                if ($response) {
                     $resposta_geral = "Pedido cancelado/estornado.";
                     $retorno = 'ok';
                 } elseif (empty($_POST['banco'])) {
@@ -274,8 +274,10 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
                                                 Os dados do sistema do Middleway foram atualizados com sucesso.";
                     $force_system_refund = true;
                 } else {
-                    echo $response['error'];
-                    die();
+                    $resposta_geral = $response['error']."<br/><br/><b>Não foi possível efetuar o estorno junto à Operadora (Pagar.me)</b>, 
+                                                por favor, efetue o procedimento de cancelamento junto a operadora manualmente.<br/><br/>
+                                                Os dados do sistema do Middleway foram atualizados com sucesso.";
+                    $force_system_refund = true;
                 }
             }
 
