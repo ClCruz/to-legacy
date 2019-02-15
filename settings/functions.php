@@ -2216,6 +2216,38 @@ function requestImage($url) {
     return $image;
 }
 
+function callapi_refund($id_pedido_venda) {
+    //die(json_encode($id_pedido_venda));
+    
+    $transaction_data = array("id_pedido_venda" => $id_pedido_venda);
+
+    $url = getconf()["api_internal_uri"]."/v1/purchase/site/refund?imthebossofme=".gethost();        
+
+    $post_data = $transaction_data;
+    // $out = fopen('php://output', 'w');
+    $curl = curl_init(); 
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_POST, 1);
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);                                                                      
+    // curl_setopt($curl, CURLOPT_VERBOSE, true);
+    // curl_setopt($curl, CURLOPT_STDERR, $out);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+    curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($post_data));   
+
+    $response = curl_exec($curl);
+    // fclose($out);
+    $errno = curl_errno($curl);
+    //die(json_encode($response));
+    
+    $json = json_decode($response);
+    
+    curl_close($curl);
+    return $json->success;
+}
+
 function getQRCodeFromAPI($id_base, $codVenda, $indice) {
     $uri = getconf()["api_internal_uri"]."/v1/print/qrcode";
     $fulluri = $uri."?id_base=".$id_base."&codVenda=".$codVenda."&indice=".$indice;
