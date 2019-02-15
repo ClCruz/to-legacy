@@ -265,7 +265,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
 
                 $response = callapi_refund($pedido['ID_PEDIDO_VENDA']); //estonarPedidoPagarme($pedido['ID_PEDIDO_VENDA'], $bank_data);
 
-                if ($response) {
+                if ($response == true || $response == "true" || $response == 1 || $response == "1") {
                     $resposta_geral = "Pedido cancelado/estornado.";
                     $retorno = 'ok';
                 } elseif (empty($_POST['banco'])) {
