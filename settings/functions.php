@@ -2217,7 +2217,7 @@ function requestImage($url) {
 }
 
 function getQRCodeFromAPI($id_base, $codVenda, $indice) {
-    $uri = multiSite_getAPI()."/v1/print/qrcode";
+    $uri = getconf()["api_internal_uri"]."/v1/print/qrcode";
     $fulluri = $uri."?id_base=".$id_base."&codVenda=".$codVenda."&indice=".$indice;
     //return "".$fulluri;
     $ch = curl_init(); 

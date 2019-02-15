@@ -245,7 +245,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
             }
 
             // tratamento para pagarme
-            elseif ($pedido_principal["ID_PEDIDO_IPAGARE"] == 'Pagar.me' && $pedido_principal["ID_PEDIDO_IPAGARE"] == 'pagarme') {
+            elseif ($pedido_principal["ID_PEDIDO_IPAGARE"] == 'Pagar.me' || $pedido_principal["ID_PEDIDO_IPAGARE"] == 'pagarme') {
 
                 require_once('../settings/pagarme_functions.php');
 
