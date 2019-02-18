@@ -1,7 +1,8 @@
 <?php
 require_once('../settings/functions.php');
 require_once('../settings/multisite/unique.php');
-
+session_start();
+session_unset();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
