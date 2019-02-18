@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/bilhetepromo/main.scss",
   "css": "/stylesheets/themes/www.bilhete.promo/main.css",
   "template": "ticketHubSearchHeader",
-  "logo": "/assets/logo-bilhetepromo.png",
+  "logo": "https://media.tixs.me/logos/logo-bilhetepromo.png",
   "favico": "/img/bilhetepromo/",
   "videos": {
     "list": []

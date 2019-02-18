@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/hiperionartes/main.scss",
   "css": "/stylesheets/themes/hiperionartes.marketplay.club/main.css",
   "template": "ticketHubSearchHeader",
-  "logo": "/assets/logo-hiperionartes.png",
+  "logo": "https://media.tixs.me/logos/logo-hiperionartes.png",
   "favico": "/img/hiperionartes/",
   "videos": {
     "list": []

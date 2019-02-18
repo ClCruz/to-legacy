@@ -5,7 +5,7 @@
   "api": "http://localhost:2002",
   "pinpad": "http://localhost:7001/api",
   "legacy": "http://localhost:2004",
-  "apikey": "live_185e1621cf994a99ba945fe9692d4bf6d66ef03a1fcc47af8ac909dbcea53fb5",
+  "apikey": "live_ad7750c9491a41b7bd2fed3b0d03a8f44613d2c3b20d4435b6e7f2b67881d34c",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "template": "ticketHub",
