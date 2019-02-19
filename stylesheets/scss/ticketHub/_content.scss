@@ -98,6 +98,7 @@ div.container_escolha_ingresso div.ingresso.quantidade {
 	}
 }
 .container_ingresso .sbHolder {
+	width: 30px !important;
 	font-size: 16px !important;
 }
 
@@ -106,10 +107,10 @@ div.container_escolha_ingresso div.ingresso div.descricao p.nome {
 }
 
 .container_ingresso .sbSelector {
-	line-height: 30px !important;
+	line-height: 29px !important;
 	height: 25px;
 	color: #000 !important;
-	margin-top: 26px;
+	margin-top: 28px;
 	background: white;
 	border-radius: 5px;
 }

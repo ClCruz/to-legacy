@@ -1655,10 +1655,13 @@ div#recaptcha_widget_div{
 	right:0;
 	bottom:0;
 	left:0;
-	z-index:100;
+	z-index:1;
 	background: #111;
+	opacity: 0.8;
 	display:none;
 	color:#FFF;
+  transition: visibility 0s, opacity 0.5s linear;
+
 	-webkit-overflow-scrolling:touch;
 }
 
