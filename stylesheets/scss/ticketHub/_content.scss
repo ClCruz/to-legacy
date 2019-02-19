@@ -127,3 +127,21 @@ a.sbFocus:hover {
 div.container_escolha_ingresso div.ingresso.quantidade {
 	width: 377px;
 }
+
+div.resumo_carrinho span.quantidade {
+	@media only screen and (min-width: 960px) {
+		font-size: 40px !important;
+	}
+}
+
+div.resumo_carrinho span.frase {
+	@media only screen and (min-width: 960px) {
+		margin-top: 14px;
+		line-height: 18px;
+	}
+}
+
+p.descricao_fase {
+	text-align: left;
+	padding-left: 4px;
+}

@@ -402,17 +402,19 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
               </div>
               
               <?php if ($vendasPorTelefone < 0 && $vendaNaoLiberada == false && $ingressosDisponiveis != 0) { ?>
-              <p class="descricao_fase">Escolha a quantidade</p>
+              <p class="descricao_fase">Escolha seus ingressos</p>
               <div class="container_ingressos">
                 <div class="container_ingresso">
                   <div class="ingresso quantidade">
                     <div class="icone assinaturas"></div>
                     <div class="descricao">
-                      <p class="nome"><?php echo $setor_atual; ?></p>
-                      <?php if($numerado){ ?>
-                      <p class="help">escolha no mapa abaixo seus assentos</p>
-                      <?php }else{ ?>
-                      <p class="help">Escolha ao lado a quantidade de ingressos</p>
+                      <?php if(!$numerado){ ?>
+                        <?php } ?>
+                        <p class="nome"><?php echo $setor_atual; ?></p>
+                        <?php if($numerado){ ?>
+                          <p class="help">escolha no mapa abaixo seus assentos</p>
+                          <?php }else{ ?>
+                            <p class="help">Escolha ao lado a quantidade de ingressos</p>
                       <?php } ?>
                     </div>
                   </div>
