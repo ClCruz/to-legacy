@@ -31,3 +31,11 @@ wl_vivaingressos 540X
 sudo docker run -it -d -p 5401:80 --name wl_vivaingressos.site -v /var/www/wl_vivaingressos/site:/var/www/html blcoccaro/linuxphpsql:v4
 sudo docker run -it -d -p 5402:80 --name wl_vivaingressos.api -v /var/www/wl_vivaingressos/api:/var/www/html -v /var/www/wl_vivaingressos/media:/var/www/media  -v /var/www/wl_vivaingressos/site:/var/www/site  blcoccaro/linuxphpsql:v4
 sudo docker run -it -d -p 5403:80 --name wl_vivaingressos.compra -v /var/www/wl_vivaingressos/compra:/var/www/html blcoccaro/linuxphpsql:v4
+
+sudo docker run -it -d -p 2002:80 --restart=always --name tixsme.api \
+-v /Users/intuiti/Documents/Projetos/tixs/to-api/:/var/www/html \
+-v /Users/intuiti/Documents/Projetos/tixs/to-media/:/var/www/media \
+-v /Users/intuiti/Documents/Projetos/tixs/to-site/:/var/www/site \
+-v /Users/intuiti/Documents/Projetos/tixs/to-legacy:/var/www/legacy \
+-v /Users/intuiti/Documents/Projetos/tixs/to-gitauto/:/var/www/gitauto \
+blcoccaro/phpwithsql:v1

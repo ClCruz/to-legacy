@@ -385,13 +385,13 @@ div.mapa_de_plateia {
 */
 
 table#pedido_resumo tbody tr {
-	background: #333;
+	background: #2d313c;
 	border: 1px solid #444;
 	padding: 10px;
 }
 
 table#pedido_resumo tbody td {
-	background: #333;
+	background: #2d313c;
 }
 
 table#pedido_resumo tbody * {
@@ -934,7 +934,7 @@ div.container_cartao p.nome {
 		padding-left: 32px;
 		background: url(../../../images/search.svg) no-repeat 5px center;
 		width: calc(100% - 40px);
-		color: #333;
+		color: #2d313c;
 
 		@include MQ(S) {
 			width: 100%;
@@ -1536,6 +1536,8 @@ div.input_area.identificacao {
 p.erro {
 	// color: $primary !important;
 	font-size: 14px;
+	margin-top: 3px;
+	color: red !important;
 	margin-left: 0 !important;
 }
 
@@ -1887,7 +1889,7 @@ a.remover {
 }
 
 a.sbFocus:hover {
-	color: #333 !important;
+	color: #2d313c !important;
 }
 
 .container_setores {
@@ -2217,7 +2219,7 @@ a.badge {
 }
 
 .badge-light {
-	color: #333 !important;
+	color: #2d313c !important;
 }
 
 .badge__icon {
@@ -2559,7 +2561,7 @@ div.container_dados p.frase {
 		padding-left: 32px;
 		background: url(../../../assets/icons/search.svg) no-repeat 5px center;
 		width: calc(100% - 40px);
-		color: #333;
+		color: #2d313c;
 
 		@include MQ(S) {
 			width: 100%;
@@ -2660,7 +2662,7 @@ div.container_dados p.frase {
 		}
 	}
 	.dropdown-menu {
-		background: #333333;
+		background: #2d313c;
 
 		a {
 			color: #fff;
@@ -2744,4 +2746,19 @@ table#pedido_resumo tbody tr.beneficio div.container_validador input {
 .endereco__icon {
 	height: 15px;
 	margin-bottom: 3px;
+}
+
+div.container_escolha_ingresso div.ingresso.quantidade {
+}
+
+table#pedido_resumo {
+	margin-bottom: 20px;
+}
+
+div.tipo {
+	margin-top: 20px !important;
+}
+
+span.total {
+	margin-right: 10px !important;
 }
