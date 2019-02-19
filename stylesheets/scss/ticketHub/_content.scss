@@ -145,3 +145,8 @@ p.descricao_fase {
 	text-align: left;
 	padding-left: 4px;
 }
+
+table#pedido_resumo tbody td a.remover {
+	background-size: cover;
+	filter: none;
+}
