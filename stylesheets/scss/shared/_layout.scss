@@ -2778,7 +2778,6 @@ div.identificacao p.frase,
 div.container_cartoes p.frase,
 div.container_dados p.frase,
 div.container_dados div.linha,
-div.descricao_pag div.descricao p.nome,
 div.descricao_pag div.descricao p.descricao {
 	@include blTO();
 }
@@ -2860,13 +2859,10 @@ div.coluna p.frase,
 #form_cadastro div.coluna_tixs {
 	color: #333 !important;
 }
+.btn__help {
+	background-color: none !important;
+}
 
-a.botao,
-.btn,
-.botao,
-#trocar_senha > div > div > div.inputs > input.submit.salvar_dados,
-input.submit.salvar_dados,
-input.submit.avancar.passo4,
-input.submit {
-	background: $secundary !important;
+.container_ingresso .sbHolder {
+	box-shadow: none!important;
 }
