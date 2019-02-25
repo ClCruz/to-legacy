@@ -101,11 +101,15 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                     LEFT JOIN MW_ASSINATURA_PROMOCAO AP ON AP.ID_PROMOCAO_CONTROLE = P.ID_PROMOCAO_CONTROLE
                     LEFT JOIN MW_ASSINATURA ASS ON ASS.ID_ASSINATURA = AP.ID_ASSINATURA
 
-                    WHERE pv.ID_CLIENTE = ?
-                    AND h.host=?
-                ) AS DADOS
-                ORDER BY ORDER_KEY DESC, ID_PEDIDO_VENDA DESC";
-    $params = array($_SESSION['user'], $_SESSION['user'], $_SERVER["HTTP_HOST"]);
+                    WHERE pv.ID_CLIENTE = ?";
+    if (gethost() != "localhost") {
+        $query .= " AND h.host=?";
+    }
+
+                    // AND h.host=?
+    $query .= ") AS DADOS ORDER BY ORDER_KEY DESC, ID_PEDIDO_VENDA DESC";
+    $params = array($_SESSION['user'], $_SESSION['user'], gethost());
+    // die(gethost());
     $result = executeSQL($mainConnection, $query, $params);
 
 

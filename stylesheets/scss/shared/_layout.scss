@@ -385,13 +385,13 @@ div.mapa_de_plateia {
 */
 
 table#pedido_resumo tbody tr {
-	background: #333;
+	background: #2d313c;
 	border: 1px solid #444;
 	padding: 10px;
 }
 
 table#pedido_resumo tbody td {
-	background: #333;
+	background: #2d313c;
 }
 
 table#pedido_resumo tbody * {
@@ -934,7 +934,7 @@ div.container_cartao p.nome {
 		padding-left: 32px;
 		background: url(../../../images/search.svg) no-repeat 5px center;
 		width: calc(100% - 40px);
-		color: #333;
+		color: #2d313c;
 
 		@include MQ(S) {
 			width: 100%;
@@ -1534,8 +1534,10 @@ div.input_area.identificacao {
 }
 
 p.erro {
-	color: $primary !important;
+	// color: $primary !important;
 	font-size: 14px;
+	margin-top: 3px;
+	color: red !important;
 	margin-left: 0 !important;
 }
 
@@ -1689,9 +1691,9 @@ p.endereco {
 	@include MQ(S) {
 		width: 80%;
 	}
-	font-size: 16px !important;
+	font-size: 14px !important;
 	margin-top: 12px !important;
-	color: #ccc;
+	color: #fff;
 }
 
 div.resumo_espetaculo div.resumo p.endereco {
@@ -1887,7 +1889,7 @@ a.remover {
 }
 
 a.sbFocus:hover {
-	color: #333 !important;
+	color: #2d313c !important;
 }
 
 .container_setores {
@@ -1996,16 +1998,35 @@ div#content div.container_botoes_etapas div.centraliza {
 }
 
 .sbToggle {
-	background-image: none !important;
+	//background-image: none !important;
+	display: block !important;
+	height: 35px !important;
+	outline: none !important;
+	position: absolute !important;
+	right: 0 !important;
+	top: 0 !important;
+	margin: 1px 0 0 !important;
+	width: 35px !important;
+	transition: none !important;
+	transform: scale(0.75);
 }
 .sbToggle:hover {
-	background-image: none !important;
+	//background-image: none !important;
 }
 .sbToggleOpen {
-	background-image: none !important;
+	// background-image: none !important;
+	display: block !important;
+	height: 35px !important;
+	outline: none !important;
+	position: absolute !important;
+	right: 0 !important;
+	top: 0 !important;
+	margin: 1px 0 0 !important;
+	width: 35px !important;
+	transition: none !important;
 }
 .sbToggleOpen:hover {
-	background-image: none !important;
+	// background-image: none !important;
 }
 
 div.container_escolha_ingresso div.ingresso div.descricao p.nome {
@@ -2198,7 +2219,7 @@ a.badge {
 }
 
 .badge-light {
-	color: #333 !important;
+	color: #2d313c !important;
 }
 
 .badge__icon {
@@ -2540,7 +2561,7 @@ div.container_dados p.frase {
 		padding-left: 32px;
 		background: url(../../../assets/icons/search.svg) no-repeat 5px center;
 		width: calc(100% - 40px);
-		color: #333;
+		color: #2d313c;
 
 		@include MQ(S) {
 			width: 100%;
@@ -2641,7 +2662,7 @@ div.container_dados p.frase {
 		}
 	}
 	.dropdown-menu {
-		background: #333333;
+		background: #2d313c;
 
 		a {
 			color: #fff;
@@ -2721,4 +2742,23 @@ div.input div.ano .sbOptions {
 
 table#pedido_resumo tbody tr.beneficio div.container_validador input {
 	color: #666 !important;
+}
+.endereco__icon {
+	height: 15px;
+	margin-bottom: 3px;
+}
+
+div.container_escolha_ingresso div.ingresso.quantidade {
+}
+
+table#pedido_resumo {
+	margin-bottom: 20px;
+}
+
+div.tipo {
+	margin-top: 20px !important;
+}
+
+span.total {
+	margin-right: 10px !important;
 }

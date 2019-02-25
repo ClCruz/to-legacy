@@ -11,7 +11,7 @@
   "scss": "./src/scss/themes/showsemsantos/main.scss",
   "css": "/stylesheets/themes/www.showsemsantosdemo.tk/main.css",
   "template": "ticketHubSearchHeader",
-  "logo": "/assets/logo-showsemsantos.jpeg",
+  "logo": "https://media.tixs.me/logos/logo-showsemsantos.jpeg",
   "favico": "/img/showsemsantos/",
   "meta": {
     "description": "Shows em Santos, venda de ingressos",

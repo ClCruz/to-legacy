@@ -203,7 +203,7 @@ if ($rs[0] != 1) header("Location: " . multiSite_getURI("URI_SSL"));
 				                        <p class="titulo">código de segurança</p>
 				                        <input type="text" name="codSeguranca">
 				                        <div class="erro_help">
-				                            <p class="help"><a href="#" class="meu_codigo_cartao">onde está meu código?</a></p>
+				                            <p class="help"><a href="#" class="meu_codigo_cartao">Onde está meu código?</a></p>
 				                        </div>
 				                    </div>
 				                    <div class="input data">

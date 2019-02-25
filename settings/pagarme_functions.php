@@ -452,7 +452,7 @@ function consultarExtratoRecebedorPagarme($recipient_id, $status, $start_date, $
 	INNER JOIN mw_evento e ON ipva.id_evento=e.id_evento
 	INNER JOIN mw_regra_split rs ON rs.id_evento=e.id_evento
 	INNER JOIN mw_recebedor re ON rs.id_recebedor=re.id_recebedor
-	WHERE pv.id_pedido_ipagare='Pagar.me' AND re.recipient_id=? AND dt_pedido_venda BETWEEN ? AND ?
+	WHERE pv.id_pedido_ipagare in ('Pagar.me','pagarme') AND re.recipient_id=? AND dt_pedido_venda BETWEEN ? AND ?
 	UNION ALL
 	SELECT DISTINCT e.id_evento, e.ds_evento, pvg.TransacaoGateway as codeTran
 	FROM mw_pedido_venda_gateway pvg
@@ -568,7 +568,7 @@ function listPayables($recipient_id, $status, $evento, $count, $page) {
 	INNER JOIN mw_evento e ON ipva.id_evento=e.id_evento
 	INNER JOIN mw_regra_split rs ON rs.id_evento=e.id_evento
 	INNER JOIN mw_recebedor re ON rs.id_recebedor=re.id_recebedor
-	WHERE pv.id_pedido_ipagare='Pagar.me' AND re.recipient_id=? AND dt_pedido_venda BETWEEN ? AND ?
+	WHERE pv.id_pedido_ipagare in ('Pagar.me','pagarme') AND re.recipient_id=? AND dt_pedido_venda BETWEEN ? AND ?
 	UNION ALL
 	SELECT DISTINCT e.id_evento, e.ds_evento, pvg.TransacaoGateway as codeTran
 	FROM mw_pedido_venda_gateway pvg

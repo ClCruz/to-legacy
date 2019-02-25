@@ -51,8 +51,14 @@ while ($rs = fetchResult($result)) {
 				<p class="endereco title__resumo" style="">
 						<?php echo utf8_encode2($rs['DS_EVENTO']); ?>
 				</p>
-        <p class="endereco endereco__resumo" style="">
-                <?php echo utf8_encode2(strftime("%a", $tempo)); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo strftime("%b", $tempo); ?> - <?php echo $rs['HR_APRESENTACAO']; ?> - <?php echo utf8_encode2($evento_info['nome_teatro']); ?> <?php echo utf8_encode2($evento_info['endereco'] . ' - ' . $evento_info['cidade'] . ', ' . $evento_info['sigla_estado']); ?>
+				<p class="endereco" style="text-transform: capitalize">
+              <img class="endereco__icon" src="../images/icons/calendar.svg" alt="">
+                <?php echo getDateToString($tempo,"week-small"); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo getDateToString($tempo,"month-small"); ?> - <?php echo $rs['HR_APRESENTACAO']; ?> 
+                <br /> 
+                <span style="margin-top: 10px"></span>
+              <img class="endereco__icon" src="../images/icons/map-pin-white.svg" alt="">
+                <?php echo utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ') . utf8_encode2($evento_info['sigla_estado']); ?>
+                <br />
         </p>
 			</div>
 			<button type="button" class="btn btn-primary botao btn__help" data-toggle="modal" data-target="#sideModalTR"></button>
@@ -157,8 +163,7 @@ function finalizar($qtdIngressos, $totalIngressos, $formaEntrega, $valorEntrega,
 			</tr>
 		</tbody>
 	</table>
-	<div class="pedido_entrega">
-		<br>
+	<div class="pedido_entrega" style="margin-right: 10px">
 		<div class="descricao">Forma de entrega</div>
 		<div class="tipo">
 			<select id="cmb_entrega" <?php echo $edicao ? '' : 'disabled'; ?>>

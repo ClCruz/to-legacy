@@ -117,6 +117,13 @@ if ($_POST) {
     ?>
 
     <script>
+
+        function numberToReal(numero) {
+            var numero = numero.toFixed(2).split('.');
+            numero[0] = numero[0].split(/(?=(?:...)*$)/).join('.');
+            return numero.join(',');
+        }
+
             <?php if (gethost()=="bringressos") {
                 
 ?>
@@ -127,9 +134,9 @@ if ($_POST) {
                         $.each(data, function (i, d) {
                             console.log(d);
                             if (d.installment == 1) {
-                                $('<option class="sbOptions">').val(d.installment).text('à vista R$' + (d.installment_amount / 100 )).appendTo(selectbox);
+                                $('<option class="sbOptions" selected="selected">').val(d.installment).text('À vista R$' + numberToReal((d.installment_amount / 100 ))).appendTo(selectbox);
                             } else {
-                                $('<option class="sbOptions">').val(d.installment).text(d.installment + 'x R$' + (d.installment_amount / 100.0 )).appendTo(selectbox);
+                                $('<option class="sbOptions">').val(d.installment).text(d.installment + 'x R$' + numberToReal((d.installment_amount / 100.0 ))).appendTo(selectbox);
                             }
                         });
                         
@@ -222,7 +229,7 @@ if ($_POST) {
                     </div>
                 </div>
         </div>
-        <div class="container_dados container_card_others" style="display:block;">
+        <div class="container_dados container_card_others">
                 <?php
                 if($_SESSION['usuario_pdv'] == 0){
                 ?>
@@ -244,7 +251,7 @@ if ($_POST) {
                             <?php
                             for ($i = 1; $i <= $parcelas; $i++) {
                                 $valor = number_format(round(str_replace(',', '.', $_COOKIE['total_exibicao']) / $i, 2), 2, ',', '');
-                                $desc = $i == 1 ? 'à vista' : $i . 'x';
+                                $desc = $i == 1 ? 'À vista' : $i . 'x';
 
                                 echo "<option value='$i'>$desc - R$ $valor</option>";
                             }
@@ -274,7 +281,7 @@ if ($_POST) {
                         <p class="titulo">Código de segurança</p>
                         <input type="text" class="form-control" name="codSeguranca">
                         <div class="erro_help">
-                            <p class="help"><a href="#" class="meu_codigo_cartao">onde está meu código?</a></p>
+                            <p class="help"><a href="#" class="meu_codigo_cartao">Onde está meu código?</a></p>
                         </div>
                     </div>
                     <div class="input data">

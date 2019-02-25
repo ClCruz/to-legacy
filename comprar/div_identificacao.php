@@ -50,9 +50,10 @@ require_once($_SERVER['DOCUMENT_ROOT']."/settings/multisite/unique.php");
 					<p class="help"></p>
 				</div>
 				</div>
-				<a id="esqueci" href="#esqueci" class="esqueci_senha">esqueci minha senha</a>
-
+				<br>
+				
 				<input type="button" class="submit avancar passo4" id="logar" href="etapa4.php" value="Acessar"></input>
+				<a id="esqueci" href="#esqueci" class="esqueci_senha">Esqueci minha senha</a>
 				<div class="erro_help">
 					<p class="erro" style="width:200px">Combinação de E-mail/senha inválida<br>Por favor tente novamente.</p>
 					<p class="help"></p>

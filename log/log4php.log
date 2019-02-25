@@ -970,3 +970,263 @@ TRACE - configureSplit variables.
 TRACE - configureSplit of pagare.
 TRACE - configureSplit variables.
 TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Erro no pagarme... PagarMe_Exception Object
+(
+    [url:protected] => 
+    [method:protected] => 
+    [return_code:protected] => 
+    [parameter_name:protected] => 
+    [type:protected] => 
+    [errors:protected] => 
+    [message:protected] => Recebedor não encontrado
+
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => /var/www/html/settings/pagarme/lib/Pagarme/Model.php
+    [line:protected] => 24
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/CardHashCommon.php
+                    [line] => 32
+                    [function] => create
+                    [class] => PagarMe_Model
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/TransactionCommon.php
+                    [line] => 37
+                    [function] => create
+                    [class] => PagarMe_CardHashCommon
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/Transaction.php
+                    [line] => 7
+                    [function] => create
+                    [class] => PagarMe_TransactionCommon
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme_functions.php
+                    [line] => 146
+                    [function] => charge
+                    [class] => PagarMe_Transaction
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => /var/www/html/comprar/processarDadosCompra.php
+                    [line] => 713
+                    [function] => pagarPedidoPagarme
+                    [args] => Array
+                        (
+                            [0] => 61
+                            [1] => Array
+                                (
+                                    [paypal_data] => 
+                                    [paypal_payment] => 
+                                    [usuario_pdv] => 0
+                                    [codCartao] => 910
+                                    [nomeCartao] => aaa
+                                    [parcelas] => 1
+                                    [numCartao] => 5586813455911088
+                                    [codSeguranca] => 796
+                                    [validadeMes] => 02
+                                    [validadeAno] => 2021
+                                    [nomePresente] => 
+                                    [emailPresente] => 
+                                    [card_hash] => 28107198_byL5NU+I8h+ZaQ5DLc2tAEXZLCEV79SOeNCRVsoPQZTlLFHARHvp20e7E4gDMBrS7LSWOSrC51DnlOpL0Ij4hGSuO2j8ki91ivyVG+jArZwgA7l+7Nv1NvpfoX0st4GIAdgcbT/55gtnCJe545CTQjyODh7Vc1sipoKYrxsEQcNQaHvnrQCuMzhX3jionViL6nVFnNPsJ8q6Uu2O6tcQzJDs7DvgGL0o/2ZOkBDgOPZleG1XE6GPL/X5Fk0xAamW0qLNInoqEBVfFvqP74VnBUpEGJY12jy0LwsY798E0Bj8FMYw1BkbHv6LmwP0zphvV8CCmkYcALV1N9gDZL9wMg==
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [file] => /var/www/html/comprar/formCartao.php
+                    [line] => 15
+                    [args] => Array
+                        (
+                            [0] => /var/www/html/comprar/processarDadosCompra.php
+                        )
+
+                    [function] => require
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
