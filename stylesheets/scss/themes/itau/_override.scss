@@ -1,17 +1,19 @@
 #pai {
-  background: $primary;
+	background: $primary;
 }
 
 $gradiente: $primary;
 
 body {
-  background: #secundary;
+	background: #secundary;
 }
 
-a.botao, .btn, .botao, #trocar_senha>div>div>div.inputs>input.submit.salvar_dados, input.submit.salvar_dados, input.submit.avancar.passo4, input.submit {
-  background: $primary!important;
-}
-
-.title__page {
-  background: $primary!important;
+a.botao,
+.btn,
+.botao,
+#trocar_senha > div > div > div.inputs > input.submit.salvar_dados,
+input.submit.salvar_dados,
+input.submit.avancar.passo4,
+input.submit {
+	background: $primary !important;
 }

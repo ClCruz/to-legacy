@@ -1,3 +1,21 @@
+@mixin blTO() {
+	border-left: 5.5px solid $secundary !important;
+	border-radius: 0 !important;
+	padding-left: 15px !important;
+
+	@include MQ(NS) {
+		margin-left: 10px !important;
+	}
+}
+
+@mixin bgTO() {
+	color: $black !important;
+	-webkit-box-shadow: 0px 0.32762px 40.32762px rgba(0, 0, 0, 0.1) !important;
+	background: $white !important;
+	padding-left: 10px !important;
+	border-radius: 5px !important;
+}
+
 * {
 	font-family: $font-family;
 	font-weight: normal;
@@ -91,7 +109,7 @@ div.resumo_espetaculo > div.data {
 }
 
 div.resumo_espetaculo > div.data p {
-	color: white;
+	color: #333;
 }
 
 div.descricao_pag div.descricao {
@@ -149,7 +167,7 @@ div.resumo_espetaculo {
 }
 
 div.resumo_espetaculo {
-	color: white;
+	color: #333;
 }
 
 /*
@@ -265,7 +283,7 @@ div.container_escolha_ingresso div.ingresso.quantidade {
 div.descricao_pag div.descricao p.nome,
 div.descricao_pag div.descricao p.descricao {
 	font-size: 24px;
-	color: white;
+	color: #333;
 }
 #content > div.centraliza > div.descricao_pag > div.descricao {
 	@include MQ(S) {
@@ -298,7 +316,7 @@ div.descricao_pag div.descricao p.descricao {
 	font-size: 24px;
 	/* display: none; */
 	font-weight: bold !important;
-	color: #fff !important;
+	color: #333 !important;
 
 	@include MQ(S) {
 		width: 100%;
@@ -359,11 +377,8 @@ div#mapa_de_plateia {
 }
 
 div#mapa_de_plateia_geral {
-	color: $black;
-	background: $black;
-	box-shadow: aquamarine;
-	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
-	border-radius: 5px;
+	@include bgTO();
+
 	padding-bottom: 30px !important;
 
 	@include MQ(S) {
@@ -395,7 +410,7 @@ table#pedido_resumo tbody td {
 }
 
 table#pedido_resumo tbody * {
-	color: #fff !important;
+	color: #333 !important;
 	font-weight: normal;
 
 	@include MQ(NS) {
@@ -430,12 +445,12 @@ table#pedido_resumo {
 	border-radius: 0.2rem !important;
 	background: $secundary !important;
 	border: none;
-	color: white !important;
+	color: #333 !important;
 }
 
 .container_ingresso .sbSelector {
 	height: 55px;
-	color: white !important;
+	color: #333 !important;
 	a {
 		text-decoration: none !important;
 	}
@@ -553,7 +568,7 @@ input.submit {
 	border-radius: 0.2rem !important;
 	background: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%) !important;
 	border: none !important;
-	color: white !important;
+	color: #fff !important;
 	text-align: center !important;
 	text-indent: unset !important;
 	-webkit-transition: 0.4s;
@@ -626,16 +641,10 @@ div.resumo_carrinho span.frase {
 
 div.descricao_pag {
 	position: relative;
-	color: white !important;
-
-	background: $black;
-	box-shadow: aquamarine;
-	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
-
-	border-radius: 5px;
-
+	@include bgTO();
 	@include MQ(NS) {
 		padding: 20px 20px;
+		padding-bottom: 40px !important;
 	}
 
 	@include MQ(S) {
@@ -648,7 +657,7 @@ div.descricao_pag {
 
 div.container_cartoes p.frase,
 div.container_dados p.frase {
-	color: white;
+	color: #333;
 	font-size: 25px;
 }
 
@@ -1452,9 +1461,7 @@ div.resumo_espetaculo,
 .container_pedido {
 	width: 100%;
 	padding: 20px;
-	background: $black;
-	box-shadow: aquamarine;
-	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+	@include bgTO();
 
 	border-radius: 5px;
 	@include MQ(S) {
@@ -1468,11 +1475,11 @@ table#pedido_resumo {
 
 table#pedido_resumo thead td {
 	padding: 0 0 5px;
-	color: white !important;
+	color: #333 !important;
 }
 
 .pedido_entrega {
-	color: white !important;
+	color: #333 !important;
 }
 
 li a {
@@ -1495,7 +1502,7 @@ div.container_dados p.frase {
 	font-weight: 300;
 	line-height: 1.1em;
 	margin: 0 0 0 0;
-	color: white !important;
+	color: #333 !important;
 }
 
 div.identificacao p.frase b {
@@ -1511,7 +1518,7 @@ div.identificacao p.site {
 	line-height: 1.2em;
 	margin: 0;
 	margin-bottom: 20px;
-	color: white;
+	color: #333;
 }
 
 div.input_area div.icone {
@@ -1671,12 +1678,12 @@ div.coluna_endereco {
 	float: left;
 	width: 387px;
 	margin: 0 5px 0 20px;
-	color: white;
+	color: #333;
 }
 
 div.container_enderecos {
 	margin: 0;
-	color: white;
+	color: #333;
 }
 
 div.container_endereco p.titulo {
@@ -1693,7 +1700,7 @@ p.endereco {
 	}
 	font-size: 14px !important;
 	margin-top: 12px !important;
-	color: #fff;
+	color: #333;
 }
 
 div.resumo_espetaculo div.resumo p.endereco {
@@ -1716,9 +1723,9 @@ p.endereco__resumo {
 	background-position: none !important;
 	font-size: 0.8rem !important;
 	border-radius: 0.2rem !important;
-	background: #666 !important;
+	background: $secundary !important;
 	border: none !important;
-	color: white !important;
+	color: #fff !important;
 	text-align: center !important;
 	text-indent: unset !important;
 	-webkit-transition: 0.4s;
@@ -1752,7 +1759,7 @@ div.coluna p.frase {
 }
 
 .header a {
-	color: white !important;
+	color: #fff !important;
 }
 
 div#content div.centraliza {
@@ -1766,7 +1773,7 @@ div#texts div.centraliza {
 	width: auto;
 	margin: 0 auto;
 	margin-left: 20px;
-	color: white !important;
+	color: #333 !important;
 }
 
 div#texts {
@@ -1774,7 +1781,7 @@ div#texts {
 }
 
 div#texts div.centraliza p {
-	color: white !important;
+	color: #333 !important;
 }
 
 #overlay div.centraliza div.fechar {
@@ -1785,7 +1792,7 @@ div#texts div.centraliza p {
 	border-radius: 0.2rem !important;
 	background: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%) !important;
 	border: none !important;
-	color: white !important;
+	color: #333 !important;
 	text-align: center !important;
 	text-indent: unset !important;
 	-webkit-transition: 0.4s;
@@ -1885,7 +1892,7 @@ a.end_cancelar {
 }
 
 a.remover {
-	filter: brightness(0%) invert(1) !important;
+	// filter: brightness(0%) invert(1) !important;
 }
 
 a.sbFocus:hover {
@@ -2072,7 +2079,7 @@ div.container_setor {
 	background-color: rgb(102, 102, 102);
 	box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 	border-radius: 0.2rem !important;
-	color: white !important;
+	color: #333 !important;
 	text-align: center !important;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
@@ -2100,7 +2107,7 @@ div.container_setor span {
 	text-decoration: none;
 	background-color: $black;
 	border-radius: 5px;
-	color: white;
+	color: #333;
 }
 
 div.container_setor:hover {
@@ -2110,12 +2117,12 @@ div.container_setor:hover {
 
 div.container_setor:hover span {
 	background-color: $black;
-	color: white;
+	color: #333;
 }
 
 div.container_setor.ativo {
 	background-color: $secundary;
-	color: white;
+	color: #333;
 }
 
 div.container_setor.ativo div.nome_setor {
@@ -2135,7 +2142,7 @@ div.container_setor.ativo span {
 	background-image: url(../../../images/help-circle.svg) !important;
 	background-repeat: no-repeat;
 	background-size: cover !important;
-	color: white;
+	color: #333;
 	position: absolute;
 	top: 10px;
 	right: 20px;
@@ -2147,10 +2154,7 @@ div.container_setor.ativo span {
 
 .content__minha-conta {
 	width: 100%;
-
-	background: $black;
-	box-shadow: aquamarine;
-	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+	@include bgTO();
 
 	border-radius: 5px;
 	padding-top: 30px;
@@ -2315,10 +2319,7 @@ a.badge {
 .container__identificacao,
 .container__cadastro {
 	width: 100%;
-	color: $black;
-	background: $black;
-	box-shadow: aquamarine;
-	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+	@include bgTO();
 
 	border-radius: 5px;
 	padding-top: 20px;
@@ -2377,7 +2378,7 @@ div.container_dados p.frase {
 		font-weight: 300;
 		line-height: 1.1em;
 		margin: 0 0 5px 0 !important;
-		color: white !important;
+		color: #333 !important;
 	}
 }
 
@@ -2687,13 +2688,13 @@ div.container_dados p.frase {
 		z-index: 1;
 		padding-right: 0;
 		&:after {
-			color: white;
+			color: #333;
 		}
 	}
 }
 
 .navbar-dark .navbar-brand {
-	color: white !important;
+	color: #333 !important;
 	font-weight: bold;
 }
 
@@ -2733,11 +2734,11 @@ div.input div.ano .sbOptions {
 }
 
 .container_beneficio {
-	color: white !important;
+	color: #333 !important;
 }
 
 .pedido_total {
-	color: white !important;
+	color: #333 !important;
 }
 
 table#pedido_resumo tbody tr.beneficio div.container_validador input {
@@ -2761,4 +2762,93 @@ div.tipo {
 
 span.total {
 	margin-right: 10px !important;
+}
+p.descricao_fase {
+	font-size: 18px !important;
+	font-weight: bold;
+}
+.title__page {
+	font-size: 28px !important;
+}
+
+.title__page,
+div.resumo,
+p.descricao_fase,
+div.identificacao p.frase,
+div.container_cartoes p.frase,
+div.container_dados p.frase,
+div.container_dados div.linha,
+div.descricao_pag div.descricao p.nome,
+div.descricao_pag div.descricao p.descricao {
+	@include blTO();
+}
+
+#overlay div.centraliza div.fechar {
+	background: $secundary !important;
+}
+
+div.container_escolha_ingresso div.ingresso div.descricao,
+div.descricao_pag div.descricao div.sessao p.tempo {
+	color: #333 !important;
+	@include blTO();
+}
+
+.container_pedido {
+	@include bgTO();
+}
+
+table#pedido_resumo tbody td {
+	background: #fff !important;
+	border-color: #ccc !important;
+	color: black !important;
+}
+
+table *,
+table#pedido_resumo thead td {
+	color: #333 !important;
+}
+
+.pedido_total {
+	color: #333 !important;
+}
+
+table#pedido_resumo tbody td div.local {
+	border: none !important;
+}
+table#pedido_resumo tbody tr {
+	border: 1px solid #ccc;
+}
+
+div.container_escolha_ingresso div.ingresso div.descricao p.help {
+	margin-bottom: 0 !important;
+}
+
+.container_ingresso > .sbHolder > .sbSelector {
+	-webkit-box-shadow: 0px 0.32762px 5.32762px rgba(0, 0, 0, 0.2) !important;
+}
+
+.presente_toggle,
+table#meus_pedidos tbody td.npedido a {
+	color: blue !important;
+	&:hover {
+		color: black !important;
+	}
+}
+
+.form-control,
+.sbOptions,
+.sbHolder {
+	box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2) !important;
+}
+div.container_dados div.erro_help p.help {
+	color: #666 !important;
+}
+
+input[type=radio].radio + label.radio {
+	background-position: 0 -62.2px !important;
+	background-size: 15px !important;
+}
+
+.menu_conta {
+	margin-left: 10px !important;
 }
