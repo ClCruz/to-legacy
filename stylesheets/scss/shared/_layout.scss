@@ -2852,3 +2852,21 @@ input[type=radio].radio + label.radio {
 .menu_conta {
 	margin-left: 10px !important;
 }
+
+.form-group,
+.sbOptions,
+.sbHolder,
+div.coluna p.frase,
+#form_cadastro div.coluna_tixs {
+	color: #333 !important;
+}
+
+a.botao,
+.btn,
+.botao,
+#trocar_senha > div > div > div.inputs > input.submit.salvar_dados,
+input.submit.salvar_dados,
+input.submit.avancar.passo4,
+input.submit {
+	background: $secundary !important;
+}
