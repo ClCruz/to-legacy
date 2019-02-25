@@ -2332,8 +2332,9 @@ a.badge {
 .container__login,
 .container__imprima {
 	width: 100%;
-	color: #fff !important;
-	background: $black;
+	@include bgTO();
+	// color: #fff !important;
+	// background: $black;
 	-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
 
 	border-radius: 5px;
@@ -2870,4 +2871,9 @@ div.descricao_pag div.descricao p.descricao {
 
 .container_ingresso .sbHolder {
 	box-shadow: none !important;
+}
+
+div.identificacao p.frase {
+	margin-left: 0 !important;
+	margin-bottom: 15px !important;
 }

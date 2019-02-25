@@ -386,7 +386,7 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                             <img src="../images/ico_enderecos.png">
                         </div>
                         <div class="descricao">
-                            <p class="nome">
+                            <p class="nome bgTO">
                                 Minha conta 
                                 <a href="logout.php">logout</a>
                             </p>
