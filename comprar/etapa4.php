@@ -116,7 +116,7 @@ $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
 							<a href="etapa2.php?<?php echo $_COOKIE['lastEvent']; ?><?php echo $campanha['tag_voltar']; ?>" class="botao voltar passo3">identificação</a>
 								<div class="resumo_carrinho">
 									<span class="quantidade"></span>
-									<span class="frase">ingressos selecionado(s) <br>para essa compra</span>
+									<span class="frase">selecionado(s) <br>para essa compra</span>
 								</div>
 							<a href="etapa5.php?eventoDS=<?php echo $_GET['eventoDS']; ?><?php echo $campanha['tag_avancar']; ?>" class="botao avancar passo5 botao_pagamento">IR PARA PAGAMENTO</a>
 						</div>
@@ -145,7 +145,7 @@ $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
 <div class="modal-content">
 <div class="modal-header">
 			<h4 class="modal-title w-100" id="myModalLabel">
-			Passo <b>4 de 5</b> revise e confirme seus ingressos
+			Passo <b>4 de 5</b> revise e confirme sua compra
 		</h4>
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>

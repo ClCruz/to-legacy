@@ -162,7 +162,7 @@ require('verificarServicosPedido.php');
 						<img src="../images/ico_black_passo2.png">
 					</div>
 					<div class="descricao">
-						<p class="title__page">2. Tipo de ingresso</p>
+						<p class="title__page">2. Seleção de tipo</p>
 						<div class="sessao">
 							<p class="tempo" id="tempoRestante"></p>
 							<p class="mensagem">
@@ -178,7 +178,7 @@ require('verificarServicosPedido.php');
 						<a href="etapa1.php?<?php echo $_COOKIE['lastEvent']; ?><?php echo $campanha['tag_voltar']; ?>" class="botao voltar passo1">Voltar</a>
 						<div class="resumo_carrinho">
 							<span class="quantidade"></span>
-							<span class="frase">ingressos selecionados <br>para essa compra</span>
+							<span class="frase">selecionado(s) <br>para essa compra</span>
 						</div>
 						<a href="etapa3.php?redirect=<?php echo urlencode('etapa4.php?eventoDS=' . $_GET['eventoDS'] . $campanha['tag_avancar']); ?><?php echo $campanha['tag_avancar']; ?>" class="botao avancar passo3 botao_avancar">Avançar</a>
 					</div>
@@ -235,13 +235,11 @@ require('verificarServicosPedido.php');
 		</div>
 		<div class="modal-body">
 		<p>Confira o(s) assento(s) escolhido(s), o preço, a forma de entrega e clique em avançar para continuar com o processo de compra.</p>
-	
-	<p>Formas de entrega:</p>
-	<p>1. E-ticket</p>
-	<p>No dia da atração escolhida, os ingressos estarão disponíveis na bilheteria, balcão ou guichê determinados pelo local onde se realizará o evento.</p>
-	<p>- Seus ingressos só poderão ser retirados no dia da apresentação sendo obrigatório apresentar o cartão utilizado na compra e um documento de identificação pessoal.</p>
-	<p>- No caso de meia entrada ou de promoções é obrigatório a apresentação do documento que comprove o benefício no momento da retirada dos ingressos e na entrada no local.</p>
-			
+		
+		<p>Formas de entrega:</p>
+		<p>1. E-ticket</p>
+		<p>A compra será enviada para o e-mail do seu cadastro no site. Se houver necessidade de reimpressão, acesse o menu "Minha conta" para acessar o seu pedido.</p>
+		<p>No caso de promoções é obrigatório a apresentação do documento que comprove o benefício no local.</p>
 		</div>
 	</div>
 </div>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_unset();
 header("Access-Control-Allow-Origin: *");
 require_once('../settings/settings.php');
 require_once('../settings/functions.php');
