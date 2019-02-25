@@ -2778,7 +2778,8 @@ div.identificacao p.frase,
 div.container_cartoes p.frase,
 div.container_dados p.frase,
 div.container_dados div.linha,
-div.descricao_pag div.descricao p.descricao {
+div.descricao_pag div.descricao p.descricao,
+.bgTO {
 	@include blTO();
 }
 
@@ -2863,6 +2864,10 @@ div.coluna p.frase,
 	background-color: none !important;
 }
 
+div.descricao_pag div.descricao p.nome,
+div.descricao_pag div.descricao p.descricao {
+}
+
 .container_ingresso .sbHolder {
-	box-shadow: none!important;
+	box-shadow: none !important;
 }
