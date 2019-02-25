@@ -45,7 +45,7 @@ if (basename($_SERVER['SCRIPT_FILENAME']) != 'pagamento_ok.php') {
 ?>
 <div class="imprima_ingressos">
 	<?php if ($exibir_bt_reimpressao) { ?>
-	<a href="reimprimirEmail.php?pedido=<?php echo $_GET['pedido']; ?>" target="_blank"><div class="icone"></div>Imprima agora seus ingressos</a>
+	<a href="reimprimirEmail.php?pedido=<?php echo $_GET['pedido']; ?>" target="_blank"><div class="icone"></div>Imprima agora sua compra</a>
 	<?php } ?>
 </div>
 <?php
@@ -132,7 +132,7 @@ while ($rs = fetchResult($result)) {
 		<thead>
 			<tr>
 				<td width="90"></td>
-				<td width="208">Tipo de ingresso</td>
+				<td width="208">Tipo</td>
 				<td width="130">Preço</td>
 				<td width="130">Serviço</td>
 				<td width="118">Total</td>
@@ -206,13 +206,13 @@ function finalizar($qtdIngressos, $totalIngressos, $rsPedido) {
 	<?php
 	}
 	?>
-	<p class="pedido_total"><b><?php echo $qtdIngressos; ?> ingresso(s)</b> para esta apresentação 
+	<p class="pedido_total"><b><?php echo $qtdIngressos; ?> selecionado(s)</b> para esta apresentação 
 		<span class="total">total:</span><span class="cifrao">R$</span><span class="valor"><?php echo number_format($totalIngressos+$rsPedido['VL_FRETE'], 2, ',', ''); ?></span>
 		 (<?php echo $rsPedido['NR_PARCELAS_PGTO'] == 1 ? 'à vista' : 'em '.$rsPedido['NR_PARCELAS_PGTO'].' vezes'; ?>)
 	</p>
 
 	<?php if ($rsPedido['NM_CLIENTE_VOUCHER']) { ?>
-		<p class="pedido_total">Ingresso emitido em nome de <b><?php echo $rsPedido['NM_CLIENTE_VOUCHER']; ?></b></p>
+		<p class="pedido_total">Voucher emitido em nome de <b><?php echo $rsPedido['NM_CLIENTE_VOUCHER']; ?></b></p>
 	<?php } ?>
 </div>
 <?php

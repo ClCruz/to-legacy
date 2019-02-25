@@ -253,9 +253,9 @@ if (!hasRows($result)) {
 }
 
 if ($total_comprado >= $limite) {
-	exit(json_encode(array('id'=>session_id(), 'error'=>utf8_encode2('Este N� de Cart�o j� atingiu o limite de '.$limite.' ingresso(s) promocional(is) para esta apresenta��o.'))));
+	exit(json_encode(array('id'=>session_id(), 'error'=>utf8_encode2('Este N� de Cart�o j� atingiu o limite de '.$limite.'  promocional(is) para esta apresenta��o.'))));
 } else if ($total_comprado + $compra_atual > $limite) {
-	exit(json_encode(array('id'=>session_id(), 'error'=>utf8_encode2('Este N� de Cart�o pode comprar apenas '.($limite - $total_comprado).' ingresso(s) promocional(is) para esta apresenta��o.'))));
+	exit(json_encode(array('id'=>session_id(), 'error'=>utf8_encode2('Este N� de Cart�o pode comprar apenas '.($limite - $total_comprado).' promocional(is) para esta apresenta��o.'))));
 }
 
 

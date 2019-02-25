@@ -402,7 +402,7 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
               </div>
               
               <?php if ($vendasPorTelefone < 0 && $vendaNaoLiberada == false && $ingressosDisponiveis != 0) { ?>
-              <p class="descricao_fase">Escolha seus ingressos</p>
+              <p class="descricao_fase"></p>
               <div class="container_ingressos">
                 <div class="container_ingresso">
                   <div class="ingresso quantidade">
@@ -453,7 +453,7 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
                 <?php } ?>
                 <div class="resumo_carrinho">
                   <span class="quantidade"></span>
-                  <span class="frase">ingresso(s) selecionado(s) <br>para essa apresentação</span>
+                  <span class="frase">selecionada(s) <br>para essa apresentação</span>
                 </div>
                 <a href="etapa2.php?eventoDS=<?php echo $_GET['eventoDS']; ?><?php echo $campanha['tag_avancar']; ?>" class="botao avancar passo2 botao_avancar" id="botao_avancar">Avançar</a>
               </div>

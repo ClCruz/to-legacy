@@ -374,7 +374,7 @@ unset($_SESSION['origem']);
 					<div class="descricao final">
 						<p class="nome title__page">Muito obrigado!</p>
 						<p class="descricao">
-							<b>Seus ingressos foram enviados para
+							<b>Sua compra foram enviados para
 							seu e-mail,</b> verifique a caixa de spam
 							se não encontrar a mensagem.
 						</p>
@@ -391,7 +391,7 @@ unset($_SESSION['origem']);
 					</div>
 				</div>
 				<div class="row container__imprima">
-				<div class="imprima_agora"><a href="reimprimirEmail.php?pedido=<?php echo $_GET['pedido']; ?>" target="_new"><div class="icone"></div>Imprima agora seus ingressos.</a></div>
+				<div class="imprima_agora"><a href="reimprimirEmail.php?pedido=<?php echo $_GET['pedido']; ?>" target="_new"><div class="icone"></div>Imprima agora sua compra.</a></div>
 				<?php if ((isset($_SESSION['operador']) and is_numeric($_SESSION['operador']))) { ?>
 					<div class="imprima_agora nova_venda"><a href="etapa0.php">NOVA VENDA</a></div>
 				<?php } ?>
@@ -403,13 +403,7 @@ unset($_SESSION['origem']);
 			</div>
 		<div id="texts">
 			<div class="centraliza">
-				<p>Muito obrigado por escolher a <?php echo multiSite_getName(); ?> para a compra de seus ingressos.</p>
-
-				<p>Fique por dentro das principais atrações em cartaz na sua cidade através do nosso Guia de Espetáculos enviado por email. Adicione o email <?php echo multiSite_getEmail("marketing"); ?> ao seu catálogo de endereços para receber nossos emails na sua caixa de entrada.</p>
-
-				<p>Curta nossa página no <a href=“<?php echo multiSite_getFacebook(); ?>”>Facebook</a> e acompanhe diariamente as últimas novidades da nossa programação.</p>
-
-				<p>Bom espetáculo!</p>
+				<p>Muito obrigado por escolher a <?php echo multiSite_getName(); ?>.</p>
 			</div>
 		</div>
 		</div>

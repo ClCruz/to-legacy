@@ -276,7 +276,7 @@ $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
 							<a href="etapa4.php?eventoDS=<?php echo $_GET['eventoDS']; ?><?php echo $campanha['tag_voltar']; ?>" class="botao voltar passo4">confirmação</a>
 								<div class="resumo_carrinho">
 									<span class="quantidade"><?php echo $qtdIngressos; ?></span>
-									<span class="frase">ingressos selecionados <br>para essa compra</span>
+									<span class="frase">selecionado(s) <br>para essa compra</span>
 								</div>
 							<a href="etapa5.php?eventoDS=<?php echo $_GET['eventoDS']; ?><?php echo $campanha['tag_avancar']; ?>" class="botao avancar passo6 botao_pagamento <?php echo $_COOKIE['total_exibicao'] == 0 ? 'finalizar' : '' ?>">Finalizar</a>
 						</div>

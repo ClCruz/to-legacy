@@ -141,7 +141,7 @@ $(function() {
 					// IMPORTANT!: Firefox will not act properly without this:
 					$this.blur();
 
-					$.dialog({text: "A quantidade máxima de ingressos promocionais para esta apresentação foi atingida."});
+					$.dialog({text: "A quantidade máxima para esta apresentação foi atingida."});
 					return false;
 				} else {
 					// se o combo foi alterado manualmente e ja existe um ingresso promocional selecionado, copiar o conteudo
@@ -200,7 +200,7 @@ $(function() {
 					// IMPORTANT!: Firefox will not act properly without this:
 					$this.blur();
 
-					$.dialog({text: "A quantidade máxima de ingressos promocionais para esta apresentação foi atingida."});
+					$.dialog({text: "A quantidade máxima para esta apresentação foi atingida."});
 					return false;
 				}
 

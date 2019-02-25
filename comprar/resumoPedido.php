@@ -72,7 +72,7 @@ while ($rs = fetchResult($result)) {
 		<thead>
 			<tr>
 				<td width="90"></td>
-				<td width="208">Tipo de ingresso</td>
+				<td width="208">Tipo</td>
 				<td width="130">Preço</td>
 				<td width="130">Serviço</td>
 				<td width="118">Total</td>
@@ -213,7 +213,7 @@ function finalizar($qtdIngressos, $totalIngressos, $formaEntrega, $valorEntrega,
 	}
 	?>
 	<span id="servico_pedido" class="hidden">0</span>
-	<p class="pedido_total"><b><span class="totalIngressosApresentacao"><?php echo $qtdIngressos; ?></span> ingresso(s)</b> para esta apresentação <span class="total">total:</span><span class="cifrao">R$</span><span class="valor" id="totalIngressos"><?php echo number_format($totalIngressos, 2, ',', ''); ?></span></p>
+	<p class="pedido_total"><b><span class="totalIngressosApresentacao"><?php echo $qtdIngressos; ?></span> selecionado(s)</b> para esta apresentação <span class="total">total:</span><span class="cifrao">R$</span><span class="valor" id="totalIngressos"><?php echo number_format($totalIngressos, 2, ',', ''); ?></span></p>
 </div>
 </div>
 </div>
