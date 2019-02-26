@@ -10,7 +10,7 @@
 
 @mixin bgTO() {
 	color: $black !important;
-	box-shadow: 0 0 3px 0 rgba(0, 0, 0, .15);
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, .3);
 
 	// -webkit-box-shadow: 0px 0.32762px 40.32762px rgba(0, 0, 0, 0.1) !important;
 	background: $white !important;
@@ -2103,28 +2103,72 @@ div.container_setor div.nome_setor {
 }
 
 div.container_setor span {
-	font-size: 10px;
+	font-size: 10px !important;
 	padding: 4px 8px;
 	cursor: pointer;
 	text-decoration: none;
-	background-color: $black;
-	border-radius: 5px;
-	color: #333;
+	background-color: #666;
+	border-radius: 2px;
+	color: #fff;
+}
+
+div.container_setores {
+	@include MQ(NS) {
+		display: flex;
+		flex-grow: 1;
+	}
+}
+
+div.container_setores-btns {
+	margin-bottom: 20px;
+	@include MQ(NS) {
+		padding: 10px;
+	}
+
+	@include MQ(S) {
+		margin-bottom: 40px !important;
+	}
+}
+
+div.container_setor {
+	text-transform: capitalize;
+	border: 1.2px solid $secundary !important;
+	font-size: 12px;
+	text-align: center;
+	padding: 10px !important;
+	padding-bottom: 10px !important;
+	color: white;
+	height: auto;
+	background: #fff;
+	box-shadow: none;
+
+	@include MQ(S) {
+		padding-bottom: 14px !important;
+	}
+
+	&:hover {
+		background: #fff !important;
+	}
+}
+
+div.container_setor div.nome_setor {
+	@include MQ(NS) {
+		width: auto;
+		height: auto;
+	}
+	padding-bottom: 15px;
 }
 
 div.container_setor:hover {
 	background-color: $secundary;
+	opacity: 1 !important;
 	color: $black;
 }
 
 div.container_setor:hover span {
-	background-color: $black;
-	color: #333;
 }
 
 div.container_setor.ativo {
-	background-color: $secundary;
-	color: #333;
 }
 
 div.container_setor.ativo div.nome_setor {
@@ -2771,7 +2815,12 @@ p.descricao_fase {
 	font-weight: bold;
 }
 .title__page {
-	font-size: 24px !important;
+	@include MQ(NS) {
+		font-size: 24px !important;
+	}
+	@include MQ(S) {
+		font-size: 16px !important;
+	}
 }
 
 .title__page,
