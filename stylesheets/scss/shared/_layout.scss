@@ -379,8 +379,6 @@ div#mapa_de_plateia {
 }
 
 div#mapa_de_plateia_geral {
-	@include bgTO();
-
 	padding-bottom: 30px !important;
 
 	@include MQ(S) {
