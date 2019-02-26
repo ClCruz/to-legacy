@@ -1656,15 +1656,16 @@ div#recaptcha_widget_div{
 	bottom:0;
 	left:0;
 	z-index:1;
-	background: #111;
-	opacity: 0.8;
+	opacity: 1;
 	display:none;
-	color:#FFF;
   transition: visibility 0s, opacity 0.5s linear;
 
 	-webkit-overflow-scrolling:touch;
 }
 
+#loading img {
+	width: 60px!important;
+}
 #overlay div.centraliza, #loading div.centraliza{
 	width:820px;
 	overflow:hidden;
