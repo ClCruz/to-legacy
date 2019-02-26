@@ -1,11 +1,20 @@
-#pai {
-	background: $primary;
+.logo-img {
+	background-color: black;
+	border-radius: 2px;
 }
 
-$gradiente: $primary;
+.body {
+	background-color: black;
+}
 
-body {
-	background: #secundary;
+$gradiente: $secundary;
+
+.main__tixsme {
+	background: black;
+}
+
+a.botao {
+	background: $secundary !important;
 }
 
 a.botao,
@@ -17,7 +26,4 @@ input.submit {
 
 .btn__help {
 	background-color: none !important;
-}
-.title__page {
-	// background: $primary !important;
 }
