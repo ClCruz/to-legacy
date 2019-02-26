@@ -2114,8 +2114,13 @@ div.container_setor span {
 
 div.container_setores {
 	@include MQ(NS) {
-		display: flex;
-		flex-grow: 1;
+	}
+}
+
+div.container_escolha_ingresso {
+	@include MQ(NS) {
+		text-align: left !important;
+		margin: unset !important;
 	}
 }
 

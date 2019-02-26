@@ -353,7 +353,7 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
             </div>
             <div class="descricao">
               
-              <p class="title__page"><?php echo utf8_encode2($rs['DS_EVENTO']); ?></p>
+              <p class="title__page">1. <?php echo utf8_encode2($rs['DS_EVENTO']); ?></p>
             </div>
           <div class="resumo_espetaculo">
 
@@ -377,8 +377,10 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
             </div>
             <div class="container_escolha_ingresso">
 
-              <div class="container_setores hidden">
+              <div class="container_setores container_setores-title hidden">
                 <p class="descricao_fase">Escolha o setor</p>
+            </div>
+            <div class="container_setores container_setores-btns  hidden">
                 <?php
                   $result = executeSQL($mainConnection, "SELECT ID_APRESENTACAO, DS_PISO, DS_EVENTO FROM MW_APRESENTACAO A
                                                         INNER JOIN MW_EVENTO E ON E.ID_EVENTO = A.ID_EVENTO AND E.IN_ATIVO = '1'
