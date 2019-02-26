@@ -35,17 +35,20 @@ if ($_REQUEST['object'] == 'transaction') {
 
     if ($response['success']) {
 
-        $id_pedido = $response['transaction']['metadata']['id_pedido_venda'];
+        $transactionid = $response['transaction']['tid'];
+        $id_pedido = 0;
 
         $rs = executeSQL(
             $mainConnection,
-            'SELECT P.IN_SITUACAO, M.CD_MEIO_PAGAMENTO
+            "SELECT P.IN_SITUACAO, M.CD_MEIO_PAGAMENTO, p.id_pedido_venda
                 FROM MW_PEDIDO_VENDA P
                 INNER JOIN MW_MEIO_PAGAMENTO M ON M.ID_MEIO_PAGAMENTO = P.ID_MEIO_PAGAMENTO
-                WHERE P.ID_PEDIDO_VENDA = ?',
-            array($id_pedido),
+                WHERE P.cd_numero_transacao = ? AND id_pedido_ipagare='pagarme'",
+            array($transactionid),
             true
         );
+
+        $id_pedido = $rs["id_pedido_venda"];
 
         $query = 'INSERT INTO MW_PEDIDO_PAGSEGURO (ID_PEDIDO_VENDA, DT_STATUS, CD_STATUS, OBJ_PAGSEGURO) VALUES (?, GETDATE(), ?, ?)';
         $params = array($id_pedido, $response['transaction']['status'], base64_encode(serialize($response['transaction'])));
