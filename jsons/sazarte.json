@@ -2,33 +2,33 @@
   "env": "production",
   "host": "sazarteingressos.com.br",
   "uri": "https://www.sazarteingressos.com.br",
+  "admin": "https://admin.sazarteingressos.com.br",
+
   "api": "https://api.sazarteingressos.com.br",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.sazarteingressos.com.br",
-  "admin": "https://admin.sazarteingressos.com.br",
   "apikey": "live_0aeae6ff88784a9bb0a704359699051677c08991c03d46759ec943ec415a71e8",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
+  "template": "ticketHub",
   "scss": "./src/scss/themes/sazarte/main.scss",
   "css": "/stylesheets/themes/sazarte/main.css",
   "logo": "https://media.tixs.me/logos/logo-sazarte.jpeg",
   "favico": "/img/sazarte/",
-  "template": "ticketHub",
   "meta": {
     "description": "Venda de Ingressos",
-    "keywords": "venda,ingresssos,sazarte,br,me"
+    "keywords": "venda,ingresssos,sazarte,viva,br,me"
   },
   "recaptcha": {
     "private": "",
     "public": ""
   },
   "info": {
-    "title": "sazarteingressos.com.br | Venda de Ingressos",
+    "title": "sazarte.com.br | Venda de Ingressos",
     "description": "Venda de Ingressos",
-    "siteName": "sazarteingressos.com.br",
+    "siteName": "sazarte.com.br",
     "CNPJ": "",
-    "companyName": "",
-    "isNewTemplate": true
+    "companyName": ""
   },
   "templates": {
     "print": {
