@@ -2134,6 +2134,7 @@ div.container_setor {
 	text-transform: capitalize;
 	border: 1.2px solid $secundary !important;
 	font-size: 12px;
+	font-weight: bold;
 	text-align: center;
 	padding: 10px !important;
 	padding-bottom: 10px !important;
@@ -2175,7 +2176,7 @@ div.container_setor.ativo div.nome_setor {
 }
 
 div.container_setor.ativo span {
-	visibility: hidden;
+	background: black !important;
 }
 
 .search input[type=text] {
