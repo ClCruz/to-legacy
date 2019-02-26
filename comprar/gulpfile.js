@@ -16,6 +16,19 @@ gulp.task('sass', function () {
     .pipe(livereload());;
 });
 
+gulp.task('sassDev', function () {
+  gulp.src([
+    '../stylesheets/scss/**/*.scss',
+    '!../stylesheets/scss/themes/*.scss', // <== !
+    '../stylesheets/scss/themes/bringressos/.scss',
+  ])
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    .pipe(gulp.dest('../stylesheets/'))
+    .pipe(livereload());;
+});
+
 
 gulp.task('sassLocalhost', function () {
   gulp.src('../stylesheets/scss/themes/tixsme/main.scss')
@@ -46,8 +59,12 @@ gulp.task('sassLocalhost', function () {
 
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch('../stylesheets/scss/**/*.scss', ['sass']);
-  gulp.watch(['../stylesheets/**/*.css'], function (files) {
+  gulp.watch(([
+    '../stylesheets/scss/**/*.scss',
+    '!../stylesheets/scss/themes/*.scss', // <== !
+    '../stylesheets/scss/themes/bringressos/.scss',
+  ]), ['sassDev']);
+  gulp.watch(['../stylesheets/themes/bringressos/*.css'], function (files) {
     livereload.changed(files)
   });
 });
