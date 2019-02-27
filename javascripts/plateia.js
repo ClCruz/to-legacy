@@ -89,7 +89,7 @@ $(function() {
               }
             });
           }
-          setup_with_touch();
+          setup_without_touch();
 
           mapaDePlateia();
 
@@ -159,10 +159,9 @@ $(function() {
       $('#mapa_de_plateia span:not(.' + closedClass + ')').off('mouseenter mouseleave')
       .on('mouseenter mouseleave', function() {
         if (!$(this).hasClass('annotationHover') && !$(this).hasClass('annotationSelected')) {
-          // $(this).addClass('annotationHover');
-          
+          $(this).addClass('annotationHover');
         } else {
-          // $(this).removeClass('annotationHover');
+          $(this).removeClass('annotationHover');
         }
       });
       $('#mapa_de_plateia span:not(.' + closedClass + ')').off('click').on('click', span_click);
