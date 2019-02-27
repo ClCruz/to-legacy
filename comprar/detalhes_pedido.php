@@ -206,7 +206,7 @@ function finalizar($qtdIngressos, $totalIngressos, $rsPedido) {
 	<?php
 	}
 	?>
-	<p class="pedido_total"><b><?php echo $qtdIngressos; ?> selecionado(s)</b> para esta apresentação 
+	<p class="pedido_total"><b><?php echo $qtdIngressos; ?> selecionado(s)</b> 
 		<span class="total">total:</span><span class="cifrao">R$</span><span class="valor"><?php echo number_format($totalIngressos+$rsPedido['VL_FRETE'], 2, ',', ''); ?></span>
 		 (<?php echo $rsPedido['NR_PARCELAS_PGTO'] == 1 ? 'à vista' : 'em '.$rsPedido['NR_PARCELAS_PGTO'].' vezes'; ?>)
 	</p>

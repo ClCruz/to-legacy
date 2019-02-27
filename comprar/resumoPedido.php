@@ -213,7 +213,7 @@ function finalizar($qtdIngressos, $totalIngressos, $formaEntrega, $valorEntrega,
 	}
 	?>
 	<span id="servico_pedido" class="hidden">0</span>
-	<p class="pedido_total"><b><span class="totalIngressosApresentacao"><?php echo $qtdIngressos; ?></span> selecionado(s)</b> para esta apresentação <span class="total">total:</span><span class="cifrao">R$</span><span class="valor" id="totalIngressos"><?php echo number_format($totalIngressos, 2, ',', ''); ?></span></p>
+	<p class="pedido_total"><b><span class="totalIngressosApresentacao"><?php echo $qtdIngressos; ?></span> selecionado(s)</b> <span class="total">total:</span><span class="cifrao">R$</span><span class="valor" id="totalIngressos"><?php echo number_format($totalIngressos, 2, ',', ''); ?></span></p>
 </div>
 </div>
 </div>

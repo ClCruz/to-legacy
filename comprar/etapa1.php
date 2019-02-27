@@ -455,7 +455,7 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
                 <?php } ?>
                 <div class="resumo_carrinho">
                   <span class="quantidade"></span>
-                  <span class="frase">selecionada(s) <br>para essa apresentação</span>
+                  <span class="frase">selecionada(s) <br>para essa compra</span>
                 </div>
                 <a href="etapa2.php?eventoDS=<?php echo $_GET['eventoDS']; ?><?php echo $campanha['tag_avancar']; ?>" class="botao avancar passo2 botao_avancar" id="botao_avancar">Avançar</a>
               </div>
