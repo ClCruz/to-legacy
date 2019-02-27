@@ -13,7 +13,7 @@ function CountBack(secs) {
 		$.confirmDialog({
 			text: '',
 			detail: 'A sua reserva de compra expirou<br>'+
-					'escolha seus ingressos novamente',
+					'escolha novamente seus itens',
 			uiOptions: {
 				buttons: {
 					'Voltar para a home': ['', null]
