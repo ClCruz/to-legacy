@@ -337,7 +337,7 @@ $(function() {
 					if (trim(data).substr(0, 4) == 'true') {
                         location.reload();
                     } else {
-                        $.dialog({text: "Recebedor INTUITI já existente."});
+                        $.dialog({text: "Recebedor já existente."});
                     }
 				},
 				error: function(){
@@ -462,7 +462,7 @@ $(function() {
             ?>
         </select>
 		<a id="new" href="#new">Novo</a>	
-		<a id="newTICKETSPAY" href="#newTICKETSPAY">Cadastrar INTUITI</a>	
+		<a id="newTICKETSPAY" href="#newTICKETSPAY">Cadastrar TicketOffice</a>	
 	</div>
 </form>
 
