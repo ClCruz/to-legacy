@@ -83,7 +83,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 660, true)) {
 				  FROM mw_recebedor
 				  WHERE in_ativo=1 AND id_produtor=? AND recipient_id=?';
 		
-		$params = array($_GET['produtor'], "re_cjp1quawk05y68f60nz9pdmyp");
+		$params = array($_GET['produtor'], "re_cjqh35gsd04w46460f9nx9mz4");
 
 		$result = executeSQL($mainConnection, $query, $params);
 		
@@ -99,7 +99,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 660, true)) {
 		}
 		else {
 
-			$query = "EXEC SP_RECEBEDOR_INTUITI ?";//"EXEC SP_RECEBEDOR_TICKETPAY ?";
+			$query = "EXEC pr_recipient_e2c ?";//"EXEC SP_RECEBEDOR_INTUITI ?";//"EXEC SP_RECEBEDOR_TICKETPAY ?";
 
 			$params = array($_GET["produtor"]);
 
