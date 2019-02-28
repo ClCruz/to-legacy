@@ -198,25 +198,6 @@ require('verificarServicosPedido.php');
 		<?php //include "selos.php"; ?>
 
 	</div>
-    <!-- Criteo Data Layer -->
-    <script type="text/javascript" src="../javascripts/criteo/basketpage.js"></script>
-    <script type="text/javascript">
-        var dataLayer = dataLayer || [];
-        var $resumoEspetaculo = $('.resumo_espetaculo');
-
-        $(document).ready(function() {
-            $resumoEspetaculo.each(function() {
-                DataLayer.init($(this));
-                DataLayer.build();
-            });
-            dataLayer.push({
-                'PageType': 'Basketpage',
-                'HashedEmail': '',
-                'ProductBasketProducts': DataLayer.getProductList()
-            });
-        })
-    </script>
-		<!-- Criteo Data Layer -->
 		
 		
 <div class="modal fade right" id="sideModalTR" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

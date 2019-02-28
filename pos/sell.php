@@ -117,7 +117,7 @@ if (isset($_GET['quantidade']) and $_GET['quantidade'] != '') {
 			        }
 			        // se nao for um BIN valido
 			        else {
-			        	display_error("Este cartão não é participante da promoção vigente para esta apresentação!<br>Informe outro cartão ou indique outro tipo de ingresso não participante da promoção.");
+			        	display_error("Este cartão não é participante da promoção vigente!<br>Informe outro cartão ou indique outro tipo de ingresso não participante da promoção.");
 			        }
 			    }
 			}
