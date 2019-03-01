@@ -86,8 +86,6 @@
 				obj.new_img = $(this).data('new_img');
 			}
 			annotations.push(obj);
-
-			$(this).attr('title', element.data('name') + ' // ' + element.data('setor'));
 		});
 		
 		return annotations;
