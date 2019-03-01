@@ -2,6 +2,41 @@
 require_once('../settings/functions.php');
 require_once('../settings/multisite/unique.php');
 
+
+function callapi_boleto($id,$id_pedido_venda) {
+    
+    $transaction_data = array("id" => $id, "id_pedido_venda"=>$id_pedido_venda);
+
+    $url = getconf()["api_internal_uri"]."/v1/purchase/site/doafter?imthebossofme=".gethost();        
+
+    $post_data = $transaction_data;
+    // $out = fopen('php://output', 'w');
+    $curl = curl_init(); 
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_POST, 1);
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);                                                                      
+    // curl_setopt($curl, CURLOPT_VERBOSE, true);
+    // curl_setopt($curl, CURLOPT_STDERR, $out);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+    curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($post_data));   
+
+    $response = curl_exec($curl);
+    // fclose($out);
+    $errno = curl_errno($curl);
+    
+    $json = json_decode($response);
+    
+    // $data = ob_get_clean();
+    // $data .= PHP_EOL . $response . PHP_EOL;
+    //die(print_r($response,true)."|".$errno);
+    
+    curl_close($curl);
+}
+
+
 $mainConnection = mainConnection();
 
 executeSQL($mainConnection, "insert into mw_log_ipagare values (getdate(), ?, ?)",
@@ -53,6 +88,12 @@ if ($_REQUEST['object'] == 'transaction') {
         $query = 'INSERT INTO MW_PEDIDO_PAGSEGURO (ID_PEDIDO_VENDA, DT_STATUS, CD_STATUS, OBJ_PAGSEGURO) VALUES (?, GETDATE(), ?, ?)';
         $params = array($id_pedido, $response['transaction']['status'], base64_encode(serialize($response['transaction'])));
         executeSQL($mainConnection, $query, $params);
+
+        if ($rs["IN_SITUACAO"] == 'P') {
+            callapi_boleto($transactionid,$id_pedido);
+        }
+        
+        die("");
 
         switch ($rs['IN_SITUACAO']) {
             // pedido em processamento no sistema
