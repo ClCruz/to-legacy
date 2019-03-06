@@ -13,67 +13,67 @@
     }
   },
   "formto": {
-    "email":"atendimento@ cursos.simoesinvestimentos.com.br",
+    "email":"atendimento@cursos.simoesinvestimentos.com.br",
     "from": "formto",
     "pass":""
   },
   "noreply": {
-    "email":"noreply@ cursos.simoesinvestimentos.com.br",
+    "email":"noreply@cursos.simoesinvestimentos.com.br",
     "from": "noreply",
     "pass":""
   },
   "register": {
-    "email":"cadastro@ cursos.simoesinvestimentos.com.br",
+    "email":"cadastro@cursos.simoesinvestimentos.com.br",
     "from": "cadastro",
     "pass":""
   },
   "shopping": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "pedido",
     "pass":""
   },
   "lembrete": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "pedido",
     "pass":""
   },
   "marketing": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "pedido",
     "pass":""
   },
   "info": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "pedido",
     "pass":""
   },
   "sac": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "noreply",
     "pass":""
   },
   "pedido": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "pedido",
     "pass":""
   },
   "assinantea@siscompre": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressospedidos@hotmail": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@siscompre": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@gmail": {
-    "email":"pedido@ cursos.simoesinvestimentos.com.br",
+    "email":"pedido@cursos.simoesinvestimentos.com.br",
     "from": "pedido",
     "pass":""
   }
