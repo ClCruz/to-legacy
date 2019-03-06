@@ -32,6 +32,31 @@
 		box-shadow: none !important;
 	}
 
+	.header a {
+		color: white !important;
+	}
+
+	.container__header .opcoes {
+		color: white;
+		background: $secundary !important;
+		border: none !important;
+		border-radius: 20px;
+		transition: 0.3s;
+		color: #fff;
+		display: inline-block;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		border: .125rem solid transparent;
+		padding: .375rem 1.625rem;
+		font-size: 1em;
+		line-height: 1.5;
+	}
+
 	body {
 		background-color: white !important;
 	}
@@ -235,3 +260,6 @@ div.container_cartao label.radio img {
 // .title__page {
 // 	@include blTO();
 // }
+
+.header a {
+}
