@@ -286,7 +286,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 382, true)) {
                                             '</div>';
                                     }
                                 });
-                                setup_with_touch();
+                                setup_without_touch();
                             }
                         }
                     });

@@ -124,7 +124,7 @@ if ($_POST) {
             return numero.join(',');
         }
 
-            <?php if (gethost()=="localhost") {
+            <?php if (gethost()=="bringressos") {
                 
 ?>
                 $.getJSON('<?php echo multiSite_getURIAPI() ?>/v1/purchase/site/getinstallments.php?codCliente=<?php echo $_SESSION['user'] ?>&idSession=<?php echo session_id() ?>', function ( data ) { 
