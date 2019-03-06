@@ -215,7 +215,7 @@ a.botao {
 			</div> 
 	<?php
 } else { ?>
-<?php if (!multiSite_isNewTemplate()) {
+<?php if (multiSite_isNewTemplate()) {
 ?>
 		<div id="myNav" class="overlay">
 

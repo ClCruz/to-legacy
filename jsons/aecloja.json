@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/aecloja/main.scss",
   "css": "/stylesheets/themes/www.aecloja.com.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/logo-aecloja.png",
   "favico": "/img/aecloja/",
   "videos": {

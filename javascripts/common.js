@@ -79,6 +79,6 @@ function tratarResposta(data, func) {
 	        buttons: buttons
 	      }
 	    });
-	}
+		}
   }
 }

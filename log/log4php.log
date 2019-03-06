@@ -1230,3 +1230,281 @@ TRACE - configureSplit variables.
 TRACE - configureSplit of pagare.
 TRACE - configureSplit variables.
 TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Erro no pagarme... PagarMe_Exception Object
+(
+    [url:protected] => 
+    [method:protected] => 
+    [return_code:protected] => 
+    [parameter_name:protected] => 
+    [type:protected] => 
+    [errors:protected] => 
+    [message:protected] => card_hash inválido. Para mais informações, consulte nossa documentação em https://pagar.me/docs.
+
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => /var/www/html/settings/pagarme/lib/Pagarme/Model.php
+    [line:protected] => 24
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/CardHashCommon.php
+                    [line] => 32
+                    [function] => create
+                    [class] => PagarMe_Model
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/TransactionCommon.php
+                    [line] => 37
+                    [function] => create
+                    [class] => PagarMe_CardHashCommon
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/Transaction.php
+                    [line] => 7
+                    [function] => create
+                    [class] => PagarMe_TransactionCommon
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme_functions.php
+                    [line] => 146
+                    [function] => charge
+                    [class] => PagarMe_Transaction
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => /var/www/html/comprar/processarDadosCompra.php
+                    [line] => 783
+                    [function] => pagarPedidoPagarme
+                    [args] => Array
+                        (
+                            [0] => 101
+                            [1] => Array
+                                (
+                                    [paypal_data] => 
+                                    [paypal_payment] => 
+                                    [usuario_pdv] => 0
+                                    [codCartao] => 910
+                                    [nomeCartao] => gabriel
+                                    [qt_parcelas] => 1
+                                    [numCartao] => 4242424242424242
+                                    [codSeguranca] => 333
+                                    [validadeMes] => 04
+                                    [validadeAno] => 2022
+                                    [nomePresente] => 
+                                    [emailPresente] => 
+                                    [card_hash] => 28891417_e3NgOmvJbOp1C69alFxXW8QtXm84k6JlBTQpke38o8022zY8dwvl+Btl3MjE0IHUNFlstBVu2/ZDpSJTqG7RbdvLGwiqmbbiEBDl8DrEfu4VE/6mvPNapIHdw//8xOoaZ0wZsCLJFMAKO/L1Tlf9eRbLbK4rZlPM0V4fTuiiiXtRLbDEI/m3z0278rDMbvq9o0D8G5HKEUBD48akarXA+CipVYSbINibo5JPPoinNaah0m9TqUevAefxl5xvFjpG0rOiagNPqCEett9oae1UIstVl7OA7bsH8O+HtSVI5BQeAN1ECAwM+pg28TrhEIWYzsU7WOq0/ytM2c442X8iWg==
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [file] => /var/www/html/comprar/formCartao.php
+                    [line] => 16
+                    [args] => Array
+                        (
+                            [0] => /var/www/html/comprar/processarDadosCompra.php
+                        )
+
+                    [function] => require
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - Erro no pagarme... PagarMe_Exception Object
+(
+    [url:protected] => 
+    [method:protected] => 
+    [return_code:protected] => 
+    [parameter_name:protected] => 
+    [type:protected] => 
+    [errors:protected] => 
+    [message:protected] => card_hash inválido. Para mais informações, consulte nossa documentação em https://pagar.me/docs.
+
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => /var/www/html/settings/pagarme/lib/Pagarme/Model.php
+    [line:protected] => 24
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/CardHashCommon.php
+                    [line] => 32
+                    [function] => create
+                    [class] => PagarMe_Model
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/TransactionCommon.php
+                    [line] => 37
+                    [function] => create
+                    [class] => PagarMe_CardHashCommon
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme/lib/Pagarme/Transaction.php
+                    [line] => 7
+                    [function] => create
+                    [class] => PagarMe_TransactionCommon
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => /var/www/html/settings/pagarme_functions.php
+                    [line] => 146
+                    [function] => charge
+                    [class] => PagarMe_Transaction
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => /var/www/html/comprar/processarDadosCompra.php
+                    [line] => 783
+                    [function] => pagarPedidoPagarme
+                    [args] => Array
+                        (
+                            [0] => 101
+                            [1] => Array
+                                (
+                                    [paypal_data] => 
+                                    [paypal_payment] => 
+                                    [usuario_pdv] => 0
+                                    [codCartao] => 910
+                                    [nomeCartao] => gabriel
+                                    [qt_parcelas] => 1
+                                    [numCartao] => 4242424242424242
+                                    [codSeguranca] => 333
+                                    [validadeMes] => 03
+                                    [validadeAno] => 2022
+                                    [nomePresente] => 
+                                    [emailPresente] => 
+                                    [card_hash] => 28891593_IbPKuWQ2H2sNTlS57vXKcSKomYbu3lrZHgudbOSxMulwKnO0B2VkUA9/Du2MBSPdgSK9Yo6JmhqqUGxEtQR2Bbfy8uNyl4gd8z5evU5g6LwqxLNcFt53R23nnuM6L4qumYGp2jFZgmuItQBw4T6FRzAaIfs/ddqvhWvlHF389WK9hCG0+mfI50Yo2xD1Ny5mujVbDYIqEaSItr2DI0rEy9n6BbzCUbQubK0TICU68dIfrho0HbjGEARmj6lUhPphbPc+qOwQDH/yuQBwpO1kZJxcoVPrhQ4oA/iYrE02iIvp23dkc6CGxl0tAquOInzW+hZJRE0GkOJRhSeBk/DGrw==
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [file] => /var/www/html/comprar/formCartao.php
+                    [line] => 16
+                    [args] => Array
+                        (
+                            [0] => /var/www/html/comprar/processarDadosCompra.php
+                        )
+
+                    [function] => require
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
+TRACE - configureSplit variables.
+TRACE - configureSplit of pagare.
