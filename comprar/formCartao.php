@@ -124,9 +124,7 @@ if ($_POST) {
             return numero.join(',');
         }
 
-            <?php if (gethost()=="bringressos") {
-                
-?>
+            
                 $.getJSON('<?php echo multiSite_getURIAPI() ?>/v1/purchase/site/getinstallments.php?codCliente=<?php echo $_SESSION['user'] ?>&idSession=<?php echo session_id() ?>', function ( data ) { 
                         var data = data.installments;
                         var selectbox = $('#qt_parcelas');
@@ -141,11 +139,6 @@ if ($_POST) {
                         });
                         
                     } );
-                    <?php
-            } else {
-
-            }
-            ?>
                 </script>
         <input type="hidden" name="usuario_pdv" value="<?php echo (isset($_SESSION["usuario_pdv"])) ? $_SESSION["usuario_pdv"] : 0; ?>" />
         
