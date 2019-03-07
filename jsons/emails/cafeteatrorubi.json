@@ -13,7 +13,7 @@
     }
   },
   "formto": {
-    "email":"atendimento@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "formto",
     "pass":""
   },
@@ -28,52 +28,52 @@
     "pass":""
   },
   "shopping": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "pedido",
     "pass":""
   },
   "lembrete": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "pedido",
     "pass":""
   },
   "marketing": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "pedido",
     "pass":""
   },
   "info": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "pedido",
     "pass":""
   },
   "sac": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "noreply",
     "pass":""
   },
   "pedido": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "pedido",
     "pass":""
   },
   "assinantea@siscompre": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressospedidos@hotmail": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@siscompre": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@gmail": {
-    "email":"pedido@cafeteatrorubi.com.br",
+    "email":"cafeteatrorubi@terra.com.br",
     "from": "pedido",
     "pass":""
   }

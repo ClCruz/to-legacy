@@ -13,7 +13,7 @@
     }
   },
   "formto": {
-    "email":"atendimento@sazarte.com",
+    "email":"administracao@teatroitalia.com.br",
     "from": "formto",
     "pass":""
   },
@@ -48,32 +48,32 @@
     "pass":""
   },
   "sac": {
-    "email":"pedido@sazarte.com",
+    "email":"administracao@teatroitalia.com.br",
     "from": "noreply",
     "pass":""
   },
   "pedido": {
-    "email":"pedido@sazarte.com",
+    "email":"administracao@teatroitalia.com.br",
     "from": "pedido",
     "pass":""
   },
   "assinantea@siscompre": {
-    "email":"pedido@sazarte.com",
+    "email":"administracao@teatroitalia.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressospedidos@hotmail": {
-    "email":"pedido@sazarte.com",
+    "email":"administracao@teatroitalia.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@siscompre": {
-    "email":"pedido@sazarte.com",
+    "email":"administracao@teatroitalia.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@gmail": {
-    "email":"pedido@sazarte.com",
+    "email":"administracao@teatroitalia.com.br",
     "from": "pedido",
     "pass":""
   }
