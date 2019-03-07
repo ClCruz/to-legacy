@@ -134,7 +134,7 @@ if ($_POST) {
                             if (d.installment == 1) {
                                 $('<option class="sbOptions" selected="selected">').val(d.installment).text('À vista R$' + numberToReal((d.installment_amount / 100 ))).appendTo(selectbox);
                             } else {
-                                $('<option class="sbOptions">').val(d.installment).text(d.installment + 'x R$' + numberToReal((d.installment_amount / 100.0 ))).appendTo(selectbox);
+                                $('<option class="sbOptions">').val(d.installment).text(d.installment + 'x R$' + numberToReal((d.installment_amount / 100.0 )) + '  -   Total (R$' +  numberToReal((d.amount / 100.0 )) + ')').appendTo(selectbox);
                             }
                         });
                         
