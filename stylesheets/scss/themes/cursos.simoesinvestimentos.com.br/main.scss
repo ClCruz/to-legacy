@@ -10,7 +10,21 @@
 	@include footer;
 
 	.container__header {
-		background-color: rgb(40, 40, 40) !important;
+		background-color: rgb(255, 255, 255) !important;
+	}
+
+	.container__header {
+		// height: 60px !important;
+		@include box-shadow();
+	}
+	.header__logo .logo-header {
+		// height: 35px !important;
+		// height: 35px !important;
+	}
+
+	header.bg-dark {
+		// background-color: rgb(202, 8, 19) !important;
+		background-color: rgb(255, 255, 255) !important;
 	}
 
 	.container__header {
