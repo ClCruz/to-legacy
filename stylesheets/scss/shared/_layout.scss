@@ -1901,7 +1901,7 @@ a.sbFocus:hover {
 
 .container_setores {
 	@include MQ(S) {
-		display: inline !important;
+		// display: inline !important;
 	}
 
 	.container_setor {
