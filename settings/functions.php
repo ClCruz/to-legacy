@@ -2222,6 +2222,7 @@ function callapi_refund($id_pedido_venda) {
     $transaction_data = array("id_pedido_venda" => $id_pedido_venda);
 
     $url = getconf()["api_internal_uri"]."/v1/purchase/site/refund?imthebossofme=".gethost();        
+    //die($url);
 
     $post_data = $transaction_data;
     // $out = fopen('php://output', 'w');
@@ -2243,9 +2244,11 @@ function callapi_refund($id_pedido_venda) {
     //die(json_encode($response));
     
     $json = json_decode($response);
+
+    //die(json_encode($json));
     
     curl_close($curl);
-    return $json->success;
+    return $json;
 }
 
 function getQRCodeFromAPI($id_base, $codVenda, $indice) {

@@ -1,12 +1,18 @@
 <?php
     function getconf() {
         $jsonFile = $_SERVER['DOCUMENT_ROOT']."/jsons/conf/conf.json";
+        $jsonFileLocal = $_SERVER['DOCUMENT_ROOT']."/jsons/conf/conf.json.local";
 
+        if (file_exists($jsonFileLocal)) {
+            $jsonFile = $jsonFileLocal;
+        }
+        
         if (!file_exists($jsonFile)) {
             die("Falha de configuração no JSON de configuração.");
         }
-
+        
         $ret = json_decode(file_get_contents($jsonFile), true);
+        //die("oi".json_encode($ret));
         return $ret;
     }
     function gethost() {
