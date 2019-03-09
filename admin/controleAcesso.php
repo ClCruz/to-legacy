@@ -38,24 +38,18 @@ if(isset($_GET["gerar"]) && $_GET["gerar"] == "true"){
                         CONVERT(CHAR(10), A.DATAPRESENTACAO,103) AS DATAPRESENTACAO,
                         A.HORSESSAO,
                         S.NOMSETOR,
-                        T.TIPBILHETE,
+                        TB.TIPBILHETE,
                         COUNT(1) AS QTD,
-                        T.STATIPBILHMEIA
+                        TB.STATIPBILHMEIA
                 FROM
                         TABCONTROLESEQVENDA CS
-                        INNER JOIN
-                        TABAPRESENTACAO     A
-                        ON  A.CODAPRESENTACAO = CS.CODAPRESENTACAO
-                        INNER JOIN
-                        TABPECA             P
-                        ON  P.CODPECA = A.CODPECA
-                        INNER JOIN
-                        TABSETOR            S
-                        ON  S.CODSETOR = SUBSTRING(CODBAR, 6,1)
-                        AND S.CODSALA  = A.CODSALA
-                        INNER JOIN
-                        TABTIPBILHETE       T
-                        ON  T.CODTIPBILHETE = SUBSTRING(CODBAR, 15,3)
+                        INNER JOIN tabLugSala ls ON cs.Indice=ls.Indice AND cs.CodApresentacao=ls.CodApresentacao
+                        INNER JOIN TABAPRESENTACAO A ON  A.CODAPRESENTACAO = CS.CODAPRESENTACAO
+                        INNER JOIN TABPECA P ON  P.CODPECA = A.CODPECA
+                        INNER JOIN tabSalDetalhe sd ON cs.Indice=sd.Indice AND sd.CodSala=a.CodSala
+                        INNER JOIN tabSala sa ON a.CodSala=sa.CodSala
+                        INNER JOIN tabSetor s ON sd.CodSetor=s.CodSetor
+                        INNER JOIN tabTipBilhete tb ON ls.CodTipBilhete=tb.CodTipBilhete
                 WHERE
                         STATUSINGRESSO = 'U'
                 AND P.CODPECA = ?
@@ -65,11 +59,13 @@ if(isset($_GET["gerar"]) && $_GET["gerar"] == "true"){
                         CONVERT(CHAR(10), A.DATAPRESENTACAO,103),
                         A.HORSESSAO,
                         S.NOMSETOR,
-                        T.TIPBILHETE,
-                        T.STATIPBILHMEIA
+                        TB.TIPBILHETE,
+                        TB.STATIPBILHMEIA
                 ORDER BY
-                        P.NOMPECA,A.DATAPRESENTACAO
+                        P.NOMPECA,CONVERT(CHAR(10), A.DATAPRESENTACAO,103)
                 ";
+
+    
     $paramsGeral = array($pRSIdEVento["CODPECA"], $DataIni, $DataFim);
     $pRSGeral = executeSQL($connGeral, $strGeral, $paramsGeral);
 }
