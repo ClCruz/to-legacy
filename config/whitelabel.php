@@ -39,6 +39,31 @@
         }
         return $ret;
     }
+    function getwhitelabelURI_home($next) {
+        $uri = getwhitelabel("uri");
+
+        if (startsWith($uri, "http") == false) {
+            $uri = "https://".$uri;
+        }
+        if (endsWith($uri, "/") == false && startsWith($next, "/") == false) {
+            $uri .= "/";
+        }
+        $uri.=$next;
+        return $uri;
+    }
+    function getwhitelabelURI_home_forced($host,$next) {
+        $forced = getwhitelabelobjforced($host);
+        $uri = $forced["uri"];
+
+        if (startsWith($uri, "http") == false) {
+            $uri = "https://".$uri;
+        }
+        if (endsWith($uri, "/") == false && startsWith($next, "/") == false) {
+            $uri .= "/";
+        }
+        $uri.=$next;
+        return $uri;
+    }
     function getwhitelabelobj() {
         $ret = array();
         $whitelabel = gethost();

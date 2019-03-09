@@ -1,23 +1,38 @@
 <?php
 session_start();
-if (isset($_SESSION['operador'])) {
-	header("Location: etapa3_2.php");
-} else if (isset($_SESSION['user'])) {
-	if (isset($_GET['redirect'])) {
-		header("Location: " . urldecode($_GET['redirect']));
-	} else {
-		if ($_COOKIE['entrega']) {
-			header("Location: etapa3_entrega.php");
-		} else {
-			header("Location: etapa4.php");
-		}
-	}
-}
+// else if (isset($_SESSION['user'])) {
+// 	if (isset($_GET['redirect'])) {
+// 		header("Location: " . urldecode($_GET['redirect']));
+// 	} else {
+// 		if ($_COOKIE['entrega']) {
+// 			header("Location: etapa3_entrega.php");
+// 		} else {
+// 			header("Location: etapa4.php");
+// 		}
+// 	}
+// }
 
 require_once('../settings/functions.php');
 
 $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
 require_once('../settings/multisite/unique.php');
+
+
+
+if (isset($_SESSION['operador'])) {
+	header("Location: etapa3_2.php");
+} 
+else {
+	if (isset($_SESSION['user'])) {
+		header("Location: etapa5.php");
+	}
+	else {
+		header("Location: ".getwhitelabelURI_home("/loginandshopping/cardafter"));
+	}
+}
+
+
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>

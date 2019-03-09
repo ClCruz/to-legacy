@@ -7,6 +7,8 @@ require_once('../settings/settings.php');
 require_once('../settings/functions.php');
 require_once($_SERVER['DOCUMENT_ROOT']."/config/whitelabel.php");
 
+//die("ddd:".json_encode($_REQUEST));
+
 if ($_REQUEST['token']!='') {
     $mainConnection = mainConnection();
 	
