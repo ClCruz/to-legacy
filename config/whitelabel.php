@@ -1,12 +1,18 @@
 <?php
     function getconf() {
         $jsonFile = $_SERVER['DOCUMENT_ROOT']."/jsons/conf/conf.json";
+        $jsonFileLocal = $_SERVER['DOCUMENT_ROOT']."/jsons/conf/conf.json.local";
 
+        if (file_exists($jsonFileLocal)) {
+            $jsonFile = $jsonFileLocal;
+        }
+        
         if (!file_exists($jsonFile)) {
             die("Falha de configuração no JSON de configuração.");
         }
-
+        
         $ret = json_decode(file_get_contents($jsonFile), true);
+        //die("oi".json_encode($ret));
         return $ret;
     }
     function gethost() {
@@ -32,6 +38,31 @@
             $ret = $aux["default"];
         }
         return $ret;
+    }
+    function getwhitelabelURI_home($next) {
+        $uri = getwhitelabel("uri");
+
+        if (startsWith($uri, "http") == false) {
+            $uri = "https://".$uri;
+        }
+        if (endsWith($uri, "/") == false && startsWith($next, "/") == false) {
+            $uri .= "/";
+        }
+        $uri.=$next;
+        return $uri;
+    }
+    function getwhitelabelURI_home_forced($host,$next) {
+        $forced = getwhitelabelobjforced($host);
+        $uri = $forced["uri"];
+
+        if (startsWith($uri, "http") == false) {
+            $uri = "https://".$uri;
+        }
+        if (endsWith($uri, "/") == false && startsWith($next, "/") == false) {
+            $uri .= "/";
+        }
+        $uri.=$next;
+        return $uri;
     }
     function getwhitelabelobj() {
         $ret = array();
