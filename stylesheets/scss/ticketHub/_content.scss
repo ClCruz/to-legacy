@@ -264,7 +264,8 @@ div.container_cartao label.radio img {
 .header a {
 }
 
-
-.descricao_pag a {
-	color: #2d313c !important;
+#pedido {
+	.descricao_pag a {
+		color: #2d313c !important;
+	}
 }
