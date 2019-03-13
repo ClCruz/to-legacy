@@ -383,3 +383,9 @@ div.container_dados div.input.data .mes .sbHolder {
 		width: 60px !important;
 	}
 }
+
+div.resumo_espetaculo {
+	@include MQ(S) {
+		width: 100% !important;
+	}
+}
