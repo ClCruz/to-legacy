@@ -416,7 +416,7 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
                         <?php if($numerado){ ?>
                           <p class="help">escolha no mapa abaixo seus assentos</p>
                           <?php }else{ ?>
-                            <p class="help">Escolha ao lado a quantidade de ingressos</p>
+                            <p class="help">Escolha ao lado a quantidade</p>
                       <?php } ?>
                     </div>
                   </div>
