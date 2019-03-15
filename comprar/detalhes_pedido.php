@@ -122,7 +122,7 @@ while ($rs = fetchResult($result)) {
 <div class="espetaculo_img"><img style="max-height: 170px;" src="<?php echo getMiniature($rs['ID_EVENTO']); ?>"></div>
 
 
-<div class="resumo" style="width: 60% !important; margin-top: 30px">
+<div class="resumo resumo_mobile" style=" margin-top: 30px">
 	<p class="nome" style="margin-bottom: 10px; font-size: 16px !important"> <?php echo utf8_encode2($rs['DS_EVENTO']); ?></p>
 	<p class="nome" style="text-transform: uppercase"><?php echo utf8_encode2(strftime("%a", $tempo)); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo strftime("%b", $tempo); ?> - <?php echo $rs['HR_APRESENTACAO']; ?></p>
 	<p class="endereco<?php echo $is_pacote ? ' hidden' : ''; ?>"><?php echo utf8_encode2($evento_info['nome_teatro']); ?> <?php echo utf8_encode2($evento_info['endereco'] . ' - ' . $evento_info['cidade'] . ', ' . $evento_info['sigla_estado']); ?></p>
