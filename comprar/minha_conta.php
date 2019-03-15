@@ -396,12 +396,9 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                             </p>
                             <div class="menu_conta">
                                 <a href="#meus_pedidos" class="botao meus_pedidos ativo">meus pedidos</a>
-                                <a href="#dados_conta" class="botao dados_conta">dados da conta</a>
                                 <?php if (!(isset($_SESSION['operador']) and is_numeric($_SESSION['operador']))) {
                                 ?>
-                                    <a href="#trocar_senha" class="botao trocar_senha">troca de senha</a>
                                 <?php } ?>
-                                <a href="#enderecos" class="botao enderecos ativo">endereços</a>
                                 <?php if ($isAssinante OR $isAssinanteCompre) { ?>
                                     <a href="#frmAssinatura" class="botao assinaturas">assinaturas</a>
                                 <?php } ?>
@@ -411,7 +408,7 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
 
                     <div class="row content__minha-conta">
 
-                    <?php require 'div_cadastro.php'; ?>
+                    
 
                                 <table id="meus_pedidos" style="display: none">
                                     <thead>

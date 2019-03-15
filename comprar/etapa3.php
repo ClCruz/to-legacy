@@ -16,7 +16,9 @@ require_once('../settings/functions.php');
 
 $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
 require_once('../settings/multisite/unique.php');
-
+//AQUI PARA FORCAR USUARIO
+//$_SESSION["user"]="30";
+//die("dd:".$_SESSION['user']);
 
 
 if (isset($_SESSION['operador'])) {
@@ -122,9 +124,9 @@ else {
 				</div>
 
 				<div class="row container__identificacao">
-				<?php require "div_identificacao.php"; ?>
+				
 
-				<?php require "div_cadastro.php"; ?>
+				
 				</div>
 			</div>
 		</div>

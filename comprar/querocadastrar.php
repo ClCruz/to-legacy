@@ -78,8 +78,7 @@ session_unset();
 					</div>
 				</div>
 				<div class="row container__cadastro">
-					<?php include "div_identificacao.php"; ?>
-					<?php include "div_cadastro.php"; ?>
+
 				</div>
 			</div>
 		</div>

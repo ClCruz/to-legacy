@@ -3,6 +3,8 @@ require_once('../settings/settings.php');
 require_once($_SERVER['DOCUMENT_ROOT']."/settings/multisite/unique.php");
 session_start();
 
+header("Location: ".getwhitelabelURI_home(""));
+
 ?>
 <style type="text/css">
 	.dia div.erro_help p.help,

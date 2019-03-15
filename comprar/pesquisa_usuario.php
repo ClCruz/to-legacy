@@ -142,7 +142,7 @@ $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
 
 				<?php require "div_identificacao_operador.php"; ?>
 				<div id="resultadoBusca" class="identificacao"></div>
-				<?php require "div_cadastro.php"; ?>
+				
 
 			</div>
 		</div>

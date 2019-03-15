@@ -5,6 +5,9 @@ require_once('../settings/Cypher.class.php');
 
 session_start();
 
+//AQUI PARA FORCAR USUARIO
+//$_SESSION["user"] = 30;
+
 //ACESSO PERMITIDO APENAS PARA CLIENTES LOGADOS
 if (isset($_SESSION['user'])) {
 

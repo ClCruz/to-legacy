@@ -128,7 +128,7 @@ require_once('../settings/multisite/unique.php');
 
 				<?php require "div_identificacao_operador.php"; ?>
 				<div id="resultadoBusca" class="identificacao"></div>
-				<?php require "div_cadastro.php"; ?>
+				
 
 			</div>
 		</div>
