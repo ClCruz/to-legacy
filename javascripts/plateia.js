@@ -78,7 +78,7 @@ $(function() {
               content: function() {
                 var dados = $(this).attr('title').split(' // ');
 
-                return '<div class="tooltip__legado">'+
+                return '<div class="tooltip tooltip__legado">'+
                           '<table><tbody><tr><td>'+dados[0]+'</td></tr></tbody></table>'+
                           '<div class="informacoes">'+
                             '<p class="local">'+dados[1]+'</p>'+
@@ -156,14 +156,15 @@ $(function() {
     }
 
     function setup_without_touch() {
-      $('#mapa_de_plateia span:not(.' + closedClass + ')').off('mouseenter mouseleave')
-      .on('mouseenter mouseleave', function() {
-        if (!$(this).hasClass('annotationHover') && !$(this).hasClass('annotationSelected')) {
-          $(this).addClass('annotationHover');
-        } else {
-          $(this).removeClass('annotationHover');
-        }
-      });
+      // $('#mapa_de_plateia span:not(.' + closedClass + ')').off('mouseenter mouseleave')
+      // .on('mouseenter mouseleave', function() {
+      //   if (!$(this).hasClass('annotationHover') && !$(this).hasClass('annotationSelected')) {
+      //     $(this).addClass('annotationHover');
+      //   } else {
+      //     $(this).removeClass('annotationHover');
+      //   }
+      // });
+
       $('#mapa_de_plateia span:not(.' + closedClass + ')').off('click').on('click', span_click);
     }
 

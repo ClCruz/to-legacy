@@ -102,13 +102,13 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                     LEFT JOIN MW_ASSINATURA ASS ON ASS.ID_ASSINATURA = AP.ID_ASSINATURA
 
                     WHERE pv.ID_CLIENTE = ?";
-    if (gethost() != "localhost") {
-        $query .= " AND h.host=?";
-    }
+    // if (gethost() != "localhost") {
+    //     $query .= " AND h.host=?";
+    // }
 
                     // AND h.host=?
     $query .= ") AS DADOS ORDER BY ORDER_KEY DESC, ID_PEDIDO_VENDA DESC";
-    $params = array($_SESSION['user'], $_SESSION['user'], gethost());
+    $params = array($_SESSION['user'], $_SESSION['user']);
     // die(gethost());
     $result = executeSQL($mainConnection, $query, $params);
 
@@ -477,13 +477,10 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                                                 $rs2 = executeSQL($mainConnection, $query, $params, true);
 
                                                 if (!empty($rs2)) {
-                                                    $transaction =  unserialize(base64_decode($rs2['OBJ_PAGSEGURO']));
-
-                                                    if ($transaction['status'] == 'waiting_payment') {
-                                                        echo "<br/><a href='".$transaction['boleto_url']."' target='_blank'>Imprimir Boleto</a>";
-                                                    } else {
-                                                        $status = getStatusPagarme($transaction['status']);
-                                                        echo "<br/>".$status['name'];
+                                                    $transaction = json_decode($rs2['OBJ_PAGSEGURO']);                                                    
+                                                    
+                                                    if ($rs['CD_MEIO_PAGAMENTO'] == '911' && $transaction->payment_method=="boleto" && $transaction->success == true) {
+                                                        echo "<br/><a href='".$transaction->boleto_url."' target='_blank'>Imprimir Boleto</a>";
                                                     }
                                                 }
                                             }

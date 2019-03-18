@@ -15,6 +15,7 @@
 
 	.container__header {
 		// height: 60px !important;
+		@include box-shadow();
 	}
 	.header__logo .logo-header {
 		// height: 35px !important;
@@ -51,17 +52,5 @@
 			transform: translateY(-2px);
 			@include box-shadow();
 		}
-	}
-
-	.header__signin {
-		color: #2d313c;
-	}
-
-	.header a {
-		color: #2d313c !important;
-	}
-
-	.opcoes a {
-		color: #fff !important;
 	}
 }

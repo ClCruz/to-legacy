@@ -12,6 +12,35 @@
 // 	padding-left: 10px !important;
 // }
 
+// breakpoints
+
+$S: 320px;
+$M: 768px;
+$L: 1080px;
+$XL: 1200px;
+
+// media queries
+
+@mixin MQ($canvas) {
+	@if $canvas==S {
+		@media only screen and (min-width: $S) and (max-width: $M) {
+			@content;
+		}
+	} @else if $canvas==NS {
+		@media only screen and (min-width: $M) {
+			@content;
+		}
+	} @else if $canvas==M {
+		@media only screen and (min-width: $M) and (max-width: $L) {
+			@content;
+		}
+	} @else if $canvas==L {
+		@media only screen and (min-width: $L) {
+			@content;
+		}
+	}
+}
+
 @function safe-rgb($color) {
 	@return unquote("rgb(#{red($color)}, #{green($color)}, #{blue($color)})");
 }
@@ -262,4 +291,101 @@ div.container_cartao label.radio img {
 // }
 
 .header a {
+}
+
+#pedido {
+	.descricao_pag a {
+		color: #2d313c !important;
+	}
+}
+div.imprima_agora a {
+	color: #2d313c !important;
+
+	&:hover {
+		color: #2d313c !important;
+	}
+}
+#overlay div.centraliza div.fechar {
+	color: white !important;
+}
+a {
+	color: #2d313c !important;
+}
+.other__dates-btn:hover {
+	color: white !important;
+}
+#overlay {
+	color: white !important;
+}
+
+td a:hover {
+	color: #2d313c !important;
+}
+
+a:hover {
+	color: #2d313c !important;
+	opacity: 0.7;
+}
+
+.resumo_espetaculo div.espetaculo_img {
+	@include MQ(S) {
+		margin-bottom: 0px !important;
+		display: block;
+	}
+}
+div.imprima_ingressos,
+div.euvou {
+	@include MQ(S) {
+		display: none;
+	}
+}
+div.resumo_espetaculo div.resumo {
+	width: 60% !important;
+	@include MQ(S) {
+		padding-top: 10px;
+		width: 100% !important;
+		margin-top: 20px !important;
+	}
+}
+
+div.imprima_ingressos {
+	@include MQ(S) {
+		width: 100% !important;
+	}
+}
+
+#pedido {
+	width: 100% !important;
+}
+
+table#pedido_resumo {
+	@include MQ(S) {
+		width: 100% !important;
+	}
+}
+
+#pedido_resumo .sbHolder,
+div.resumo_espetaculo div.pedido_entrega div.tipo .sbHolder,
+div.resumo_espetaculo div.estado .sbHolder {
+	@include MQ(S) {
+		width: 110px;
+	}
+}
+
+.sbToggle {
+	@include MQ(S) {
+		background-position: 0 -124px;
+	}
+}
+
+div.container_dados div.input.data .mes .sbHolder {
+	@include MQ(S) {
+		width: 60px !important;
+	}
+}
+
+div.resumo_espetaculo {
+	@include MQ(S) {
+		width: 100% !important;
+	}
 }

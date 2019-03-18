@@ -163,8 +163,8 @@ div.resumo_espetaculo {
 	box-sizing: border-box;
 
 	@include MQ(NS) {
-		/* width: 780px; */
 		width: 100%;
+		/* width: 780px; */
 	}
 }
 
@@ -1391,7 +1391,7 @@ div.resumo_espetaculo div.pedido_entrega div.tipo {
 div.resumo_espetaculo div.pedido_entrega div.tipo .sbHolder,
 div.resumo_espetaculo div.estado .sbHolder {
 	@include MQ(S) {
-		width: 100% !important;
+		// width: 100% !important;
 	}
 }
 
@@ -1453,8 +1453,8 @@ div.resumo_espetaculo,
 
 .resumo_espetaculo {
 	@include MQ(S) {
-		display: flex !important;
-		width: 100% !important;
+		// display: flex !important;
+		// width: 100% !important;
 	}
 }
 
@@ -1705,7 +1705,7 @@ p.endereco {
 
 div.resumo_espetaculo div.resumo p.endereco {
 	@include MQ(S) {
-		width: 100%;
+		// width: 100%;
 	}
 }
 
@@ -1951,11 +1951,6 @@ div.container_botoes_etapas {
 #pedido > div.resumo_espetaculo > div.pedido_entrega > div.descricao,
 div.resumo_espetaculo div.pedido_entrega div.valor {
 	@include MQ(S) {
-		text-align: left !important;
-		padding-left: 20px;
-		font-size: 12px;
-		display: inline;
-		box-sizing: border-box;
 	}
 }
 
