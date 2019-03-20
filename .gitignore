@@ -1,4 +1,4 @@
 node_modules
 .bash_profile
 stylesheets/themes
-.conf.json.local
+conf.json.local
