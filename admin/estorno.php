@@ -17,15 +17,16 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
 
     require_once('../settings/Paginator.php');
 
-    if (isset($_GET["dt_inicial"]) && isset($_GET["dt_final"]) && isset($_GET["nm_cliente"]) && isset($_GET["nm_operador"]) && isset($_GET["cd_cpf"]) && isset($_GET["num_pedido"])) {
-
+    if (isset($_GET["dt_inicial"]) && isset($_GET["dt_final"]) && isset($_GET["nm_cliente"]) && isset($_GET["cd_cpf"]) && isset($_GET["num_pedido"]) && isset($_GET["id_base"])) {
         $situacao = 'F';
 
-        $where = "WHERE CONVERT(DATETIME,CONVERT(CHAR(8), PV.DT_PEDIDO_VENDA, 112)) BETWEEN CONVERT(DATETIME, ?, 103) AND CONVERT(DATETIME, ?, 103) AND PV.IN_SITUACAO = ?";
+        $cboLocal = $_GET["id_base"];
 
-        $params = array($_GET["dt_inicial"], $_GET["dt_final"], $situacao);
+        $where = "WHERE e.id_base=? AND CONVERT(DATETIME,CONVERT(CHAR(8), PV.DT_PEDIDO_VENDA, 112)) BETWEEN CONVERT(DATETIME, ?, 103) AND CONVERT(DATETIME, ?, 103) AND PV.IN_SITUACAO = ?";
 
-        $paramsTotal = array($_GET["dt_inicial"], $_GET["dt_final"], $situacao);
+        $params = array($_GET["id_base"], $_GET["dt_inicial"], $_GET["dt_final"], $situacao);
+
+        $paramsTotal = array($_GET["id_base"], $_GET["dt_inicial"], $_GET["dt_final"], $situacao);
 
         $select = "SELECT
                     (CONVERT(VARCHAR(10), PV.DT_PEDIDO_VENDA, 103) + ' - ' + CONVERT(VARCHAR(8), PV.DT_PEDIDO_VENDA, 114)) AS DT_PEDIDO_VENDA,
@@ -46,7 +47,11 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
                       MW_PEDIDO_VENDA PV
                       INNER JOIN MW_CLIENTE C ON C.ID_CLIENTE = PV.ID_CLIENTE
                       INNER JOIN MW_MEIO_PAGAMENTO MP ON MP.ID_MEIO_PAGAMENTO = PV.ID_MEIO_PAGAMENTO
-                      LEFT JOIN MW_ITEM_PEDIDO_VENDA IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
+                      INNER JOIN MW_ITEM_PEDIDO_VENDA IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
+
+                      INNER JOIN MW_APRESENTACAO A ON IPV.ID_APRESENTACAO = A.ID_APRESENTACAO
+                      INNER JOIN MW_EVENTO E ON E.ID_EVENTO=A.ID_EVENTO
+
                       LEFT JOIN MW_USUARIO U ON U.ID_USUARIO=PV.ID_USUARIO_CALLCENTER ";
 
         $from2 = "FROM
@@ -54,6 +59,8 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
                       INNER JOIN MW_CLIENTE C ON C.ID_CLIENTE = PV.ID_CLIENTE
                       INNER JOIN MW_MEIO_PAGAMENTO MP ON MP.ID_MEIO_PAGAMENTO = PV.ID_MEIO_PAGAMENTO
                       INNER JOIN MW_ITEM_PEDIDO_VENDA_HIST IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
+                      INNER JOIN MW_APRESENTACAO A ON IPV.ID_APRESENTACAO = A.ID_APRESENTACAO
+                      INNER JOIN MW_EVENTO E ON E.ID_EVENTO=A.ID_EVENTO
                       LEFT JOIN MW_USUARIO U ON U.ID_USUARIO=PV.ID_USUARIO_CALLCENTER ";
 
         $group = " GROUP BY
@@ -82,48 +89,43 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
             //$params[] = $_GET["nm_cliente"];
         }
 
-        if (!empty($_GET["nm_evento"])) {
-            $from .= "  LEFT JOIN MW_APRESENTACAO A ON IPV.ID_APRESENTACAO = A.ID_APRESENTACAO
-                        LEFT JOIN MW_EVENTO E ON E.ID_EVENTO=A.ID_EVENTO ";
-        }
+        // if (!empty($_GET["nm_operador"])) {
+        //     if ($_GET["nm_operador"] == 'Web' || $_GET["nm_operador"] == 'WEB' || $_GET["nm_operador"] == 'web') {
+        //         $select = "SELECT
+        //                     (CONVERT(VARCHAR(10), PV.DT_PEDIDO_VENDA, 103) + ' - ' + CONVERT(VARCHAR(8), PV.DT_PEDIDO_VENDA, 114)) AS DT_PEDIDO_VENDA,
+        //                     PV.ID_PEDIDO_VENDA,
+        //                     C.DS_NOME AS CLIENTE,
+        //                     C.DS_SOBRENOME,
+        //                     SUM(IPV.VL_UNITARIO) AS TOTAL_UNIT,
+        //                     PV.IN_SITUACAO,
+        //                     ROW_NUMBER() OVER(ORDER BY PV.ID_PEDIDO_VENDA DESC) AS 'LINHA',
+        //                     COUNT(1) AS QUANTIDADE,
+        //                     PV.IN_RETIRA_ENTREGA,
+        //                     C.DS_DDD_TELEFONE,
+        //                     C.DS_TELEFONE ";
 
-        if (!empty($_GET["nm_operador"])) {
-            if ($_GET["nm_operador"] == 'Web' || $_GET["nm_operador"] == 'WEB' || $_GET["nm_operador"] == 'web') {
-                $select = "SELECT
-                            (CONVERT(VARCHAR(10), PV.DT_PEDIDO_VENDA, 103) + ' - ' + CONVERT(VARCHAR(8), PV.DT_PEDIDO_VENDA, 114)) AS DT_PEDIDO_VENDA,
-                            PV.ID_PEDIDO_VENDA,
-                            C.DS_NOME AS CLIENTE,
-                            C.DS_SOBRENOME,
-                            SUM(IPV.VL_UNITARIO) AS TOTAL_UNIT,
-                            PV.IN_SITUACAO,
-                            ROW_NUMBER() OVER(ORDER BY PV.ID_PEDIDO_VENDA DESC) AS 'LINHA',
-                            COUNT(1) AS QUANTIDADE,
-                            PV.IN_RETIRA_ENTREGA,
-                            C.DS_DDD_TELEFONE,
-                            C.DS_TELEFONE ";
+        //         $group = " GROUP BY
+        //                       (CONVERT(VARCHAR(10), PV.DT_PEDIDO_VENDA, 103) + ' - ' + CONVERT(VARCHAR(8), PV.DT_PEDIDO_VENDA, 114)),
+        //                       PV.ID_PEDIDO_VENDA,
+        //                       C.DS_NOME,
+        //                       C.DS_SOBRENOME,
+        //                       PV.IN_SITUACAO,
+        //                       DT_PEDIDO_VENDA,
+        //                       PV.IN_RETIRA_ENTREGA,
+        //                       C.DS_DDD_TELEFONE,
+        //                       C.DS_TELEFONE ";
 
-                $group = " GROUP BY
-                              (CONVERT(VARCHAR(10), PV.DT_PEDIDO_VENDA, 103) + ' - ' + CONVERT(VARCHAR(8), PV.DT_PEDIDO_VENDA, 114)),
-                              PV.ID_PEDIDO_VENDA,
-                              C.DS_NOME,
-                              C.DS_SOBRENOME,
-                              PV.IN_SITUACAO,
-                              DT_PEDIDO_VENDA,
-                              PV.IN_RETIRA_ENTREGA,
-                              C.DS_DDD_TELEFONE,
-                              C.DS_TELEFONE ";
-
-                $from = "FROM MW_PEDIDO_VENDA PV INNER JOIN MW_CLIENTE C ON C.ID_CLIENTE = PV.ID_CLIENTE AND PV.ID_USUARIO_CALLCENTER IS NULL
-                          LEFT JOIN MW_ITEM_PEDIDO_VENDA_HIST IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA ";
-                $join2 = true;
-            } else {
-                $where .= " AND U.DS_NOME LIKE '%" . utf8_decode(trim($_GET["nm_operador"])) . "%'";
-                $from = "FROM MW_PEDIDO_VENDA PV INNER JOIN MW_CLIENTE C ON C.ID_CLIENTE = PV.ID_CLIENTE
-                          LEFT JOIN MW_ITEM_PEDIDO_VENDA IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
-                          LEFT JOIN MW_USUARIO U ON U.ID_USUARIO=PV.ID_USUARIO_CALLCENTER ";
-                $join3 = true;
-            }
-        }
+        //         $from = "FROM MW_PEDIDO_VENDA PV INNER JOIN MW_CLIENTE C ON C.ID_CLIENTE = PV.ID_CLIENTE AND PV.ID_USUARIO_CALLCENTER IS NULL
+        //                   LEFT JOIN MW_ITEM_PEDIDO_VENDA_HIST IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA ";
+        //         $join2 = true;
+        //     } else {
+        //         $where .= " AND U.DS_NOME LIKE '%" . utf8_decode(trim($_GET["nm_operador"])) . "%'";
+        //         $from = "FROM MW_PEDIDO_VENDA PV INNER JOIN MW_CLIENTE C ON C.ID_CLIENTE = PV.ID_CLIENTE
+        //                   LEFT JOIN MW_ITEM_PEDIDO_VENDA IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
+        //                   LEFT JOIN MW_USUARIO U ON U.ID_USUARIO=PV.ID_USUARIO_CALLCENTER ";
+        //         $join3 = true;
+        //     }
+        // }
         if (!empty($_GET["cd_cpf"])) {
             $where .= " AND C.CD_CPF = ?";
             $join = true;
@@ -133,12 +135,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
         }
 
         if (!empty($_GET["nm_evento"])) {
-            $where .= " AND E.ID_EVENTO = ?";
-            $join4 = true;
-
-            $from2 .= " LEFT JOIN MW_APRESENTACAO A ON IPV.ID_APRESENTACAO = A.ID_APRESENTACAO
-                        INNER JOIN MW_EVENTO E ON E.ID_EVENTO=A.ID_EVENTO ";
-
+            $where .= " AND e.id_evento = ?";
             $params[] = $_GET["nm_evento"];
             $paramsTotal[] = $_GET["nm_evento"];
         }
@@ -272,9 +269,40 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
     <script type="text/javascript" src="../javascripts/jquery.combobox-autocomplete.js"></script>
     <script type="text/javascript" src="../javascripts/simpleFunctions.js"></script>
     <script>
+        function executechangewith(id) {
+            if (id=="" || id == 'undefined') {
+                return;
+            }
+            var pagina = '<?php echo $pagina; ?>';
+            const cboPeca = $('#cboPeca');
+            const id_evento = '<?php echo $_GET["nm_evento"] ?>';
+            $.ajax({
+                url: pagina+'?action=cboPeca&cboTeatro=' + id + "&id_evento="+id_evento
+            }).done(function(html){
+                cboPeca.html(html);
+            });
+        }
+        function localchange(obj) {
+            var pagina = '<?php echo $pagina; ?>';
+            const aux = $(obj);
+            executechangewith(aux.val());
+        }
+
         $(function() {
             var pagina = '<?php echo $pagina; ?>';
+            const $cboTeatro = $('#cboTeatro');
+            const $cboPeca = $('#cboPeca');
+
+            executechangewith(<?php echo $_GET["id_base"]; ?>);
             var $estorno_dialog = $('#estorno_form').hide();
+
+            $cboTeatro.on('change', function(){
+                $.ajax({
+                    url: 'controleEntrada.php?action=cboPeca&cboTeatro=' + $cboTeatro.val()//pagina + '?action=cboPeca&cboTeatro=' + $cboTeatro.val()
+                }).done(function(html){
+                    $cboPeca.html(html).trigger('change');
+                });
+            });
 
             $('.numbersOnly').onlyNumbers();
 
@@ -294,7 +322,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
                 if (!verificaCPF($('#cd_cpf').val())) {
                     $.dialog({title: 'Alerta...', text: 'CPF inválido.'});
                 } else {
-                    document.location = '?p=' + pagina.replace('.php', '') + '&dt_inicial=' + $("#dt_inicial").val() + '&dt_final='+ $("#dt_final").val() + '&nm_cliente=' + $("#nm_cliente").val() + '&cd_cpf=' + $("#cd_cpf").val() + '&num_pedido=' + $("#num_pedido").val() + '&nm_operador='+ $("#nm_operador").val() +'&nm_evento=' + $("#evento").val();
+                    document.location = '?p=' + pagina.replace('.php', '') + '&dt_inicial=' + $("#dt_inicial").val() + '&dt_final='+ $("#dt_final").val() + '&nm_cliente=' + $("#nm_cliente").val() + '&cd_cpf=' + $("#cd_cpf").val() + '&num_pedido=' + $("#num_pedido").val() +'&nm_evento=' + $("#cboPeca").val() +'&id_base=' + $("#cboLocal").val();
                 }
             });
 
@@ -433,12 +461,12 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
                 document.location = '?p=' + pagina.replace('.php', '') + '&controle=' + $("#controle").val() + '&dt_inicial=' + $("#dt_inicial").val() + '&dt_final=' + $("#dt_final").val() + '&nm_cliente=' + $("#nm_cliente").val() + '&cd_cpf=' + $("#cd_cpf").val() + '&num_pedido=' + $("#num_pedido").val() + '&nm_operador=' + $("#nm_operador").val() + '&nm_evento=' + $("#evento").val() + '';
             });
 
-            $.ajax({
-              url: pagina + '?action=load_evento_combo&nm_evento=<?php echo $_GET['nm_evento']; ?>',
-              success: function(data) {
-                $('#evento').html(data).combobox();
-              }
-            });
+            // $.ajax({
+            //   url: pagina + '?action=load_evento_combo&nm_evento=<?php echo $_GET['nm_evento']; ?>',
+            //   success: function(data) {
+            //     $('#evento').html(data).combobox();
+            //   }
+            // });
 
             $(':input[name=banco]').combobox();
         });    
@@ -464,25 +492,27 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
     $mes = date("m") - 1;
 ?>
     <table>
+        <tr>
+            <td>Local</td>
+            <td><?php echo comboTeatroPorUsuario2('cboLocal', $_SESSION["admin"], $_GET["id_base"],"localchange(this)"); ?></td>
+            <td>Nome do Cliente</td>
+        <td><input size="40" type="text" value="<?php echo (isset($_GET["nm_cliente"])) ? $_GET["nm_cliente"] : "" ?>" id="nm_cliente" name="nm_cliente" /></td>
+        </tr>
       <tr>
         <td>Pedido nº</td>
         <td><input size="10" type="text" value="<?php echo (isset($_GET["num_pedido"])) ? $_GET["num_pedido"] : "" ?>" id="num_pedido" name="num_pedido" /></td>
         <td>CPF</td>
         <td><input type="text" value="<?php echo (isset($_GET["cd_cpf"])) ? $_GET["cd_cpf"] : "" ?>" id="cd_cpf" name="cd_cpf" maxlength="13" /></td>
-        <td>Nome do Cliente</td>
-        <td><input size="40" type="text" value="<?php echo (isset($_GET["nm_cliente"])) ? $_GET["nm_cliente"] : "" ?>" id="nm_cliente" name="nm_cliente" /></td>
       </tr>
       <tr>
         <td>Data Inicial</td>
         <td><input type="text" value="<?php echo (isset($_GET["dt_inicial"])) ? $_GET["dt_inicial"] : date("d/m/Y") ?>" class="datepicker" id="dt_inicial" readonly name="dt_inicial" /></td>
         <td>Data Final</td>
         <td><input type="text" class="datepicker" value="<?php echo (isset($_GET["dt_final"])) ? $_GET["dt_final"] : date("d/m/Y") ?>" id="dt_final" name="dt_final" readonly/></td>
-        <td>Nome do Operador</td>
-        <td><input size="40" type="text" value="<?php echo (isset($_GET["nm_operador"])) ? $_GET["nm_operador"] : "" ?>" id="nm_operador" name="nm_operador" /></td>
       </tr>
       <tr>
         <td>Nome do Evento</td>
-        <td><select name="evento" class="inputStyle" id="evento"><option value="">Carregando combo...</option></select></td>
+        <td><select name="cboPeca" class="inputStyle" id="cboPeca"><option value="">...</option></select></td>
         <td></td>
         <td></td>
         <td align="center"><input type="submit" class="button" id="btnRelatorio" value="Buscar" /></td>
