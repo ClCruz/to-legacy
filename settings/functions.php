@@ -1509,6 +1509,24 @@ function comboTeatroPorUsuario($name, $usuario, $selected) {
 
     return $combo;
 }
+function comboTeatroPorUsuario2($name, $usuario, $selected, $onchange) {
+    $mainConnection = mainConnection();
+    $result = executeSQL($mainConnection, "SELECT DISTINCT B.ID_BASE, B.DS_NOME_TEATRO
+                                            FROM MW_BASE B
+                                            INNER JOIN MW_ACESSO_CONCEDIDO AC ON B.ID_BASE = AC.ID_BASE
+                                            AND AC.ID_USUARIO = ?
+                                            WHERE IN_ATIVO = '1'
+                                            ORDER BY DS_NOME_TEATRO",
+            array($usuario));
+
+    $combo = '<select onchange="'.$onchange.'" name="' . $name . '" class="inputStyle" id="' . $name . '"><option value="">Selecione um local...</option>';
+    while ($rs = fetchResult($result)) {
+    $combo .= '<option value="' . $rs['ID_BASE'] . '"' . (($selected == $rs['ID_BASE']) ? ' selected' : '') . '>' . utf8_encode2($rs['DS_NOME_TEATRO']) . '</option>';
+    }
+    $combo .= '</select>';
+
+    return $combo;
+}
 
 function comboDia($name, $selected, $shortText = false) {
     $combo = '<select name="' . $name . '" class="inputStyle" id="' . $name . '"><option value="">'.($shortText ? 'dia' : 'Selecione um dia...').'</option>';
@@ -2214,6 +2232,41 @@ function requestImage($url) {
     //===== REMOVER MARCA DAGUA =====*/
 
     return $image;
+}
+
+function callapi_resendmail($id_pedido_venda,$email) {
+    //die(json_encode($id_pedido_venda));
+    
+    $transaction_data = array("id_pedido_venda" => $id_pedido_venda, "email"=>$email);
+
+    $url = getconf()["api_internal_uri"]."/v1/purchase/site/resendmail?imthebossofme=".gethost();        
+    //die($url);
+
+    $post_data = $transaction_data;
+    // $out = fopen('php://output', 'w');
+    $curl = curl_init(); 
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_POST, 1);
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);                                                                      
+    // curl_setopt($curl, CURLOPT_VERBOSE, true);
+    // curl_setopt($curl, CURLOPT_STDERR, $out);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+    curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($post_data));   
+
+    $response = curl_exec($curl);
+    // fclose($out);
+    $errno = curl_errno($curl);
+    //die(json_encode($response));
+    
+    $json = json_decode($response);
+
+    //die(json_encode($json));
+    
+    curl_close($curl);
+    return $json;
 }
 
 function callapi_refund($id_pedido_venda) {

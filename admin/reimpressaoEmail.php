@@ -10,7 +10,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 310, true)) {
     if (isset($_GET['action'])) {
         require('actions/' . $pagina);
     } else {
-        if (strlen($_GET["pedido"]) > 5 or strlen($_GET["cpf"]) > 10 or strlen($_GET["nome"]) > 2) {
+        if ($_GET["id_base"] != "" && (strlen($_GET["pedido"]) > 0 or strlen($_GET["cpf"]) > 10 or strlen($_GET["nome"]) > 2)) {
 
             $query = "SELECT TOP 100
                         PV.ID_PEDIDO_VENDA,
@@ -25,8 +25,11 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 310, true)) {
                         PV.IN_SITUACAO
                     FROM MW_PEDIDO_VENDA PV
                     INNER JOIN MW_ITEM_PEDIDO_VENDA IPV ON PV.ID_PEDIDO_VENDA = IPV.ID_PEDIDO_VENDA
+                    INNER JOIN MW_APRESENTACAO A ON IPV.ID_APRESENTACAO = A.ID_APRESENTACAO
+                    INNER JOIN MW_EVENTO E ON E.ID_EVENTO=A.ID_EVENTO
                     INNER JOIN MW_CLIENTE C ON C.ID_CLIENTE = PV.ID_CLIENTE
-                    WHERE (PV.ID_PEDIDO_VENDA = ? OR ? = '')
+                    WHERE e.id_base=?
+                    AND (PV.ID_PEDIDO_VENDA = ? OR ? = '')
                     AND (C.CD_CPF = ? OR ? = '')
                     AND (C.DS_NOME LIKE '%' + ? + '%' OR C.DS_SOBRENOME LIKE '%' + ? + '%')
                     GROUP BY
@@ -41,7 +44,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 310, true)) {
                         PV.IN_SITUACAO
                     ORDER BY 1 DESC";
 
-            $params = array($_GET["pedido"], $_GET["pedido"],
+            $params = array($_GET["id_base"], $_GET["pedido"], $_GET["pedido"],
                             $_GET["cpf"], $_GET["cpf"],
                             utf8_decode($_GET["nome"]), utf8_decode($_GET["nome"]));
             
@@ -54,12 +57,19 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 310, true)) {
                 var pagina = '<?php echo basename($pagina, ".php"); ?>';
 
                 $('.button').button().click(function(){
-                   document.location.href = "?p=" + pagina + "&pedido=" + $("#pedido").val() + "&cpf=" + $('#cpf').val() + "&nome=" + $('#nome').val();
+                    if ($("#cboLocal").val() == "") {
+                        $.dialog({title: 'Alerta...', text: 'Selecione o local'});
+                        return;
+                    }
+                   document.location.href = "?p=" + pagina + "&pedido=" + $("#pedido").val() + "&cpf=" + $('#cpf').val() + "&nome=" + $('#nome').val() + "&id_base="+$("#cboLocal").val();
                 });
             });
         </script>
         <h2>Reimpressão de Pedido</h2>
         <form id="dados" name="dados" action="?p=consultaLog" method="POST" style="text-align: left;">
+            <label>local
+                <?php echo comboTeatroPorUsuario2('cboLocal', $_SESSION["admin"], $_GET["id_base"],""); ?>
+            </label>
             <label>Pedido nº:
                 <input type="text" id="pedido" name="pedido" value="<?php echo $_GET["pedido"]; ?>" />
             </label>
@@ -89,6 +99,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 310, true)) {
         while ($dados = fetchResult($result)) {
 ?>
             <tr>
+
                 <td><?php echo $dados["ID_PEDIDO_VENDA"]; ?></td>
                 <td><?php echo $dados["DT_PEDIDO_VENDA"]->format("d/m/Y"); ?></td>
                 <td><?php echo $dados["CD_CPF"]; ?></td>
