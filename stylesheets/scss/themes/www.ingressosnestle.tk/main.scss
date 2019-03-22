@@ -20,5 +20,12 @@
 		//	height: 35px !important;
 		//	margin-top: -8px;
 	}
+	.header__logo .logo-header {
+		height: 55px;
+		width: 400px;
+		background-position: left center;
+		margin-top: -12px;
+		background-size: 55%;
+	}
 	$gradiente: $primary;
 }
