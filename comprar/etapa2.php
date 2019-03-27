@@ -64,6 +64,10 @@ require('verificarServicosPedido.php');
 	<?php
 	$mainConnection = mainConnection();
 	
+	$query = 'EXEC dbo.pr_clear_morethanone_presentation ?';
+	$params = array(session_id());
+	$result = executeSQL($mainConnection, $query, $params);
+	
 	$query = 'WITH PARTICIPACOES_NA_RESERVA AS (
 					SELECT DISTINCT ASS.ID_ASSINATURA, PC.CODTIPPROMOCAO
 					FROM MW_RESERVA R
