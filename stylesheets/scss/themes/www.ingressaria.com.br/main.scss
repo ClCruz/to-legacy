@@ -21,4 +21,10 @@
 		//	margin-top: -8px;
 	}
 	$gradiente: $primary;
+	.header__logo .logo-header {
+		height: 30px !important;
+		width: 50% !important;
+		background-position: left center;
+		margin-top: 0px !important;
+	}
 }

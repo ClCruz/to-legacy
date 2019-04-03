@@ -28,4 +28,12 @@
 		background-size: 55%;
 	}
 	$gradiente: $primary;
+
+	.header__logo .logo-header {
+		height: 30px;
+		width: 50%;
+		background-position: left center;
+		margin-top: 0px;
+		background-size: contain !important;
+	}
 }
