@@ -13,67 +13,67 @@
     }
   },
   "formto": {
-    "email":"atendimento@https://www.ingressoparatodos.com.br/",
+    "email":"atendimento@ingressoparatodos.com.br",
     "from": "formto",
     "pass":""
   },
   "noreply": {
-    "email":"noreply@https://www.ingressoparatodos.com.br/",
+    "email":"noreply@ingressoparatodos.com.br",
     "from": "noreply",
     "pass":""
   },
   "register": {
-    "email":"cadastro@https://www.ingressoparatodos.com.br/",
+    "email":"cadastro@ingressoparatodos.com.br",
     "from": "cadastro",
     "pass":""
   },
   "shopping": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "pedido",
     "pass":""
   },
   "lembrete": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "pedido",
     "pass":""
   },
   "marketing": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "pedido",
     "pass":""
   },
   "info": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "pedido",
     "pass":""
   },
   "sac": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "noreply",
     "pass":""
   },
   "pedido": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "pedido",
     "pass":""
   },
   "assinantea@siscompre": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressospedidos@hotmail": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@siscompre": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@gmail": {
-    "email":"pedido@https://www.ingressoparatodos.com.br/",
+    "email":"pedido@ingressoparatodos.com.br",
     "from": "pedido",
     "pass":""
   }

@@ -1,0 +1,31 @@
+@import "settings.scss";
+@import "../../main.scss";
+@import "override.scss";
+@import "../../ticketHub/main.scss";
+
+@if $tickethub == true {
+	@include froala;
+	@include header;
+	@include content;
+	@include footer;
+
+	.container__header {
+		background-color: $secundary !important;
+	}
+
+	.container__header {
+		height: 80px !important;
+	}
+	.header__logo .logo-header {
+		//	height: 35px !important;
+		//	margin-top: -8px;
+	}
+	.header__logo .logo-header {
+		height: 40px;
+		width: 400px;
+		background-position: left center;
+		margin-top: -10px;
+		background-size: 55%;
+	}
+	$gradiente: $primary;
+}
