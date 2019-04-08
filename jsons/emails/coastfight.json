@@ -13,67 +13,67 @@
     }
   },
   "formto": {
-    "email":"atendimento@coastfight.com.br",
+    "email":"atendimento@ingressos.coastfight.com.br",
     "from": "formto",
     "pass":""
   },
   "noreply": {
-    "email":"noreply@coastfight.com.br",
+    "email":"noreply@ingressos.coastfight.com.br",
     "from": "noreply",
     "pass":""
   },
   "register": {
-    "email":"cadastro@coastfight.com.br",
+    "email":"cadastro@ingressos.coastfight.com.br",
     "from": "cadastro",
     "pass":""
   },
   "shopping": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "pedido",
     "pass":""
   },
   "lembrete": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "pedido",
     "pass":""
   },
   "marketing": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "pedido",
     "pass":""
   },
   "info": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "pedido",
     "pass":""
   },
   "sac": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "noreply",
     "pass":""
   },
   "pedido": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "pedido",
     "pass":""
   },
   "assinantea@siscompre": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressospedidos@hotmail": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@siscompre": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@gmail": {
-    "email":"pedido@coastfight.com.br",
+    "email":"pedido@ingressos.coastfight.com.br",
     "from": "pedido",
     "pass":""
   }
