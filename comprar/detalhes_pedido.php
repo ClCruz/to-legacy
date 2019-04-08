@@ -108,6 +108,10 @@ $result = executeSQL($mainConnection, $query, $params);
 $eventoAtual = NULL;
 $qtdIngressosTotal = 0;
 
+$hora = explode('h', $rs['HR_APRESENTACAO']);
+$data = explode('/', $rs['DT_APRESENTACAO']);
+$tempo = mktime($hora[0], $hora[1], 0, $data[1], $data[0], $data[2]);
+
 while ($rs = fetchResult($result)) {
 	
 	if ($eventoAtual != $rs['ID_EVENTO'] . $rs['ID_APRESENTACAO']) {
@@ -123,10 +127,19 @@ while ($rs = fetchResult($result)) {
 
 
 <div class="resumo resumo_mobile" style=" margin-top: 30px">
-	<p class="nome" style="margin-bottom: 10px; font-size: 16px !important"> <?php echo utf8_encode2($rs['DS_EVENTO']); ?></p>
-	<p class="nome" style="text-transform: uppercase"><?php echo utf8_encode2(strftime("%a", $tempo)); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo strftime("%b", $tempo); ?> - <?php echo $rs['HR_APRESENTACAO']; ?></p>
-	<p class="endereco<?php echo $is_pacote ? ' hidden' : ''; ?>"><?php echo utf8_encode2($evento_info['nome_teatro']); ?> <?php echo utf8_encode2($evento_info['endereco'] . ' - ' . $evento_info['cidade'] . ', ' . $evento_info['sigla_estado']); ?></p>
-	<p class="horario<?php echo $is_pacote ? ' hidden' : ''; ?>"></p>
+		<?php echo utf8_encode2($rs['DS_EVENTO']); ?>
+				</p>
+				<p class="endereco" style="text-transform: capitalize">
+              <img class="endereco__icon" src="../images/icons/calendar.svg" style="height: 14px">
+                <?php echo getDateToString($tempo,"week-small"); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo getDateToString($tempo,"month-small"); ?> - <?php echo $rs['HR_APRESENTACAO']; ?> 
+                <br /> 
+                <span style="margin-top: 10px"></span>
+              <img class="endereco__icon" src="../images/icons/map-pin-white.svg" alt="" style="height: 14px">
+                <?php echo utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ') . utf8_encode2($evento_info['sigla_estado']); ?>
+                <br />
+        </p>
+
+
 </div>
 	<table id="pedido_resumo"  style="margin-top: 30px">
 		<thead>
