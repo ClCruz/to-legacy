@@ -10,15 +10,13 @@
 	@include footer;
 
 	.container__header {
-		background-color: rgb(40, 40, 40) !important;
+		background: linear-gradient(to top, #f15f79, #b24592) !important;
 	}
 
-	.container__header {
-	//	height: 60px !important;
+	.header__logo .img {
+		height: 35px;
+		width: 50%;
+		background-position: left center;
+		margin-top: 0px;
 	}
-	.header__logo .logo-header {
-	//	height: 35px !important;
-	//	margin-top: -8px;
-	}
-	$gradiente: $primary;
 }
