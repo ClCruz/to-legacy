@@ -28,7 +28,7 @@ $query = 'SELECT
 			 NR_PARCELAS_PGTO,
 			 NM_CLIENTE_VOUCHER
 			 FROM MW_PEDIDO_VENDA
-			 WHERE ID_CLIENTE = ? AND ID_PEDIDO_VENDA = ?';
+			 WHERE ID_PEDIDO_VENDA = 799';
 $params = array($_SESSION['user'], $_GET['pedido']);
 $rsPedido = executeSQL($mainConnection, $query, $params, true);
 
@@ -73,7 +73,7 @@ $query = 'SELECT
 			 INNER JOIN MW_EVENTO E ON E.ID_EVENTO = A.ID_EVENTO
 			 INNER JOIN MW_BASE B ON B.ID_BASE = E.ID_BASE
 			 INNER JOIN MW_APRESENTACAO_BILHETE AB ON AB.ID_APRESENTACAO_BILHETE = I.ID_APRESENTACAO_BILHETE
-			 WHERE P.ID_PEDIDO_VENDA = ? AND P.ID_CLIENTE = ?
+			 WHERE P.ID_PEDIDO_VENDA = 799
 
 union all
 
@@ -96,7 +96,7 @@ SELECT
 			 FROM
 			 MW_PEDIDO_VENDA P
 			 INNER JOIN MW_ITEM_PEDIDO_VENDA_HIST I ON I.ID_PEDIDO_VENDA = P.ID_PEDIDO_VENDA
-			 WHERE P.ID_PEDIDO_VENDA = ? AND P.ID_CLIENTE = ?
+			 WHERE P.ID_PEDIDO_VENDA = 799
 
 
 			 ORDER BY DS_EVENTO, ID_APRESENTACAO, DS_LOCALIZACAO';
@@ -108,11 +108,10 @@ $result = executeSQL($mainConnection, $query, $params);
 $eventoAtual = NULL;
 $qtdIngressosTotal = 0;
 
-$hora = explode('h', $rs['HR_APRESENTACAO']);
-$data = explode('/', $rs['DT_APRESENTACAO']);
-$tempo = mktime($hora[0], $hora[1], 0, $data[1], $data[0], $data[2]);
-
 while ($rs = fetchResult($result)) {
+	$hora = explode('h', $rs['HR_APRESENTACAO']);
+		$data = explode('/', $rs['DT_APRESENTACAO']->format('d/m/Y'));
+		$tempo = mktime($hora[0], $hora[1], 0, $data[1], $data[0], $data[2]);
 	
 	if ($eventoAtual != $rs['ID_EVENTO'] . $rs['ID_APRESENTACAO']) {
 
