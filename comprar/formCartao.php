@@ -65,9 +65,15 @@ if ($_POST) {
         }
 
 
-        $query = "SELECT cd_meio_pagamento, ds_meio_pagamento, nm_cartao_exibicao_site 
-                  FROM mw_meio_pagamento 
-                  WHERE in_ativo = 1 ". $queryAux ."
+        $query = "SELECT DISTINCT mp.cd_meio_pagamento, mp.ds_meio_pagamento, mp.nm_cartao_exibicao_site 
+                  FROM mw_meio_pagamento mp
+                  INNER JOIN MW_MEIO_PAGAMENTO_FORMA_PAGAMENTO mpfp ON mp.id_meio_pagamento=mpfp.id_meio_pagamento
+                  INNER JOIN mw_base b ON mpfp.id_base=b.id_base
+                  INNER JOIN mw_evento e ON b.id_base=e.id_base
+                  INNER JOIN mw_apresentacao ap ON e.id_evento=ap.id_evento
+                  INNER JOIN mw_reserva r ON r.id_apresentacao=ap.id_apresentacao
+                  WHERE mp.in_ativo = 1 ". $queryAux ."
+                  AND r.id_session = ?
                   AND id_gateway NOT IN (SELECT id_gateway FROM mw_gateway WHERE in_exibe_usuario = 1 AND id_gateway != ?)
                   AND (qt_hr_anteced <= $horas_antes_apresentacao or qt_hr_anteced is null) ".
                       // se for ambiente de testes nao limitar a exibicao dos meios
@@ -80,7 +86,7 @@ if ($_POST) {
                             ) or nm_cartao_exibicao_site not like '%pagseguro%')"
                       ).
                       "
-                      AND id_meio_pagamento not in (
+                      AND mp.id_meio_pagamento not in (
                         select id_meio_pagamento
                         from mw_reserva r
                         INNER JOIN mw_apresentacao a ON a.id_apresentacao = r.ID_APRESENTACAO
@@ -91,7 +97,7 @@ if ($_POST) {
                       )
                       order by ds_meio_pagamento";
 
-        $params = array($rs['ID_GATEWAY'], session_id());
+        $params = array(session_id(), $rs['ID_GATEWAY'], session_id());
 
         if (!$_ENV['IS_TEST']) {
             $params[] = session_id();
