@@ -13,67 +13,67 @@
     }
   },
   "formto": {
-    "email":"atendimento@reservagruposdemo.tk",
+    "email":"atendimento@reservagrupos.tixs.me",
     "from": "formto",
     "pass":""
   },
   "noreply": {
-    "email":"noreply@reservagruposdemo.tk",
+    "email":"noreply@reservagrupos.tixs.me",
     "from": "noreply",
     "pass":""
   },
   "register": {
-    "email":"cadastro@reservagruposdemo.tk",
+    "email":"cadastro@reservagrupos.tixs.me",
     "from": "cadastro",
     "pass":""
   },
   "shopping": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "pedido",
     "pass":""
   },
   "lembrete": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "pedido",
     "pass":""
   },
   "marketing": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "pedido",
     "pass":""
   },
   "info": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "pedido",
     "pass":""
   },
   "sac": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "noreply",
     "pass":""
   },
   "pedido": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "pedido",
     "pass":""
   },
   "assinantea@siscompre": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "pedido",
     "pass":""
   },
   "compreingressospedidos@hotmail": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@siscompre": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@gmail": {
-    "email":"pedido@reservagruposdemo.tk",
+    "email":"pedido@reservagrupos.tixs.me",
     "from": "pedido",
     "pass":""
   }
