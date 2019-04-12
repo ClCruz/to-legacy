@@ -88,7 +88,9 @@ $(function(){
 
     	if (valido) {
     		// parar contagem regressiva
-    		CountStepper = 0;
+				CountStepper = 0;
+				
+				$(".botao_pagamento").hide();
 
     		$('#dadosPagamento').addClass('dirty');
 
@@ -114,12 +116,14 @@ $(function(){
 						$.dialog({text: "Compra efetuada com sucesso!"});	
 						if (objAux.printisafter == true || objAux.printisafter == "true" || objAux.printisafter == 1 || objAux.printisafter == "1") {
 							document.location = "pagamento_ok.php?pedido="+objAux.id_pedido_venda;
+							
 						}
 						else {
 							document.location = "pagamento_pagarme.php?pedido="+objAux.id_pedido_venda;
 						}
 					}
 					else {
+						$(".botao_pagamento").show();
 						fecharOverlay();
 						$.dialog({text: objAux.msg});	
 					}
