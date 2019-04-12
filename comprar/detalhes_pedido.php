@@ -55,7 +55,7 @@ $query = 'SELECT
 			 I.ID_APRESENTACAO,
 			 E.DS_EVENTO,
 			 B.DS_NOME_TEATRO,
-			 A.DT_APRESENTACAO,
+			 CONVERT(VARCHAR(10),A.DT_APRESENTACAO,103) DT_APRESENTACAO,
 			 A.HR_APRESENTACAO,
 			 I.DS_LOCALIZACAO,
 			 I.DS_SETOR,
@@ -82,7 +82,7 @@ SELECT
 			 I.ID_APRESENTACAO,
 			 I.DS_NOME_EVENTO AS DS_EVENTO,
 			 I.DS_NOME_LOCAL AS DS_NOME_TEATRO,
-			 I.DT_APRESENTACAO,
+			 CONVERT(VARCHAR(10),I.DT_APRESENTACAO,103) DT_APRESENTACAO,
 			 I.HR_APRESENTACAO,
 			 I.DS_LOCALIZACAO,
 			 I.DS_SETOR,
@@ -112,6 +112,7 @@ $qtdIngressosTotal = 0;
 while ($rs = fetchResult($result)) {
 	$hora = explode('h', $rs['HR_APRESENTACAO']);
 	$data = explode('/', $rs['DT_APRESENTACAO']);
+	//die(json_encode($rs['DT_APRESENTACAO']));
 	$tempo = mktime($hora[0], $hora[1], 0, $data[1], $data[0], $data[2]);
 	
 	if ($eventoAtual != $rs['ID_EVENTO'] . $rs['ID_APRESENTACAO']) {
