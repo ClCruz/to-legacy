@@ -10,15 +10,26 @@
 	@include footer;
 
 	.container__header {
-		background-color: rgb(40, 40, 40) !important;
+		background: #3e4293 !important;
+	}
+
+	.header__signin {
+		color: #2d313c;
+	}
+
+	.header__logo .img {
+		height: 35px;
+		width: 50%;
+		background-position: left center;
+		margin-top: 0px;
 	}
 
 	.container__header {
-	//	height: 60px !important;
+		//	height: 60px !important;
 	}
 	.header__logo .logo-header {
-	//	height: 35px !important;
-	//	margin-top: -8px;
+		//	height: 35px !important;
+		//	margin-top: -8px;
 	}
 	$gradiente: $primary;
 }
