@@ -13,7 +13,7 @@
     }
   },
   "formto": {
-    "email":"atendimento@ingressoparatodos.com.br",
+    "email":"diretor@escolarecriarte.com.br",
     "from": "formto",
     "pass":""
   },
@@ -48,7 +48,7 @@
     "pass":""
   },
   "sac": {
-    "email":"pedido@ingressoparatodos.com.br",
+    "email":"diretor@escolarecriarte.com.br",
     "from": "noreply",
     "pass":""
   },
