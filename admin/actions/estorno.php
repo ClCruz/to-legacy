@@ -300,7 +300,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
                 $ok = $response->success == true || $response->success == "true" || $response->success == 1 || $response->success == "1" || ($response->msg == "Transação já estornada");
                 //$ok = true;
 
-                die($ok);
+                //die($ok);
 
                 if ($ok) {
                     $resposta_geral = "Pedido cancelado/estornado.";
