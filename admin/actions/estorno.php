@@ -292,10 +292,15 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 250, true)) {
                         )
                     );
                 }
-
                 $response = callapi_refund($pedido['ID_PEDIDO_VENDA']); //estonarPedidoPagarme($pedido['ID_PEDIDO_VENDA'], $bank_data);
 
-                $ok = $response["success"] == true || $response["success"] == "true" || $response["success"] == 1 || $response["success"] == "1";
+
+                //die("oi".json_encode($response));
+
+                $ok = $response->success == true || $response->success == "true" || $response->success == 1 || $response->success == "1" || ($response->msg == "Transação já estornada");
+                //$ok = true;
+
+                die($ok);
 
                 if ($ok) {
                     $resposta_geral = "Pedido cancelado/estornado.";
