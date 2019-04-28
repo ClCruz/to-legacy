@@ -60,7 +60,7 @@ if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
     //verifica se o evento é numerado e se pode ser vendido pelo site
     $query = 'SELECT
              INGRESSONUMERADO,
-             DATEDIFF(HH, DATEADD(HH, (ISNULL(P.QT_HR_ANTECED, 24) * -1), CONVERT(DATETIME, CONVERT(VARCHAR, A.DATAPRESENTACAO, 112) + \' \' + LEFT(HORSESSAO,2) + \':\' + RIGHT(HORSESSAO,2) + \':00\')) ,GETDATE() ) AS TELEFONE,
+             DATEDIFF(HH, DATEADD(MINUTE, (100), CONVERT(DATETIME, CONVERT(VARCHAR, A.DATAPRESENTACAO, 112) + \' \' + LEFT(HORSESSAO,2) + \':\' + RIGHT(HORSESSAO,2) + \':00\')) ,GETDATE() ) AS TELEFONE,
              S.TAMANHOLUGAR,
              CASE WHEN S.FOTOIMAGEMSITE IS NOT NULL THEN 1 ELSE 0 END AS TEM_MAPA
              FROM
