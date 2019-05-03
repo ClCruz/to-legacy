@@ -1,14 +1,14 @@
 {
   "env": "production",
-  "host": "teatroumc.tk",
-  "uri": "https://www.teatroumc.tk",
-  "api": "https://api.teatroumc.tk",
+  "host": "teatroumc.com.br",
+  "uri": "https://ingressos.teatroumc.com.br",
+  "api": "https://api.teatroumc.com.br",
   "pinpad": "http://localhost:7001/api",
-  "legacy": "https://compra.teatroumc.tk",
+  "legacy": "https://compra.teatroumc.com.br",
   "apikey": "live_6f709463b3b84943a7c0b379067c6e108fa8df6ff0b44551aff7e71e65a32be0",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "scss": "./src/scss/themes/www.teatroumc.tk/main.scss",
+  "scss": "./src/scss/themes/ingressos.teatroumc.com.br/main.scss",
   "css": "/stylesheets/themes/www.teatroumc.com.br/main.css",
   "logo": "https://media.tixs.me/logos/teatroumc.png",
   "favico": "/img/teatroumc/",
@@ -22,9 +22,9 @@
     "public": ""
   },
   "info": {
-    "title": "teatroumc.tk | Venda de Ingressos",
+    "title": "teatroumc.com.br | Venda de Ingressos",
     "description": "Venda de Ingressos",
-    "siteName": "teatroumc.tk",
+    "siteName": "teatroumc.com.br",
     "CNPJ": "",
     "companyName": "",
     "isNewTemplate": false
