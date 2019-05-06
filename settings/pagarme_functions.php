@@ -555,29 +555,42 @@ function listPayables($recipient_id, $status, $evento, $count, $page) {
 	// $firstDate->modify('-50 days');
 	// $lastDate->modify('+50 days');
 
+
 	$start_date_modified = $firstDate->format('Y-m-d');
 	$end_date_modified = $lastDate->format('Y-m-d');
 
 	log_trace("firstDate" .$start_date_modified);
 	log_trace("lastDate" .$end_date_modified);
 
-	$query = "SELECT DISTINCT e.id_evento, e.ds_evento, pv.cd_numero_autorizacao as codeTran
+	$query = "SELECT DISTINCT e.id_evento, e.ds_evento, pv.cd_numero_transacao as codeTran
 	FROM mw_pedido_venda pv 
 	INNER JOIN mw_item_pedido_venda ipv ON pv.id_pedido_venda=ipv.id_pedido_venda
 	INNER JOIN mw_apresentacao ipva ON ipv.id_apresentacao=ipva.id_apresentacao
 	INNER JOIN mw_evento e ON ipva.id_evento=e.id_evento
 	INNER JOIN mw_regra_split rs ON rs.id_evento=e.id_evento
 	INNER JOIN mw_recebedor re ON rs.id_recebedor=re.id_recebedor
-	WHERE pv.id_pedido_ipagare in ('Pagar.me','pagarme') AND re.recipient_id=? AND dt_pedido_venda BETWEEN ? AND ?
+	WHERE pv.id_pedido_ipagare in ('Pagar.me','pagarme') AND re.recipient_id=? AND dt_pedido_venda BETWEEN ? AND ? AND pv.in_situacao='F'
 	UNION ALL
-	SELECT DISTINCT e.id_evento, e.ds_evento, pvg.TransacaoGateway as codeTran
-	FROM mw_pedido_venda_gateway pvg
-	INNER JOIN mw_evento e ON pvg.CodPeca=e.CodPeca AND pvg.id_base=e.id_base
-	INNER JOIN mw_regra_split rs ON rs.id_evento=e.id_evento
-	INNER JOIN mw_recebedor re ON rs.id_recebedor=re.id_recebedor
-	WHERE re.recipient_id=? AND pvg.Created BETWEEN ? AND ?";
+	SELECT e.id_evento, e.ds_evento, togr.transactionKey as codeTran
+	FROM CI_MIDDLEWAY..ticketoffice_gateway_result togr
+	INNER JOIN CI_MIDDLEWAY..ticketoffice_shoppingcart_hist tosch ON togr.id_ticketoffice_shoppingcart=tosch.id
+	INNER JOIN CI_MIDDLEWAY..mw_apresentacao ap ON tosch.id_apresentacao=ap.id_apresentacao
+	INNER JOIN CI_MIDDLEWAY..mw_evento e ON ap.id_evento=e.id_evento
+	INNER JOIN CI_MIDDLEWAY..mw_regra_split rs ON e.id_evento=rs.id_evento AND rs.in_ativo=1
+	INNER JOIN CI_MIDDLEWAY..mw_recebedor re ON rs.id_recebedor=re.id_recebedor
+	WHERE re.recipient_id=? AND togr.created BETWEEN ? AND ?
+	UNION ALL
+    SELECT e.id_evento, e.ds_evento, togr.pinpad_transactionId as codeTran
+    FROM CI_MIDDLEWAY..ticketoffice_pinpad togr
+    INNER JOIN CI_MIDDLEWAY..ticketoffice_shoppingcart_hist tosch ON togr.id_ticketoffice_user=tosch.id_ticketoffice_user
+    INNER JOIN CI_MIDDLEWAY..mw_apresentacao ap ON tosch.id_apresentacao=ap.id_apresentacao
+    INNER JOIN CI_MIDDLEWAY..mw_evento e ON ap.id_evento=e.id_evento
+    INNER JOIN CI_MIDDLEWAY..mw_regra_split rs ON e.id_evento=rs.id_evento AND rs.in_ativo=1
+    INNER JOIN CI_MIDDLEWAY..mw_recebedor re ON rs.id_recebedor=re.id_recebedor
+    WHERE re.recipient_id=? AND togr.created BETWEEN ? AND ?
+	";
 
-	$param = array($recipient_id, $start_date_modified, $end_date_modified,$recipient_id, $start_date_modified, $end_date_modified);
+	$param = array($recipient_id, $start_date_modified, $end_date_modified,$recipient_id, $start_date_modified, $end_date_modified,$recipient_id, $start_date_modified, $end_date_modified);
 	$connection = mainConnection();
 	$resulttran = executeSQL($connection, $query, $param);
 	$aux = array();
@@ -590,12 +603,13 @@ function listPayables($recipient_id, $status, $evento, $count, $page) {
 		);
 	}
 
+	//die(json_encode($param));
+
 	$json = array();
 
 	foreach ($playables as $value) {
 		$id_evento = -1;
 		$ds_evento = "Bilheteria";
-
 		foreach ($aux as $value2) {
 			if ($value2["transaction"] == $value["transaction_id"]) {
 				$id_evento = $value2["id_evento"];
