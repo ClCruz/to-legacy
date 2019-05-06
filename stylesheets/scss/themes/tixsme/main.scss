@@ -10,47 +10,21 @@
 	@include footer;
 
 	.container__header {
-		background: linear-gradient(to right, #2c5364, #203a43, #0f2027) !important;
+		background: linear-gradient(135deg, #ff0099 10%, #04a6ec) !important;
 	}
 
 	.container__header {
-		// height: 60px !important;
-		@include box-shadow();
+		//	height: 60px !important;
 	}
 	.header__logo .logo-header {
-		// height: 35px !important;
-		// height: 35px !important;
+		//	height: 35px !important;
+		//	margin-top: -8px;
 	}
-
-	header.bg-dark {
-		// background-color: rgb(202, 8, 19) !important;
-		background: linear-gradient(to right, #2c5364, #203a43, #0f2027) !important;
-	}
-	.header__logo .img {
-		height: 55px;
-		width: 100%;
-	}
-
-	$gradiente: $secundary !important;
-
-	.swal2-progresscircle {
-		background: $secundary !important;
-	}
-
-	.swal2-styled {
-		font-size: 0.8rem;
-		padding-left: 20px;
-		padding-right: 20px;
-		margin-top: 5px;
-		background: $secundary !important;
-		border: none;
-		color: white;
-		transition: 0.5s;
-
-		&:hover {
-			-webkit-transform: translateY(-2px);
-			transform: translateY(-2px);
-			@include box-shadow();
-		}
+	$gradiente: $primary;
+	.header__logo .logo-header {
+		height: 20px !important;
+		width: 30% !important;
+		background-position: left center;
+		margin-top: 0px !important;
 	}
 }
