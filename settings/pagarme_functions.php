@@ -571,7 +571,7 @@ function listPayables($recipient_id, $status, $evento, $count, $page) {
 	INNER JOIN mw_recebedor re ON rs.id_recebedor=re.id_recebedor
 	WHERE pv.id_pedido_ipagare in ('Pagar.me','pagarme') AND re.recipient_id=? AND dt_pedido_venda BETWEEN ? AND ? AND pv.in_situacao='F'
 	UNION ALL
-	SELECT e.id_evento, e.ds_evento, togr.transactionKey as codeTran
+	SELECT DISTINCT e.id_evento, e.ds_evento, togr.transactionKey as codeTran
 	FROM CI_MIDDLEWAY..ticketoffice_gateway_result togr
 	INNER JOIN CI_MIDDLEWAY..ticketoffice_shoppingcart_hist tosch ON togr.id_ticketoffice_shoppingcart=tosch.id
 	INNER JOIN CI_MIDDLEWAY..mw_apresentacao ap ON tosch.id_apresentacao=ap.id_apresentacao
@@ -580,7 +580,7 @@ function listPayables($recipient_id, $status, $evento, $count, $page) {
 	INNER JOIN CI_MIDDLEWAY..mw_recebedor re ON rs.id_recebedor=re.id_recebedor
 	WHERE re.recipient_id=? AND togr.created BETWEEN ? AND ?
 	UNION ALL
-    SELECT e.id_evento, e.ds_evento, togr.pinpad_transactionId as codeTran
+    SELECT DISTINCT e.id_evento, e.ds_evento, togr.pinpad_transactionId as codeTran
     FROM CI_MIDDLEWAY..ticketoffice_pinpad togr
     INNER JOIN CI_MIDDLEWAY..ticketoffice_shoppingcart_hist tosch ON togr.id_ticketoffice_user=tosch.id_ticketoffice_user
     INNER JOIN CI_MIDDLEWAY..mw_apresentacao ap ON tosch.id_apresentacao=ap.id_apresentacao
@@ -607,9 +607,14 @@ function listPayables($recipient_id, $status, $evento, $count, $page) {
 
 	$json = array();
 
+	die(json_encode($playables));
 	foreach ($playables as $value) {
 		$id_evento = -1;
 		$ds_evento = "Bilheteria";
+
+		// if ($value["transaction_id"] == "89148746") {
+		// }
+
 		foreach ($aux as $value2) {
 			if ($value2["transaction"] == $value["transaction_id"]) {
 				$id_evento = $value2["id_evento"];
