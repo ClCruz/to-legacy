@@ -97,7 +97,7 @@
           if (isset($_SESSION["user"])) {
           		echo "Minha Conta";
           } else {
-          		echo "Entrar";
+          		// echo "Entrar";
           }
           ?>
         </a>
