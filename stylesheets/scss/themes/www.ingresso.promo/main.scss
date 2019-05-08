@@ -45,13 +45,18 @@
 	div.container_dados p.frase,
 	div.container_escolha_ingresso div.ingresso div.descricao,
 	div.descricao_pag div.descricao div.sessao p.tempo,
-	.container__imprima {
+	.container__imprima,
+	div.container_setor {
 		background: $bg-color;
 		color: $text-color;
 
 		* {
 			color: $text-color;
 		}
+	}
+
+	.endereco__icon {
+		display: none !important;
 	}
 
 	.sbHolder {
