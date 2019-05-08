@@ -21,4 +21,52 @@
 		// height: 35px !important;
 	}
 	$gradiente: $primary;
+
+	body {
+		background: #000 !important;
+	}
+
+	$bg-color: #222 !important;
+	$bg-input: #fff !important;
+	$text-color-input: #222 !important;
+	$text-color: #fff !important;
+
+	div.descricao_pag,
+	.container_pedido,
+	table,
+	tr,
+	th,
+	td,
+	table *,
+	table#pedido_resumo thead td,
+	table#pedido_resumo tbody td,
+	div.identificacao p.frase,
+	div.container_cartoes p.frase,
+	div.container_dados p.frase,
+	div.container_escolha_ingresso div.ingresso div.descricao,
+	div.descricao_pag div.descricao div.sessao p.tempo,
+	.container__imprima {
+		background: $bg-color;
+		color: $text-color;
+
+		* {
+			color: $text-color;
+		}
+	}
+
+	.sbHolder {
+		* {
+			color: #333 !important;
+		}
+	}
+
+	table#pedido_resumo tbody li *,
+	#pedido_resumo .sbHolder * {
+		background: $bg-input;
+		color: $text-color-input;
+
+		* {
+			color: $text-color-input;
+		}
+	}
 }
