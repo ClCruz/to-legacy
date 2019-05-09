@@ -126,7 +126,9 @@ while ($rs = fetchResult($result)) {
 						<div class="img_complemento">
 							<img src="">
 						</div>
-						<div class="ajuda">
+						<div class="ajuda" style="display: flex; text-align: center;
+    justify-content: center;
+    align-items: center;">
 							<span class="frase1 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">valide o benefício</span>
 							<span class="frase2 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">insira o número e clique validar</span>
 							<span class="frase3 <?php echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">benefício válido</span>
@@ -136,7 +138,7 @@ while ($rs = fetchResult($result)) {
 							<input type="text" name="bin[]" class="validador_itau form-control  <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" placeholder="<?php echo $beneficio_texto; ?>" maxlength="<?php echo $beneficio_size; ?>" value="<?php echo $rs['CD_BINITAU'].$rs['NR_BENEFICIO']; ?>" <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'readonly' : ''; ?>>
 							<input type="hidden" name="tipoBin[]" value="<?php echo $rs['CD_BINITAU'] ? 'itau' : 'promocao'; ?>" />
 							<a class="validarBin <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" href="#">validar</a>
-							<img class="<?php echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" src="">
+							<!-- <img class="<?php //echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" src=""> -->
 						</div>
 					</div>
 				</td>
