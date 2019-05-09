@@ -6,8 +6,8 @@ session_start();
 
 
 if ($_POST) {
-    sale_trace($_SESSION['user'],NULL,NULL,NULL,NULL,NULL,session_id(),'formCartao.php','Chamando bin','',0);
-    require('validarBin.php');
+    //sale_trace($_SESSION['user'],NULL,NULL,NULL,NULL,NULL,session_id(),'formCartao.php','Chamando bin','',0);
+    //require('validarBin.php');
     sale_trace($_SESSION['user'],NULL,NULL,NULL,NULL,NULL,session_id(),'formCartao.php','Chamando Validar Lote','',0);
     require('validarLote.php');
     sale_trace($_SESSION['user'],NULL,NULL,NULL,NULL,NULL,session_id(),'formCartao.php','Chamando Validar Assinatura','',0);
@@ -20,7 +20,7 @@ if ($_POST) {
 
     // se o pedido tiver valor zero ele pode continuar se tiver um ingresso promocional
     // essa variavel nao representao o valor final, este sera recalculado no servidor
-    if ($_COOKIE['total_exibicao'] == 0) {
+    if ($_COOKIE['total_exibicao'] == -90) {
         // meio de pagamento fixado como 885 (cd_meio_pagamento / pdv cc)
         // e variavel usuario_pdv = 1 para o javascript nao validar dads do cartao
         ?>
@@ -118,7 +118,6 @@ if ($_POST) {
         $query = 'select qt_parcelas from tabpeca where codpeca = ?';
         $rsParcelas = executeSQL($conn, $query, array($rsParcelas['codpeca']), true);
         $parcelas = $rsParcelas['qt_parcelas'];
-
         
     ?>
 
@@ -166,7 +165,8 @@ if ($_POST) {
                 }
                 while ($rs = fetchResult($result)) {
                     // nao exibir fastcash e pagseguro se tiver promo bin na reserva
-                    if ($bin != '' and in_array($rs['cd_meio_pagamento'], array('892', '893', '900', '901', '902'))) continue;
+                    
+                    if ($bin != '' and in_array($rs['cd_meio_pagamento'], array('892', '893', '900', '901', '902', '911'))) continue;
 
                     // paypal
                     if (in_array($rs['cd_meio_pagamento'], array('101'))) {
