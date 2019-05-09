@@ -124,6 +124,7 @@ $(function(){
 					}
 					else {
 						$(".botao_pagamento").show();
+						CountStepper = -1;
 						fecharOverlay();
 						$.dialog({text: objAux.msg});	
 					}
