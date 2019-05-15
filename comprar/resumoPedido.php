@@ -51,14 +51,27 @@ while ($rs = fetchResult($result)) {
 				<p class="endereco title__resumo" style="">
 						<?php echo utf8_encode2($rs['DS_EVENTO']); ?>
 				</p>
-				<p class="endereco" style="text-transform: capitalize">
+				<p class="endereco">
+							<span style="text-transform: capitalize">
               <img class="endereco__icon" src="../images/icons/calendar.svg" alt="">
                 <?php echo getDateToString($tempo,"week-small"); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo getDateToString($tempo,"month-small"); ?> - <?php echo $rs['HR_APRESENTACAO']; ?> 
-                <br /> 
+								<br /> 
+							</span>
+							<span style="text-transform: capitalize">
                 <span style="margin-top: 10px"></span>
               <img class="endereco__icon" src="../images/icons/map-pin-white.svg" alt="">
                 <?php echo utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ') . utf8_encode2($evento_info['sigla_estado']); ?>
-                <br />
+								<br />
+							</span>
+							<span>
+                <?php if ($evento_info["show_partner_info"] == 1) {
+                      ?>
+                      <img class="endereco__icon" src="../images/icons/handshake-regular.svg" alt="">
+                      <?php echo "Vendido e entregue por ".utf8_encode2($evento_info['name_site']); ?>
+                      <br />
+                      <?php
+                    }?>
+              </span>
         </p>
 			</div>
 			<button type="button" class="btn btn-primary botao btn__help" data-toggle="modal" data-target="#sideModalTR"></button>
@@ -214,8 +227,6 @@ function finalizar($qtdIngressos, $totalIngressos, $formaEntrega, $valorEntrega,
 	?>
 	<span id="servico_pedido" class="hidden">0</span>
 	<p class="pedido_total"><b><span class="totalIngressosApresentacao"><?php echo $qtdIngressos; ?></span> selecionado(s)</b> <span class="total">total:</span><span class="cifrao">R$</span><span class="valor" id="totalIngressos"><?php echo number_format($totalIngressos, 2, ',', ''); ?></span></p>
-</div>
-</div>
 </div>
 <?php
 }

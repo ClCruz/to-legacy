@@ -20,6 +20,12 @@ else
 	$compraExpireTime = 15;//minutos
 }
 
+if ($_SERVER["HTTP_HOST"] == "localhost:2004") {
+	$cookieExpireTime = time() + 60 * 180;
+	$compraExpireTime = 180;
+	
+}
+
 $uploadPath = '../images/uploads/';
 
 $isContagemAcessos = true;
