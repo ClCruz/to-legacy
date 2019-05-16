@@ -180,7 +180,7 @@ foreach ($itensPedido as $item) {
 
 $valores['itens_destacaveis'] = $valores['itens_pedido'];
 
-$rs_show_partner_info["show_partner_info"] = 0;
+//$rs_show_partner_info["show_partner_info"] = 0;
 
 $forcedbase = $rs_show_partner_info["ds_nome_base_sql"];
 $forcedbase = "simoesinvestimentos";
