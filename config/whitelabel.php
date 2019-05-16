@@ -77,6 +77,19 @@
 
         return $ret;
     }
+    function getwhitelabelobj_forced($whitelabel) {
+        $ret = array();
+        //$whitelabel = gethost();
+        $jsonFile = $_SERVER['DOCUMENT_ROOT']."/jsons/".$whitelabel.".json";
+        //die("jsonFile: $jsonFile");
+        if (!file_exists($jsonFile)) {
+            die("Falha de configuração no JSON.");
+        }
+
+        $ret = json_decode(file_get_contents($jsonFile), true);
+
+        return $ret;
+    }
     function getwhitelabeldb() {
         $ret = array();
         $whitelabel = gethost();

@@ -2307,6 +2307,7 @@ function callapi_refund($id_pedido_venda) {
 function getQRCodeFromAPI($id_base, $codVenda, $indice) {
     $uri = getconf()["api_internal_uri"]."/v1/print/qrcode";
     $fulluri = $uri."?id_base=".$id_base."&codVenda=".$codVenda."&indice=".$indice;
+    //die($fulluri);
     //return "".$fulluri;
     $ch = curl_init(); 
     curl_setopt($ch, CURLOPT_URL, $fulluri); 

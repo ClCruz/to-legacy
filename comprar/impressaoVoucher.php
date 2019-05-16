@@ -17,6 +17,12 @@ $result = executeSQL($mainConnection, $query, $params);
 $is_assinatura = hasRows($result);
 
 
+$query = "EXEC pr_show_partner_info_bypedido ?, ?";
+$params = array(getwhitelabelobj()["apikey"],$parametros['OrderData']['OrderId']);
+//     die(json_encode($params));
+$rs_show_partner_info = executeSQL($mainConnection, $query, $params, true);
+//die(json_encode($rs_show_partner_info));
+
 // checa se é um cliente estrangeiro
 $query = "SELECT CD_RG, ID_DOC_ESTRANGEIRO FROM MW_CLIENTE WHERE ID_CLIENTE = ?";
 $rsEstrangeiro = executeSQL($mainConnection, $query, array($parametros['CustomerData']['CustomerIdentity']), true);
@@ -139,7 +145,9 @@ foreach ($itensPedido as $item) {
 
         $code = $rsCodigo['codbar'];
 
+        
         $qrcode = getQRCodeFromAPI($item['descricao_item']['id_base'], $item['descricao_item']['codvenda'], $item['descricao_item']['indice']);
+        //die("impressaoVoucher");
 
         //die("qrCode: ".$qrcode);
         
@@ -172,7 +180,23 @@ foreach ($itensPedido as $item) {
 
 $valores['itens_destacaveis'] = $valores['itens_pedido'];
 
-$caminhoHtml = $is_gift ? getwhitelabeltemplate("print:gift") : getwhitelabeltemplate("print:voucher");
+$rs_show_partner_info["show_partner_info"] = 0;
+
+$forcedbase = $rs_show_partner_info["ds_nome_base_sql"];
+$forcedbase = "simoesinvestimentos";
+//die(json_encode($is_gift));
+
+$objwlforced = getwhitelabelobj_forced($rs_show_partner_info["show_partner_info"] == 1 ? $forcedbase: gethost());
+
+$caminhoHtml = $is_gift == 1 ? $objwlforced["templates"]["print"]["gift"] : $objwlforced["templates"]["print"]["voucher"];
+//die(json_encode($objwlforced));
+
+
+$valores['partner_desc'] = "";
+if ($rs_show_partner_info["show_partner_info"] == 1) {
+    $valores['partner_desc'] = "Compra realizada em: ".getwhitelabelobj()["uri"];
+
+}
 
 $tpl_file = $caminhoHtml;
 
