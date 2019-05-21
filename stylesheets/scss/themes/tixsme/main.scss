@@ -25,6 +25,14 @@
 	body {
 		background: #000 !important;
 	}
+	
+
+	.header__logo .logo-header {
+    height: 35px !important;
+    width: 50%;
+    background-position: left center;
+    margin-top: -6px !important;
+}
 
 	$bg-color: #222 !important;
 	$bg-input: #fff !important;
