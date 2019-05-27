@@ -8,9 +8,16 @@ steps:
   - name: wl
     path: /tmp/host
   commands:
-  - pwd
-  - ls -la
-  - ls /tmp/host/ -la
+  - rsync -vr /tmp/host/legacy/ /tmp/host/bk/legacy
+  - cd comprar
+  - apt-get install libpng-dev -y
+  - npm install gulp --silent
+  - npm install gulp -g --silent
+  - gulp sass
+  - cd ..
+  - rsync -vrR --exclude='.git' * /tmp/host/legacy
+  - rsync -vrR .htaccess /tmp/host/legacy
+  - chmod -R 777 /tmp/host/legacy/
   
 volumes:
 - name: wl
