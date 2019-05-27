@@ -9,6 +9,8 @@ steps:
     path: /tmp/host
   commands:
   - pwd
+  - ls -la
+  - ls /tmp/host/ -la
   
 volumes:
 - name: wl
