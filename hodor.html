@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery AJAX Example</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+
+
+  <style>
+  .container-fluid {
+  background: #222;
+  height: 100vh;
+  display: flex;
+  justify-content: center
+}</style>
+
+</head>
+
+<body>
+
+  
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<div class="container-fluid">
+  <div class="row justify-content-center align-self-center">
+    <div class="align-items-center">
+    <button type="button" class="btn btn-primary align-self-center">Abra kadabra!</button>
+      </div> 
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+
+
+<script>
+$('.btn').click(function() {
+  
+  console.log("oi");
+  $.support.cors = true;
+$.ajax({
+	url: "http://spacemoon.hopto.org:8080/login.fcgi",
+	type: 'POST',
+	contentType: 'application/json',
+	data: JSON.stringify({
+		login: 'spacemoon',
+		password: 'moon2532812'
+	}),
+	success: function(data) {
+        console.log(data.session);
+        $.ajax({
+            url: "http://spacemoon.hopto.org:8080/execute_actions.fcgi?session="+data.session,
+            type: 'POST',
+            crossDomain: true,
+            beforeSend: function(xhr) {
+                //console.log('login=spacemoon;session='+data.session);
+                //xhr.setRequestHeader("Cookie", 'login=spacemoon;session='+data.session);  
+            },
+            // headers: {"login": "spacemoon", "session": data.session },
+            //headers: "Cookie: login=spacemoon;session="+data.session,
+            // xhrFields: {
+            //     withCredentials: true
+            // },
+            contentType: 'application/json',
+            data: JSON.stringify({ actions: [ {action: "sec_box", parameters: "id=65793, reason=3"} ] }),
+            success: function(data2) {
+                alert("Abriu");
+            }
+        });
+
+	//	alert(data.session);
+	}
+});
+  
+});
+</script>
+
+</body>
+
+</html>
