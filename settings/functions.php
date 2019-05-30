@@ -1,6 +1,6 @@
 <?php
 //ini_set('mssql.charset', 'UTF-8');
-require('../settings/Metzli/autoload.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/settings/Metzli/autoload.php');
 require_once($_SERVER['DOCUMENT_ROOT']."/settings/multisite/unique.php");
 use Metzli\Encoder\Encoder;
 use Metzli\Renderer\PngRenderer;
@@ -635,8 +635,8 @@ function getProximoValorAssinatura($id_assinatura_cliente) {
 /*  BANCO  */
 
 
-
-require_once('../settings/mainConnections.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/settings/mainConnections.php');
+//require_once('../settings/mainConnections.php');
 
 function sqlErrors($index = NULL) {
     $retorno = sqlsrv_errors();
@@ -1915,8 +1915,8 @@ function is_pacote($id_apresentacao) {
 /*  OUTROS  */
 
 
-
-require_once('../settings/mail.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/settings/mail.php');
+//require_once('../settings/mail.php');
 
 function getCurrentUrl() {
     include('../settings/settings.php');

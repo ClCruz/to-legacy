@@ -1,5 +1,5 @@
 <?php
-require_once("tellmethesite.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/settings/multisite/tellmethesite.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/config/whitelabel.php");
 $isDev = true;
 
