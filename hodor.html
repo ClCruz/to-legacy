@@ -15,7 +15,85 @@
   height: 100vh;
   display: flex;
   justify-content: center
-}</style>
+}
+
+.container-door {
+  width: 222px;
+  height: 500px;
+  margin: auto;
+  background: black;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  perspective-origin: 50% 50%;
+}
+
+.door {
+  width: 222px;
+  height: 500px;
+  transition: transform 1s;
+  transition-timing-function: ease-in;
+  transform-origin: 0% 0%;
+}
+
+.door-click {
+  transform: rotateY(50deg);
+  transform-style: preserve-3d;
+}
+
+.flap {
+  position: absolute;
+  top: 337px;
+  left: 80px;
+  transition: transform .5s;
+  transform-origin: 0% 0%;
+}
+
+.flap-click {
+  transform: rotateX(35deg);
+  transition-timing-function: ease-in;
+}
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 0;
+  background-image:url(http://websemantics.uk/articles/late-loaded-blurred-image-replacement/demo/digital-tunnel.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  animation: filters 36s ease-in-out 0s infinite;
+}
+
+
+@keyframes filters {
+  0% {
+    -webkit-filter: brightness(100%) hue-rotate(0deg) contrast(100%);
+    filter: brightness(100%) hue-rotate(0deg) contrast(100%);
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    -webkit-filter: brightness(150%) hue-rotate(9de0g) contrast(125%);
+    filter: brightness(150%) hue-rotate(9de0g) contrast(125%);
+    transform: translate3d(4vw, 0, 0) scale(1.1) rotate(-2deg);
+  }
+  50% {
+    -webkit-filter: brightness(200%) hue-rotate(180deg) contrast(125%);
+    filter: brightness(200%) hue-rotate(180deg) contrast(125%);
+    transform: translate3d(0, 0, 0) scale(1.2) rotate(4deg);
+  }
+  75% {
+    -webkit-filter: brightness(150%) hue-rotate(270deg) contrast(125%);
+    filter: brightness(150%) hue-rotate(270deg) contrast(125%);
+    transform: translate3d(-4vw, 0, 0) scale(1.1) rotate(-2deg);
+  }
+  100% {
+    -webkit-filter: brightness(100%) hue-rotate(360deg) contrast(100%);
+    filter: brightness(100%) hue-rotate(360deg) contrast(100%);
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+</style>
 
 </head>
 
@@ -24,10 +102,23 @@
   
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
+
+
+
+<div id=bg class=bg></div>
 <div class="container-fluid">
   <div class="row justify-content-center align-self-center">
     <div class="align-items-center">
-    <button type="button" class="btn btn-primary align-self-center">Abra kadabra!</button>
+  
+<div class="container-door">
+  <div class="door">
+
+    <img src="http://gdurl.com/fi0D" alt="door"/>
+    <div class="flap" id="flap-toogle">
+      <img src="http://gdurl.com/shqb" alt="flap"/>
+    </div>
+  </div>
+</div>
       </div> 
   </div>
 </div>
@@ -35,7 +126,7 @@
 
 
 <script>
-$('.btn').click(function() {
+$('.door').click(function() {
   
   console.log("oi");
   $.support.cors = true;
@@ -65,7 +156,8 @@ $.ajax({
             contentType: 'application/json',
             data: JSON.stringify({ actions: [ {action: "sec_box", parameters: "id=65793, reason=3"} ] }),
             success: function(data2) {
-                alert("Abriu");
+              $( ".door" ).addClass('door-click');
+
             }
         });
 
