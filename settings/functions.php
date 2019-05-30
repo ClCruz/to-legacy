@@ -2380,6 +2380,22 @@ function comboGateway($name, $gateway = ""){
     return $combo;
 }
 
+function checkIfDelivery($id_pedido_venda) {
+    $mainConnection = mainConnection();
+    $query = "SELECT DISTINCT
+    E.in_entrega_ingresso
+        FROM MW_PEDIDO_VENDA PV
+        INNER JOIN MW_ITEM_PEDIDO_VENDA IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
+        INNER JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = IPV.ID_APRESENTACAO
+        INNER JOIN MW_EVENTO E ON E.ID_EVENTO = A.ID_EVENTO
+        WHERE PV.ID_PEDIDO_VENDA = ?";
+
+    $params = array($id_pedido_venda);
+    $rs = executeSQL($mainConnection, $query, $params, true);
+
+    return $rs['IN_ENTREGA_INGRESSO'] == 1 ? true : false;
+}
+
 function getEvento($id_evento) {
     $mainConnection = mainConnection();
     $query = "SELECT

@@ -6,29 +6,29 @@ require_once('../settings/functions.php');
 session_start();
 
 $mainConnection = mainConnection();
-$query = 'SELECT
-			 CASE IN_RETIRA_ENTREGA
-				WHEN \'R\' THEN \'retirada no local\'
-				WHEN \'E\' THEN \'no endereço\'
-				ELSE \' - \'
-			 END IN_RETIRA_ENTREGA,
-			 DT_PEDIDO_VENDA,
-			 VL_TOTAL_PEDIDO_VENDA,
-			 IN_SITUACAO,
-			 VL_FRETE,
-			 VL_TOTAL_INGRESSOS,
-			 DS_ENDERECO_ENTREGA,
-			 DS_COMPL_ENDERECO_ENTREGA,
-			 DS_BAIRRO_ENTREGA,
-			 DS_CIDADE_ENTREGA,
-			 ID_ESTADO,
-			 CD_CEP_ENTREGA,
-			 GETDATE() DATA_ATUAL,
-			 ID_PEDIDO_VENDA,
-			 NR_PARCELAS_PGTO,
-			 NM_CLIENTE_VOUCHER
-			 FROM MW_PEDIDO_VENDA
-			 WHERE ID_CLIENTE = ? AND ID_PEDIDO_VENDA = ?';
+	$query = 'SELECT DISTINCT
+				E.in_entrega_ingresso,
+				DT_PEDIDO_VENDA,
+				VL_TOTAL_PEDIDO_VENDA,
+				IN_SITUACAO,
+				VL_FRETE,
+				VL_TOTAL_INGRESSOS,
+				DS_ENDERECO_ENTREGA,
+				DS_COMPL_ENDERECO_ENTREGA,
+				DS_BAIRRO_ENTREGA,
+				DS_CIDADE_ENTREGA,
+				ID_ESTADO,
+				CD_CEP_ENTREGA,
+				GETDATE() DATA_ATUAL,
+				PV.ID_PEDIDO_VENDA,
+				NR_PARCELAS_PGTO,
+				NM_CLIENTE_VOUCHER
+				FROM MW_PEDIDO_VENDA PV
+				INNER JOIN MW_ITEM_PEDIDO_VENDA IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
+				INNER JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = IPV.ID_APRESENTACAO
+		  	INNER JOIN MW_EVENTO E ON E.ID_EVENTO = A.ID_EVENTO
+			  WHERE ID_CLIENTE = ? AND PV.ID_PEDIDO_VENDA = ?';
+
 $params = array($_SESSION['user'], $_GET['pedido']);
 $rsPedido = executeSQL($mainConnection, $query, $params, true);
 
@@ -43,11 +43,14 @@ $exibir_bt_reimpressao = (	$rsPedido['IN_SITUACAO'] == 'F'
 						);
 if (basename($_SERVER['SCRIPT_FILENAME']) != 'pagamento_ok.php') {
 ?>
-<div class="imprima_ingressos">
-	<?php if ($exibir_bt_reimpressao) { ?>
-	<a href="reimprimirEmail.php?pedido=<?php echo $_GET['pedido']; ?>" target="_blank"><div class="icone"></div>Imprima agora sua compra</a>
-	<?php } ?>
-</div>
+<?php //echo json_encode($rsPedido) ?>
+<?php if ($rsPedido['in_entrega_ingresso'] == 0) { ?>
+	<div class="imprima_ingressos">
+		<?php if ($exibir_bt_reimpressao) { ?>
+		<a href="reimprimirEmail.php?pedido=<?php echo $_GET['pedido']; ?>" target="_blank"><div class="icone"></div>Imprima agora sua compra</a>
+		<?php } ?>
+	</div>
+<?php };?>
 <?php
 }
 $query = 'SELECT
