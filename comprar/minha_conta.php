@@ -55,7 +55,7 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                 FROM (
                     SELECT
                         AH.ID_ASSINATURA_HISTORICO AS ID_PEDIDO_VENDA,
-                        ' - ' AS IN_RETIRA_ENTREGA,
+                        ' - ' AS IN_RETIRA_INGRESSO,
                         CONVERT(VARCHAR(10), AH.DT_PAGAMENTO, 103) AS DT_PEDIDO_VENDA, 
                         AH.VL_PAGAMENTO AS VL_TOTAL_PEDIDO_VENDA,
                         'F' AS IN_SITUACAO,
@@ -75,11 +75,7 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
 
                     SELECT DISTINCT
                         PV.ID_PEDIDO_VENDA,
-                        CASE PV.IN_RETIRA_ENTREGA
-                        WHEN 'R' THEN 'retirada no Local'
-                        WHEN 'E' THEN 'no endereço'
-                        ELSE ' - '
-                        END IN_RETIRA_ENTREGA,
+                        E2.in_entrega_ingresso,
                         CONVERT(VARCHAR(10), PV.DT_PEDIDO_VENDA, 103) DT_PEDIDO_VENDA, 
                         PV.VL_TOTAL_PEDIDO_VENDA,
                         PV.IN_SITUACAO,
@@ -92,6 +88,9 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                     FROM MW_PEDIDO_VENDA PV
                     INNER JOIN CI_MIDDLEWAY..order_host oh ON pv.id_pedido_venda=oh.id_pedido_venda
                     INNER JOIN CI_MIDDLEWAY..host h ON oh.id_host=h.id
+                    INNER JOIN CI_MIDDLEWAY..mw_item_pedido_venda IPV2 ON IPV2.id_pedido_venda = PV.id_pedido_venda
+                    INNER JOIN CI_MIDDLEWAY..mw_apresentacao A2 ON A2.id_apresentacao = IPV2.id_apresentacao
+                    INNER JOIN CI_MIDDLEWAY..mw_evento E2 ON E2.id_evento = A2.id_evento
                     LEFT JOIN MW_ITEM_PEDIDO_VENDA IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_PAI
                     LEFT JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = IPV.ID_APRESENTACAO
                     LEFT JOIN MW_EVENTO E ON E.ID_EVENTO = A.ID_EVENTO
@@ -425,6 +424,7 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                                     </thead>
                                     <tbody>
                             <?php
+                            // die(json_encode(fetchResult($result)));
                                 while ($rs = fetchResult($result)) {
                             ?>
                                     <tr>
@@ -437,7 +437,16 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                                                 <a href="detalhes_pedido.php?pedido=<?php echo $rs['ID_PEDIDO_VENDA']; ?>"><?php echo $rs['ID_PEDIDO_VENDA']; ?></a>
                                             </td>
                                         <?php } ?>
-                                        <td><?php //echo $rs['IN_RETIRA_ENTREGA']; ?></td>
+                                        <td>
+                                            <?php 
+                                            
+                                            if ($rs['IN_RETIRA_INGRESSO'] == 0) {
+                                                echo 'E-TICKET';
+                                            } else {
+                                                echo 'Ingresso físico';
+                                            }
+                                            ?>
+                                        </td>
                                         <td><?php echo $rs['DT_PEDIDO_VENDA']; ?></td>
                                         <td>R$ <?php echo number_format($rs['VL_TOTAL_PEDIDO_VENDA'], 2, ',', ''); ?></td>
                                         <td>

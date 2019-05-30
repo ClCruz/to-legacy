@@ -1,6 +1,6 @@
 <?php
 //ini_set('mssql.charset', 'UTF-8');
-require('../settings/Metzli/autoload.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/settings/Metzli/autoload.php');
 require_once($_SERVER['DOCUMENT_ROOT']."/settings/multisite/unique.php");
 use Metzli\Encoder\Encoder;
 use Metzli\Renderer\PngRenderer;
@@ -635,8 +635,8 @@ function getProximoValorAssinatura($id_assinatura_cliente) {
 /*  BANCO  */
 
 
-
-require_once('../settings/mainConnections.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/settings/mainConnections.php');
+//require_once('../settings/mainConnections.php');
 
 function sqlErrors($index = NULL) {
     $retorno = sqlsrv_errors();
@@ -1915,8 +1915,8 @@ function is_pacote($id_apresentacao) {
 /*  OUTROS  */
 
 
-
-require_once('../settings/mail.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/settings/mail.php');
+//require_once('../settings/mail.php');
 
 function getCurrentUrl() {
     include('../settings/settings.php');
@@ -2378,6 +2378,22 @@ function comboGateway($name, $gateway = ""){
     $combo .= '</select>';
 
     return $combo;
+}
+
+function checkIfDelivery($id_pedido_venda) {
+    $mainConnection = mainConnection();
+    $query = "SELECT DISTINCT
+    E.in_entrega_ingresso
+        FROM MW_PEDIDO_VENDA PV
+        INNER JOIN MW_ITEM_PEDIDO_VENDA IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
+        INNER JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = IPV.ID_APRESENTACAO
+        INNER JOIN MW_EVENTO E ON E.ID_EVENTO = A.ID_EVENTO
+        WHERE PV.ID_PEDIDO_VENDA = ?";
+
+    $params = array($id_pedido_venda);
+    $rs = executeSQL($mainConnection, $query, $params, true);
+
+    return $rs['IN_ENTREGA_INGRESSO'] == 1 ? true : false;
 }
 
 function getEvento($id_evento) {
