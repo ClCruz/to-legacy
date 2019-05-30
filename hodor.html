@@ -157,6 +157,9 @@ $.ajax({
             data: JSON.stringify({ actions: [ {action: "sec_box", parameters: "id=65793, reason=3"} ] }),
             success: function(data2) {
               $( ".door" ).addClass('door-click');
+              setTimeout(function(){ 
+                $( ".door" ).removeClass('door-click');
+               }, 5000);
 
             }
         });
