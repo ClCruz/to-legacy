@@ -2,13 +2,13 @@
 require_once('../settings/functions.php');
 require_once('../settings/multisite/unique.php');
 
+//die("oi");
 
 function callapi_boleto($id,$id_pedido_venda) {
     
     $transaction_data = array("id" => $id, "id_pedido_venda"=>$id_pedido_venda);
 
-    $url = getconf()["api_internal_uri"]."/v1/purchase/site/doafter?imthebossofme=".gethost();     
-    die(json_encode(array($id, $id_pedido_venda,$url)));
+    $url = getconf()["api_internal_uri"]."/v1/purchase/site/doafter?imthebossofme=".gethost();        
 
     $post_data = $transaction_data;
     // $out = fopen('php://output', 'w');
@@ -40,8 +40,16 @@ function callapi_boleto($id,$id_pedido_venda) {
 
 $mainConnection = mainConnection();
 
-$transactionid = $_REQUEST["trann"];
-$id_pedido = 0;
+require_once('../settings/pagarme_functions.php');
+
+
+$response = getNotificationPagarme($_REQUEST['trann']);
+
+// die(json_encode($response));
+    if ($response['success']) {
+
+        $transactionid = $response['transaction']['tid'];
+        $id_pedido = 0;
 
         $rs = executeSQL(
             $mainConnection,
@@ -55,9 +63,8 @@ $id_pedido = 0;
 
         $id_pedido = $rs["id_pedido_venda"];
 
-        // die(json_encode($id_pedido));
-
         if ($rs["IN_SITUACAO"] == 'P') {
             callapi_boleto($transactionid,$id_pedido);
         }
+    }      
 ?>
