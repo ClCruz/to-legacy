@@ -15,7 +15,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 216, true)) {
         require('actions/' . $pagina);
     } else {
 
-        if (isset($_GET["dt_inicial"]) && isset($_GET["dt_final"]) && isset($_GET["situacao"]) && isset($_GET["nm_cliente"]) && isset($_GET["cd_cpf"]) && isset($_GET["num_pedido"])) {
+        if (isset($_GET["dt_inicial"]) && isset($_GET["dt_final"]) && isset($_GET["situacao"]) && isset($_GET["nm_cliente"]) && isset($_GET["cd_cpf"])) {
 
             $where = "WHERE CONVERT(DATETIME,CONVERT(CHAR(8), PV.DT_PEDIDO_VENDA, 112)) BETWEEN CONVERT(DATETIME, ?, 103) AND CONVERT(DATETIME, ?, 103) 
                         AND PV.IN_SITUACAO = 'F' AND PV.IN_RETIRA_ENTREGA = 'E' AND PV.ID_PEDIDO_PAI IS NULL ";
@@ -74,20 +74,22 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 216, true)) {
                 //$params[] = $_GET["nm_cliente"];
             }
 
-            if (!empty($_GET["nm_evento"])) {
+            if (!empty($_GET["cboPeca"])) {
                 $from .= "  LEFT JOIN MW_APRESENTACAO A ON IPV.ID_APRESENTACAO = A.ID_APRESENTACAO
                             LEFT JOIN MW_EVENTO E ON E.ID_EVENTO=A.ID_EVENTO ";
             }
 
-            if (!empty($_GET["nm_evento"])) {
-                $where .= " AND E.ID_EVENTO = ?";
+            if (!empty($_GET["cboPeca"])) {
+                $where .= " AND E.codPeca = ? AND e.id_base= ? ";
                 $join4 = true;
 
                 $from2 .= " LEFT JOIN MW_APRESENTACAO A ON IPV.ID_APRESENTACAO = A.ID_APRESENTACAO
                             INNER JOIN MW_EVENTO E ON E.ID_EVENTO=A.ID_EVENTO ";
 
-                $params[] = $_GET["nm_evento"];
-                $paramsTotal[] = $_GET["nm_evento"];
+                $params[] = $_GET["cboPeca"];
+                $params[] = $_GET["cboTeatro"];
+                $paramsTotal[] = $_GET["cboPeca"];
+                $paramsTotal[] = $_GET["cboTeatro"];
             }
 
             if (!empty($_GET["cd_cpf"])) {
@@ -143,6 +145,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 216, true)) {
                     $group . ")
 				  SELECT * FROM RESULTADO WHERE LINHA BETWEEN " . $offset . " AND " . $final . " ORDER BY ID_PEDIDO_VENDA ";
             $result = executeSQL($mainConnection, $strSql, $params);
+            //die(json_encode($result));
 
             $query = "SELECT
                           SUM (IPV.VL_UNITARIO) AS TOTAL_PEDIDO
@@ -211,6 +214,53 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 216, true)) {
         <script type="text/javascript" src="../javascripts/simpleFunctions.js"></script>
         <script type="text/javascript" src="../javascripts/date.format.js"></script>
         <script>
+            function ExibePeca(NmDB, Tipo, Procedure)
+            {
+                //limpar();
+
+                if (NmDB != "")
+                {
+                    switch(Tipo)
+                    {
+                        case 'Peca':
+                            $.ajax({
+                                url: 'actions/entregarIngressos.php',
+                                type: 'post',
+                                data: 'NomeBase='+ NmDB +'&Proc='+ Procedure,
+                                success: function(data){
+                                    $('#divPeca').html(data);
+                                    if ($("#cboPecaHidden").val() != '') {
+                                        $("#cboPeca").val($("#cboPecaHidden").val());   
+                                    }
+                                },
+                                error: function(){
+                                    $.dialog({
+                                        title: 'Erro...',
+                                        text: 'Erro na chamada dos dados.'
+                                    });
+                                }
+                            });
+                            break;
+                    }
+                }
+                else
+                {
+                    switch(Tipo)
+                    {
+                        case 'Peca':
+                            document.getElementById("divPeca").innerHTML = '<SELECT disabled id="cboPeca" name="cboPeca" style="width: 250px;"><option value="">Não Selecionado</option></select>';
+                            break;
+                    }
+                }
+            };
+            $(document).ready(function(){
+                if ($('#cboTeatro').val() != '') {
+                    try {
+                        ExibePeca($('#cboTeatro').val(), 'Peca', 'SP_PEC_CON009;8');
+                    }
+                    catch (e) { }
+                }
+            });
             $(function() {
                 var pagina = '<?php echo $pagina; ?>';
                 var dtInicialOpc = '<?php echo $_GET["dt_inicial"] ?>';
@@ -267,11 +317,12 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 216, true)) {
                     }else{ if($('#cboSituacao').val() == 0){
                             $.dialog({title: 'Alerta...', text: 'Selecione uma situação para efetuar a pesquisa.'});
                         }else{
-                            document.location = '?p=' + pagina.replace('.php', '') + '&dt_inicial=' + $("#dt_inicial").val() + '&dt_final='+ $("#dt_final").val() + '&situacao=' + $("#cboSituacao").val() + '&nm_cliente=' + $("#nm_cliente").val() + '&cd_cpf=' + $("#cd_cpf").val() + '&num_pedido=' + $("#num_pedido").val() + '&nm_evento=' + $("#evento").val();
+                            document.location = '?p=' + pagina.replace('.php', '') + '&dt_inicial=' + $("#dt_inicial").val() + '&dt_final='+ $("#dt_final").val() + '&situacao=' + $("#cboSituacao").val() + '&nm_cliente=' + $("#nm_cliente").val() + '&cd_cpf=' + $("#cd_cpf").val() + '&num_pedido=' + $("#num_pedido").val() + '&nm_evento=' + $("#evento").val() + '&cboTeatro='+$("#cboTeatro").val() + '&cboPeca='+$("#cboPeca").val();
                         }}
                 });
 
                 $('#app table').delegate('a', 'click', function(event) {
+                    //debugger;
                     event.preventDefault();
 
                     var $this = $(this),
@@ -395,22 +446,36 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 216, true)) {
         }
         ?>
     </select>
-</p><br/>
-<p>
-    <?php
-        $name = "evento";
-        $queryEvento = 'SELECT E.ID_EVENTO, E.DS_EVENTO FROM MW_EVENTO E WHERE IN_ATIVO = 1 ORDER BY DS_EVENTO ASC';
-        $resultEventos = executeSQL($mainConnection, $queryEvento, null);
-        $combo = '<select name="' . $name . '" class="inputStyle" id="' . $name . '"><option value="">Selecione um evento...</option>';
+</p>
+<table cellpadding='0' border='0' width='609' cellspacing='0'>
+                <tr>
+                    <td><strong>Local:</strong><br>
+                    <?php
+                    $selected = $_GET["cboTeatro"];
+                    $funcJavascript = 'onChange="ExibePeca(this.value, \'Peca\', \'SP_PEC_CON009;8\');"';
+                    //echo comboTeatro("cboTeatro", "", $funcJavascript);
 
-        while ($rs = fetchResult($resultEventos)) {
-            $combo .= '<option value="' . $rs['ID_EVENTO'] . '"' .
-                    (($_GET["nm_evento"] == $rs['ID_EVENTO']) ? ' selected' : '' ) .
-                    '>' . utf8_encode2($rs['DS_EVENTO']) . '</option>';
-        }
-        $combo .= '</select>';
-    ?>
-        Evento &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $combo; ?> &nbsp;&nbsp;&nbsp;
+                    $base = executeSQL($mainConnection, 'SELECT DISTINCT B.ID_BASE, B.DS_NOME_TEATRO FROM MW_BASE B INNER JOIN MW_ACESSO_CONCEDIDO AC ON AC.ID_BASE = B.ID_BASE WHERE AC.ID_USUARIO ='. $_SESSION['admin'] .'  AND B.IN_ATIVO = \'1\' ORDER BY B.DS_NOME_TEATRO');
+
+                    $combo = '<select name="cboTeatro" ' . $funcJavascript . ' class="inputStyle" id="cboTeatro"><option value="">Selecione um local...</option>';
+                    while ($rs = fetchResult($base)) {
+                        $combo .= '<option value="' . $rs['ID_BASE'] . '"' . (($selected == $rs['ID_BASE']) ? ' selected' : '') . '>' . utf8_encode2($rs['DS_NOME_TEATRO']) . '</option>';
+                    }
+                    $combo .= '</select>';
+
+                    echo $combo;
+                    ?>
+                </td>
+                <td>
+                    <strong>Evento:</strong><br>
+                    <input type="hidden" id="cboPecaHidden" name="cboPecaHidden" value="<?php echo $_GET["cboPeca"]; ?>" />
+                    <div name="divPeca" Id="divPeca">&nbsp;
+                    </div>
+                </td>
+            </tr>
+</table>
+<br/>
+<p>
         <input type="submit" class="button" id="btnRelatorio" value="Buscar" />
     </p><br/>
     <!--<p>
@@ -443,6 +508,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 216, true)) {
             <tbody>
             <?php
             while ($rs = fetchResult($result)) {
+                //die(json_encode($rs));
                 $id = $rs['ID_PEDIDO_VENDA'];
                 $diaEntrega = $rs["DT_ENTREGA_INGRESSO"];
                 $diaEntrega = substr($rs['DT_ENTREGA_INGRESSO'], -2) . '/' . substr($rs['DT_ENTREGA_INGRESSO'], 4, 2) . '/' . substr($rs['DT_ENTREGA_INGRESSO'], 0, 4);
@@ -490,7 +556,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 216, true)) {
     <div id="paginacao">
     <?php
                 //paginacao($pc, $intervalo, $tp, true);
-                $link = "?p=entregarIngressos&dt_inicial=" . $_GET["dt_inicial"] . "&dt_final=" . $_GET["dt_final"] . "&situacao=" . $_GET["situacao"] . "&num_pedido=" . $_GET["num_pedido"] . "&nm_cliente=" . $_GET["nm_cliente"] . "&cd_cpf=" . $_GET["cd_cpf"] . "&nm_evento=" . $_GET["nm_evento"] . "&controle=" . $total_reg . "&bar=2&baz=3&offset=";
+                $link = "?p=entregarIngressos&dt_inicial=" . $_GET["dt_inicial"] . "&dt_final=" . $_GET["dt_final"] . "&situacao=" . $_GET["situacao"] . "&num_pedido=" . $_GET["num_pedido"] . "&nm_cliente=" . $_GET["nm_cliente"] . "&cd_cpf=" . $_GET["cd_cpf"] . "&nm_evento=" . $_GET["nm_evento"] . "&controle=" . $total_reg . "&bar=2&baz=3"."&cboTeatro="+$_GET["cboTeatro"]."&cboPeca=".$_GET["cboPeca"]."&offset=";
                 Paginator::paginate($offset, $tr, $total_reg, $link, true);
     ?>
             </div>
@@ -498,3 +564,6 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 216, true)) {
             }
         }
 ?>
+<script>
+    ExibePeca('','Peca','');
+</script>

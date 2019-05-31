@@ -167,9 +167,10 @@ function finalizar($qtdIngressos, $totalIngressos, $formaEntrega, $valorEntrega,
 		<div class="descricao">Forma de entrega</div>
 		<div class="tipo">
 			<select id="cmb_entrega" <?php echo $edicao ? '' : 'disabled'; ?>>
-				<option value="retirada">e-ticket</option>
 				<?php if ($habilitar_entrega) { ?>
-				<option value="entrega" <?php echo $_COOKIE['entrega'] ? 'selected' : ''; ?>>no endere&ccedil;o</option>
+				<option value="entrega" <?php echo $_COOKIE['entrega'] ? 'selected' : ''; ?>>no endereço</option>
+				<?php } else { ?>
+				<option value="retirada">e-ticket</option>
 				<?php } ?>
 			</select>
         </div>
@@ -203,12 +204,12 @@ function finalizar($qtdIngressos, $totalIngressos, $formaEntrega, $valorEntrega,
 	<?php
 	} else {
 	?>
-		<div class="selecione_estado hidden">
+		<!-- <div class="selecione_estado hidden">
 			<div class="descricao">seu estado</div>
 			<div class="estado">
 				<?php echo comboEstado('estado', $_COOKIE['entrega'], false, true, '', true); ?>
 			</div>
-		</div>
+		</div> -->
 	<?php
 	}
 	?>
