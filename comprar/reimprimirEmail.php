@@ -7,7 +7,7 @@ session_start();
 // echo $cipher->decrypt(base64_decode($_GET['pedido']));
 // die();
 
-
+if (checkIfDelivery($_GET['pedido']) == true) die();
 
 if (!isset($_GET['pedido'])) die();
 

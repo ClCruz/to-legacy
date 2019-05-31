@@ -108,7 +108,7 @@
     "api.cursos.simoesinvestimentos.com.br": "simoesinvestimentos",
     "compra.cursos.simoesinvestimentos.com.br": "simoesinvestimentos",
     "admin.cursos.simoesinvestimentos.com.br": "simoesinvestimentos",
-    "www.teatrocec.tk": "teatrocec",
+    "www.teatroantoniofagundes.com.br": "teatrocec",
     "api.teatrocec.tk": "teatrocec",
     "compra.teatrocec.tk": "teatrocec",
     "admin.teatrocec.tk": "teatrocec",
@@ -203,5 +203,17 @@
     "www.eventoaju.com.br": "eventoaju",
     "api.eventoaju.com.br": "eventoaju",
     "compra.eventoaju.com.br": "eventoaju",
-    "admin.eventoaju.com.br": "eventoaju"
+    "admin.eventoaju.com.br": "eventoaju",
+    "www.compreingressos.com": "compreingressos",
+    "api.compreingressos.com": "compreingressos",
+    "compra.compreingressos.com": "compreingressos",
+    "admin.compreingressos.com": "compreingressos",
+    "parteventos.ticketoffice.me": "parteventos",
+    "api.parteventos.ticketoffice.me": "parteventos",
+    "compra.parteventos.ticketoffice.me": "parteventos",
+    "admin.parteventos.ticketoffice.me": "parteventos",
+    "ingressos.rfse.com.br": "rfse",
+    "api.ingressos.rfse.com.br": "rfse",
+    "compra.ingressos.rfse.com.br": "rfse",
+    "admin.ingressos.rfse.com.br": "rfse"
 }

@@ -1,8 +1,8 @@
 <?php
 
-require_once("../settings/multisite/tellmethesite.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/settings/multisite/tellmethesite.php");
 
-require_once("../settings/multisite/cnnConfig.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/settings/multisite/cnnConfig.php");
 function oi() {
 	return "oi";
 }
