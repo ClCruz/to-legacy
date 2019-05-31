@@ -18,18 +18,19 @@
 }
 
 .container-door {
-  width: 222px;
-  height: 500px;
+  width: 220px;
+  height: 400px;
   margin: auto;
-  background: black;
+  background: url('https://s2.glbimg.com/BfvRE1n7K1SXEarro0FMdktgHJ8=/0x0:1200x750/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2018/K/I/5ot9AZQAG7KFQYoXchhw/spacemoon-ambiente-1200x750.jpg');
+  background-position: center;
   -webkit-perspective: 1000;
   perspective: 1000;
   perspective-origin: 50% 50%;
 }
 
 .door {
-  width: 222px;
-  height: 500px;
+  width: 220px;
+  height: 400px;
   transition: transform 1s;
   transition-timing-function: ease-in;
   transform-origin: 0% 0%;
@@ -55,7 +56,7 @@
 
 .bg {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   z-index: 0;
   background-image:url(http://websemantics.uk/articles/late-loaded-blurred-image-replacement/demo/digital-tunnel.jpg);
@@ -113,10 +114,7 @@
 <div class="container-door">
   <div class="door">
 
-    <img src="http://gdurl.com/fi0D" alt="door"/>
-    <div class="flap" id="flap-toogle">
-      <img src="http://gdurl.com/shqb" alt="flap"/>
-    </div>
+    <img src="door.jpeg" class="door" alt="door"/>
   </div>
 </div>
       </div> 
