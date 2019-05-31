@@ -124,6 +124,14 @@
 
 
 <script>
+    function beep(session) {
+    $.ajax({
+	url: "http://spacemoon.hopto.org:8080/buzzer_buzz.fcgi?session=" + session,
+	type: 'POST',
+	contentType: 'application/json',
+  data: JSON.stringify({"duty_cycle":50,"frequency":4000,"timeout":250}),
+});
+  }
 $('.door').click(function() {
   
   console.log("oi");
@@ -154,6 +162,7 @@ $.ajax({
             contentType: 'application/json',
             data: JSON.stringify({ actions: [ {action: "sec_box", parameters: "id=65793, reason=3"} ] }),
             success: function(data2) {
+              beep(data.session);
               $( ".door" ).addClass('door-click');
               setTimeout(function(){ 
                 $( ".door" ).removeClass('door-click');
