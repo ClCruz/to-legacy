@@ -160,6 +160,7 @@ $.ajax({
             //     withCredentials: true
             // },
             contentType: 'application/json',
+            // data: JSON.stringify({ actions: [ {action: "sec_box", parameters: "id=65793, reason=3,user_id=20"} ] }),
             data: JSON.stringify({ actions: [ {action: "sec_box", parameters: "id=65793, reason=3"} ] }),
             success: function(data2) {
               beep(data.session);
