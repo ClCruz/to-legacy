@@ -13,17 +13,17 @@ if (!isset($_GET['pedido'])) die();
 
 if (is_numeric($_GET['pedido'])) {
 	require 'acessoLogado.php';
-
+	
 	$id_pedido = $_GET['pedido'];
 	$id_usuario = $_SESSION['user'];
 	$email_presenteado = null;
 } else {
 	require_once('../settings/Cypher.class.php');
-
+	
 	$cipher = new Cipher('1ngr3ss0s');
 	$decryptedtext = $cipher->decrypt(base64_decode($_GET['pedido']));
 	$decryptedtext = explode('|', $decryptedtext);
-
+	
 	$id_pedido = $decryptedtext[0];
 	$id_usuario = null;
 	$email_presenteado = $decryptedtext[1];
@@ -65,12 +65,13 @@ $query = "SELECT
 			WHERE PV.ID_PEDIDO_VENDA = ?
 				AND ((C.ID_CLIENTE = ? AND ? IS NULL) OR (? IS NULL AND PV.DS_EMAIL_VOUCHER = ?))";
 $params = array($id_pedido,
-				$id_usuario, $email_presenteado,
-				$id_usuario, $email_presenteado);
+$id_usuario, $email_presenteado,
+$id_usuario, $email_presenteado);
 $rsDados = executeSQL($mainConnection, $query, $params, true);
 
-if (!empty($rsDados)) {
 
+if (!empty($rsDados)) {
+	
 	$parametros['OrderData']['OrderId'] = $id_pedido;
 	$parametros['CustomerData']['CustomerName'] = $rsDados['DS_NOME'];
 	$valores['date'] = $rsDados['DT_PEDIDO_VENDA'];
@@ -130,7 +131,7 @@ if (!empty($rsDados)) {
 						LEFT JOIN MW_TAXA_CONVENIENCIA T ON T.ID_EVENTO = A.ID_EVENTO AND T.DT_INICIO_VIGENCIA <= GETDATE() AND T.IN_TAXA_POR_PEDIDO = 'S'
 						WHERE I.ID_PEDIDO_VENDA = ?";
 	$rsServicos = executeSQL($mainConnection, $queryServicos, array($id_pedido), true);
-
+	
 	$itensPedido = array();
 	$i = -1;
 	while ($itens = fetchResult($result)) {
@@ -175,6 +176,7 @@ if (!empty($rsDados)) {
 	$is_gift = ($email_presenteado != null);
 
 	require "../comprar/impressaoVoucher.php";
+	//die("reimprimirEmail");
 
 	if ($_GET['pdf']) {
 		/*require "../settings/mpdf60/mpdf.php";

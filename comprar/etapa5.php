@@ -1,5 +1,7 @@
 <?php
 ob_start();
+$edicao = false;
+$edicao2 = false;
 require_once('../settings/functions.php');
 require_once('../settings/settings.php');
 require_once('../settings/multisite/unique.php');
@@ -26,7 +28,7 @@ if (isset($_COOKIE['entrega'])) {
 }
 
 require('../settings/pagseguro_functions.php');
-
+//die(session_id());
 $mainConnection = mainConnection();
 $rs = executeSQL($mainConnection, 'SELECT COUNT(1) FROM MW_RESERVA WHERE ID_SESSION = ?', array(session_id()), true);
 $qtdIngressos = $rs[0] >= 9 ? '0'.$rs[0] : $rs[0];
@@ -68,6 +70,7 @@ $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
 
 	<script type="text/javascript" src="../javascripts/contagemRegressiva.js?until=<?php echo tempoRestante(); ?>"></script>
 	<script type="text/javascript" src="../javascripts/formCartao.js"></script>
+
 
 	<?php echo $campanha['script']; ?>
 
@@ -233,6 +236,8 @@ $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
 						automaticamente e os lugares liberados
 						</p>
 						</div>
+						<?php require "resumoPedidoNew.php"; ?>
+						<br />
 						</div>
 						</div>
 						<div class="descricao_pag">

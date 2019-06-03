@@ -177,6 +177,8 @@ require('verificarServicosPedido.php');
 					</div>
 				
 				<?php require "resumoPedido.php"; ?>
+				<br />
+				<br />
 				<div class="container_botoes_etapas">
 					<div class="centraliza">
 						<a href="etapa1.php?<?php echo $_COOKIE['lastEvent']; ?><?php echo $campanha['tag_voltar']; ?>" class="botao voltar passo1">Voltar</a>

@@ -2307,6 +2307,7 @@ function callapi_refund($id_pedido_venda) {
 function getQRCodeFromAPI($id_base, $codVenda, $indice) {
     $uri = getconf()["api_internal_uri"]."/v1/print/qrcode";
     $fulluri = $uri."?id_base=".$id_base."&codVenda=".$codVenda."&indice=".$indice;
+    //die($fulluri);
     //return "".$fulluri;
     $ch = curl_init(); 
     curl_setopt($ch, CURLOPT_URL, $fulluri); 
@@ -2407,7 +2408,10 @@ function getEvento($id_evento) {
     ,m.ds_municipio cidade
     ,es.sg_estado sigla_estado
     ,es.ds_estado
+    ,b.name_site
+    ,ISNULL((SELECT TOP 1 sub.show_partner_info FROM CI_MIDDLEWAY..[partner] sub WHERE sub.[key]=?),0) show_partner_info
     FROM CI_MIDDLEWAY..mw_evento e
+    LEFT JOIN CI_MIDDLEWAY..mw_base b ON e.id_base=b.id_base
     LEFT JOIN CI_MIDDLEWAY..mw_evento_extrainfo eei ON e.id_evento=eei.id_evento
     LEFT JOIN CI_MIDDLEWAY..genre g ON eei.id_genre=g.id
     LEFT JOIN CI_MIDDLEWAY..mw_local_evento le ON e.id_local_evento=le.id_local_evento
@@ -2416,9 +2420,9 @@ function getEvento($id_evento) {
     WHERE 
     e.id_evento=?";
 
-    $params = array($id_evento);
+    $params = array(getwhitelabelobj()["apikey"],$id_evento);
     $rs = executeSQL($mainConnection, $query, $params, true);
-
+    //die(json_encode($rs));
     return $rs;
 
     $query_mysql = "SELECT
