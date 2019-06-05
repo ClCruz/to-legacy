@@ -18,10 +18,11 @@ $is_assinatura = hasRows($result);
 
 
 $query = "EXEC pr_show_partner_info_bypedido ?, ?";
-$params = array(getwhitelabelobj()["apikey"],$parametros['OrderData']['OrderId']);
+// die(json_encode(getwhitelabelobj_forced("ingressaria")));
+$params = array(getwhitelabelobj_forced("ingressaria")["apikey"],$parametros['OrderData']['OrderId']);
 //     die(json_encode($params));
 $rs_show_partner_info = executeSQL($mainConnection, $query, $params, true);
-//die(json_encode($rs_show_partner_info));
+// die(json_encode($rs_show_partner_info));
 
 // checa se é um cliente estrangeiro
 $query = "SELECT CD_RG, ID_DOC_ESTRANGEIRO FROM MW_CLIENTE WHERE ID_CLIENTE = ?";
@@ -189,6 +190,7 @@ $forcedbase = $rs_show_partner_info["ds_nome_base_sql"];
 $objwlforced = getwhitelabelobj_forced($rs_show_partner_info["show_partner_info"] == 1 ? $forcedbase: gethost());
 
 $caminhoHtml = $is_gift == 1 ? $objwlforced["templates"]["print"]["gift"] : $objwlforced["templates"]["print"]["voucher"];
+// die($caminhoHtml);
 //die(json_encode($objwlforced));
 
 

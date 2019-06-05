@@ -52,7 +52,7 @@
         return $uri;
     }
     function getwhitelabelURI_home_forced($host,$next) {
-        $forced = getwhitelabelobjforced($host);
+        $forced = getwhitelabelobj_forced($host);
         $uri = $forced["uri"];
 
         if (startsWith($uri, "http") == false) {
