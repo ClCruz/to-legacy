@@ -84,6 +84,15 @@
 			height: 24px !important;
 		}
 	}
+
+	@media (max-width: 960px) {
+		table#pedido_resumo tbody li *,
+		#pedido_resumo .sbHolder * {
+			top: 0 !important;
+			padding: 0 !important;
+			height: 24px !important;
+		}
+	}
 }
 
 @media (max-width: 960px) {
