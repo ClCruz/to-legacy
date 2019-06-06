@@ -13,67 +13,67 @@
     }
   },
   "formto": {
-    "email":"atendimento@itaucard.compreingressos.com",
+    "email":"atendimento@teatro.compreingressos.com",
     "from": "formto",
     "pass":""
   },
   "noreply": {
-    "email":"noreply@itaucard.compreingressos.com",
+    "email":"noreply@teatro.compreingressos.com",
     "from": "noreply",
     "pass":""
   },
   "register": {
-    "email":"cadastro@itaucard.compreingressos.com",
+    "email":"cadastro@teatro.compreingressos.com",
     "from": "cadastro",
     "pass":""
   },
   "shopping": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "pedido",
     "pass":""
   },
   "lembrete": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "pedido",
     "pass":""
   },
   "marketing": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "pedido",
     "pass":""
   },
   "info": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "pedido",
     "pass":""
   },
   "sac": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "noreply",
     "pass":""
   },
   "pedido": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "pedido",
     "pass":""
   },
   "assinantea@siscompre": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "pedido",
     "pass":""
   },
   "compreingressospedidos@hotmail": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@siscompre": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@gmail": {
-    "email":"pedido@itaucard.compreingressos.com",
+    "email":"pedido@teatro.compreingressos.com",
     "from": "pedido",
     "pass":""
   }

@@ -1,4 +1,5 @@
 <?php
+header("Location: etapa5.php");
 $edicao = false;
 session_start();
 

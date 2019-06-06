@@ -22,15 +22,23 @@ $mainConnection = mainConnection();
 				GETDATE() DATA_ATUAL,
 				PV.ID_PEDIDO_VENDA,
 				NR_PARCELAS_PGTO,
-				NM_CLIENTE_VOUCHER
+				NM_CLIENTE_VOUCHER,
+				B.NAME_SITE,
+				E.ID_EVENTO
+
 				FROM MW_PEDIDO_VENDA PV
 				INNER JOIN MW_ITEM_PEDIDO_VENDA IPV ON IPV.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
 				INNER JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = IPV.ID_APRESENTACAO
 		  	INNER JOIN MW_EVENTO E ON E.ID_EVENTO = A.ID_EVENTO
+				INNER JOIN CI_MIDDLEWAY..mw_base b ON E.id_base=B.id_base
+
 			  WHERE ID_CLIENTE = ? AND PV.ID_PEDIDO_VENDA = ?';
 
 $params = array($_SESSION['user'], $_GET['pedido']);
 $rsPedido = executeSQL($mainConnection, $query, $params, true);
+
+$evento_info = getEvento($rsPedido['ID_EVENTO']);
+
 
 $ultima_data = executeSQL($mainConnection, 'SELECT MAX(A.DT_APRESENTACAO) APRESENTACAO
 											FROM MW_ITEM_PEDIDO_VENDA IPV
@@ -140,7 +148,15 @@ while ($rs = fetchResult($result)) {
                 <span style="margin-top: 10px"></span>
               <img class="endereco__icon" src="../images/icons/map-pin-white.svg" alt="" style="height: 14px">
                 <?php echo utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ') . utf8_encode2($evento_info['sigla_estado']); ?>
-                <br />
+								<br />
+								<?php if ($evento_info["show_partner_info"] == 1) {
+                      ?>
+                      <img class="endereco__icon" src="../images/icons/handshake-regular.svg" alt="">
+                      <?php echo "Vendido e entregue por ".utf8_encode2($evento_info['name_site']); ?>
+                      <br />
+                      <?php
+                    }?>
+								
         </p>
 
 

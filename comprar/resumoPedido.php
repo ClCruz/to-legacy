@@ -51,14 +51,27 @@ while ($rs = fetchResult($result)) {
 				<p class="endereco title__resumo" style="">
 						<?php echo utf8_encode2($rs['DS_EVENTO']); ?>
 				</p>
-				<p class="endereco" style="text-transform: capitalize">
+				<p class="endereco">
+							<span style="text-transform: capitalize">
               <img class="endereco__icon" src="../images/icons/calendar.svg" alt="">
                 <?php echo getDateToString($tempo,"week-small"); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo getDateToString($tempo,"month-small"); ?> - <?php echo $rs['HR_APRESENTACAO']; ?> 
-                <br /> 
+								<br /> 
+							</span>
+							<span style="text-transform: capitalize">
                 <span style="margin-top: 10px"></span>
               <img class="endereco__icon" src="../images/icons/map-pin-white.svg" alt="">
                 <?php echo utf8_encode2($evento_info['nome_teatro'] . ' - ' . $evento_info['cidade'] . ', ') . utf8_encode2($evento_info['sigla_estado']); ?>
-                <br />
+								<br />
+							</span>
+							<span>
+                <?php if ($evento_info["show_partner_info"] == 1) {
+                      ?>
+                      <img class="endereco__icon" src="../images/icons/handshake-regular.svg" alt="">
+                      <?php echo "Vendido e entregue por ".utf8_encode2($evento_info['name_site']); ?>
+                      <br />
+                      <?php
+                    }?>
+              </span>
         </p>
 			</div>
 			<button type="button" class="btn btn-primary botao btn__help" data-toggle="modal" data-target="#sideModalTR"></button>
@@ -122,21 +135,23 @@ while ($rs = fetchResult($result)) {
 			<tr class="beneficio hidden">
 				<td></td>
 				<td colspan="5">
-					<div class="container_beneficio">
+					<div class="container_beneficio"  style="display: flex; align-items: center; align-content: center">
 						<div class="img_complemento">
 							<img src="">
 						</div>
-						<div class="ajuda">
+						<div class="ajuda" style="display: flex; align-content: center; align-self: center" >
 							<span class="frase1 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">valide o benefício</span>
 							<span class="frase2 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">insira o número e clique validar</span>
-							<span class="frase3 <?php echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">benefício válido</span>
+							<span class="frase3 <?php echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" style="display: flex;
+    align-items: center;">benefício válido</span>
 						</div>
-						<div class="icone_validador <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'valido' : ''; ?>"></div>
-						<div class="container_validador">
-							<input type="text" name="bin[]" class="validador_itau form-control  <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" placeholder="<?php echo $beneficio_texto; ?>" maxlength="<?php echo $beneficio_size; ?>" value="<?php echo $rs['CD_BINITAU'].$rs['NR_BENEFICIO']; ?>" <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'readonly' : ''; ?>>
+						<div class="icone_validador <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'valido' : ''; ?>" style="margin: 0px 0 0 10px !important"></div>
+						<div class="container_validador" style="display: flex; align-items: center; align-content: center">
+							<input type="text" name="bin[]" class="validador_itau form-control  <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" placeholder="<?php echo $beneficio_texto; ?>" maxlength="<?php echo $beneficio_size; ?>" value="<?php echo $rs['CD_BINITAU'].$rs['NR_BENEFICIO']; ?>" <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'readonly' : ''; ?> style="    width: 100%;
+    margin: 0px 10px 0 20px;">
 							<input type="hidden" name="tipoBin[]" value="<?php echo $rs['CD_BINITAU'] ? 'itau' : 'promocao'; ?>" />
 							<a class="validarBin <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" href="#">validar</a>
-							<img class="<?php echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" src="">
+							<!-- <img class="<?php// echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" src=""> -->
 						</div>
 					</div>
 				</td>
@@ -215,8 +230,6 @@ function finalizar($qtdIngressos, $totalIngressos, $formaEntrega, $valorEntrega,
 	?>
 	<span id="servico_pedido" class="hidden">0</span>
 	<p class="pedido_total"><b><span class="totalIngressosApresentacao"><?php echo $qtdIngressos; ?></span> selecionado(s)</b> <span class="total">total:</span><span class="cifrao">R$</span><span class="valor" id="totalIngressos"><?php echo number_format($totalIngressos, 2, ',', ''); ?></span></p>
-</div>
-</div>
 </div>
 <?php
 }

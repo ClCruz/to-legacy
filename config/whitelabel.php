@@ -52,7 +52,7 @@
         return $uri;
     }
     function getwhitelabelURI_home_forced($host,$next) {
-        $forced = getwhitelabelobjforced($host);
+        $forced = getwhitelabelobj_forced($host);
         $uri = $forced["uri"];
 
         if (startsWith($uri, "http") == false) {
@@ -67,6 +67,19 @@
     function getwhitelabelobj() {
         $ret = array();
         $whitelabel = gethost();
+        $jsonFile = $_SERVER['DOCUMENT_ROOT']."/jsons/".$whitelabel.".json";
+        //die("jsonFile: $jsonFile");
+        if (!file_exists($jsonFile)) {
+            die("Falha de configuração no JSON.");
+        }
+
+        $ret = json_decode(file_get_contents($jsonFile), true);
+
+        return $ret;
+    }
+    function getwhitelabelobj_forced($whitelabel) {
+        $ret = array();
+        //$whitelabel = gethost();
         $jsonFile = $_SERVER['DOCUMENT_ROOT']."/jsons/".$whitelabel.".json";
         //die("jsonFile: $jsonFile");
         if (!file_exists($jsonFile)) {
