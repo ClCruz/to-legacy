@@ -186,7 +186,7 @@ $valores['itens_destacaveis'] = $valores['itens_pedido'];
 $forcedbase = $rs_show_partner_info["ds_nome_base_sql"];
 //$forcedbase = "simoesinvestimentos";
 //die(json_encode($is_gift));
-
+//die("oi");
 $objwlforced = getwhitelabelobj_forced($rs_show_partner_info["show_partner_info"] == 1 ? $forcedbase: gethost());
 
 $caminhoHtml = $is_gift == 1 ? $objwlforced["templates"]["print"]["gift"] : $objwlforced["templates"]["print"]["voucher"];

@@ -78,11 +78,17 @@
         return $ret;
     }
     function getwhitelabelobj_forced($whitelabel) {
+        switch ($whitelabel) {
+            case "ci_localhost":
+                $whitelabel="localhost";
+            break;
+        }
         $ret = array();
         //$whitelabel = gethost();
         $jsonFile = $_SERVER['DOCUMENT_ROOT']."/jsons/".$whitelabel.".json";
         //die("jsonFile: $jsonFile");
         if (!file_exists($jsonFile)) {
+            //die("oi".$whitelabel);
             die("Falha de configuração no JSON.");
         }
 
