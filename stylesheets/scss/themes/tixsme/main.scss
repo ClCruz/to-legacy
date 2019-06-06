@@ -86,6 +86,12 @@
 	}
 
 	@media (max-width: 960px) {
+		#pedido_resumo .sbToggle,
+		div.resumo_espetaculo div.pedido_entrega div.tipo .sbToggle,
+		div.resumo_espetaculo div.estado .sbToggle {
+			height: 10px !important;
+		}
+
 		table#pedido_resumo tbody li *,
 		#pedido_resumo .sbHolder * {
 			top: 0 !important;
