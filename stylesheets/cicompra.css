@@ -923,7 +923,7 @@ table#pedido_resumo tbody tr.beneficio div.container_validador input{
 
 table#pedido_resumo tbody tr.beneficio div.container_validador a{
 	float:left;
-	margin:28px 0 0;
+	margin:0px 0 0;
 	text-transform:lowercase;
 	font-size:14px;
 }
