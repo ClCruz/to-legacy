@@ -7,6 +7,12 @@ require_once('../settings/settings.php');
 require_once('../settings/functions.php');
 require_once($_SERVER['DOCUMENT_ROOT']."/config/whitelabel.php");
 
+if (gethost() == "compreingressos") {
+// if (gethost() == "localhost") {
+    header('Location: '.getwhitelabelobj_forced("teatroumc")["legacy"]."/comprar/gotoshopping.php?token=".$_REQUEST["token"]."&id=".$_REQUEST["id"]);
+    die();
+}
+
 if ($_REQUEST['token']!='') {
     $mainConnection = mainConnection();
 	
@@ -19,6 +25,7 @@ if ($_REQUEST['token']!='') {
         $_SESSION['user'] = $rs['ID_CLIENTE'];
     }   
 }
+// die(gethost());
 if ($_REQUEST["id"] == "") {
     header('Location: '.getwhitelabelobj()["uri"]);
 }

@@ -5,6 +5,7 @@ $edicao2 = false;
 require_once('../settings/functions.php');
 require_once('../settings/settings.php');
 require_once('../settings/multisite/unique.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/settings/diebyhost.php');
 
 if ($is_manutencao === true) {
 	header("Location: manutencao.php");
