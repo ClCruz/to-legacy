@@ -25,14 +25,13 @@
 	body {
 		background: #000 !important;
 	}
-	
 
 	.header__logo .logo-header {
-    height: 35px !important;
-    width: 50%;
-    background-position: left center;
-    margin-top: -6px !important;
-}
+		height: 35px !important;
+		width: 50%;
+		background-position: left center;
+		margin-top: -6px !important;
+	}
 
 	$bg-color: #222 !important;
 	$bg-input: #fff !important;
@@ -80,6 +79,34 @@
 
 		* {
 			color: $text-color-input;
+			top: 0 !important;
+			padding: 0 !important;
+			height: 24px !important;
+		}
+	}
+
+	@media (max-width: 960px) {
+		#pedido_resumo .sbToggle,
+		div.resumo_espetaculo div.pedido_entrega div.tipo .sbToggle,
+		div.resumo_espetaculo div.estado .sbToggle {
+			height: 10px !important;
+		}
+
+		table#pedido_resumo tbody li *,
+		#pedido_resumo .sbHolder * {
+			top: 0 !important;
+			padding: 0 !important;
+		}
+	}
+}
+
+@media (max-width: 960px) {
+	table#pedido_resumo tbody li *,
+	#pedido_resumo .sbHolder * {
+		* {
+			top: 0 !important;
+			padding: 0 !important;
+			height: 24px !important;
 		}
 	}
 }

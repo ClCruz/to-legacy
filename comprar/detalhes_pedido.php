@@ -7,7 +7,7 @@ session_start();
 
 $mainConnection = mainConnection();
 	$query = 'SELECT DISTINCT
-				E.in_entrega_ingresso,
+				ISNULL(E.in_entrega_ingresso,0) in_entrega_ingresso,
 				DT_PEDIDO_VENDA,
 				VL_TOTAL_PEDIDO_VENDA,
 				IN_SITUACAO,
@@ -32,10 +32,11 @@ $mainConnection = mainConnection();
 		  	INNER JOIN MW_EVENTO E ON E.ID_EVENTO = A.ID_EVENTO
 				INNER JOIN CI_MIDDLEWAY..mw_base b ON E.id_base=B.id_base
 
-			  WHERE ID_CLIENTE = ? AND PV.ID_PEDIDO_VENDA = ?';
+			  WHERE PV.ID_CLIENTE = ? AND PV.ID_PEDIDO_VENDA = ?';
 
 $params = array($_SESSION['user'], $_GET['pedido']);
 $rsPedido = executeSQL($mainConnection, $query, $params, true);
+// die(json_encode($rsPedido));
 
 $evento_info = getEvento($rsPedido['ID_EVENTO']);
 
@@ -49,10 +50,12 @@ $exibir_bt_reimpressao = (	$rsPedido['IN_SITUACAO'] == 'F'
 							and
 							$ultima_data['APRESENTACAO']->format('Ymd') >= $rsPedido['DATA_ATUAL']->format('Ymd')
 						);
+
+
 if (basename($_SERVER['SCRIPT_FILENAME']) != 'pagamento_ok.php') {
 ?>
 <?php //echo json_encode($rsPedido) ?>
-<?php if ($rsPedido['in_entrega_ingresso'] == 0) { ?>
+<?php if ($rsPedido['in_entrega_ingresso'] == 0 || $rsPedido['in_entrega_ingresso'] == "0") { ?>
 	<div class="imprima_ingressos">
 		<?php if ($exibir_bt_reimpressao) { ?>
 		<a href="reimprimirEmail.php?pedido=<?php echo $_GET['pedido']; ?>" target="_blank"><div class="icone"></div>Imprima agora sua compra</a>
@@ -195,7 +198,7 @@ while ($rs = fetchResult($result)) {
 					<div class="local">
 						<table>
 							<tbody><tr>
-								<td>
+								<td style="font-size: 14px !important;">
 									<?php echo utf8_encode2($rs['DS_SETOR']); ?><br>
 									<?php echo $rs['DS_LOCALIZACAO']; ?>
 								</td>

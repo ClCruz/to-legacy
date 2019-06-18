@@ -140,17 +140,13 @@ while ($rs = fetchResult($result)) {
 							<img src="">
 						</div>
 						<div class="ajuda" style="display: flex; align-content: center; align-self: center" >
-							<span class="frase1 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">valide o benefício</span>
-							<span class="frase2 <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>">insira o número e clique validar</span>
-							<span class="frase3 <?php echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" style="display: flex;
-    align-items: center;">benefício válido</span>
 						</div>
 						<div class="icone_validador <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'valido' : ''; ?>" style="margin: 0px 0 0 10px !important"></div>
 						<div class="container_validador" style="display: flex; align-items: center; align-content: center">
 							<input type="text" name="bin[]" class="validador_itau form-control  <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" placeholder="<?php echo $beneficio_texto; ?>" maxlength="<?php echo $beneficio_size; ?>" value="<?php echo $rs['CD_BINITAU'].$rs['NR_BENEFICIO']; ?>" <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'readonly' : ''; ?> style="    width: 100%;
     margin: 0px 10px 0 20px;">
 							<input type="hidden" name="tipoBin[]" value="<?php echo $rs['CD_BINITAU'] ? 'itau' : 'promocao'; ?>" />
-							<a class="validarBin <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" href="#">validar</a>
+							<a style="text-decoration: underline;" class="validarBin <?php echo ($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" href="#">validar</a>
 							<!-- <img class="<?php// echo !($rs['CD_BINITAU'] || $rs['NR_BENEFICIO']) ? 'hidden' : 'notHidden'; ?>" src=""> -->
 						</div>
 					</div>
