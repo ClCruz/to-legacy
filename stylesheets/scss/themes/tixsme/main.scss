@@ -53,7 +53,8 @@
 	div.container_escolha_ingresso div.ingresso div.descricao,
 	div.descricao_pag div.descricao div.sessao p.tempo,
 	.container__imprima,
-	div.container_setor {
+	div.container_setor,
+	 {
 		background: $bg-color;
 		color: $text-color;
 
@@ -62,6 +63,27 @@
 		}
 	}
 
+	div.input select * {
+		background: white;
+		color: $text-color;
+
+		* {
+			color: $text-color;
+		}
+	}
+
+	div.descricao_pag .linha .input input *,
+	div.descricao_pag .linha .mes *,
+	div.descricao_pag .linha .data * {
+		color: #333 !important;
+	}
+
+	p.titulo,
+	p.nome,
+	div.descricao_pag a,
+	div.descricao_pag .linha .input input p, div.descricao_pag .linha .mes p, div.descricao_pag .linha .data p.titulo {
+		color: white !important;
+	}
 	.endereco__icon {
 		display: none !important;
 	}
