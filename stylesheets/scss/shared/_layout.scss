@@ -418,11 +418,6 @@ table#pedido_resumo tbody * {
 	}
 }
 
-table#pedido_resumo tbody li *,
-#pedido_resumo .sbHolder * {
-	color: $black !important;
-}
-
 table#pedido_resumo {
 	@include MQ(NS) {
 		width: 100%;
@@ -433,7 +428,6 @@ table#pedido_resumo {
 	font-size: 13px !important;
 	width: 100% !important;
 	text-transform: capitalize;
-	color: $black !important;
 	width: 100% !important;
 }
 
@@ -443,19 +437,15 @@ table#pedido_resumo {
 	height: 55px;
 	width: 65px;
 	border-radius: 0.2rem !important;
-	background: $secundary !important;
 	border: none;
-	color: #333 !important;
 }
 
 .container_ingresso .sbSelector {
 	height: 55px;
-	color: #333 !important;
 	a {
 		text-decoration: none !important;
 	}
 	a.sbSelector:hover {
-		color: #ccc;
 		text-decoration: none;
 	}
 }
@@ -2222,7 +2212,7 @@ div.coluna p.frase {
 	@include MQ(NS) {
 		font-size: 18px;
 
-		background: $secundary !important;
+		// background: $secundary !important;
 		border-radius: 5px !important;
 		position: relative !important;
 		width: auto !important;
@@ -2230,7 +2220,7 @@ div.coluna p.frase {
 		font-size: 16px;
 		/* display: none; */
 		font-weight: bold !important;
-		color: #fff !important;
+		// color: #fff !important;
 		padding: 5px 8px !important;
 		-webkit-box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25) !important;
 		/* box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25)!important; */
@@ -2424,7 +2414,7 @@ div.container_dados p.frase {
 		font-weight: 300;
 		line-height: 1.1em;
 		margin: 0 0 5px 0 !important;
-		color: #333 !important;
+		// color: #333 !important;
 	}
 }
 

@@ -42,7 +42,7 @@
   display: none;
   }
 </style>
-<link rel="stylesheet" type="text/css" href="../stylesheets/nova_home.css">
+<!-- <link rel="stylesheet" type="text/css" href="../stylesheets/nova_home.css"> -->
 <link rel="stylesheet" type="text/css" href="../stylesheets/icons/socicon/styles.css">
 <link rel="stylesheet" type="text/css" href="../stylesheets/icons/flaticon1/flaticon.css">
 <?php require ("desktopMobileVersion.php"); ?>
