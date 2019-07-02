@@ -154,7 +154,7 @@ $(function() {
 						window.validarBin = function(){$this.closest('tr').next('.beneficio').find('.validarBin').trigger('click', [true])};
 					} else {
 						sizeBin = $this.find('option:selected').attr('sizeBin');
-						placeholder = sizeBin + ' primeiros números do seu cartão';
+						placeholder = sizeBin + ' primeiros números do cartão';
 
 						$this.closest('tr').addClass('complementar')
 							.next('.beneficio')

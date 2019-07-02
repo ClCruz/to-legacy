@@ -28,7 +28,7 @@ while ($rs = fetchResult($result)) {
 	$tempo = mktime($hora[0], $hora[1], 0, $data[1], $data[0], $data[2]);
 
 	$beneficio_size = $rs['NR_BENEFICIO'] ? '12' : '6';
-	$beneficio_texto = $rs['NR_BENEFICIO'] ? 'número cartão/matrícula SESC' : $beneficio_size . ' primeiros números do seu cartão';
+	$beneficio_texto = $rs['NR_BENEFICIO'] ? 'número cartão/matrícula SESC' : $beneficio_size . ' primeiros números cartão';
 
 	if($_SESSION["dataEvento"] == "" || $tempo < $_SESSION["dataEvento"]) {
 		$_SESSION["dataEvento"] = $tempo;
