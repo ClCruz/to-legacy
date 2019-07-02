@@ -38,6 +38,8 @@ $json = json_encode(array('descricao' => ($_POST ? '2.' : '1.') .' etapa5 - ' . 
 include('logiPagareChamada.php');
 
 $campanha = get_campanha_etapa(basename(__FILE__, '.php'));
+
+require_once("makeitmine.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
