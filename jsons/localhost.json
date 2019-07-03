@@ -11,7 +11,7 @@
   "template": "ticketHub",
 
   "scss": "./src/scss/themes/www.bringressos.com.br/main.scss",
-  "css": "/stylesheets/themes/www.ingressaria.com.br/main.css",
+  "css": "/stylesheets/themes/tixsme/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "favico": "/img/vivaingressos/",
   "meta": {
