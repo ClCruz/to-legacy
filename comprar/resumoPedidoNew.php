@@ -10,7 +10,10 @@ $result = executeSQL($mainConnection, $query, $params);
 $evento_info = null;
 $total = "";
 
+
 while ($rs = fetchResult($result)) {
+
+	
 	if ($evento_info == null) {
 		$evento_info = getEvento($rs['id_evento']);
 		$total = $rs["totalWithService_formatted"];
@@ -21,11 +24,6 @@ while ($rs = fetchResult($result)) {
 						<?php echo utf8_encode2($evento_info['DS_EVENTO']); ?>
 				</p>
 				<p class="endereco">
-							<span style="text-transform: capitalize">
-							<img class="endereco__icon" src="../images/icons/calendar.svg" alt="">
-								<?php echo getDateToString($tempo,"week-small"); ?> <?php echo strftime("%d", $tempo); ?>/<?php echo getDateToString($tempo,"month-small"); ?> - <?php echo $rs['HR_APRESENTACAO']; ?> 
-								<br /> 
-							</span>
 							<span style="text-transform: capitalize">
 								<span style="margin-top: 10px"></span>
 							<img class="endereco__icon" src="../images/icons/map-pin-white.svg" alt="">
