@@ -481,15 +481,13 @@ if (isset($_SESSION['user']) and is_numeric($_SESSION['user'])) {
                                             // pagarme
                                             elseif (in_array($rs['CD_MEIO_PAGAMENTO'], array('911')) and $rs['IN_SITUACAO'] == 'P') {
 
-                                                $query = "SELECT OBJ_PAGSEGURO FROM MW_PEDIDO_PAGSEGURO WHERE ID_PEDIDO_VENDA = ? ORDER BY DT_STATUS DESC";
+                                                $query = "SELECT url_boleto,isboletogenerated FROM mw_pedido_venda WHERE ID_PEDIDO_VENDA = ?";
                                                 $params = array($rs['ID_PEDIDO_VENDA']);
                                                 $rs2 = executeSQL($mainConnection, $query, $params, true);
 
                                                 if (!empty($rs2)) {
-                                                    $transaction = json_decode($rs2['OBJ_PAGSEGURO']);                                                    
-                                                    
-                                                    if ($rs['CD_MEIO_PAGAMENTO'] == '911' && $transaction->payment_method=="boleto" && $transaction->success == true) {
-                                                        echo "<br/><a href='".$transaction->boleto_url."' target='_blank'>Imprimir Boleto</a>";
+                                                    if ($rs['CD_MEIO_PAGAMENTO'] == '911' && $rs2["isboletogenerated"] == 1) {
+                                                        echo "<br/><a href='".$rs2["url_boleto"]."' target='_blank'>Imprimir Boleto</a>";
                                                     }
                                                 }
                                             }
