@@ -227,5 +227,9 @@
     "afrac.ticketoffice.me": "afrac",
     "api.afrac.ticketoffice.me": "afrac",
     "compra.afrac.ticketoffice.me": "afrac",
-    "admin.afrac.ticketoffice.me": "afrac"
+    "admin.afrac.ticketoffice.me": "afrac",
+    "feiraautocom.ticketoffice.me": "feiraautocom",
+    "api.feiraautocom.ticketoffice.me": "feiraautocom",
+    "compra.feiraautocom.ticketoffice.me": "feiraautocom",
+    "admin.feiraautocom.ticketoffice.me": "feiraautocom"
 }
