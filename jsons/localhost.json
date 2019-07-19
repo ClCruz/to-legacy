@@ -10,8 +10,8 @@
   "ga": "",
   "template": "ticketHub",
 
-  "scss": "./src/scss/themes/www.bringressos.com.br/main.scss",
-  "css": "/stylesheets/themes/www.ingressaria.com.br/main.css",
+  "scss": "./src/scss/themes/willianleite.tixs.me/main.scss",
+  "css": "/stylesheets/themes/willianleite.tixs.me/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "favico": "/img/vivaingressos/",
   "meta": {
