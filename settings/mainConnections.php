@@ -7,7 +7,7 @@ function oi() {
 	return "oi";
 }
 function mainConnection() {
-	//die("dddaa");
+	// die("dddaa");
         $host = multiSite_getCurrentSQLServer()["host"];
 	$port = multiSite_getCurrentSQLServer()["port"];
 	$dbname = 'CI_MIDDLEWAY';
@@ -18,6 +18,7 @@ function mainConnection() {
 	// echo "<br />dbname: " .$dbname;
 	// echo "<br />host: " .$user;
 	// echo "<br />host: " .$pass;
+	// die("");
         return sqlsrv_connect($host.','.$port, array("UID" => $user, "PWD" => $pass, "Database" => $dbname));
 }
 

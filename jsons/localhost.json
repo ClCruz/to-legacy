@@ -10,8 +10,8 @@
   "ga": "",
   "template": "ticketHub",
 
-  "scss": "./src/scss/themes/willianleite.tixs.me/main.scss",
-  "css": "/stylesheets/themes/willianleite.tixs.me/main.css",
+  "scss": "./src/scss/themes/equiperevival.ticketoffice.me/main.scss",
+  "css": "/stylesheets/themes/equiperevival.ticketoffice.me/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "favico": "/img/vivaingressos/",
   "meta": {
