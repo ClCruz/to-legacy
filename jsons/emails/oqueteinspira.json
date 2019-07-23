@@ -1,0 +1,80 @@
+{
+  "config": {
+    "type": "api",
+    "smtp": {
+      "uri": "smtp-relay.gmail.com",
+      "port": "587",
+      "smtpsecure": "tls"
+    },
+    "api": {
+      "login": "leonel.costa@tixs.me",
+      "apikey": "b175cc5be004456855e061f1fb8f113b",
+      "uri": "http://app1.iagentesmtp.com.br/api/v1/send.json"
+    }
+  },
+  "formto": {
+    "email":"atendimento@oqueteinspira.net.br",
+    "from": "formto",
+    "pass":""
+  },
+  "noreply": {
+    "email":"noreply@oqueteinspira.net.br",
+    "from": "noreply",
+    "pass":""
+  },
+  "register": {
+    "email":"cadastro@oqueteinspira.net.br",
+    "from": "cadastro",
+    "pass":""
+  },
+  "shopping": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "lembrete": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "marketing": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "info": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "sac": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "noreply",
+    "pass":""
+  },
+  "pedido": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "assinantea@siscompre": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressospedidos@hotmail": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@siscompre": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@gmail": {
+    "email":"pedido@oqueteinspira.net.br",
+    "from": "pedido",
+    "pass":""
+  }
+}
