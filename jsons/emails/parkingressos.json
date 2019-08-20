@@ -1,0 +1,80 @@
+{
+  "config": {
+    "type": "api",
+    "smtp": {
+      "uri": "smtp-relay.gmail.com",
+      "port": "587",
+      "smtpsecure": "tls"
+    },
+    "api": {
+      "login": "leonel.costa@tixs.me",
+      "apikey": "b175cc5be004456855e061f1fb8f113b",
+      "uri": "http://app1.iagentesmtp.com.br/api/v1/send.json"
+    }
+  },
+  "formto": {
+    "email":"atendimento@parkingressos.com",
+    "from": "formto",
+    "pass":""
+  },
+  "noreply": {
+    "email":"noreply@parkingressos.com",
+    "from": "noreply",
+    "pass":""
+  },
+  "register": {
+    "email":"cadastro@parkingressos.com",
+    "from": "cadastro",
+    "pass":""
+  },
+  "shopping": {
+    "email":"pedido@parkingressos.com",
+    "from": "pedido",
+    "pass":""
+  },
+  "lembrete": {
+    "email":"pedido@parkingressos.com",
+    "from": "pedido",
+    "pass":""
+  },
+  "marketing": {
+    "email":"pedido@parkingressos.com",
+    "from": "pedido",
+    "pass":""
+  },
+  "info": {
+    "email":"pedido@parkingressos.com",
+    "from": "pedido",
+    "pass":""
+  },
+  "sac": {
+    "email":"pedido@parkingressos.com",
+    "from": "noreply",
+    "pass":""
+  },
+  "pedido": {
+    "email":"pedido@parkingressos.com",
+    "from": "pedido",
+    "pass":""
+  },
+  "assinantea@siscompre": {
+    "email":"pedido@parkingressos.com",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressospedidos@hotmail": {
+    "email":"pedido@parkingressos.com",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@siscompre": {
+    "email":"pedido@parkingressos.com",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@gmail": {
+    "email":"pedido@parkingressos.com",
+    "from": "pedido",
+    "pass":""
+  }
+}
