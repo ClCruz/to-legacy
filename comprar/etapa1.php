@@ -5,7 +5,7 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/settings/functions.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/settings/settings.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/settings/multisite/unique.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/settings/diebyhost.php');
-die(phpinfo());
+
 if (isset($_GET['apresentacao']) and is_numeric($_GET['apresentacao'])) {
 
   // se o usuario estiver em um processo de renovacao redirecionar imediatamente para a etapa 2, evitando a possibilidade de selecao de lugares
