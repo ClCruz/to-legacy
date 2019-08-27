@@ -918,6 +918,14 @@ function comboTipoLocalOptions($name, $selected, $isCombo = true) {
     return $isCombo ? $combo : $text;
 }
 
+function check_show_tickettype_partner($conn,$id) {
+    $query = 'EXEC pr_check_tickettype_partner ?,?';
+    $params = array(getwhitelabelobj()["apikey"],$id);
+    $rs = executeSQL($conn, $query, $params, true);
+
+    return $rs["active"] == 1;
+}
+
 function comboPrecosIngresso($name, $apresentacaoID, $idCadeira, $selected = NULL, $isCombo = true, $isArray = false) {
     session_start();
     $mainConnection = mainConnection();
@@ -1038,6 +1046,10 @@ function comboPrecosIngresso($name, $apresentacaoID, $idCadeira, $selected = NUL
     $bilhetes = array();
 
     while ($rs = fetchResult($result)) {
+
+        if (check_show_tickettype_partner($conn,$rs["CODTIPBILHETE"]) == false) {
+            continue;
+        }
 
         if (
             (in_array($id_evento, explode(',', $_COOKIE['hotsite'])) and $rs['IN_HOT_SITE'] == '1')
