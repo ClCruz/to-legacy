@@ -13,67 +13,67 @@
     }
   },
   "formto": {
-    "email":"atendimento@ingreshow.ticketoffice.me",
+    "email":"atendimento@ingreshow.com.br",
     "from": "formto",
     "pass":""
   },
   "noreply": {
-    "email":"noreply@ingreshow.ticketoffice.me",
+    "email":"noreply@ingreshow.com.br",
     "from": "noreply",
     "pass":""
   },
   "register": {
-    "email":"cadastro@ingreshow.ticketoffice.me",
+    "email":"cadastro@ingreshow.com.br",
     "from": "cadastro",
     "pass":""
   },
   "shopping": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "pedido",
     "pass":""
   },
   "lembrete": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "pedido",
     "pass":""
   },
   "marketing": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "pedido",
     "pass":""
   },
   "info": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "pedido",
     "pass":""
   },
   "sac": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "noreply",
     "pass":""
   },
   "pedido": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "pedido",
     "pass":""
   },
   "assinantea@siscompre": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressospedidos@hotmail": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@siscompre": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "pedido",
     "pass":""
   },
   "compreingressos@gmail": {
-    "email":"pedido@ingreshow.ticketoffice.me",
+    "email":"pedido@ingreshow.com.br",
     "from": "pedido",
     "pass":""
   }
