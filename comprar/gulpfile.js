@@ -39,7 +39,7 @@ gulp.task('sassLocalhost', function () {
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('../stylesheets/scss/themes/localhost/'));
-  gulp.src('../stylesheets/scss/themes/www.cafeteatrorubi.com.br/main.scss')
+  gulp.src('../stylesheets/scss/themes/www.caferubi.com.br/main.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
