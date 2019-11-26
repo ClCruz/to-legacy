@@ -9,7 +9,9 @@ session_start();
 
 if (checkIfDelivery($_GET['pedido']) == true) die();
 
+
 if (!isset($_GET['pedido'])) die();
+
 
 if (is_numeric($_GET['pedido'])) {
 	require 'acessoLogado.php';
@@ -141,7 +143,7 @@ if (!empty($rsDados)) {
 	        if ($rsServicos['IN_TAXA_POR_PEDIDO'] == 'S') {
 	            $valorConveniencia = obterValorServico($itens['ID_APRESENTACAO_BILHETE'], true, $id_pedido);
 
-	            $itensPedido[$i]['descricao_item'] = 'Servi√ßo';
+	            $itensPedido[$i]['descricao_item'] = 'Serviáo';
 	            $itensPedido[$i]['valor_item'] = $valorConveniencia;
 
 	            $valorConveniencia = 0;
