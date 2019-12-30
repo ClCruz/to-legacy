@@ -13,68 +13,68 @@
     }
   },
   "formto": {
-    "email":"atendimento@bilheteriacom.ticketoffice.me",
+    "email": "atendimento@bilheteria.com.br",
     "from": "formto",
-    "pass":""
+    "pass": ""
   },
   "noreply": {
-    "email":"noreply@bilheteriacom.ticketoffice.me",
+    "email": "noreply@bilheteria.com.br",
     "from": "noreply",
-    "pass":""
+    "pass": ""
   },
   "register": {
-    "email":"cadastro@bilheteriacom.ticketoffice.me",
+    "email": "cadastro@bilheteria.com.br",
     "from": "cadastro",
-    "pass":""
+    "pass": ""
   },
   "shopping": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "pedido",
-    "pass":""
+    "pass": ""
   },
   "lembrete": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "pedido",
-    "pass":""
+    "pass": ""
   },
   "marketing": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "pedido",
-    "pass":""
+    "pass": ""
   },
   "info": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "pedido",
-    "pass":""
+    "pass": ""
   },
   "sac": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "noreply",
-    "pass":""
+    "pass": ""
   },
   "pedido": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "pedido",
-    "pass":""
+    "pass": ""
   },
   "assinantea@siscompre": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "pedido",
-    "pass":""
+    "pass": ""
   },
   "compreingressospedidos@hotmail": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "pedido",
-    "pass":""
+    "pass": ""
   },
   "compreingressos@siscompre": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "pedido",
-    "pass":""
+    "pass": ""
   },
   "compreingressos@gmail": {
-    "email":"pedido@bilheteriacom.ticketoffice.me",
+    "email": "pedido@bilheteria.com.br",
     "from": "pedido",
-    "pass":""
+    "pass": ""
   }
 }
