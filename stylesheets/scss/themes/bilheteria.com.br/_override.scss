@@ -14,14 +14,16 @@ $gradiente: $secundary;
 }
 
 a.botao {
-	background: rgb(254,60,103) !important;
+	background: #fff !important;
+	color: #f29536 !important;
 }
 
 a.botao,
 input.submit.salvar_dados,
 input.submit.avancar.passo4,
 input.submit {
-	background: rgb(254,60,103) !important;
+	background: #fff !important;
+	color: #f29536 !important;
 }
 
 .btn__help {
