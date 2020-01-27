@@ -1,0 +1,29 @@
+.logo-img {
+	background-color: black;
+	border-radius: 2px;
+}
+
+.body {
+	background-color: black;
+}
+
+$gradiente: $secundary;
+
+.main__tixsme {
+	background: black;
+}
+
+a.botao {
+	background: $secundary !important;
+}
+
+a.botao,
+input.submit.salvar_dados,
+input.submit.avancar.passo4,
+input.submit {
+	background: $secundary !important;
+}
+
+.btn__help {
+	background-color: none !important;
+}
