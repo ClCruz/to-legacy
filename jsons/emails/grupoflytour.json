@@ -1,0 +1,80 @@
+{
+  "config": {
+    "type": "api",
+    "smtp": {
+      "uri": "smtp-relay.gmail.com",
+      "port": "587",
+      "smtpsecure": "tls"
+    },
+    "api": {
+      "login": "leonel.costa@tixs.me",
+      "apikey": "b175cc5be004456855e061f1fb8f113b",
+      "uri": "http://app1.iagentesmtp.com.br/api/v1/send.json"
+    }
+  },
+  "formto": {
+    "email":"atendimento@grupoflytour.bilheteria.com.br",
+    "from": "formto",
+    "pass":""
+  },
+  "noreply": {
+    "email":"noreply@grupoflytour.bilheteria.com.br",
+    "from": "noreply",
+    "pass":""
+  },
+  "register": {
+    "email":"cadastro@grupoflytour.bilheteria.com.br",
+    "from": "cadastro",
+    "pass":""
+  },
+  "shopping": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "lembrete": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "marketing": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "info": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "sac": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "noreply",
+    "pass":""
+  },
+  "pedido": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "assinantea@siscompre": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressospedidos@hotmail": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@siscompre": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "pedido",
+    "pass":""
+  },
+  "compreingressos@gmail": {
+    "email":"pedido@grupoflytour.bilheteria.com.br",
+    "from": "pedido",
+    "pass":""
+  }
+}
