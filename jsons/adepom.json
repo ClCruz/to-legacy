@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/adepom/main.scss",
   "css": "/stylesheets/themes/adepom.bilheteria.com.br/main.css",
   "template": "ticketHub",
-  "logo": "/assets/logo-adepom.png",
+  "logo": "/assets/logo-adepom.jpg",
   "favico": "/img/adepom/",
   "videos": {
     "list": []
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_adepom/emailPresente.html",
       "signature": "../comprar/templates/multi_adepom/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_adepom/confirmacaoEmail.html"
-
     }
   }
 }
