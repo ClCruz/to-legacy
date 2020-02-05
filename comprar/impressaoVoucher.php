@@ -35,7 +35,7 @@ $dadosExtrasEmail['cpf_cnpj_cliente'] = $rsExtrangeiro['ID_DOC_ESTRANGEIRO'] ? $
 $query = 'SELECT ds_meio_pagamento FROM mw_meio_pagamento WHERE cd_meio_pagamento = ?';
 $rs = executeSQL($mainConnection, $query, array($PaymentDataCollection['PaymentMethod']), true);
 
-$valores['aaa'] = "ab";
+$valores['aaa'] = $query;
 
 $valores['codigo_pedido'] = $parametros['OrderData']['OrderId'];
 $valores['nome_cliente'] = $parametros['CustomerData']['CustomerName'];
