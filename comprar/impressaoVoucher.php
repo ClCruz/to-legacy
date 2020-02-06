@@ -41,7 +41,21 @@ $voucher = executeSQL($mainConnection, $query, $params, true);
 if($voucher){
     $voucher = $voucher["description_voucher"];
 } else {
-    $voucher = 'nada cadastrado';
+    $voucher = '<p style="font-family:Arial,Verdana;font-size:8px;font-weight:normal;color:#000000;line-height:14px;margin:0;padding:0;">
+    - O evento  começa rigorosamente no horário marcado. Não haverá troca de voucher ou devoluções em caso de atraso de qualquer natureza. Seja pontual, poderá não ser permitida a entrada após o início do espetáculo.<br />
+    - A taxa de serviço e os vouchers que forem adquiridos e pagos através desse canal não poderão ser devolvidos,
+    trocado ou cancelados depois que a compra for efetuada pelo cliente e o pagamento confirmado pela
+    instituição financeira.<br />
+    - É obrigatório <b>apresentar um documento de identificação pessoal e o cartão de crédito utilizado na compra</b> na entrada do evento. De acordo com a política de segurança das operadoras de crédito, essa conferência se faz necessária visto que as transações via internet não são autenticadas com sua senha de usuário.<br />
+    
+    - No caso de <b>meia-entrada</b> ou <b>promoção</b> é obrigatório a apresentação de documento que comprove o
+    benefício no momento da retirada dos vouchers e na entrada do local.<br />
+    - Caso você tenha alguma dúvida sobre o seu pedido, entre em contato conosco através do site:
+    <a href="https://demo.ticketoffice.me" style="color:#000000;text-decoration:none;font-weight:bold;">https://demo.ticketoffice.me</a><br /><br />
+    </p>
+    <p style="font-family:Arial,Verdana;font-size:8px;font-weight:bold;color:#000000;line-height:14px;margin:0;padding:0;text-transform:uppercase;">
+        ESTE É UM E-MAIL AUTOMÁTICO. NÃO É NECESSÁRIO RESPONDÊ-LO.
+    </p>';
 }
 
 $query = "EXEC pr_show_partner_info_bypedido ?, ?";
@@ -62,7 +76,7 @@ $dadosExtrasEmail['cpf_cnpj_cliente'] = $rsExtrangeiro['ID_DOC_ESTRANGEIRO'] ? $
 $query = 'SELECT ds_meio_pagamento FROM mw_meio_pagamento WHERE cd_meio_pagamento = ?';
 $rs = executeSQL($mainConnection, $query, array($PaymentDataCollection['PaymentMethod']), true);
 
-$valores['aaa'] = $voucher;
+$valores['description_voucher'] = $voucher;
 
 $valores['codigo_pedido'] = $parametros['OrderData']['OrderId'];
 $valores['nome_cliente'] = $parametros['CustomerData']['CustomerName'];
