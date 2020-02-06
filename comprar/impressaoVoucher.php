@@ -38,7 +38,7 @@ exec('USE '+ @ds_nome_base_sql + ';SELECT description_voucher from tabPeca where
 $params = array($parametros['OrderData']['OrderId']);
 $result = executeSQL($mainConnection, $query, $params);
 
-$voucher = hasRows($result);
+$voucher = $result;
 
 
 $query = "EXEC pr_show_partner_info_bypedido ?, ?";
