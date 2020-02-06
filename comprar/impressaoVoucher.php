@@ -39,7 +39,8 @@ $params = array($parametros['OrderData']['OrderId']);
 $result = executeSQL($mainConnection, $query, $params, true);
 
 $voucher = $result;
-die($voucher);
+var_dump($voucher);
+die();
 
 
 $query = "EXEC pr_show_partner_info_bypedido ?, ?";
