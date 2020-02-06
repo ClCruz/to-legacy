@@ -17,6 +17,30 @@ $result = executeSQL($mainConnection, $query, $params);
 $is_assinatura = hasRows($result);
 
 
+$query = "DECLARE @id_base   INT
+DECLARE @CodPeca   INT
+DECLARE @id_evento INT
+DECLARE @ds_nome_base_sql VARCHAR(32)
+
+SELECT TOP 1 @id_evento = E.id_evento, @CodPeca = E.CodPeca, @id_base = E.id_base
+            FROM MW_PEDIDO_VENDA PV
+            INNER JOIN MW_ITEM_PEDIDO_VENDA I ON I.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
+            INNER JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = I.ID_APRESENTACAO
+            INNER JOIN MW_APRESENTACAO A2 ON A2.ID_EVENTO = A.ID_EVENTO
+			INNER JOIN CI_MIDDLEWAY..mw_evento E ON A.id_evento = E.id_evento
+            WHERE PV.ID_PEDIDO_VENDA = ?
+
+SELECT @ds_nome_base_sql = ds_nome_base_sql FROM CI_MIDDLEWAY..mw_base
+where id_base = @id_base
+
+exec('USE '+ @ds_nome_base_sql + ';SELECT description_voucher from tabPeca where CodPeca ='+@CodPeca)";
+
+$params = array($parametros['OrderData']['OrderId']);
+$result = executeSQL($mainConnection, $query, $params);
+
+$voucher = hasRows($result);
+
+
 $query = "EXEC pr_show_partner_info_bypedido ?, ?";
 // die(json_encode(getwhitelabelobj_forced("ingressaria")));
 $params = array(getwhitelabelobj_forced("ingressaria")["apikey"],$parametros['OrderData']['OrderId']);
@@ -35,7 +59,7 @@ $dadosExtrasEmail['cpf_cnpj_cliente'] = $rsExtrangeiro['ID_DOC_ESTRANGEIRO'] ? $
 $query = 'SELECT ds_meio_pagamento FROM mw_meio_pagamento WHERE cd_meio_pagamento = ?';
 $rs = executeSQL($mainConnection, $query, array($PaymentDataCollection['PaymentMethod']), true);
 
-$valores['aaa'] = $query;
+$valores['aaa'] = $voucher;
 
 $valores['codigo_pedido'] = $parametros['OrderData']['OrderId'];
 $valores['nome_cliente'] = $parametros['CustomerData']['CustomerName'];
