@@ -35,12 +35,9 @@ where id_base = @id_base
 
 exec('USE '+ @ds_nome_base_sql + ';SELECT description_voucher from tabPeca where CodPeca ='+@CodPeca)";
 
-$params = array($parametros['OrderData']['OrderId']);
-$result = executeSQL($mainConnection, $query, $params, true);
+$params  = array($parametros['OrderData']['OrderId']);
+$voucher = executeSQL($mainConnection, $query, $params, true);
 
-$voucher = $result;
-var_dump($voucher);
-die();
 
 
 $query = "EXEC pr_show_partner_info_bypedido ?, ?";
