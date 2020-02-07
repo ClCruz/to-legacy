@@ -14,16 +14,23 @@ $gradiente: $secundary;
 }
 
 a.botao {
-	background: $secundary !important;
+	background: #fff !important;
+	color: $secundary !important;
 }
 
 a.botao,
 input.submit.salvar_dados,
 input.submit.avancar.passo4,
 input.submit {
-	background: $secundary !important;
+	background: #fff !important;
+	color: $secundary !important;
 }
 
 .btn__help {
 	background-color: none !important;
+}
+
+div .container_botoes_etapas{
+	z-index: 1000 !important;
+	background-color: $secundary;
 }
