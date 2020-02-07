@@ -38,6 +38,9 @@ exec('USE '+ @ds_nome_base_sql + ';SELECT description_voucher from tabPeca where
 $params  = array($parametros['OrderData']['OrderId']);
 $voucher = executeSQL($mainConnection, $query, $params, true);
 
+var_dump($voucher);
+die();
+
 if($voucher){
     $voucher = $voucher["description_voucher"];
 } else {
