@@ -1,4 +1,8 @@
 <?php
+ini_set ("odbc.defaultlrl", "256000");
+ini_set('mssql.textlimit', '2147483647');
+ini_set('mssql.textsize', '2147483647');
+
 require_once('../settings/functions.php');
 require_once('../settings/settings.php');
 require_once('../settings/Template.class.php');
