@@ -1,288 +1,144 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
-<head>
-<title>bilheteriacom</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-        <td align="center" valign="top">
-            <table width="560" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td align="left" valign="top">
-                      <!-- BEGIN ITENS_DESTACAVEIS -->
-                      <table width="140" border="0" align="left" cellpadding="0" cellspacing="0" style="margin-bottom: 5px;">
-                            <tbody>
-                                <tr>
-                                    <td width="130" align="center" valign="middle">
-                                        <table width="130" border="0" align="left" cellpadding="4" cellspacing="0">
-                                            <tbody><tr>
-                                                <td width="122" align="left" valign="top" bgcolor="#EEEEEE">
-                                                    <p style="font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:12px;margin:0;padding:0;">
-                                                        {item_evento}<br>
-                                                        {item_teatro}<br>
-                                                        {item_tipo_bilhete} - R$ {item_valor}<br>
-                                                        {item_data} {item_hora}<br>
-                                                        {item_setor} {item_cadeira}
-                                                    </p>
-                                                    <p style="font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:12px;margin:0;padding:0;text-transform:uppercase;float:right;">
-                                                        urna
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </tbody></table>
-                                    </td>
-                                    <td width="10" align="center" valign="middle">
-                                        <div style="width:0;height:80px;{item_extra_style}"></div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                      <!-- END ITENS_DESTACAVEIS -->
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td height="15" valign="top">
-            <div style="height:1px;border-bottom:2px dashed #EEEEEE;width:600px;"></div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-          <table width="560" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tbody>
-                <tr>
-                    <td>
-                        <p style="font-family:Arial,Verdana;font-size:14px;font-weight:bold;color:#02143a;line-height:20px;margin:0;padding:0;">Aqui está o seu voucher (e-ticket)</p>
-                        <p style="font-family:Arial,Verdana;font-size:9px;font-weight:normal;color:#02143a;line-height:14px;margin:0;padding:0;">É obrigatório a apresentação deste voucher na bilheteria, <br>balcão ou diretamente no controle de acesso do local do evento.</p>
-                    </td>
-                    <td>
-                        <img src="https://media.tixs.me/logos/logo-bilheteriacom.png" style="height: 80px;" alt="" align="left">
-                    </td>
-                </tr>
-                <tr>
-                    <td height="6"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <p style="font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:16px;margin:0;padding:0;">
-                            Olá <span style="font-size:11px;font-weight:bold;">{nome_cliente}</span>, obrigado pela compra.<br>
-                            <b>Confira abaixo as informações</b> da sua compra.
-                        </p>                  
-                </td></tr><tr>
-                    <td height="6"></td>
-                </tr>              
-                <tr>
-                    <td colspan="2">
-                        <p style="font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:16px;margin:0;padding:0;">
-                            <b>Código Cliente:</b> {codigo_cliente} <b>Nome:</b> {nome_cliente}<br>
-                            <b>E-mail:</b> {email_cliente} <b>CPF/CNPJ/Passport:</b> {cpf_cnpj_cliente}
-                        </p>
-                    </td>
-                </tr>                  
-                <tr>
-                    <td colspan="2">
-                        <p style="font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:16px;margin:0;padding:0;">
-                        <b>{partner_desc}</b>
-                        </p>
-                    </td>
-                </tr>      
-                <tr>
-                    <td height="6"></td>
-                </tr>
-            </tbody></table>
-        </td>
-    </tr>
-    <tr>
-        <td height="13" valign="top">
-            <div style="height:1px;border-bottom:1px solid #EEEEEE;width:600px;"></div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <table width="560" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tbody><tr>
-                    <td>
-                        <p style="font-family:Arial,Verdana;font-size:14px;font-weight:bold;color:#000000;line-height:16px;margin:0;padding:0;text-transform:uppercase;">
-                            LOCALIZADOR Nº {codigo_pedido}
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <!-- BEGIN ITENS_PEDIDO -->
-                        <table width="400" border="0" cellpadding="0" cellspacing="0">
-                            <tbody>
-                                <tr>
-                                    <td height="3"></td>
-                                </tr>
-                                <tr>
-                                    <td width="72" align="left" valign="middle">
-                                        <img src="{item_qrcode}" style="margin:0 20px 0 0;" />
-                                    </td>
-                                    <td width="328" valign="middle">
-                                      <div style="width:324px;border:2px solid #EEEEEE;">
-                                            <table width="324" border="0" cellpadding="4" cellspacing="0">
-                                                <tbody><tr>
-                                                    <td width="208" valign="middle">
-                                                        <p style="font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:15px;margin:0;padding:0;text-transform:uppercase;">
-                                                            <b>{item_evento}</b><br>
-                                                            {item_teatro}<br>
-                                                            {item_tipo_bilhete} - R$ {item_valor}<br>
-                                                            {item_setor} - {item_cadeira}<br>
-                                                            <span style="font-size:15px;line-height:16px;">{item_data} {item_hora}</span>
-                                                        </p>
-                                                    </td>
-                                                    <td width="100" align="center" valign="middle">
-                                                        <p style="font-family:Arial,Verdana;font-size:13px;font-weight:bold;color:#000000;line-height:18px;margin:0;padding:0;text-transform:uppercase;">
-                                                            {item_setor}
-                                                        </p>
-                                                        <p style="font-family:Arial,Verdana;font-size:19px;font-weight:bold;color:#000000;line-height:22px;margin:0;padding:0;text-transform:uppercase;">
-                                                            {item_cadeira}
 
-                                                        </p>
-                                                        <p style="font-size: 10px; font-family: Arial, Verdana; margin-top: 2px;">
-                                                            {item_codvenda}
-                                                        </p>
-                                                    </td>
-                                                </tr>
-                                            </tbody></table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- END ITENS_PEDIDO -->
-                    </td>
-                </tr>
-                <tr>
-                    <td height="6"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <table style="width:100%; font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:16px;margin:0;padding:0;"><tr><td>Total de vouchers: R$ {valor_ingressos}</td><td>{valor_servico}</td><td><b>Total do pedido:</b> R$ {valor_total}</td></tr></table>
-                    </td>
-                </tr>                  
-                <tr>
-                    <td height="6">      
-                    </td>
-                </tr>
-            </tbody></table>
-        </td>
-    </tr>
-    <tr>
-        <td height="13" valign="top">
-            <div style="height:1px;border-bottom:1px solid #EEEEEE;width:600px;"></div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <table width="560" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td>
-                        <table width="560" border="0" cellspacing="0" cellpadding="0">
-                            <tr>
-                                <td width="150" valign="top">
-                                    <p style="font-family:Arial,Verdana;font-size:9px;font-weight:bold;color:#000000;line-height:14px;margin:0;padding:0;text-transform:uppercase;">
-                                        DADOS DO PEDIDO
-                                    </p>
-                                    <p style="font-family:Arial,Verdana;font-size:9px;font-weight:normal;color:#000000;line-height:14px;margin:0;padding:0;">
-                                        <b>Localizador:</b> {codigo_pedido}<br />
-                                        <b>Data e hora de venda:</b><br />
-                                        {data_hora_status}<br />
-                                        <b>Data e hora de impressão:</b><br />
-                                        {data_hora_impressao}<br />
-                                        <b>Login de usuário:</b><br />
-                                        {email_cliente}<br />
-                                        <b>Status: </b>{nome_status}<b> Via:</b> 1<br />
-                                        <b>Total de pagamento:</b><br />
-                                        R$ {valor_total}<br />
-                                        <b>Meio de pagamento:</b><br />
-                                        {meio_pagamento}<br />
-                                        <b>Nr. do Cartão da Compra</b><br />
-                                        {cartao}<br />
-                                    </p>
-                                </td>
-                                <td width="10"></td>
-                                <td width="400" valign="top" 
-                                style="font-family:Arial,Verdana;font-size:9px;font-weight:normal;color:#000000;line-height:14px;margin:0;padding:0;">
-                                  {description_voucher}
-                                  {description_voucher2}
-                                    <br />
-                                    {workaround}
-                                </td>
-                          </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td height="8"></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr style="display:none">
-        <td height="13" valign="top">
-            <div style="height:1px;border-bottom:1px solid #EEEEEE;width:600px;page-break-after: always;"></div>
-        </td>
-    </tr>
-    <tr style="display:none">
-        <td>
-            <table width="560" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tr style="display:none">
-                    <td>
-                        <p style="font-family:Arial,Verdana;font-size:12px;font-weight:normal;color:#000000;line-height:16px;margin:0;padding:0;">
-                            <b>PROCURAÇÃO</b><br /><br />
-                            AUTORIZAÇÃO PARA RETIRADA DE INGRESSOS POR TERCEIROS<br /><br />
-                            <span style="line-height:26px">Pelo presente instrumento particular de procuração, ______________________________________,  inscrito(a) no  CPF sob n.º _____________________, nomeia e constitui seu(sua) bastante procurador(a), ______________________________________, inscrito(a) no CPF sob n.º _____________________,</span> para o fim específico de retirar, aceitar, trocar e/ou promover todos os demais atos pertinentes ao recebimento do(s)ingressos(s) cujo número do pedido/localizador {codigo_pedido}, no valor total de R$ {valor_total} adquirido(s) pelo Outorgante no site da bilheteriacom (https://bilheteriacom.ticketoffice.me), nos termos procedimento, prazos e locais convencionados.<br />
-                            O presente instrumento de procuração encontra-se limitado aos poderes específicos para a causa indicada, tendo prazo determinado até a data do evento relacionado e serve de comprovação para eventuais contestações junto a credenciadoras dos cartões de crédito de que os ingressos foram comprados e utilizados.<br /><br />
-                            ___________________, _____, _________________________________________<br /><br />
-                            Assinatura e CPF de quem comprou os Ingressos.<br /><br /><br /><br /><br /><br />
-                            ___________________, _____, _________________________________________<br /><br />
-                            Assinatura e CPF de quem recebeu os Ingressos.<br /><br /><br /><br /><br /><br />
-                        </p>
-                    </td>
-                </tr>
-                <tr style="display:none">
-                    <td height="6"></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr style="display:none">
-        <td height="13" valign="top">
-            <div style="height:1px;border-bottom:1px solid #EEEEEE;width:600px;"></div>
-        </td>
-    </tr>
-    <tr style="display:none">
-        <td>
-            <table width="560" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td>
-                        <p style="font-family:Arial,Verdana;font-size:12px;font-weight:normal;color:#000000;line-height:16px;margin:0;padding:0;">
-                            <b>TERMO DE AUTORIZAÇÃO PARA UTILIZAÇÃO DE CARTÃO DE TERCEIROS</b><br /><br />
-                            <span style="line-height:26px">EU:_________________________________________________________________________ <br />
-                            RG:____________________________ CPF:______________________________, AUTORIZO <br />
-                            NOME:______________________________________________________________________ <br />
-                            RG:____________________________ CPF:______________________________, a utilizar o <br />
-                            Cartão de Crédito ou Débito que tenha os ingressos vinculados do Localizador N° {codigo_pedido}, <br />
-                            Referente ao evento: _____________________________ que se realizará no dia: ___/___/___.<br /><br />
-                            Para terceiros utilizarem o cartão como meio de compra, será necessário que o mesmo esteja de posse do cartão utilizado na compra, o RG ou documento com foto, comprovante de compra junto com a autorização ao portador devidamente reconhecida ou autenticada em cartório.<br /><br />
-                            _____________________________________________________________ <br />
-                            ASSINATURA RECONHECIDA OU AUTENTICADA EM CARTÓRIO
-                            </span>
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td height="6"></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-<script>print()</script>
-</body>
+<head>
+    <title>bilheteriacom</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(../../../images/marca2PNG.png);
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        table.box {
+            display: inline-block;
+            margin: 0 5%;
+            font-size: 12px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <h1 style="text-align: center;"><img src="https://media.tixs.me/logos/logo-bilheteriacom.png"
+                alt="Logo Bilheteria" style="height: 50px;">
+        </h1>
+        <h4 style="text-align: center; margin-top: -10px;">CONFIRMAÇÃO DA COMPRA</h4>
+
+        <div>
+            <h5>Tipo do Ingresso:</h5>
+            <p style="margin-top: -20px;">{item_tipo_bilhete}</p>
+            <h5>Produto:</h5>
+            <p style="margin-top: -20px;">{item_teatro}</p>
+            <div>
+                <table class="box">
+                    <tr>
+                        <td>Código:</td>
+                    </tr>
+                    <tr>
+                        <td>{codigo_cliente}</td>
+                    </tr>
+                </table>
+
+                <table class="box">
+                    <tr>
+                        <td>Número do Pedido:</td>
+                    </tr>
+                    <tr>
+                        <td>{codigo_pedido}</td>
+                    </tr>
+                </table>
+
+                <table class="box">
+                    <tr>
+                        <td>Data da Compra:</td>
+                    </tr>
+                    <tr>
+                        <td>{item_data}</td>
+                    </tr>
+                </table>
+
+                <table class="box">
+                    <tr>
+                        <td>Validade:</td>
+                    </tr>
+                    <tr>
+                        <td>{}</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <h5>Nome:</h5>
+            <h3 style="margin-top: -20px;">{nome_cliente}</h3>
+            <h4>CPF: {cpf_cnpj_cliente}</h4>
+
+            <h5 style="text-align: center;">LEIA, É IMPORTANTE!</h5>
+            <div align="justify" class="">
+                <h5 style="text-align: center;">PARQUE DA MÔNICA</h5>
+                <p> -Limite de até 5 ingressos por CPF; O voucher é valido apenas para o dia da visita, referente a data
+                    escolhida no ato da compra; O voucher é intransferível;</p>
+                <p> -Não será permitida o reagendamento após a compra;</p>
+                <p> -Obrigatório a apresentação do voucher impresso junto com o documento de indentidade na Bilheteria
+                    do
+                    parque
+                    para a troca do (s) Ingresso (s);</p>
+                <p> -A troca do voucher por ingresso é realizada exclusivamente na Bilheteria do Parque conforme o
+                    calendário de
+                    abertura disponível no site www.parquedamonica.com.br;</p>
+                <p> -O ingresso adquirido dará direito a único acesso ao Parque;</p>
+                <p> -O voucher não poderá ser trocado, nem convertido total ou parcialmente em crédito ou valor;</p>
+                <p> -Promoção não acumulativa com outras promoções e benefícios. Essa promoção só é valida para Empresas
+                    parceira, não será valida para Excursões;</p>
+                <p> -Ingresso para criança até 1 ano e 11 meses é gratuito, mediante apresentação do RG ou certidão de
+                    nascimento da criança. Basta retirar na Bilheteria;</p>
+                <p> -O parque segue normas internacionais de segurança. As atrações possuem restrições de uso como
+                    idade,
+                    altura, calçados e condições físicas. Em algumas atrações não é permitida a entrada com calçados de
+                    salto,
+                    chinelos, curativos e imobilizações médicas ( gesso ou tala). Consulte as restrições gerais na
+                    placas
+                    localizadas na entrada de cada atração e no site do parque;</p>
+                <p> -O ingresso não inclui serviços adicionais, atrações extras pagas à parte e não é valido para
+                    promoções,
+                    descontos, eventos especiais ou exclusivos;</p>
+                <p> -Não é permitida a entrada no parque com objetos cortantes, alimentos e bebidas em recipientes de
+                    vidro;
+                </p>
+                <p> -O Parque possui capacidade simultânea de 3.000 visitantes e se reserva ao direito de fechar a
+                    Bilheteria e
+                    restringir o acesso do público ao Parque após atingir sua capacidade máximo;</p>
+                <p> -Cancelamentos serão permitidos em até 07 (sete) dias corridos a contar da data de compra. Por isso,
+                    fique
+                    atento à validade do seu voucher e programe sua visita com antecedência, pois caso o voucher esteja
+                    vencido
+                    não será possível o cancelamento.</p>
+                <p> -O voucher deve ser mantido o mais intacto possível e protegido de terceiros, pois a Bilheteria.com
+                    não
+                    se
+                    responsabiliza por perdas ou pelo uso de terceiros.</p>
+
+
+                <div style="text-align: center;">
+                    <h5>UTILIZE ESTE PIN PARA TROCAR ESSE VOUCHER PELO SEU INGRESSO:</h5>
+                    <p>PIN: {pin_code}</p>
+
+                    <img style="align-content: center; height: 70px; " src="{item_qrcode}" />
+
+                </div>
+            </div>
+            <footer>
+                <h3 style="float: left;">bilheteria.com</h3>
+                <h3 style="float: right;">(11) 3030-3033</h3>
+            </footer>
+        </div>
+
+        <script>print()</script>
+    </body>
+
 </html>
