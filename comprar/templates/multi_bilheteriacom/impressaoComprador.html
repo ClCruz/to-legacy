@@ -93,51 +93,89 @@
 
         <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
-                <td align="center" valign="top">
-                    <table width="400" border="0" cellpadding="0" cellspacing="0">
+                <td>
+                    <table width="560" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr>
-                                <td height="3"></td>
+                                <td>
+                                    <p
+                                        style="font-family:Arial,Verdana;font-size:14px;font-weight:bold;color:#000000;line-height:16px;margin:0;padding:0;text-transform:uppercase;">
+                                        LOCALIZADOR Nº {codigo_pedido}
+                                    </p>
+                                </td>
                             </tr>
                             <tr>
-                                <td width="72" align="left" valign="middle">
-                                    <img src="{item_qrcode}" style="margin:0 20px 0 0;" />
-                                </td>
-                                <td width="328" valign="middle">
-                                    <div style="width:324px;border:2px solid #EEEEEE;">
-                                        <table width="324" border="0" cellpadding="4" cellspacing="0">
-                                            <tbody>
-                                                <tr>
-                                                    <td width="208" valign="middle">
-                                                        <p
-                                                            style="font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:15px;margin:0;padding:0;text-transform:uppercase;">
-                                                            <b>{item_evento}</b><br>
-                                                            {item_teatro}<br>
-                                                            {item_tipo_bilhete} - R$ {item_valor}<br>
-                                                            {item_setor} - {item_cadeira}<br>
-                                                            <span style="font-size:15px;line-height:16px;">{item_data}
-                                                                {item_hora}</span>
-                                                        </p>
-                                                    </td>
-                                                    <td width="100" align="center" valign="middle">
-                                                        <p
-                                                            style="font-family:Arial,Verdana;font-size:13px;font-weight:bold;color:#000000;line-height:18px;margin:0;padding:0;text-transform:uppercase;">
-                                                            {item_setor}
-                                                        </p>
-                                                        <p
-                                                            style="font-family:Arial,Verdana;font-size:19px;font-weight:bold;color:#000000;line-height:22px;margin:0;padding:0;text-transform:uppercase;">
-                                                            {item_cadeira}
+                                <td>
+                                    <!-- BEGIN ITENS_PEDIDO -->
+                                    <table width="400" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td height="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="72" align="left" valign="middle">
+                                                    <img src="{item_qrcode}" style="margin:0 20px 0 0;" />
+                                                </td>
+                                                <td width="328" valign="middle">
+                                                    <div style="width:324px;border:2px solid #EEEEEE;">
+                                                        <table width="324" border="0" cellpadding="4" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="208" valign="middle">
+                                                                        <p
+                                                                            style="font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:15px;margin:0;padding:0;text-transform:uppercase;">
+                                                                            <b>{item_evento}</b><br>
+                                                                            {item_teatro}<br>
+                                                                            {item_tipo_bilhete} - R$ {item_valor}<br>
+                                                                            {item_setor} - {item_cadeira}<br>
+                                                                            <span
+                                                                                style="font-size:15px;line-height:16px;">{item_data}
+                                                                                {item_hora}</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td width="100" align="center" valign="middle">
+                                                                        <p
+                                                                            style="font-family:Arial,Verdana;font-size:13px;font-weight:bold;color:#000000;line-height:18px;margin:0;padding:0;text-transform:uppercase;">
+                                                                            {item_setor}
+                                                                        </p>
+                                                                        <p
+                                                                            style="font-family:Arial,Verdana;font-size:19px;font-weight:bold;color:#000000;line-height:22px;margin:0;padding:0;text-transform:uppercase;">
+                                                                            {item_cadeira}
 
-                                                        </p>
-                                                        <p
-                                                            style="font-size: 10px; font-family: Arial, Verdana; margin-top: 2px;">
-                                                            {item_codvenda}
-                                                        </p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                                                        </p>
+                                                                        <p
+                                                                            style="font-size: 10px; font-family: Arial, Verdana; margin-top: 2px;">
+                                                                            {item_codvenda}
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- END ITENS_PEDIDO -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="6"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table
+                                        style="width:100%; font-family:Arial,Verdana;font-size:10px;font-weight:normal;color:#000000;line-height:16px;margin:0;padding:0;">
+                                        <tr>
+                                            <td>Total de vouchers: R$ {valor_ingressos}</td>
+                                            <td>{valor_servico}</td>
+                                            <td><b>Total do pedido:</b> R$ {valor_total}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="6">
                                 </td>
                             </tr>
                         </tbody>
@@ -145,7 +183,6 @@
                 </td>
             </tr>
         </table>
-        <!-- END ITENS_PEDIDO -->
 
         <footer>
             <h3 style="float: left;">bilheteria.com</h3>
