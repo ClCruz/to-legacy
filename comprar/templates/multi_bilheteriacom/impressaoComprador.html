@@ -3,9 +3,6 @@
 <head>
     <title>bilheteriacom</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-
-<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -22,90 +19,84 @@
             font-size: 12px;
         }
     </style>
-    </head>
+</head>
 
-    <body>
-        <h1 style="text-align: center;"><img src="https://media.tixs.me/logos/logo-bilheteriacom.png"
-                alt="Logo Bilheteria" style="height: 50px;">
-        </h1>
-        <h4 style="text-align: center; margin-top: -10px;">CONFIRMAÇÃO DA COMPRA</h4>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <h1 style="text-align: center;"><img src="https://media.tixs.me/logos/logo-bilheteriacom.png" alt="Logo Bilheteria"
+            style="height: 50px;">
+    </h1>
+    <h4 style="text-align: center; margin-top: -10px;">CONFIRMAÇÃO DA COMPRA</h4>
 
 
-        <h5>Tipo do Ingresso:</h5>
-        <p style="margin-top: -20px;">{item_tipo_bilhete}</p>
-        <h5>Produto:</h5>
-        <p style="margin-top: -20px;">{item_teatro}</p>
-        <div>
-            <table class="box">
-                <tr>
-                    <td>Código:</td>
-                </tr>
-                <tr>
-                    <td>{codigo_cliente}</td>
-                </tr>
-            </table>
+    <h5>Tipo do Ingresso:</h5>
+    <p style="margin-top: -20px;">{item_tipo_bilhete}</p>
+    <h5>Produto:</h5>
+    <p style="margin-top: -20px;">{item_teatro}</p>
+    <div>
+        <table class="box">
+            <tr>
+                <td>Código:</td>
+            </tr>
+            <tr>
+                <td>{codigo_cliente}</td>
+            </tr>
+        </table>
 
-            <table class="box">
-                <tr>
-                    <td>Número do Pedido:</td>
-                </tr>
-                <tr>
-                    <td>{codigo_pedido}</td>
-                </tr>
-            </table>
+        <table class="box">
+            <tr>
+                <td>Número do Pedido:</td>
+            </tr>
+            <tr>
+                <td>{codigo_pedido}</td>
+            </tr>
+        </table>
 
-            <table class="box">
-                <tr>
-                    <td>Data da Compra:</td>
-                </tr>
-                <tr>
-                    <td>{item_data}</td>
-                </tr>
-            </table>
+        <table class="box">
+            <tr>
+                <td>Data da Compra:</td>
+            </tr>
+            <tr>
+                <td>{item_data}</td>
+            </tr>
+        </table>
 
-            <table class="box">
-                <tr>
-                    <td>Validade:</td>
-                </tr>
-                <tr>
-                    <td>{}</td>
-                </tr>
-            </table>
+        <table class="box">
+            <tr>
+                <td>Validade:</td>
+            </tr>
+            <tr>
+                <td>{}</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h5>Nome:</h5>
+    <h3 style="margin-top: -20px;">{nome_cliente}</h3>
+    <h4>CPF: {cpf_cnpj_cliente}</h4>
+
+    <h5 style="text-align: center;">LEIA, É IMPORTANTE!</h5>
+    <div>
+        <h5 style="text-align: center;">{description_voucher}</h5>
+        <p>{description_voucher2}</p>
+
+        <div style="text-align: center;">
+            <h5>UTILIZE ESTE PIN PARA TROCAR ESSE VOUCHER PELO SEU INGRESSO:</h5>
+            <p>PIN: {pin_code}</p>
+            <!-- BEGIN TEST -->
+            <img src="https://media.tixs.me/logos/logo-bilheteriacom.png" alt="Logo Bilheteria" style="height: 50px; ">
+            <!-- END TEST -->
         </div>
 
+    </div>
 
-        <h5>Nome:</h5>
-        <h3 style="margin-top: -20px;">{nome_cliente}</h3>
-        <h4>CPF: {cpf_cnpj_cliente}</h4>
-
-        <h5 style="text-align: center;">LEIA, É IMPORTANTE!</h5>
-        <div align="justify" class="">
-            <h5 style="text-align: center;">{description_voucher}</h5>
-            <p>{description_voucher2}</p>
-
-            <div style="text-align: center;">
-                <h5>UTILIZE ESTE PIN PARA TROCAR ESSE VOUCHER PELO SEU INGRESSO:</h5>
-                <p>PIN: {pin_code}</p>
-
-            </div>
-
-            <div style="text-align: center;">
-                <!-- BEGIN TEST -->
-                <img src="https://media.tixs.me/logos/logo-bilheteriacom.png" alt="Logo Bilheteria"
-                    style="height: 50px; ">
-                <!-- END TEST -->
-            </div>
-        </div>
+    <footer>
+        <h3 style="float: left;">bilheteria.com</h3>
+        <h3 style="float: right;">(11) 3030-3033</h3>
+    </footer>
 
 
-
-        <footer>
-            <h3 style="float: left;">bilheteria.com</h3>
-            <h3 style="float: right;">(11) 3030-3033</h3>
-        </footer>
-
-
-        <!-- <script>print()</script> -->
-    </body>
+    <!-- <script>print()</script> -->
+</body>
 
 </html>
