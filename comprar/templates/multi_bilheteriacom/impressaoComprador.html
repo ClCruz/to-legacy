@@ -13,9 +13,14 @@
             font-size: 10px;
         }
 
+        td {
+            font-size: 12px;
+            font: bolder;
+        }
+
         table.box {
             display: inline-block;
-            margin: 0 5%;
+            margin-right: 8%;
             font-size: 12px;
         }
     </style>
@@ -27,24 +32,48 @@
     </h1>
     <h4 style="text-align: center; margin-top: -10px;">CONFIRMAÇÃO DA COMPRA</h4>
 
-
-    <h5>Tipo do Ingresso:</h5>
-    <p style="margin-top: -20px;">{item_tipo_bilhete}</p>
-    <h5>Produto:</h5>
-    <p style="margin-top: -20px;">{item_teatro}</p>
     <div>
         <table class="box">
             <tr>
-                <td>Código:</td>
+                <td><strong>Tipo do Ingresso:</strong></td>
             </tr>
             <tr>
-                <td>{codigo_cliente}</td>
+                <td>{item_tipo_bilhete}</td>
+            </tr>
+        </table>
+        <table class="box">
+            <tr>
+                <td><strong>Qtde:</strong></td>
+            </tr>
+            <tr>
+                <td>{}</td>
+            </tr>
+        </table>
+        <table class="box">
+            <tr>
+                <td><strong>Data do Eevento:</strong></td>
+            </tr>
+            <tr>
+                <td>{item_data}</td>
+            </tr>
+        </table>
+    </div>
+
+    <h5>Produto:</h5>
+    <p style="margin-top: -20px;">{item_evento}</p>
+    <div>
+        <table class="box">
+            <tr>
+                <td><strong>Código:</strong></td>
+            </tr>
+            <tr>
+                <td>{item_codvenda}</td>
             </tr>
         </table>
 
         <table class="box">
             <tr>
-                <td>Número do Pedido:</td>
+                <td><strong>Número do Pedido:</strong></td>
             </tr>
             <tr>
                 <td>{codigo_pedido}</td>
@@ -53,16 +82,16 @@
 
         <table class="box">
             <tr>
-                <td>Data da Compra:</td>
+                <td><strong>Data da Compra:</strong></td>
             </tr>
             <tr>
-                <td>{item_data}</td>
+                <td>{data_hora_impressao}</td>
             </tr>
         </table>
 
         <table class="box">
             <tr>
-                <td>Validade:</td>
+                <td><strong>Validade:</strong></td>
             </tr>
             <tr>
                 <td>{}</td>
@@ -73,7 +102,7 @@
 
     <h5>Nome:</h5>
     <h3 style="margin-top: -20px;">{nome_cliente}</h3>
-    <h4>CPF: {cpf_cnpj_cliente}</h4>
+    <h4 style="margin-top: -15px;">CPF: {cpf_cnpj_cliente}</h4>
 
     <h5 style="text-align: center;">LEIA, É IMPORTANTE!</h5>
     <div>
@@ -81,8 +110,6 @@
         <p>{description_voucher2}</p>
 
         <div style="text-align: center;">
-            <h5>UTILIZE ESTE PIN PARA TROCAR ESSE VOUCHER PELO SEU INGRESSO:</h5>
-            <p>PIN: </p>
 
             <table style="margin: auto; border: none;" cellpadding="0" cellspacing="0">
                 <tr>
