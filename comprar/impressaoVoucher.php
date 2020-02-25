@@ -26,13 +26,12 @@ DECLARE @CodPeca   INT
 DECLARE @id_evento INT
 DECLARE @ds_nome_base_sql VARCHAR(32)
 
-SELECT TOP 1 @id_evento = E.id_evento, @CodPeca = E.CodPeca, @id_base = E.id_base, @tempin = ee.showPin
+SELECT TOP 1 @id_evento = E.id_evento, @CodPeca = E.CodPeca, @id_base = E.id_base
             FROM MW_PEDIDO_VENDA PV
             INNER JOIN MW_ITEM_PEDIDO_VENDA I ON I.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
             INNER JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = I.ID_APRESENTACAO
             INNER JOIN MW_APRESENTACAO A2 ON A2.ID_EVENTO = A.ID_EVENTO
             INNER JOIN CI_MIDDLEWAY..mw_evento E ON A.id_evento = E.id_evento
-            INNER JOIN mw_evento_extrainfo EE on e.id_evento = ee.id_evento
             WHERE PV.ID_PEDIDO_VENDA = ?
 
 SELECT @ds_nome_base_sql = ds_nome_base_sql FROM CI_MIDDLEWAY..mw_base
@@ -67,7 +66,6 @@ $rsEstrangeiro = executeSQL($mainConnection, $query, array($parametros['Customer
 $dadosExtrasEmail['cpf_cnpj_cliente'] = $rsExtrangeiro['ID_DOC_ESTRANGEIRO'] ? $rsExtrangeiro['CD_RG'] : $dadosExtrasEmail['cpf_cnpj_cliente'];
 // ---------------------------------
 
-$numeroPin['codePin'] = "0001802560001026555752";
 
 $query = 'SELECT ds_meio_pagamento FROM mw_meio_pagamento WHERE cd_meio_pagamento = ?';
 $rs = executeSQL($mainConnection, $query, array($PaymentDataCollection['PaymentMethod']), true);
