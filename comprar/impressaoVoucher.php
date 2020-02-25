@@ -8,18 +8,19 @@ require_once('../settings/settings.php');
 require_once('../settings/Template.class.php');
 
 // checa se o pedido é um "pedido pai" (assinatura)
-$query = "SELECT TOP 1 1
+$query = "SELECT TOP 1 a.id_evento, ee.showPin
             FROM MW_PEDIDO_VENDA PV
             INNER JOIN MW_ITEM_PEDIDO_VENDA I ON I.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
             INNER JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = I.ID_APRESENTACAO
             INNER JOIN MW_APRESENTACAO A2 ON A2.ID_EVENTO = A.ID_EVENTO AND A2.DT_APRESENTACAO = A.DT_APRESENTACAO AND A2.HR_APRESENTACAO = A.HR_APRESENTACAO
             INNER JOIN MW_PACOTE P ON P.ID_APRESENTACAO = A2.ID_APRESENTACAO
+            INNER JOIN mw_evento_extrainfo EE on a.id_evento = ee.id_evento
             WHERE PV.ID_PEDIDO_VENDA = ?";
 $params = array($parametros['OrderData']['OrderId']);
 $result = executeSQL($mainConnection, $query, $params);
+$tempin = $result['showPin'];
 
 $is_assinatura = hasRows($result);
-
 
 $query = "DECLARE @id_base   INT
 DECLARE @CodPeca   INT
@@ -32,6 +33,7 @@ SELECT TOP 1 @id_evento = E.id_evento, @CodPeca = E.CodPeca, @id_base = E.id_bas
             INNER JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = I.ID_APRESENTACAO
             INNER JOIN MW_APRESENTACAO A2 ON A2.ID_EVENTO = A.ID_EVENTO
             INNER JOIN CI_MIDDLEWAY..mw_evento E ON A.id_evento = E.id_evento
+            
             WHERE PV.ID_PEDIDO_VENDA = ?
 
 SELECT @ds_nome_base_sql = ds_nome_base_sql FROM CI_MIDDLEWAY..mw_base
@@ -52,6 +54,8 @@ if ($res) {
     $voucher2 = '--';
 }
 
+
+
 $query = "EXEC pr_show_partner_info_bypedido ?, ?";
 // die(json_encode(getwhitelabelobj_forced("ingressaria")));
 $params = array(getwhitelabelobj_forced("ingressaria")["apikey"], $parametros['OrderData']['OrderId']);
@@ -65,6 +69,23 @@ $rsEstrangeiro = executeSQL($mainConnection, $query, array($parametros['Customer
 
 $dadosExtrasEmail['cpf_cnpj_cliente'] = $rsExtrangeiro['ID_DOC_ESTRANGEIRO'] ? $rsExtrangeiro['CD_RG'] : $dadosExtrasEmail['cpf_cnpj_cliente'];
 // ---------------------------------
+
+
+// ÍNICIO CÓDIGO PIN 
+
+if ($tempin == '1') {
+    $query2 = "SELECT TOP 1 cd_promocional,id_promocao FROM mw_promocao WHERE id_promocao_controle = 383  AND id_pedido_venda IS NULL ORDER BY 1";
+    $rsPin = executeSQL($mainConnection, $query2, array($parametros['cdPin']['idPromocao']), true);
+
+    $dadosPin['cdPin'] = $rsPin['cd_promocional'];
+
+    $dadosPin['idPromocao'] = $rsPin['id_promocao'];
+
+    $query3 = "UPDATE MW_PROMOCAO SET id_evento = {$id_evento}, id_pedido_venda = {$id_pedido_venda} WHERE id_promocao_controle = 383 AND id_promocao = {$dadosPin['idPromocao']}";
+    $rsUpdate = executeSQL($mainConnection, $query2, array($parametros['cdPin']['idPromocao']), true);
+}
+
+// FIM CÓDIGO PIN
 
 
 $query = 'SELECT ds_meio_pagamento FROM mw_meio_pagamento WHERE cd_meio_pagamento = ?';
