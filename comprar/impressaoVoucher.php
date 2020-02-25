@@ -1,5 +1,5 @@
 <?php
-ini_set ("odbc.defaultlrl", "256000");
+ini_set("odbc.defaultlrl", "256000");
 ini_set('mssql.textlimit', '2147483647');
 ini_set('mssql.textsize', '2147483647');
 
@@ -26,12 +26,13 @@ DECLARE @CodPeca   INT
 DECLARE @id_evento INT
 DECLARE @ds_nome_base_sql VARCHAR(32)
 
-SELECT TOP 1 @id_evento = E.id_evento, @CodPeca = E.CodPeca, @id_base = E.id_base
+SELECT TOP 1 @id_evento = E.id_evento, @CodPeca = E.CodPeca, @id_base = E.id_base, @tempin = ee.showPin
             FROM MW_PEDIDO_VENDA PV
             INNER JOIN MW_ITEM_PEDIDO_VENDA I ON I.ID_PEDIDO_VENDA = PV.ID_PEDIDO_VENDA
             INNER JOIN MW_APRESENTACAO A ON A.ID_APRESENTACAO = I.ID_APRESENTACAO
             INNER JOIN MW_APRESENTACAO A2 ON A2.ID_EVENTO = A.ID_EVENTO
-			INNER JOIN CI_MIDDLEWAY..mw_evento E ON A.id_evento = E.id_evento
+            INNER JOIN CI_MIDDLEWAY..mw_evento E ON A.id_evento = E.id_evento
+            INNER JOIN mw_evento_extrainfo EE on e.id_evento = ee.id_evento
             WHERE PV.ID_PEDIDO_VENDA = ?
 
 SELECT @ds_nome_base_sql = ds_nome_base_sql FROM CI_MIDDLEWAY..mw_base
@@ -44,7 +45,7 @@ $res     = executeSQL($mainConnection, $query, $params, true);
 $voucher = '';
 $voucher2 = '';
 
-if($res){
+if ($res) {
     $voucher = $res["description_voucher"];
     $voucher2 = $res["description_voucher2"];
 } else {
@@ -54,7 +55,7 @@ if($res){
 
 $query = "EXEC pr_show_partner_info_bypedido ?, ?";
 // die(json_encode(getwhitelabelobj_forced("ingressaria")));
-$params = array(getwhitelabelobj_forced("ingressaria")["apikey"],$parametros['OrderData']['OrderId']);
+$params = array(getwhitelabelobj_forced("ingressaria")["apikey"], $parametros['OrderData']['OrderId']);
 //     die(json_encode($params));
 $rs_show_partner_info = executeSQL($mainConnection, $query, $params, true);
 // die(json_encode($rs_show_partner_info));
@@ -66,6 +67,7 @@ $rsEstrangeiro = executeSQL($mainConnection, $query, array($parametros['Customer
 $dadosExtrasEmail['cpf_cnpj_cliente'] = $rsExtrangeiro['ID_DOC_ESTRANGEIRO'] ? $rsExtrangeiro['CD_RG'] : $dadosExtrasEmail['cpf_cnpj_cliente'];
 // ---------------------------------
 
+$numeroPin['codePin'] = "0001802560001026555752";
 
 $query = 'SELECT ds_meio_pagamento FROM mw_meio_pagamento WHERE cd_meio_pagamento = ?';
 $rs = executeSQL($mainConnection, $query, array($PaymentDataCollection['PaymentMethod']), true);
@@ -127,12 +129,11 @@ $queryCodigos = "SELECT codbar
                 WHERE l.CodApresentacao = ? AND l.CodVenda = ? and c.statusingresso = 'L'
                 ORDER BY c.Indice";
 foreach ($itensPedido as $item) {
-    
-    if ($item['descricao_item'] == 'Serviço') {
-        
-        $valores['valor_servico'] = 'Serviço: R$ '.number_format($item['valor_item'], 2, ',', '').'<br>';
-        $valores['valor_ingressos'] = number_format(($PaymentDataCollection['Amount'] / 100) - $item['valor_item'], 2, ',', '');
 
+    if ($item['descricao_item'] == 'Serviço') {
+
+        $valores['valor_servico'] = 'Serviço: R$ ' . number_format($item['valor_item'], 2, ',', '') . '<br>';
+        $valores['valor_ingressos'] = number_format(($PaymentDataCollection['Amount'] / 100) - $item['valor_item'], 2, ',', '');
     } else {
         if ($CodApresentacao !== $item['CodApresentacao']) {
 
@@ -144,21 +145,21 @@ foreach ($itensPedido as $item) {
                     'id_base' => $item['id_base'],
                     'conexao' => sqlErrors()
                 );
-                
+
                 $codigos = executeSQL($conn, $queryCodigos, array($item['CodApresentacao'], $item['CodVenda']));
                 $codigo_sql_errors[] = array(
                     'params' => array($item['CodApresentacao'], $item['CodVenda']),
                     'requisicao' => sqlErrors()
                 );
-                
+
                 $rsCodigo = fetchResult($codigos);
                 $codigo_sql_errors[] = array('fetch' => sqlErrors());
 
                 if ($rsCodigo['codbar'] != NULL) break;
                 else {
                     $data_parts = explode('/', $item['descricao_item']['data']);
-                    
-                    $data_hora = $data_parts[2].'-'.$data_parts[1].'-'.$data_parts[0].' '.preg_replace('/h/i', ':', $item['descricao_item']['hora']);
+
+                    $data_hora = $data_parts[2] . '-' . $data_parts[1] . '-' . $data_parts[0] . ' ' . preg_replace('/h/i', ':', $item['descricao_item']['hora']);
 
                     if (strtotime($data_hora) > time()) {
                         $codigo_error_data[] = array(
@@ -173,8 +174,8 @@ foreach ($itensPedido as $item) {
             $CodApresentacao = $item['CodApresentacao'];
         } else {
             // remover esse codigo depois do dia 31/07/2016 -------------- issue #129
-            if ($rsCodigo = fetchResult($codigos)) {}
-            else {
+            if ($rsCodigo = fetchResult($codigos)) {
+            } else {
                 $codigos = executeSQL($conn, $queryCodigos, array($item['CodApresentacao'], $item['CodVenda']));
                 $rsCodigo = fetchResult($codigos);
             }
@@ -184,17 +185,17 @@ foreach ($itensPedido as $item) {
 
         $code = $rsCodigo['codbar'];
 
-        
+
         $qrcode = getQRCodeFromAPI($item['descricao_item']['id_base'], $item['descricao_item']['codvenda'], $item['descricao_item']['indice']);
         //die("impressaoVoucher");
 
         //die("qrCode: ".$qrcode);
-        
+
         $ingressosCount++;
 
         //$code2_type = pathinfo($path2, PATHINFO_EXTENSION);
         //$code2_data = file_get_contents($path2);
-        $code2_img_src = 'data:image/png;base64,'.$qrcode;
+        $code2_img_src = 'data:image/png;base64,' . $qrcode;
 
         $valores['itens_pedido'][] = array(
             'item_qrcode' => $code2_img_src,
@@ -225,7 +226,7 @@ $forcedbase = $rs_show_partner_info["ds_nome_base_sql"];
 //$forcedbase = "simoesinvestimentos";
 //die(json_encode($is_gift));
 //die("oi");
-$objwlforced = getwhitelabelobj_forced($rs_show_partner_info["show_partner_info"] == 1 ? $forcedbase: gethost());
+$objwlforced = getwhitelabelobj_forced($rs_show_partner_info["show_partner_info"] == 1 ? $forcedbase : gethost());
 
 $caminhoHtml = $is_gift == 1 ? $objwlforced["templates"]["print"]["gift"] : $objwlforced["templates"]["print"]["voucher"];
 // die($caminhoHtml);
@@ -234,8 +235,7 @@ $caminhoHtml = $is_gift == 1 ? $objwlforced["templates"]["print"]["gift"] : $obj
 
 $valores['partner_desc'] = "";
 if ($rs_show_partner_info["show_partner_info"] == 1) {
-    $valores['partner_desc'] = "Compra realizada em: ".getwhitelabelobj()["uri"];
-
+    $valores['partner_desc'] = "Compra realizada em: " . getwhitelabelobj()["uri"];
 }
 
 $tpl_file = $caminhoHtml;
@@ -246,12 +246,18 @@ foreach ($valores as $key => $value) {
     if (is_array($value)) {
         foreach ($value as $detalhes) {
             foreach ($detalhes as $key2 => $value2) {
-                try { $tpl->$key2 = $value2; } catch (Exception $e) { /* variaveis nao encontradas */ }
+                try {
+                    $tpl->$key2 = $value2;
+                } catch (Exception $e) { /* variaveis nao encontradas */
+                }
             }
             $tpl->parseBlock(strtoupper($key), true);
         }
     } else {
-        try { $tpl->$key = $value; } catch (Exception $e) { /* variaveis nao encontradas */ }
+        try {
+            $tpl->$key = $value;
+        } catch (Exception $e) { /* variaveis nao encontradas */
+        }
     }
 }
 
@@ -264,4 +270,3 @@ $tpl->show();
 $message = ob_get_clean();
 
 $successMail = $message;
-?>
