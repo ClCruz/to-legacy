@@ -75,14 +75,14 @@ $dadosExtrasEmail['cpf_cnpj_cliente'] = $rsExtrangeiro['ID_DOC_ESTRANGEIRO'] ? $
 
 if ($tempin == '1') {
     $query2 = "SELECT TOP 1 cd_promocional,id_promocao FROM mw_promocao WHERE id_promocao_controle = 383  AND id_pedido_venda IS NULL ORDER BY 1";
-    $rsPin = executeSQL($mainConnection, $query2, array($parametros['cdPin']['idPromocao']), true);
+    $rsPin = executeSQL($mainConnection, $query2, array($parametros['cdpin']['idpromocao']), true);
 
-    $dadosPin['cdPin'] = $rsPin['cd_promocional'];
+    $dadosPin['cdpin'] = $rsPin['cd_promocional'];
 
-    $dadosPin['idPromocao'] = $rsPin['id_promocao'];
+    $dadosPin['idpromocao'] = $rsPin['id_promocao'];
 
-    $query3 = "UPDATE MW_PROMOCAO SET id_evento = {$id_evento}, id_pedido_venda = {$id_pedido_venda} WHERE id_promocao_controle = 383 AND id_promocao = {$dadosPin['idPromocao']}";
-    $rsUpdate = executeSQL($mainConnection, $query2, array($parametros['cdPin']['idPromocao']), true);
+    $query3 = "UPDATE MW_PROMOCAO SET id_evento = {$id_evento}, id_pedido_venda = {$id_pedido_venda} WHERE id_promocao_controle = 383 AND id_promocao = {$dadosPin['idpromocao']}";
+    $rsUpdate = executeSQL($mainConnection, $query2, array($parametros['cdpin']['idpromocao']), true);
 }
 
 // FIM CÓDIGO PIN
