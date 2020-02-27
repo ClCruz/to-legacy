@@ -73,7 +73,7 @@ $dadosExtrasEmail['cpf_cnpj_cliente'] = $rsExtrangeiro['ID_DOC_ESTRANGEIRO'] ? $
 
 // ÍNICIO CÓDIGO PIN 
 
-if ($tempin == '1') {
+if ($tempin == 1) {
     $query2 = "SELECT TOP 1 cd_promocional,id_promocao FROM mw_promocao WHERE id_promocao_controle = 383  AND id_pedido_venda IS NULL ORDER BY 1";
     $rsPin = executeSQL($mainConnection, $query2, array($parametros['cdpin']['idpromocao']), true);
 
