@@ -211,7 +211,7 @@ require_once("makeitmine.php");
 				<div class="centraliza">
 					<img src="../images/ico_erro_notificacao.svg">
 					<div class="container_erros"></div>
-					<a>fechar</a>
+					<a>FECHAR</a>
 				</div>
 			</div>
 
