@@ -83,7 +83,7 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 660, true)) {
 				  FROM mw_recebedor
 				  WHERE in_ativo=1 AND id_produtor=? AND recipient_id=?';
 		
-		$params = array($_GET['produtor'], "re_cjqh35gsd04w46460f9nx9mz4");
+		$params = array($_GET['produtor'], "re_ck7534cfe2zn8ur60coq35zh1");
 
 		$result = executeSQL($mainConnection, $query, $params);
 		
@@ -276,5 +276,3 @@ if (acessoPermitido($mainConnection, $_SESSION['admin'], 660, true)) {
         echo $retorno;
     }
 }
-
-?>
