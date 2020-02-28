@@ -34,3 +34,8 @@ div .container_botoes_etapas{
 	z-index: 1000 !important;
 	background-color: #f29536;
 }
+
+a.botao:hover{
+	color: $primary !important;
+	cursor: pointer !important;
+}
