@@ -24,6 +24,10 @@ input.submit.avancar.passo4,
 input.submit {
 	background: #fff !important;
 	color: #f29536 !important;
+	margin-left: 83.2% !important;
+	@include MQ(S){
+		margin-left: 0 !important;
+	}
 }
 
 .btn__help {
@@ -34,3 +38,4 @@ div.container_botoes_etapas {
 	z-index: 1000;
 	background-color: #f29536 !important;
 }
+
