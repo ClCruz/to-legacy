@@ -36,13 +36,21 @@ div.container_botoes_etapas {
 	background-color: #f29536 !important;
 }
 
+a.botao.avancar {
+    float: right;
+	margin-right: 83.2% !important;
+	@include MQ(S){
+		margin-right: 0 !important;
+	}
+}
+
 a.botao:hover{
 	color: $primary !important;
 	cursor: pointer !important;
 }
 
 a.botao.avancar.passo3 {
-	margin-right: 83.2% !important;
+	margin-right: 76.1% !important;
 	@include MQ(S){
 		margin-right: 0 !important;
 	}
