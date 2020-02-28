@@ -43,3 +43,10 @@ a.botao:hover{
 	color: $primary !important;
 	cursor: pointer !important;
 }
+
+a.botao.avancar.passo3 {
+	margin-right: 83.2% !important;
+	@include MQ(S){
+		margin-right: 0 !important;
+	}
+}
