@@ -14,16 +14,44 @@ $gradiente: $secundary;
 }
 
 a.botao {
-	background: $secundary !important;
+	background: #fff !important;
+	color: #f29536 !important;
 }
 
 a.botao,
 input.submit.salvar_dados,
 input.submit.avancar.passo4,
 input.submit {
-	background: $secundary !important;
+	background: #fff !important;
+	color: #f29536 !important;
+	
 }
 
 .btn__help {
 	background-color: none !important;
+}
+
+div.container_botoes_etapas {
+	z-index: 1000;
+	background-color: #f29536 !important;
+}
+
+a.botao.avancar {
+    float: right;
+	margin-right: 76.1% !important;
+	@include MQ(S){
+		margin-right: 0 !important;
+	}
+}
+
+a.botao:hover{
+	color: $primary !important;
+	cursor: pointer !important;
+}
+
+a.botao.avancar.passo3 {
+	margin-right: 76.1% !important;
+	@include MQ(S){
+		margin-right: 0 !important;
+	}
 }
