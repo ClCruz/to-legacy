@@ -206,8 +206,8 @@ require_once("makeitmine.php");
 
 	<div id="pai">
 		<?php require "header.php"; ?>
-		<div id="overlay">
-			<div class="">
+		<div id="content">
+			<div class="alert">
 				<div class="centraliza">
 					<img src="../images/ico_erro_notificacao.svg">
 					<div class="container_erros"></div>
