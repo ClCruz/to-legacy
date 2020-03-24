@@ -4,21 +4,21 @@
 @import "../../ticketHub/main.scss";
 
 @if $tickethub == true {
-	@include froala;
-	@include header;
-	@include content;
-	@include footer;
+  @include froala;
+  @include header;
+  @include content;
+  @include footer;
 
-	.container__header {
-		background-color: rgb(40, 40, 40) !important;
-	}
+  .container__header {
+    background-color: #f29536 !important;
+  }
 
-	.container__header {
-	//	height: 60px !important;
-	}
-	.header__logo .logo-header {
-	//	height: 35px !important;
-	//	margin-top: -8px;
-	}
-	$gradiente: $primary;
+  .container__header {
+    //	height: 60px !important;
+  }
+  .header__logo .logo-header {
+    //	height: 35px !important;
+    //	margin-top: -8px;
+  }
+  $gradiente: $primary;
 }
