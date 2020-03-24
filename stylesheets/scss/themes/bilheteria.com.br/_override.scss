@@ -39,3 +39,28 @@ a.botao:hover{
 	color: $primary !important;
 	cursor: pointer !important;
 }
+
+div.alert img {
+	margin-top: 114px !important;
+} 
+
+div.alert div.container_erros p {
+	margin-top: 95px !important;
+	font-size: 40px !important;
+
+	@include MQ(S){
+		font-size: 43px !important;
+    	line-height: 60px !important;
+    	/* margin-left: 40px; */
+    	text-align: center !important;
+}
+}
+
+div.alert {
+	height: 600px !important;
+
+	@include MQ(S){
+		height: 700px !important;
+	}
+}
+
