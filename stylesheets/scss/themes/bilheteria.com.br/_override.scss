@@ -41,12 +41,17 @@ a.botao:hover{
 }
 
 div.alert img {
-	margin-top: 114px !important;
+	margin-top: 131px !important;
+	height: 57px !important;
+
+	@include MQ(S) {
+		width: 75px !important;
+	}
 } 
 
 div.alert div.container_erros p {
 	margin-top: 95px !important;
-	font-size: 40px !important;
+	font-size: 65px !important;
 
 	@include MQ(S){
 		font-size: 43px !important;
