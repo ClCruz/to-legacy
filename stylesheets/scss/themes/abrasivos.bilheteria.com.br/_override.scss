@@ -55,3 +55,33 @@ a.botao.avancar.passo3 {
 		margin-right: 0 !important;
 	}
 }
+
+
+div.alert img {
+	margin-top: 160px !important;
+	height: 40px !important;
+
+	@include MQ(S) {
+		width: 60px !important;
+	}
+} 
+
+div.alert div.container_erros p {
+	margin-top: 115px !important;
+	font-size: 65px !important;
+
+	@include MQ(S){
+		font-size: 43px !important;
+    	line-height: 60px !important;
+    	/* margin-left: 40px; */
+    	text-align: center !important;
+}
+}
+
+div.alert {
+	height: 600px !important;
+
+	@include MQ(S){
+		height: 700px !important;
+	}
+}
